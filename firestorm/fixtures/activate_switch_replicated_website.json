@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "replicated-website",
+        "model": "gargoyle.switch", 
+        "fields": {
+            "status": 3, 
+            "description": "Determines whether or not replicated website integration with Trinity Software's Firestorm product is allowed.",
+            "value": {
+                "is_active": true
+            }, 
+            "label": "replicated website"
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+   {
+        "pk": 401,
+        "model": "coupon.flyer",
+        "fields": {
+            "is_approved": true,
+            "is_mini": false,
+            "create_datetime": "2011-01-07 13:34:59",
+            "send_date": "2011-01-07",
+            "site": 2,
+            "num_recipients": 571,
+            "send_status": 3
+        }
+   }
+]

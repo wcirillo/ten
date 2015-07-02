@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">
+        var map;
+        function init(){
+            map = new OpenLayers.Map({
+                div: "map",
+                allOverlays: true,
+            });
+            var base_layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
+               "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
+            var kml = new OpenLayers.Layer.GML("KML", "/hudson-valley/geolocation/kml/", 
+               { format: OpenLayers.Format.KML });
+            map.addLayers([base_layer, kml]);
+            map.addControl(new OpenLayers.Control.LayerSwitcher());
+            map.zoomToExtent(new OpenLayers.Bounds{{ extent }});
+            }
+    </script>
+  </head>
+  <body onload="init()">
+    There should be a total of {{ counties.count }} Locations.
+    {% for county in counties %}
+        {{ county.name }} has {{ county.consumers }} consumers.<br />
+    {% endfor %}
+    <br />
+    <div id="map"></div>
+  </body>
+</html>

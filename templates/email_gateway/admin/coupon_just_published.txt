@@ -1,0 +1,4 @@
+{{ coupon.offer.business.business_name }} just published another coupon on {{ site }}.
+
+Check out all of their coupons:
+{{ base_url }}/{{site.directory_name}}/coupons/{{ coupon.offer.business.slug }}/{{ coupon.offer.business.id }}/

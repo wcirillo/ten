@@ -1,0 +1,68 @@
+$("#id_cat").change(function(){
+    search_coupons();
+});
+
+$("#submit_frm_search_coupons").click(function(e){
+    e.preventDefault();
+    search_coupons();
+    disable_element($(this));
+});
+
+function search_coupons(){
+    $(".offerHeader").fadeTo('fast', 0.4);
+    $(".all_offers").fadeTo('fast', 0.4);
+    $(".search_loader_container").show();
+    $(".search_loader_container").spin(opts);
+
+    query_string = $("#id_q").val()
+    category = $("#id_cat").val()
+        
+    if (query_string){
+        if (category == 0){
+            query_dict = { q:query_string }
+        }else{
+            query_dict = { q:query_string, cat:category }
+        }
+    }else{
+        if (category == 0){
+            query_dict = {}
+        }else{
+            query_dict = { cat:category }
+        }
+    //alert(category); 
+    }
+    url_params = jQuery.param(query_dict);
+    if (url_params){
+        url_string = "{% url all-coupons %}?" + url_params
+    }else{
+        url_string = "{% url all-coupons %}"
+    }
+    //alert(url_string);
+    window.parent.location = encodeURI(url_string);
+}
+
+$(".closeMessage").click(function(e){
+    e.preventDefault();
+    $(".message").fadeOut("fast");
+});
+
+/*
+var params = { width:1680, height:1050 };
+var str = jQuery.param(params);
+$("#results").text(str);
+
+//alert(window.location.href.search("?"));
+url_array = window.location.href.split("?");
+//alert(url_array);
+//alert(url_array.length);
+//alert(location.search);
+alert(jQuery.query.get('abcde'));
+jQuery.query.set("abcd", 5)
+if(url_array.length == 1){
+    alert('append everything to current url');
+    //parent.location.hash = "www.google.com";
+    parent.location('www.google.com');
+}else{
+    alert('Save url args and modify the search query');
+}
+*/

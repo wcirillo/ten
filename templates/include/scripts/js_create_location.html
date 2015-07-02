@@ -1,0 +1,414 @@
+//Page Load items
+total_locations = 10;
+default_header_txt = '<em class="highlight">(Empty)</em>';
+run_on_page_load();
+
+function run_on_page_load(){
+    var count = 1;
+    //location_count = 0;
+    $(".hide").hide();
+    //$(".hiddenLocation:first").slideUp().removeClass("hiddenLocation").addClass("visibleLocation");
+    $("#header_1").slideUp().removeClass("hiddenLocation").addClass("visibleLocation");
+    //$("#header_1").fadeOut().removeClass("hiddenLocation").addClass("visibleLocation");
+    $(".hiddenLocation").hide();
+    $("option[value='dash']").attr("disabled", "disabled");
+    default_web_url();
+    while (count <= total_locations){
+        run_auto_tab(count);
+        header_number = '#header_' + count
+        header_txt = update_accordion_header(count);
+        if (header_txt != default_header_txt){
+            header_id = '#header_' + count;
+            $(header_id).slideDown().removeClass("hiddenLocation").addClass("visibleLocation");
+            update_this_locations_display(count);
+            //alert(count);
+            //alert(header_number);
+           // $("#accordion").accordion("activate", header_number);
+            //$("#accordion").accordion("activate", '#header_2');
+            //$("#accordion").accordion("activate", False);
+        //location_count = location_count + 1;
+        }
+        count = count + 1;
+    }
+    are_all_headers_empty();
+}
+
+function update_this_locations_display(location_number){
+    update_address1(location_number);
+    update_address2(location_number);
+    update_city(location_number);
+    update_city_state_comma(location_number);
+    update_zip_postal(location_number);
+    update_phone(location_number);
+    update_description(location_number);                                         
+}
+
+function get_location_number(){
+    var active = $("#accordion").accordion( "option", "active" );
+    return active + 1;
+}
+
+function update_accordion_header(location_number){
+    var loc_id_txt = '#loc_' + location_number + '_txt';
+    var header_txt = get_header_txt(location_number);
+    $(loc_id_txt).html(header_txt);
+    if (header_txt == default_header_txt){
+        $("#location_" + location_number + " ." + 'iconPin').addClass("hidden");
+        $("#location_" + location_number).addClass("hidden");
+    }else{
+        $("#location_" + location_number + " ." + 'iconPin').removeClass("hidden");
+        $("#location_" + location_number).removeClass("hidden");
+    }
+    return header_txt;
+}
+
+function get_header_txt(location_number){
+    var header_txt = default_header_txt;
+    var state_province_id = ($(this).attr("id"));
+    if ($("#id_location_address1_" + location_number).val().length > 0){
+        header_txt = $("#id_location_address1_" + location_number).val();
+    }else if ($("#id_location_city_" + location_number).val().length > 0){
+        header_txt = $("#id_location_city_" + location_number).val();
+    
+    }else if ($("#id_location_description_" + location_number).val().length > 0){
+        header_txt = $("#id_location_description_" + location_number).val();
+    }else if ( 
+                ($("#id_location_exchange_" + location_number).val().length == 3) && 
+                ($("#id_location_number_" + location_number).val().length == 4)){
+        header_txt = $("#id_location_exchange_" + location_number).val() + '-' + 
+                        $("#id_location_number_" + location_number).val();
+        if($("#id_location_area_code_" + location_number).val().length == 3){
+            header_txt = '(' + $("#id_location_area_code_" + location_number).val() + ') ' + header_txt;
+        }
+    }else if ($("#id_location_address2_" + location_number).val().length > 0){
+        header_txt = $("#id_location_address2_" + location_number).val();
+    }else if ($("#id_location_zip_postal_" + location_number).val().length > 0){
+        header_txt = $("#id_location_zip_postal_" + location_number).val();
+    }else if ($("#id_location_state_province_" + location_number + " :selected").val() != ''){
+        header_txt = $("#id_location_state_province_" + location_number + " :selected").val() + 
+                        ' (' + $("#id_location_state_province_" + location_number + 
+                                " :selected").html() + ')';
+    }
+    return header_txt
+}
+
+function find_first_empty_header(){
+    count = 1;
+    found_empty_header = '';
+    while (count <= total_locations){
+        empty_header_id = '#header_' + count;
+        has_class = $(empty_header_id).hasClass('visibleLocation');
+        if(has_class){
+            loc_id_txt = '#loc_' + count + '_txt';
+            header_txt = $(loc_id_txt).html();
+            if(header_txt == default_header_txt){
+                found_empty_header = 'true';
+                break;
+            }
+        }
+        count = count + 1;
+    }
+    if(!found_empty_header){
+        empty_header_id = '';
+    }
+    return empty_header_id                                  
+}
+
+function are_all_headers_empty(){
+    count = 1;
+    all_headers_empty = 'true';
+    while (count <= total_locations){
+        empty_header_id = '#header_' + count;
+        has_class = $(empty_header_id).hasClass('visibleLocation');
+        if(has_class){
+            loc_id_txt = '#loc_' + count + '_txt';
+            header_txt = $(loc_id_txt).html();
+            if(header_txt != default_header_txt){
+                all_headers_empty = 'false';
+                break;
+            }
+        }
+        count = count + 1;
+    }
+    if(all_headers_empty == 'false'){
+        $('.coupon_location').slideDown();
+        $('#message_map').removeClass('hidden');
+    }else{       
+        $('.coupon_location').slideUp();
+        $('#message_map').addClass('hidden');
+    }                                 
+}
+
+function default_web_url(){
+    if ($("#id_web_url").val().length > 0){
+        $(".url").html($("#id_web_url").val());
+    }
+}
+
+//ACCORDIAN
+$("#accordion").accordion({
+    animated: "bounceslide",
+    //active: true,
+    autoHeight: false,
+    collapsible: true,
+    icons: {
+        header: "sprite accordionHeaderClosed",
+        headerSelected: "sprite accordionHeaderOpen"
+    }
+});
+
+
+//ADD A LOCATION
+$(".add_location").click(function(e){ 
+    e.preventDefault();
+    empty_header_id = find_first_empty_header();
+    location_number = get_location_number();
+    if(empty_header_id){        
+        active_location_id = '#header_' + location_number;
+        if(empty_header_id != active_location_id){                
+            $("#accordion").accordion("activate", empty_header_id);
+            location_number = get_location_number();
+        }
+    }else{
+        //Grab the id of the new location that hasn't been open yet.
+        hiddenLocationId = "#" + $(".hiddenLocation:first").attr("id");
+        //Select the first accordian header with class hiddenLocation and remove hiddenLocation class.
+        $(".hiddenLocation:first").slideDown().removeClass("hiddenLocation").addClass("visibleLocation");
+        //Show all fields now that the header panel is visible
+        $("#accordion").accordion("activate", hiddenLocationId);
+        
+        hiddenLocationsRemaining = $(".hiddenLocation").length;
+        if (hiddenLocationsRemaining == 8){
+            $("#header_1").slideDown();
+        }
+        //If no hiddenLocations to add, remove the link to add another one.
+        if (hiddenLocationsRemaining == 0){
+            $("#add_location_container").slideUp();
+        }
+        location_number = location_number + 1
+    }
+    focus_field = '#id_location_address1_' + location_number;
+    $(focus_field).focus();
+});
+
+//DELETE A LOCATION
+$(".x").click(function(e){
+    var location_number = this.name;
+    e.preventDefault();
+    //$("#header_" + location_number).fadeOut().removeClass("hiddenLocation").addClass("visibleLocation");
+    //$("#header_" + location_number).slideUp().addClass("hiddenLocation").removeClass("visibleLocation");
+    //alert($("#id_location_city_1").val());
+    form_field_list = ['address1', 'address2', 'city', 'zip_postal', 'area_code', 'exchange', 'number', 'description'];
+    form_index = 0;
+    while(form_index < form_field_list.length){
+        $("#id_location_" + form_field_list[form_index] + "_" + location_number).val('');
+        form_index = form_index + 1;       
+    }
+    loc_id_txt = '#loc_' + location_number + '_txt';
+    $(loc_id_txt).html(default_header_txt);
+    $("#location_" + location_number + " ." + 'iconPin').addClass("hidden");
+    field_list = ['address1', 'address2', 'city', 'city_state_comma', 'zip_postal', 'default_phone_paren_open', 'phone_paren_open', 'area_code', 'default_phone_paren_close', 'phone_paren_close', 'exchange', 'default_phone_hyphen', 'phone_hyphen', 'number', 'description'];
+    index = 0;
+    while(index < field_list.length){
+        $("#location_" + location_number + " ." + field_list[index]).html("");
+        index = index + 1;       
+    }
+    $("#location_" + location_number + " ." + 'city_state_comma').addClass("hidden");
+    state_province_id = 'id_location_state_province_' + location_number;
+    $("#" + state_province_id).val('');
+    update_city_state_comma(location_number);
+    are_all_headers_empty();
+});
+
+
+//WEB URL
+$("#id_web_url").focus(function(){
+    $(".url").addClass("editHover");
+});
+$("#id_web_url").blur(function(){
+    $(".url").removeClass("editHover");
+    default_web_url();
+});
+$("#id_web_url").keyup(function(){
+    $(".url").html($(this).val());
+    default_web_url();
+});
+
+
+//FOCUS
+$(".form_location, .form_city, .form_phone").focus(function(){
+    var location_number = get_location_number();
+    var location_type = ($(this).attr("alt"));
+    if(location_type == 'area_code' || location_type == 'exchange' || location_type == 'number'){
+        location_type = 'phone';
+    };
+    $("#location_" + location_number + " ." + location_type).addClass("editHover"); 
+});
+
+
+
+//BLUR
+$(".form_location, .form_city, .form_phone").blur(function(){
+    var location_number = get_location_number();
+    var location_type = ($(this).attr("alt"));
+    if(location_type == 'area_code' || location_type == 'exchange' || location_type == 'number'){
+        location_type = 'phone';
+    };
+    $("#location_" + location_number + " ." + location_type).removeClass("editHover"); 
+});
+
+
+
+//ADDRESS1, ADDRESS2, ZIP_POSTAL, DESCRIPTION
+$(".form_location, .form_city, .form_phone").keyup(function(){
+    var location_number = get_location_number();
+    var location_type = ($(this).attr("alt"));
+    update_accordion_header(location_number);
+    if(location_type == 'city'){
+        update_city(location_number);
+    }else if(location_type == 'area_code' || location_type == 'exchange' || location_type == 'number'){
+        update_phone(location_number);
+    }else{
+        $("#location_" + location_number + " ." + location_type).html($(this).val());
+    }
+    are_all_headers_empty();
+});
+
+// OPEN ADDRESS 2
+$(".open_address2").click(function(){
+    var location_number = get_location_number();
+    //alert(location_number);
+    open_address2(location_number);
+});
+
+function open_address2(location_number){
+    $('#id_label_location_address2_' + location_number).removeClass('hidden');
+    $('.open_address2_' + location_number).fadeOut();
+    //$(this).fadeOut();
+    $(".li_address2_" + location_number).slideDown("slow");    
+}
+
+function update_address1(location_number){
+    var address1_value = $("#id_location_address1_" + location_number).val();
+    $("#location_" + location_number + " .address1").html(address1_value);                                        
+}
+
+function update_address2(location_number){
+    var address2_value = $("#id_location_address2_" + location_number).val();
+    if (address2_value != ''){
+        open_address2(location_number);
+    }
+    $("#location_" + location_number + " .address2").html(address2_value);                                        
+}
+
+//CITY
+function update_city(location_number){
+    var city_value = $("#id_location_city_" + location_number).val();
+    $("#location_" + location_number + " .city").html(city_value);
+    if (city_value.length > 0){
+        if ($("#location_" + location_number + " .state").html().length > 0){
+            $("#location_" + location_number + " .default_city_state_comma").html("")
+            $("#location_" + location_number + " .city_state_comma").html(", ").removeClass("hidden");
+        }else{
+            $("#location_" + location_number + " .default_city_state_comma").html("");
+            $("#location_" + location_number + " .city_state_comma").html("");
+        }
+    }else{
+        $("#location_" + location_number + " .default_city_state_comma").html("");
+        $("#location_" + location_number + " .city_state_comma").html("");
+    }
+}
+
+//STATE_PROVINCE
+$(".form_state_province").change(function(){
+    var location_number = get_location_number();
+    update_city_state_comma(location_number);
+    update_accordion_header(location_number);
+    are_all_headers_empty();
+});
+
+function update_city_state_comma(location_number){
+    var state_province_id = 'id_location_state_province_' + location_number;
+    if ($("#" + state_province_id + " option:selected").val().length > 0){
+        var state_selected = $("#" + state_province_id + " option:selected").val();
+        if ($("#id_location_city_" + location_number).val().length > 0){
+            $("#location_" + location_number + " .default_city_state_comma").html("")
+            $("#location_" + location_number + " .city_state_comma").html(", ").removeClass("hidden");
+        }else{
+            $("#location_" + location_number + " .default_city_state_comma").html("");
+            $("#location_" + location_number + " .city_state_comma").html("");
+        }
+        $("#location_" + location_number + " .state").html(state_selected);
+    }else{
+        $("#location_" + location_number + " .default_city_state_comma").html("");
+        $("#location_" + location_number + " .city_state_comma").html("");
+        $("#location_" + location_number + " .state").html("");
+    }
+                                                                  
+}
+
+function update_zip_postal(location_number){
+    var zip_postal_value = $("#id_location_zip_postal_" + location_number).val();
+    $("#location_" + location_number + " .zip_postal").html(' ' + zip_postal_value);                                           
+}
+
+//PHONE NUMBER
+function update_phone(location_number){
+    run_auto_tab(location_number);
+    area_code_value = $("#id_location_area_code_" + location_number).val();
+    exchange_value = $("#id_location_exchange_" + location_number).val();
+    number_value = $("#id_location_number_" + location_number).val();
+    if (area_code_value.length > 0){
+        $("#location_" + location_number + " .default_phone_paren_open").html("");
+        $("#location_" + location_number + " .default_phone_paren_close").html("");
+        $("#location_" + location_number + " .phone_paren_open").html("(").removeClass("hidden");
+        $("#location_" + location_number + " .phone_paren_close").html(") ").removeClass("hidden");
+        $("#location_" + location_number + " .area_code").html(area_code_value);
+    }else{
+        $("#location_" + location_number + " .default_phone_paren_open").html("");
+        $("#location_" + location_number + " .default_phone_paren_close").html("");
+        $("#location_" + location_number + " .phone_paren_open").html("");
+        $("#location_" + location_number + " .phone_paren_close").html("");
+        $("#location_" + location_number + " .area_code").html("");
+    }
+    if (exchange_value.length > 0){
+        $("#location_" + location_number + " .exchange").html(exchange_value);
+    }else{
+        $("#location_" + location_number + " .exchange").html("");
+    }
+    if ((exchange_value.length > 2) || (exchange_value.length > 0 && number_value.length > 0)){
+        $("#location_" + location_number + " .default_phone_hyphen").html("");
+        $("#location_" + location_number + " .phone_hyphen").html("-").removeClass("hidden");
+    }else{
+        $("#location_" + location_number + " .default_phone_hyphen").html("");
+        $("#location_" + location_number + " .phone_hyphen").html("");
+    }
+    $("#location_" + location_number + " .number").html(number_value);
+}
+
+function update_description(location_number){
+    var description_value = $("#id_location_description_" + location_number).val();
+    $("#location_" + location_number + " .description").html(description_value);                                             
+}
+
+function run_auto_tab(location_number){
+    $("#id_location_area_code_" + location_number).autotab({
+        format: "alphanumeric",
+        target: "id_location_exchange_" + location_number,
+        uppercase: true
+    });
+    $("#id_location_exchange_" + location_number).autotab({
+        format: "alphanumeric",
+        previous: "id_location_area_code_" + location_number,
+        target: "id_location_number_" + location_number,
+        uppercase: true
+    });
+    $("#id_location_number_" + location_number).autotab({
+        format: "alphanumeric",
+        previous: "id_location_exchange_" + location_number,
+        uppercase: true
+    });                        
+}
+
+
+

@@ -1,0 +1,35 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+    <p>Post your coupon on {{ site.domain }} and...</p>
+
+    <p>- We'll post your coupon on the site for 30 days.</p> 
+    <p>- We'll email your coupon offer TWICE during that month</p>
+
+    <p><em>ALL for just $49.</em></p>
+    
+    <p>Just enter tracking code "Mail2x" by 2/19/11 to take advantage of this amazing offer!!!</p>
+    
+    <p>Post your coupon in just 5 minutes or feel free to call me at 800-581-3380 x1 for more information!</p>
+    
+    <p>We look forward to working with you!</p>
+    
+    <p>Sincerely,</p>
+    
+    <p>Best,</p>
+    
+    <p>
+        <strong>Eric Straus</strong><br/>
+        President<br/>
+        {{ site.domain }}<br/>
+        Phone: 914-920-3059<br/>
+        Email: <a href="mailto:Eric@10Coupons.com?subject=RE: {{site.domain}}">Eric@10Coupons.com</a>
+    </p>
+    
+    <p>
+        I'll very occasionally send updates like these to let you know what's going on with our site.
+        If you'd prefer not to receive them, please use this <a href="{{base_url}}{% url opt_out payload=payload %}">unsubscribe</a> link to cancel these newsletters instantly.
+    </p>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p style="margin-top: 0;">
+
+    Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},<br/>
+    
+    {% if business.order_items.count == 0 %}
+        <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}">Create a coupon today</a> and pay <strong>just $10</strong> for the first month!
+    {% else %}
+        <strong>{{ business.business_name }}</strong> was one of the first businesses with a <strong>coupon on our website</strong>.
+        Thanks!
+        We're getting <strong>more popular</strong> every day.
+    
+
+        {% if site.consumers.count > 500 %}
+            There are now <strong>{{ site.consumers.count }} registered consumers</strong>.
+            {% endif %}
+
+        </p>
+
+        <p>
+
+        <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}">Try us again</a> and pay <strong>just $10</strong> for the next 30 days!
+
+    {% endif %}
+    Simply use <strong>Tracking Code: {{ promo_code }}</strong> at checkout.
+
+    </p>
+
+<p style="margin-bottom: 5px;">
+
+    {% if business.order_items.count == 0 %}
+        A coupon for {{ business.business_name }} might look like this, or it could
+    {% else %}
+        Renew this coupon or
+    {% endif %}
+
+    include <strong>any offer</strong> you like.
+
+</p>
+
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" align="center" style="background-color: #ffffff; border: 1px #666666 solid; margin-bottom: 0;">
+                <tr>
+                    <td>
+                        <table cellpadding="15" cellspacing="0" style="border: 1px #999999 dashed; width: 545px;">
+                            <tr>
+                                <td align="left">
+
+                                    <span style="color: #333; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                                        {{ business.business_name }}
+                                    </span>
+
+                                    <br/><br/>
+
+                                    <span style="color: #333; font-family: Arial, Helvetica, sans-serif; font-size: 39px; font-weight: bold; letter-spacing: -2px;">
+                                    {% if offer.headline %}
+                                        {{ offer.headline }}
+                                    {% else %}
+                                        30% OFF    
+                                    {% endif %}
+                                    </span>
+
+                                    <br/>
+
+                                    <span style="color: #333; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+                                    
+                                    {% if offer.qualifier %}
+                                        {{ offer.qualifier }}
+                                    {% else %}
+                                        Limited time offer
+                                    {% endif %}
+                                        
+                                    </span>
+
+                                    <br/><br/>
+
+                                    <img alt="Display images to view how customers would see this coupon." src="{{media_url}}images/email/buttons/sample_coupon_buttons.gif" border="0" height="57" width="500" style="margin: 0 0 10px 0;"/>
+
+                                    <p style="color: #333; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-style: italic; line-height: 16px; margin: 0 0 15px 0;">
+                                        {% if coupon.custom_restrctions %}
+                                            {{ coupon.custom_restrctions }}
+                                            {{ coupon.valid_days }}
+                                            {{ coupon.expiration_date }}
+                                        {% else %}
+                                        One Coupon per Person, per Visit. Tax and Gratuity Not Included. One Coupon per Household. No cash value. Not valid in combination with other offers. Coupon void if altered. Offer good 7 days a week. Valid through 5/16/11. 
+                                        {% endif %}
+                                        
+                                    </p>
+
+                                    <img alt="Share on Facebook and Twitter" src="{{media_url}}images/share_sample.gif" height="20" border="0" width="122" style="margin-bottom: -2px;"/>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top"><img src="{{media_url}}images/email/layout/coupon_Shadow.gif" height="5" border="0" width="557" style="display: block;"/></td>
+    </tr>
+</table>
+
+<p>
+
+    Display your offer to
+
+    {% if business.order_items.count == 0 and site.consumers.count > 500 %}
+        <strong>{{ site.consumers.count }} registered consumers</strong> and everyone else
+    {% else %}
+        everyone
+    {% endif %}
+
+    in the {{ site.region }} now!
+    <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}">Get started</a> for just ten bucks.
+
+</p>
+
+<p>
+
+    {% if business.order_items.count = 0 %}
+        <strong>Make</strong>
+    {% else %}
+        Now you can <strong>make</strong>
+    {% endif %}
+
+    <strong>unlimited changes anytime</strong> with just a few clicks.
+    Need help?
+    Contact me by phone or email and we'll <strong>get your coupon done in minutes</strong>.
+
+</p>
+
+<p>
+    {{ signature_name }}<br/>
+    {{ signature_title }}<br/>
+    <a href="mailto:{{ signature_email }}">{{ signature_email }}</a><br/>
+    {{ signature_phone }}
+</p>
+
+<p>
+    P.S. Get this done now with <strong>{{ promo_code }}</strong>.
+    The $10 offer is good <strong>only today</strong> (April 6, 2011).
+</p>
+<br>
+<p>
+    If you'd prefer not to receive notice of future advertiser opportunities frm {{ site.domain }}, please use this <a href="{{base_url}}{% url opt_out payload=payload %}">unsubscribe</a> link to instantly cancel these messages.
+</p>
+
+{% endblock %}

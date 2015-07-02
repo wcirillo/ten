@@ -1,0 +1,12 @@
+{% extends "frames/web/full.html" %}}
+{% block title %}{{ current_site.domain }} - Become a Referrer{% endblock %}
+
+{% block base_content %}
+    <div class="grid_8 alpha">
+        
+        See the email we sent to: {{ email }} <br/>
+        We've provided details about your personalized website:<br/>
+        <a href="{% url home %}{{ url }}">{{ current_site.domain }}/<b>{{ url }}</b></a>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - {% if user.has_usable_password %}Sign In To Get Started{% else %}Complete Enrollment{% endif %}{% endblock %}
+
+{% block meta %}
+<link rel="canonical" href="{% url recommend-enroll %}"/>
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+
+        <div class="message center">
+            You've been recommended!
+            Start today as an Independent Advertising Representative.
+
+            <div class="clear"></div>
+        </div>
+
+        {% include "include/frm/frm_recommend_ad_rep.html" %}
+
+        <p class="smallmargin" align="center">
+            <em>We wish you success,</em>
+        </p>
+
+        <h4 class="alt_font2" align="center">
+                The {{ current_site.domain }} Team
+        </h4>
+
+        <br/>
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

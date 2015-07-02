@@ -1,0 +1,37 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p>Dear {{ ad_rep_lead_first_name }},</p>
+
+<p>We have just made a MAJOR new announcement about our compensation plan at 10LocalCoupons.com.</p>
+
+<p>If you're considering joining up with us.... we should talk!<br/>
+We're looking for ONE great Market Manager in your market!</p>
+
+<p>As Market Manager, you earn:<br/>
+<ol>
+    <li>37.5% of all your sales!</li>
+    <li>An override of 12.5% on ALL sales made by ad reps in your market</li>
+    <li>A $150 Quick Start Performance Bonus when an Ad Rep you recruit meets minimum performance goals.</li>
+    <li>An override of 5% of all Sales made by EVERY Ad Rep you recruit... forever!</li>
+</ol>
+</p>
+
+
+
+<p>We are gearing up - FAST - and we'd love to talk to you about joining our team.</p>
+
+<p>Please call me, Eric Straus, CEO, if you have any questions/thoughts/comments!</p>
+
+<p>I look forward to the opportunity of working with you!!!!</p>
+
+<p>Best,<br/>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+</p>
+<br/><br/>
+<p style='text-align:center;font-size:small;'>
+{% include 'email_gateway/generic_email_unsubscribe.html' %}
+</p>
+{% endblock %}

@@ -1,0 +1,192 @@
+[
+    {
+        "pk": 1, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 114, 
+            "end_date": "2011-03-17", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 114, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 114, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 114, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 113, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 113, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 113, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 113, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 119, 
+            "end_date": "2010-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2008-01-17", 
+            "is_autorenew": false
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 120, 
+            "end_date": "2010-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2008-01-17", 
+            "is_autorenew": false
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 4, 
+            "coupon": 300, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 6, 
+            "coupon": 117, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 7, 
+            "coupon": 119, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 8, 
+            "coupon": 120, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 9, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 9, 
+            "coupon": 121, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 10, 
+            "coupon": 122, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 11, 
+            "coupon": 123, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    }
+]

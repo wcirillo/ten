@@ -1,0 +1,95 @@
+<div class="coupon">
+    <div class="couponInner">
+
+        <div class="coupon_business">
+
+            <h1 class="business_name">{{ coupon.offer.business.business_name }}</h1>
+
+            {% if coupon.offer.business.slogan %}
+            <h2 class="slogan">- {{ coupon.offer.business.slogan }} -</h2>
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="coupon_offer">
+
+            <h3 class="headline">{{ coupon.offer.headline }}</h3>
+
+            {% if coupon.offer.qualifier %}
+            <h4 class="qualifier">
+                {{ coupon.offer.qualifier }}
+            </h4>
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="redemption_method">
+
+            {% if coupon.precise_url %}
+
+                <a class="button largeBtn" href="{% url external-click-coupon coupon.id %}" target="new" rel="nofollow">
+
+            {% else %}
+
+                {% if is_logged_in or request.flags.is_mobile %}
+                    <a class="button largeBtn" href="{% url print-single-coupon coupon.id %}" rel="nofollow">
+                {% else %}
+                    <a class="button largeBtn modaltriggerSm" name="print_coupon_iframe{{ coupon.id }}" rel="nofollow">
+                {% endif %}
+
+            {% endif %}
+
+                Get This Coupon! &raquo;</a>
+
+            {% if not request.flags.is_mobile %}
+
+                {% if coupon.is_redeemed_by_sms %}
+                    <a class="button largeBtn modaltrigger iconPhone" name="sms_iframe{{ coupon.id }}">&nbsp;<div class="sprite"></div></a>
+                {% endif %}
+
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        <h5 class="alt_font">The Fine Print:</h5>
+
+        <ul class="fine_print small">
+            {% for restriction in coupon.default_restrictions.all %}
+                <li>{{ restriction }}</li>
+            {% endfor %}  
+            {% if coupon.custom_restrictions %}
+                <li>{{ coupon.custom_restrictions }}</li>
+            {% endif %}
+            <li>{{ ten_coupon_restrictions }}</li>
+            {% if valid_days %}
+                <li class="valid_days">{{ valid_days }}</li>
+            {% endif %}
+            <li class="redemption_window">Valid through {{ coupon.expiration_date }}</li>
+        </ul>
+
+        <div class="qrcodesample">
+            <div class="center alt_font2 smallmargin">Sample</div>
+            <img class="block" src="{{ safe_static_url }}images/qrcodesample.gif" height="75" width="75"/>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="print_coupon_iframe{{ coupon.id }}" class="hidden">
+    <iframe class="modal_iframe" src="{% url show-email-coupon coupon.id %}" width="440" height="280" frameborder="0"></iframe>
+</div>
+
+{% if coupon.is_redeemed_by_sms %}
+    <div id="sms_iframe{{ coupon.id }}" class="hidden">
+        <iframe class="modal_iframe" src="{% url show-send-sms-single-coupon coupon.id %}" width="760" height="400" frameborder="0"></iframe>
+    </div>
+{% endif %}

@@ -1,0 +1,18 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+<p>
+{{ original.code }} is a member of US State {{ original.us_state.name }} 
+and County {{ original.us_county.name }} and City {{ original.us_city.name }}.<br/>
+</p>
+<table width="100%"><tr>
+<td>
+<h2>Markets that include {{ original.code }}:</h2>
+<ul>{% for site in original.us_county.sites.all %}
+    <li>{{ site.name }}</li>
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+</tr></table>
+{% endblock %}

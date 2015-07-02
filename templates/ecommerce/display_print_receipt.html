@@ -1,0 +1,27 @@
+{% extends "frames/print/frame1.html" %}
+
+{% block meta %}
+<META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+{% endblock %}
+
+{% block base_content %}
+
+    <div class="modal_receipt">
+
+        <div>
+            <h4 class="left">{{ current_site.domain }}</h4>
+            <a class="button printbutton right" href="JavaScript:window.print();"><div class="sprite iconPrint">Print your receipt</div></a>
+            <div class="clear"></div>
+        </div>
+
+        {% include "include/dsp/dsp_receipt.html" %}
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".link_to_coupon").hide();
+        });
+    </script>
+
+{% endblock %}

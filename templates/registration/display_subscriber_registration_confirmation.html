@@ -1,0 +1,33 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_subscriber_registration_confirmation.html" %}
+
+    <br/>
+
+    <div class="hr"></div>
+
+    {% if contest_is_running %}
+        <h2 class="large highlight alt_font2" align="center">Win $10,000!*</h2>
+        <p class="tiny" align="center">
+            <strong>*</strong>Verify both your cell phone and email address to qualify for the next $10,000 Drawing. No purchase necessary.
+            <a href="{% url contest-rules %}">Rules</a>
+        </p>
+    {% endif %}
+
+    <table cellpadding="10" cellspacing="0" border="0" align="center" width="600">
+        <tr>
+            <td align="center" valign="top">
+
+                {% include "include/dsp/dsp_opt_in_opt_out_mobile_phone.html" %}
+
+                <p>Live Help: (800) 581-3380</p>
+
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

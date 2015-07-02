@@ -1,0 +1,216 @@
+[
+    {
+        "pk": 116, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "ColdCallGroupUser", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "coldcalltestuser@10coupons.com", 
+            "date_joined": "2011-04-18 16:59:59"
+        }
+    }, 
+     {
+        "pk": 117, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Advertiser_Do_Not_Market", 
+            "first_name": "Ted", 
+            "last_name": "Burger", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "advertiser_do_not_market@10coupons.com", 
+            "date_joined": "2011-04-18 16:59:59"
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Advertiser_Do_Not_Market2", 
+            "first_name": "Teddy", 
+            "last_name": "Cheese", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "advertiser_do_not_market2@10coupons.com", 
+            "date_joined": "2011-04-18 16:59:59"
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2011-04-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [1], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2011-04-18 16:12:24"
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2011-04-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [2], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2011-04-18 16:12:24"
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2011-04-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [2], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2011-04-18 16:12:24"
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 116, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": "No Paid Orders", 
+            "is_active": true, 
+            "business_name": "Test116 Biz no orders"
+        }
+    },
+    {
+        "pk": 117, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 117, 
+            "slogan": "", 
+            "business_modified_datetime": "2011-05-12 16:12:24", 
+            "business_create_datetime": "2011-05-12 16:12:24", 
+            "short_business_name": "No Paid Orders", 
+            "is_active": true, 
+            "business_name": "Test117 Biz with offer but no orders"
+        }
+    },
+    {
+        "pk": 118, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 118, 
+            "slogan": "", 
+            "business_modified_datetime": "2011-05-12 16:12:24", 
+            "business_create_datetime": "2011-05-12 16:12:24", 
+            "short_business_name": "No Offers nor Paid Orders", 
+            "is_active": true, 
+            "business_name": "Test118 Biz no offers no orders"
+        }
+    },
+    {
+        "pk": 117, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "No paid offers", 
+            "create_datetime": "2011-05-12 16:12:24", 
+            "qualifier": "advertiser__do_not_market", 
+            "business": 117
+        }
+    }
+]

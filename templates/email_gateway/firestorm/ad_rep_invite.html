@@ -1,0 +1,90 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+Hi {{ ad_rep_lead.first_name }},
+
+<p><strong>Great news!</strong>
+{% if len_right_person_text > 25 %}
+We feel that you have the potential for success and could be a good fit with our team.
+{% endif %}
+{% if 4 < len_right_person_text and len_right_person_text < 26 %}
+We've reviewed your application.
+{% endif %}
+You can <a href="{{ base_url }}{% url show-offer-to-enroll payload %}">start today</a>
+as an Independent Advertising Representative.</p>
+
+<p>Just click the "Get Started" button to finalize your <strong>approved</strong>
+application.</p>
+
+<table cellpadding="0" cellspacing="0" width="190" border="0" align="center" style="margin-bottom: 5px;">
+    <tr>
+        <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 40px;">
+            <a href="{{ base_url }}{% url show-offer-to-enroll payload %}" style="color: #222222; display: block; height: 40px; font-size: 16px; font-weight: bold; line-height: 39px; padding: 0; text-align: center; text-decoration: none;">
+                <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;">Get Started &raquo;</span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<p>We're thrilled to offer you this opportunity.</p>
+
+<p><strong>Next</strong>, you'll be asked
+<ul>
+{% if ad_rep_lead.password != '!' %}
+    <li>to create a unique <strong>Password</strong></li>
+{% endif %}
+    <li>to choose a unique "name" for your <strong>Personalized Website</strong></li>
+    <li>to read and agree to three important documents:<br/>
+    <a href="{{ base_url }}{% url terms-of-agreement %}">Terms of Agreement</a><br/>
+    <a href="{{ base_url }}{% url policies-procedures %}">Policies and Procedures</a><br/>
+    <a href="{{ base_url }}{% url compensation-plan %}">Compensation Plan</a><br/>
+    </li>
+</ul>
+</p>
+
+<p><strong>And</strong> you <strong>won't</strong> be asked:
+<ul>
+    <li>for <strong>any</strong> payment.</li>
+    <li>for any additional <strong>personal information</strong>.</li>
+</ul>
+</p>
+
+<p>Your <strong>Social Security</strong> number or <strong>Tax ID</strong>
+number are only important <strong>after</strong> you've made a sale. (We need
+that information so that we can <strong>pay you</strong> the commission!) You'll
+be notified by email.</p>
+
+<p>Good luck! Please call or email me with any questions.</p>
+
+<table width='100%' cellpadding=0 cellspacing=0>
+{%  if ad_rep_lead.ad_rep %}
+<tr>
+<td style='vertical-align:top;width:65%;'>{% include "include/dsp/dsp_email_html_signature.html" %}</td>
+</tr>
+{% else %}
+<tr>
+<td style='vertical-align:top;width:65%;'>
+<span style='color:#00A9E7;font-weight:bold;'>Eric Straus, President and CEO</span><br/>
+<a style='color:#00A9E7;' href="mailto:Eric@10LocalCoupons.com">Eric@10LocalCoupons.com</a><br/>
+914-920-3059<br/><br/>
+
+<span style='color:#00A9E7;font-weight:bold;'>David Sage, Chief Marketing Officer</span><br/>
+<a style='color:#00A9E7;' href="mailto:David@10LocalCoupons.com">David@10LocalCoupons.com</a><br/>
+800-581-3380 ext 306<br/>
+</td>
+</tr>
+{% endif %}
+<tr>
+<td style='vertical-align:top;padding-top:15px'>
+<span style='color:#00A9E7;font-weight:bold;'>Alana Lenec, Customer Service</span><br/>
+<a style='color:#00A9E7;' href="mailto:Alana@10LocalCoupons.com">Alana@10LocalCoupons.com</a><br/>
+800-581-3380 ext 500<br/>
+
+</td>
+</tr>
+</table>
+<br/><br/>
+<p style='text-align:center;font-size:small;'>
+{% include 'email_gateway/generic_email_unsubscribe.html' %}
+</p>
+{%  endblock %}

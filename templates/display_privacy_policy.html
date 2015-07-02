@@ -1,0 +1,19 @@
+{% extends "frames/web/sidenav.html" %}
+{% block title %}{{ current_site.domain }} - Privacy Policy{% endblock %}
+{% block meta %}<meta name="robots" content="noindex, follow">{% endblock %}}
+
+{% block breadcrumbs_content %}
+    <span>Privacy Policy</span>
+{% endblock %}
+
+{% block links %}
+    {% include "include/navigation/nav1.html" %}
+{% endblock %}
+
+{% block base_content %}
+	{% block display_privacy_policy %}
+		{% block display_privacy_policy_content %} 
+			{% include "include/dsp/dsp_privacy_policy.html" %} 
+		{% endblock %}
+	{% endblock %}
+{% endblock %}

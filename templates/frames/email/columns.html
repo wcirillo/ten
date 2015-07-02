@@ -1,0 +1,22 @@
+{% extends "email_gateway/base_email.html" %}
+
+{% block frame_email %}
+
+    <table cellpadding="0" cellspacing="0" border="0" align="center" width="580">
+        <tr>
+            <td width="320" valign="top" align="left">
+
+                {% block email_content %}
+                {% endblock %}
+
+            </td>
+            <td width="260" valign="top" align="left">
+
+                {% block email_column_content %}
+                {% endblock %}
+
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

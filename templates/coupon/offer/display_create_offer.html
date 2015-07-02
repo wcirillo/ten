@@ -1,0 +1,52 @@
+{% extends "frames/web/leftCol.html" %}}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block body_onload %}onload="document.getElementById('id_headline').focus();"{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    <div class="left">
+
+        <h3>
+            <strong>Describe an offer to customers.</strong>
+        </h3>
+
+        <p>Need help with the offer? Contact Customer Care at (800) 581-3380.</p>
+
+    </div>
+
+    <div class="right padding">
+
+        <h3 class="alt_font2 highlight">
+            {% include "include/dsp/dsp_subheading_create_coupon.html" %}
+        </h3>
+
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="box2">
+
+        {% include "include/frm/frm_create_offer.html" %}
+
+        {% include "include/dsp/dsp_preview_coupon_locations.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    <p align="center">{% include "include/dsp/dsp_purchase_intent.html" %}</p>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}
+

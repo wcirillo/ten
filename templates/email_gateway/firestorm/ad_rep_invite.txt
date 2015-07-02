@@ -1,0 +1,51 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Hi {{ ad_rep_lead.first_name }},
+
+Great news!
+{% if len_right_person_text > 25 %}You could be a good fit with our team.
+{% endif %}{% if 4 < len_right_person_text and len_right_person_text < 26 %}We've reviewed your application.
+{% endif %}Start today as an Independent Advertising Representative.
+Follow this link to finalize your approved application.
+{{ base_url }}{% url show-offer-to-enroll payload %}
+
+We're thrilled to offer you this opportunity.
+
+Next, you'll be asked
+{% if ad_rep_lead.password != '!' %} - to create a unique Password
+
+{% endif %} - to choose a unique "name" for your Personalized Website
+
+ - to read and agree to three important documents.
+ Our Terms of Agreement, Policies and Procedures
+ ... and our Compensation Plan.
+Use this link to read these documents
+{{ base_url }}{% url terms-of-agreement %}
+
+You WON'T be asked:
+
+ - for any payment.
+
+ - for any additional personal information.
+
+A Social Security number or Tax ID number
+... are needed only AFTER the first sale.
+We'll need that to pay you the commission!
+You'll be notified by email.
+
+Good luck! Please call or email me with any questions.
+
+{%  if ad_rep_lead.ad_rep %}{% include "include/dsp/dsp_email_text_signature.txt" %}
+{% else %}Eric Straus, President and CEO
+914-920-3059
+Eric@10LocalCoupons.com
+
+David Sage, Chief Marketing Officer
+800-581-3380 ext 306
+David@10LocalCoupons.com
+{% endif %}
+Alana Lenec, Customer Service
+800-581-3380 ext 500
+Alana@10LocalCoupons.com
+{% endblock %}

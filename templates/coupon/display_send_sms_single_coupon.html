@@ -1,0 +1,20 @@
+{% extends "frames/web/modal.html" %}
+{% block meta %}<meta name="robots" content="noindex, follow">{% endblock %}
+{% block open_content %}
+
+    <h3>Send this coupon as a text message to my cell phone!</h3>
+
+    <p class="small">
+        Redeem your coupon by presenting this message on your cell phone at <strong>{{ business_name }}</strong>.
+        All restrictions displayed on {{ current_site.domain }} apply to text coupons.
+    </p>
+
+    <div class="left modalform">
+        {% include "include/frm/frm_subscriber_registration.html" %}
+    </div>
+
+    <div class="right">
+        {% include "include/dsp/dsp_sample_phone.html" %}
+    </div>
+
+{% endblock %}

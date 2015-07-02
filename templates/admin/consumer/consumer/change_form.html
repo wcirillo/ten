@@ -1,0 +1,20 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+{% if original %}
+<table width="100%"><tr>
+<td>
+{% if original.subscriber %}
+<h2><a href="{% url admin:subscriber_subscriber_change original.subscriber.id %}">Subscriber {{ original.subscriber }}</a></h2>
+<ul>{% for mobile_phone in original.subscriber.mobile_phones.all %}
+    <li><a href="{% url admin:subscriber_mobilephone_change mobile_phone.id %}">{{ mobile_phone }}</a>: {% if not mobile_phone.is_verified %}Not {% endif %}Verified</li>
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+{% endif %}
+{% regroup original.history.all by event_datetime as events %}
+{% include "admin/includes/dsp_history.html" %}
+</td>
+</tr></table>
+{% endif %}
+{% endblock %}

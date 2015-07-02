@@ -1,0 +1,11 @@
+
+<div class="thumbnail">
+    <a class="nodec modaltrigger" href="#" name="modal_rep_contact"><img src="{% if not ad_rep.ad_rep_photo or ad_rep.ad_rep_photo.name == '' %}{{ safe_static_url }}images/thumbnail10.gif{% else %}{{ ad_rep.ad_rep_photo.url }}{% endif %}" border="0" height="40" width="40"/></a>
+</div>
+
+
+<strong><a class="nodec modaltrigger" href="#" name="modal_rep_contact">{{ ad_rep.first_name }} {{ ad_rep.last_name }}</a></strong><br/>
+{% if ad_rep.rank  != 'CUSTOMER'%}
+Advertising Representative{% endif %}<br/>
+
+{% include 'include/dsp/dsp_ad_rep_data_detail.html' %}

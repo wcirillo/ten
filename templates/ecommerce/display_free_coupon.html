@@ -1,0 +1,42 @@
+{% extends "frames/web/leftCol.html" %}}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block body_onload %}onload="document.getElementById('id_cc_number').focus();"{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    {% if coupon %}
+        <h2>Almost done!</h2>
+    {% endif %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="boxBorder">
+
+        <div class="boxBorderTight">
+            {% include "include/dsp/dsp_order_summary.html" %}
+            <div class="clear"></div>
+        </div>
+
+        {% include "include/frm/frm_free_coupon.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% if coupon %}
+
+        {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    {% endif %}
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

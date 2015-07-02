@@ -1,0 +1,54 @@
+[
+    {
+        "pk": 1, 
+        "model": "market.twitteraccount", 
+        "fields": {
+            "access_key": null, 
+            "site": 1, 
+            "consumer_secret": null, 
+            "twitter_name": null, 
+            "access_secret": null, 
+            "password": null, 
+            "consumer_key": null
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "market.twitteraccount", 
+        "fields": {
+            "access_key": "267212036-HotnmrE5deyfyn7BbjSWEGjFodXQhHUZNZCZnsyy", 
+            "site": 2, 
+            "consumer_secret": "PtX0TzYfvPVsK0Z0p9i6HCNfQQRRIKLjBLSQNm284Jc", 
+            "twitter_name": "test10coupons", 
+            "access_secret": "ITzUJdW1aj7rHThSRLi8sEtH47EWGxUns02JY1RutE", 
+            "password": "Onlinecouponsareawesome1!", 
+            "consumer_key": "7boDrE0mZ5HSayoiz5TgVg"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "market.twitteraccount", 
+        "fields": {
+            "access_key": "", 
+            "site": 3, 
+            "consumer_secret": "", 
+            "twitter_name": "10TrianglCoupns", 
+            "access_secret": "", 
+            "password": "Onlinecouponsareawesome1!", 
+            "consumer_key": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "market.twitteraccount", 
+        "fields": {
+            "access_key": "339866257-fpOd4t7bK9Kk41uyhBAwkoqlwoDlEIOK6Z4bNenx", 
+            "site": 4, 
+            "consumer_secret": "uIJjjkERomkqQhyIsDm5nia2QW0SchiNBJ2129RVo", 
+            "twitter_name": "JenkinsStable", 
+            "access_secret": "CtgRofl7ATzKxKxIaQNFaQjQ5s3rzlqAxvvPeDn4hI", 
+            "password": "Gargoyle43#d", 
+            "consumer_key": "dNdMYcTEHPz7dm25igfMIw"
+        }
+    }
+]

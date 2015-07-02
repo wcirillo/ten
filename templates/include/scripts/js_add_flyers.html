@@ -1,0 +1,28 @@
+
+function submitAddFlyers(){
+    $("form[name='frm_add_flyers']").submit();
+}
+
+$("#addFlyer0").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_flyers_choices_0']").attr("checked", "checked");
+    submitAddFlyers();
+});
+
+$("#addFlyer1").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_flyers_choices_1']").attr("checked", "checked");
+    submitAddFlyers();
+});
+
+$("#addFlyer2").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_flyers_choices_2']").attr("checked", "checked");
+    submitAddFlyers();
+});
+
+$("#addFlyer3").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_flyers_choices_3']").attr("checked", "checked");
+    submitAddFlyers();
+});

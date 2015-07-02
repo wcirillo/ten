@@ -1,0 +1,40 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Thanks for signing up for the weekly Email Coupon Flyer.
+Tell everyone about {{ site.domain }}
+
+We're actually willing to pay you for it.
+You read that correctly!
+We'll pay you.
+
+Here's what you need to do:
+
+1) Get a personalized website and private Virtual Office.
+Use this link:
+{{ base_url }}{% url enroll-referring-consumer payload %}
+
+2) Have friends & family register for Email Coupon Flyers.
+Be sure they use your personalized website.
+
+Tell them to verify the email where they get Flyers.
+
+3) Keep track of your referrals in the Virtual Office.
+
+Referral Bonuses -  - 
+A portion of each sale is used for a Referral Bonus Pool. 
+Your share grows when Flyers are sent to verified emails.
+Read our compensation plan at this link: 
+{{ base_url }}{% url compensation-plan %}
+Bonuses are paid each month.
+
+Independent Advertising Representatives
+- Also refer customers.
+- Also share in Referral Bonus Pools.
+Follow this link to learn more:
+{{ base_url }}{% url become-an-ad-rep %}
+
+Good Luck!
+800-581-3380
+
+{% endblock %}

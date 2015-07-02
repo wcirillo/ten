@@ -1,0 +1,78 @@
+{% load format_phone_number %}
+
+<div id="modal_rep_contact" class="hidden">
+    <table cellpadding="5" cellspacing="0" border="0">
+        <tr>
+            <td valign="top">
+
+                <img src="{% if not ad_rep.ad_rep_photo or ad_rep.ad_rep_photo.name == '' %}{{ safe_static_url }}images/10_200x200.gif{% else %}{{ ad_rep.ad_rep_photo.url }}{% endif %}" height="200" width="200" align="left">
+
+            </td>
+            <td>&nbsp;</td>
+            <td valign="top">
+
+                <h3>{{ ad_rep.first_name }} {{ ad_rep.last_name }}</h3>
+                {% if ad_rep.rank != 'CUSTOMER' %}
+                <p><em>Advertising Representative</em></p>
+                {% endif %}
+
+                {% if ad_rep.company %}Company: {{ ad_rep.company|safe }}<br/>{% endif %}
+                {% if ad_rep.email %}Email: {{ ad_rep.email }}<br/>{% endif %}
+                {% if ad_rep.rank != 'CUSTOMER' %}
+                {% if ad_rep.home_phone_number %}Home Phone: {{ ad_rep.home_phone_number|format_phone_number }}<br/>{% endif %}
+                {% if ad_rep.primary_phone_number %}Work Phone: {{ ad_rep.primary_phone_number|format_phone_number }}<br/>{% endif %}
+                {% else %}<br/><br/>
+                {% endif %}
+                <br/>
+
+                {% if ad_rep.ad_rep_web_greeting.web_greeting %}
+
+                    <style>
+                        pre {
+                             font-family: Arial, Helvetica, sans-serif;
+                             white-space: pre-wrap;       /* css-3 */
+                             white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                             white-space: -pre-wrap;      /* Opera 4-6 */
+                             white-space: -o-pre-wrap;    /* Opera 7 */
+                             word-wrap: break-word;       /* Internet Explorer 5.5+ */
+                        }
+                    </style>
+
+                    <pre>{{ ad_rep.ad_rep_web_greeting.web_greeting|striptags|safe }}</pre>
+
+                {% else %}
+
+                    <p class="smallmargin"><strong>Thanks for stopping by!</strong></p>
+
+                    {% if ad_rep.rank != 'CUSTOMER' %}
+
+                        <p class="smallmargin">Are you a local business... looking to increase profits?</p>
+
+                    {% endif %}
+
+                    <p class="smallmargin">Are you a local consumer... looking to save money by using our valuable free, local coupons?</p>
+
+                    {% if ad_rep.rank != 'CUSTOMER' %}
+
+                        <p class="smallmargin">Are you a motivated individual... interested in becoming an Advertising  Representative to help local businesses with their advertising needs?</p>
+    
+                        <p class="smallmargin">If you said "yes" to any of these 3 questions... <em>you're in the right place!</em></p>
+    
+                        <p class="smallmargin">I look forward to working with you!</p>
+
+                    {% else %}
+
+                        <p class="smallmargin"><em>If so... you're in the right place!</em></p>
+
+                        <p class="smallmargin">Sign up today... right here! It's FREE... and you'll receive an email each week... with 10 local money saving coupons!</p>
+    
+                        <p class="smallmargin">Thank you.</p>
+
+                    {% endif %}
+
+                {% endif %}
+
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,75 @@
+<form name="frm_consumer_registration" class="largeForm" method="post" action="">{% csrf_token %}
+    <ol{% if is_home %} class="inline"{% endif %}>
+
+        {% if email_coupon %}
+            <div id="email_errors" class="errorlist">{{ consumer_reg_form.email.errors }}</div>
+        {% endif %}
+
+        <li{% if not is_home %} class="fullInput"{% endif %}>
+            {% if not email_coupon %}
+                <div id="email_errors" class="errorlist">{{ consumer_reg_form.email.errors }}</div>
+            {% endif %}
+            <label for="id_email" class="infield">your email address</label>
+            {{ consumer_reg_form.email }}
+        </li>
+
+        {% if email_coupon %}
+            <div id="consumer_zip_postal_errors" class="errorlist">{{ consumer_reg_form.consumer_zip_postal.errors }}</div>
+        {% endif %}
+
+        <li>
+            {% if not email_coupon %}
+                <div id="consumer_zip_postal_errors" class="errorlist">{{ consumer_reg_form.consumer_zip_postal.errors }}</div>
+            {% endif %}
+            <label for="id_consumer_zip_postal" class="infield">zip code</label>
+            {{ consumer_reg_form.consumer_zip_postal }}
+        </li>
+
+        <li>
+            {% if email_coupon %}
+                <input class="button largeBtn" id="submit_consumer_reg" type="submit" tabindex="5" value="Send My Coupon"/>
+            {% else %}
+                {% if is_home %}
+                    <input class="button largeBtn" id="submit_consumer_reg" name="submit_consumer_reg" type="submit" tabindex="5" value="GO! &raquo;"/>
+                {% else %}
+                    <input class="button fullBtn fullBtnTight" id="submit_consumer_reg" name="submit_consumer_reg" type="submit" tabindex="5" value="Get free coupons{% if contest_is_running %} &amp; enter to win{% endif %}! &raquo;"/>
+                {% endif %}
+            {% endif %}
+        </li>
+
+        <div class="clear"></div>
+    </ol>
+</form>
+
+{% if email_coupon %}
+
+    <p class="tiny nomargin">
+        Receive this coupon and 10 {{ current_site.name }} coupons each week.
+        Click "Send My Coupon" to accept the <a class="terms nodec" href="{% url terms-of-use %}">Terms of Use</a>.
+    </p>
+
+{% else %}
+
+    <div class="clear"></div>
+
+    <div id="id_terms_signup">
+        <p class="{% if is_home %}small{% else %}tiny{% endif %}">
+            Only great deals sent directly to you, period.
+            Accept the <a class="nodec ajaxtrigger" href="{% url loader 'load_terms_of_use' %}">Terms of Use</a> by signing up above.
+        </p>
+        {% if contest_is_running and not is_home %}
+            <p class="smallmargin tiny">
+                *Eligibility requires current and complete signup.
+                No purchase necessary.
+                <a class="nodec" href="{% url contest-rules %}">Rules</a>
+            </p>
+        {% endif %}
+    </div>
+
+    <div id="id_terms_signin" class="hidden">
+        <p>
+            Accept the <a class="nodec ajaxtrigger" href="{% url loader 'load_terms_of_use' %}">Terms of Use</a> by signing in above.
+        </p>
+    </div>
+
+{% endif %}

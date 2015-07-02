@@ -1,0 +1,29 @@
+<form name="frm_send_to_friend" action="" method="post">{% csrf_token %}
+
+    <ol>
+
+        <li>
+            <label for="id_send_to" class="block">To (email):</label>
+            <input id="id_send_to" class="block" type="text" size="30"/>
+            <em class="tiny"><strong>*Required.</strong></em>
+        </li>
+
+
+        <li>
+            <label for="id_send_from" class="block">From:</label>
+            <input id="id_send_from" class="block" type="text" size="30"/>
+            <em class="tiny"><strong>*Required.</strong></em>
+        </li>
+
+
+        <li>
+            <label for="id_send_message" class="block">Additional Message (optional):</label>
+            <textarea id="id_send_message" class="block" rows="5"></textarea>
+        </li>
+
+        <li>
+            <input class="button" type="submit" tabindex="5" value="Next Step &raquo;" />
+        </li>
+    </ol>
+
+</form>

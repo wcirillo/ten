@@ -1,0 +1,298 @@
+/*
+	Name: 10LocalCoupons.com - Print stylesheet
+	Date: November 2011
+	Author: Shawn M. Adams for Straus Digital Media, LLC.
+*/
+
+.printhidden {display: block;}
+
+html {height: 100%;}
+
+body, .container_16, .container {
+	background-color: #fff;
+	border: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+body {min-width: 100%;}
+.container {margin: 1.000em;}
+
+.header_top {
+	padding: 1px 2px;
+	text-align: left;
+}
+
+	/* print coupon */
+
+	.coupon {
+		background-color: #fff;
+		background-image: none;
+	}
+
+	.coupon_business {padding: 0 225px;}
+
+	.coupon_line {margin: 15px 200px 10px 200px;}
+
+	.coupon_bottom {
+		min-height: 180px;
+		position: relative;
+	}
+
+	.fine_print {margin: 2px 150px 0 0;}
+
+	.weblogo {
+		background: url(../images/layout/print_web_logo.gif) no-repeat;
+		border: 1px #fff solid;
+		color: #3c9dbe;
+		display: block;
+		font-size: 18px;
+		height: 85px;
+		position: absolute;
+		right: 15px;
+		text-decoration: none;
+		top: 5px;
+		width: 205px;
+	}
+	.weblogo p {margin: 12px 0 0 60px;}
+
+	.printlogocontainer {display: none;}
+
+	.print .iconPin {background-position: -40px -620px;}
+	.print .iconPin div {display: none;}
+
+	.qr {
+		bottom: 0;
+		font-size: 30px;
+		position: absolute;
+		right: 10px;
+		text-align: center;
+	}
+
+	.print_locationList {width: 300px;}
+
+	.print_map {width: 400px;}
+
+	/* window display */
+
+    .window_header {
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    .window_business_name {
+        font-size: 60px;
+        font-weight: bold;
+        letter-spacing: -2px;
+    }
+
+    .window_logo {
+        display: block;
+        height: 189px;
+        margin: 30px auto 40px auto;
+        position: relative;
+        text-align: center;
+        width: 650px;
+    }
+
+    .window_logo_image {
+        border: 0;
+        height: 189px; /* 204px */
+        width: 650px; /* 700px */
+    }
+
+    .window_logo_market {
+        color: #3c9dbe;
+        font-size: 62px;
+        letter-spacing: -3px;
+        left: 200px;
+        position: absolute;
+        top: 27px;
+    }
+
+    .window_sitename {
+        font-size: 26px;
+        font-weight: normal;
+        height: 60px;
+    }
+
+    .window_contest_header {
+        color: #ce5eaa;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        margin: 0 0 5px 0;
+    }
+    .window_contest_details {
+        color: #ce5eaa;
+        font-size: 17px;
+        font-style: italic;
+        margin: 0;
+    }
+
+	/* our competition */
+
+	.competition_local_logo {display: none;}
+
+	.competition_print_header {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -1px;
+	}
+
+	/* benefits for business */
+
+	.benefits_print_header {
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: -1px;
+		margin: 0 0 2px 0;
+	}
+
+	.benefits_print_subheader {
+        font-size: 19px;
+		margin: 0 0 2px 0;
+	}
+
+	.benefits_print_table {
+		font-size: 15px;
+		line-height: 16px;
+	}
+
+	/* bulletin board */
+
+	.bulletin_print_header {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -1px;
+	}
+
+	.bulletin_tearoffs {
+		height: 350px;
+		bottom: 0;
+		position: absolute;
+	}
+	.bulletin_tearoffs td {
+		border-left: 1px #999 dashed;
+	}
+	.bulletin_tearoffs td.first {border-left: 0;}
+
+	.rotate {
+		display: block;
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+		width: 40px;
+		-webkit-transform: rotate(90deg); 
+		-moz-transform: rotate(90deg);
+	}
+
+	/* simple steps */
+
+	.steps_print_header {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: -1px;
+		margin-bottom: 30px;
+	}
+
+	.steps_print_li {
+		font-size: 27px;
+		line-height: 1.000em;
+        padding-bottom: 40px;
+	}
+
+	/* ad rep footer */
+
+	.ad_rep_name {
+		font-size: 30px;
+        font-weight: bold;
+        letter-spacing: -1px;
+	}
+	.ad_rep_title {font-size: 23px;}
+	.ad_rep_text {font-size: 17px;}
+	.ad_rep_text_small {font-size: 15px;}
+
+/*******************************/
+/******** Actual print *********/
+/*******************************/
+
+@media print {
+
+    body, .container_16, .container {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+
+	.header_top, .weblogo {display: none;}
+
+	.highlight {color: #ff24b9;}
+
+	/* print coupon */
+
+	.coupon_business {padding: 0 160px;}
+
+	.coupon_line {
+		background-color: none;
+		border-top: 1px #ccc solid;
+		margin: 15px 50px 10px 50px;
+	}
+
+	.iconList div {
+		border: 1px #000 solid;
+		height: 25px;
+		width: 20px;
+	}
+
+	.print .iconPin div {display: block;}
+
+	.printlogocontainer, .printlogo, .printlogo img {
+		display: block;
+		width: 140px;
+	}
+	.printlogocontainer {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+	}
+	.printlogo {
+		height: auto;
+		margin: 0;
+		position: relative;
+	}
+	.printmarket {
+		color: #7bdcff;
+		font-size: 12px;
+		left: 44px;
+		position: absolute;
+		top: 0;
+	}
+
+	.qr {
+		bottom: 0;
+		right: 0;
+	}
+
+	.print_locationList {width: 300px;}
+
+	.print_map {width: 350px;}
+	.map {height: 200px;}
+
+	/* window display */
+
+    .window_contest_header, .window_contest_details {color: #ff24b9;}
+
+    .window_logo_market {color: #7bdcff;}
+
+	/* benefits for business */
+
+	.bulletin_tearoffs {
+		bottom: 0;
+		height: 400px;
+		position: fixed;
+	}
+
+}

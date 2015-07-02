@@ -1,0 +1,48 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url ad-rep-account %}">Virtual Office</a> &nbsp;&rsaquo;&nbsp;
+    <span>My Sales Team</span>
+{% endblock %}
+
+{% block base_content %}
+
+    <h2 align="center">Encourage your recruits to maintain 10 referred customers.</h2>
+
+    {% if commissions %}
+        <p align="center"><em>Click a name to display contact information.</em></p>
+    {% endif %}
+
+    <table align="center" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td style='background-color:#000;color:#FFF;font-weight:bold;width:50%;text-align:left;padding-left:5px;'>Recruited Ad Rep</td>
+            <!--<td style='background-color:#000;color:#FFF;font-weight:bold;width:40%;text-align:center;'>Sales ToDate - FromDate</td>
+            <td style='background-color:#000;color:#FFF;font-weight:bold;width:19%;text-align:center;'>Recruit's Commission</td>-->
+            <td style='background-color:#000;color:#FFF;font-weight:bold;width:50%;'>Referred Customers</td>
+        </tr>
+        
+        {% if not commissions %}
+            <tr>
+                <td align="center" colspan="4" style="padding: 10px;"><em>No recruits to report</em></td>
+            </tr>
+        {% else %}
+            {% for child_rep in commissions %}
+                <tr>
+                    <td style='text-align:left;'><a class="nodec modaltrigger" name="modal_rep_contact" href ="#" onclick="modal_recruit_summary({{ child_rep.id }})">{{ child_rep.first_name }} {{ child_rep.last_name }}</a></td>
+                    <!--<td style='text-align:left;'><div class="grid_4 rep">order info ...</div></td>
+                    <td>$100.00</td>-->
+                    <td><strong>{{ child_rep.consumers.count }}</strong></td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+
+    <br/><br/>
+
+    <div id="modal_rep_contact" class="hidden" style="width:700px; height:450px;"></div>
+    
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

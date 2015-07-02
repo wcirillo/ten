@@ -1,0 +1,55 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+<p>Hi {{ ad_rep.first_name }},</p>
+
+<p><strong>Congratulations</strong> and Welcome Aboard!</p>
+
+<p>We are thrilled to be working with you!</p>
+
+{% if ad_rep_referred %}
+    
+    <p>Activate your <a href='{{ base_url }}{% url login-ad-rep-from-email payload=payload %}'>Virtual Office</a> now.<br/>
+    We'll confirm this email address: {{ ad_rep.email }}<br/>
+    Forgot your password? Customer Care can reset it for you.
+    </p>
+    <table cellpadding="0" cellspacing="0" width="190" border="0" align="center" style="margin-bottom: 5px;">
+        <tr>
+            <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 40px;">
+                <a href="{{ base_url }}{% url login-ad-rep-from-email payload=payload %}" style="color: #222222; display: block; height: 40px; font-size: 16px; font-weight: bold; line-height: 39px; padding: 0; text-align: center; text-decoration: none;">
+                    <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;"
+                        >Go to your Virtual Office &raquo;</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+{% else %}
+
+    <p>Sign in to your <a href="{{ base_url }}{% url sign-in %}">Virtual Office</a> now.<br/>
+    Use this email address: {{ ad_rep.email }}<br/>
+    Forgot your password? Customer Care can reset it for you.</p>
+    
+    <table cellpadding="0" cellspacing="0" width="190" border="0" align="center" style="margin-bottom: 5px;">
+        <tr>
+            <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 40px;">
+                <a href="{{ base_url }}{% url login-ad-rep-from-email payload=payload %}" style="color: #222222; display: block; height: 40px; font-size: 16px; font-weight: bold; line-height: 39px; padding: 0; text-align: center; text-decoration: none;">
+                    <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;"
+                        >Go to your Virtual Office &raquo;</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+{% endif %}
+
+
+<p>Send prospects, friends and family to your <strong>personalized website</strong>:<br/>
+{{ ad_rep.site.domain }}/{{ ad_rep.url }}</p>
+
+{% include 'include/dsp/dsp_about_quick_start_resources.html' %}
+
+{% include 'email_gateway/three_person_signature.html' %}
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% if is_logged_in %}
+
+    {% if is_email_subscription %}
+
+        <h2>Unsubscribing from {{ current_site.domain }} Email</h2>
+
+	    <p>
+	        You can cancel email messages right away.
+	        No survey. No debate.
+	        Change your mind?
+	        Come back tomorrow, next week or next year.
+	        Joining again is easy.
+	    </p>
+
+        <p>
+            We send messages to this email address: <strong>{{ is_logged_in }}</strong>
+        </p>
+
+	    <form name="frm_opt_in_opt_out" method="post">{% csrf_token %}
+	        <ol>
+	            <li>
+	                {{ form.email.errors }}
+	                {{ form.email }}
+	                <input class="button smallBtn" type="submit" value="Unsubscribe">
+	            </li>
+	        </ol>
+	    </form>
+
+        {% if user_type == 'advertiser' %}
+
+            <p>
+                <em>(Some email notices may still be sent in response to Advertiser Account activity)</em>
+            </p>
+
+        {% endif %}
+
+        {% if contest_is_running %}
+
+            <div class="hr"></div>
+
+		    <p>
+		        Optional: <strong>Stay signed up for email</strong> to qualify for the next <strong>$10,000 Drawing!*</strong>
+		    </p>
+
+		    <p>
+		        *Eligibility requires current complete signup for both email and text messages.
+		        <a href="{% url contest-rules %}">Rules</a>
+		    </p>
+
+        {% endif %}
+
+    {% else %}
+
+        <h2>Unsubscribed from {{ current_site.domain }} Email</h2>
+
+        <p>
+            You've chosen not to receive messages from {{ current_site.domain }} sent to this email address: <strong>{{ is_logged_in }}</strong>
+        </p>
+
+	    {% if user_type == 'advertiser' %}
+
+	        <p>
+	            <em>(Some email notices may still be sent in response to Advertiser Account activity)</em>
+	        </p>
+
+	    {% endif %}
+
+        {% if contest_is_running %}
+
+            <div class="hr"></div>
+
+            <h4>Sign up for email to qualify for the next <strong>$10,000 Drawing!*</strong></h4>
+
+            <p><a class="button large" href="{% url home %}">Get Free Coupons! &raquo;</a></p>
+
+		    <p>
+		        *Eligibility requires current complete signup for both email and text messages.
+		        <a href="{% url contest-rules %}">Rules</a>
+		    </p>
+
+        {% endif %}
+
+    {% endif %}
+
+{% else %}
+
+    <h2>Unsubscribing from {{ current_site.domain }} Email</h2>
+
+    <p>
+        The easiest method is the <strong>unsubscribe link</strong> at the bottom of any email you received from us.
+        (Click it, or copy &amp; paste the address into your web browser.)
+    </p>
+
+{% endif %}

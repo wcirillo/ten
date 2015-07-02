@@ -1,0 +1,13 @@
+{% extends "frames/web/iframeBody.html" %}
+
+{% block open_content %}
+{% if ad_rep.first_name %}<span style='color:#09524c;font-weight:bold;'>{{ ad_rep.first_name }},</span></br>{% endif %}
+<p style='color:#09524c;font-weight:bold;'> 
+    A successful team means profits for you! Add more talent to your pool of prospects. Post this Help Wanted Ad to help build your team!
+</p></br>
+<h3 style='width:100%; text-align:center; border-bottom: 4px solid #00A9E7; line-height:0.0em; margin:10px 0 40px;'>
+    <span style='background:#fff; padding:0 10px;'>Copy and Paste the Ad</span>
+</h3>
+
+{% include 'include/dsp/dsp_firestorm_recruitment_ad.html' %}
+{% endblock %}

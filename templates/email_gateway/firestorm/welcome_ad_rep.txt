@@ -1,0 +1,26 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Hi {{ ad_rep.first_name }},
+
+Congratulations and Welcome Aboard!
+We are thrilled to be working with you!
+
+{% if ad_rep_referred %}Activate your Virtual Office using this link:
+{{ base_url }}{% url login-ad-rep-from-email payload=payload %}
+We'll confirm this email address:
+{{ ad_rep.email }}
+{% else %}Sign in to your Virtual Office using this link:
+{{ base_url }}{% url login-ad-rep-from-email payload=payload %}
+Use this email address: {{ ad_rep.email }}
+{% endif %}
+Forgot your password? Customer Care can reset it for you.
+
+Send prospects, friends & family to your custom website:
+{{ ad_rep.site.domain }}/{{ ad_rep.url }}
+
+{% include 'include/dsp/dsp_about_quick_start_resources.txt' %}
+
+{% include 'email_gateway/three_person_signature.txt' %}
+
+{% endblock %}

@@ -1,0 +1,112 @@
+{% load range %}
+{% load dynamic_variable %}
+
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<form name="frm_create_location" action="" method="post">{% csrf_token %}
+
+    <ol>
+        {{ web_url_form.web_url.errors }}
+        <li class="fullInput">
+            <label for="id_web_url" class="block">Website URL (optional)</label>
+            {{ web_url_form.web_url }}
+            <p class="small smallmargin light">example.com</p>
+        </li>
+    </ol>
+
+<div id="accordion">
+    {% for count in 10|get_range %}       
+        <div id="header_{{ count|add:"1" }}" class="loc_{{ count|add:"1" }} accordionHeader hiddenLocation"><span id="loc_{{ count|add:"1" }}_txt"><em class="highlight">(Empty)</em></span > <a name="{{ count|add:"1" }}" class="x nodec right" href="#">X</a></div>
+        <div class="loc_{{ count|add:"1" }} accordionContent">
+            <ol>
+                {% comment %}
+                {{ 'create_location_form.location_address1_'{{ count }}'.errors' }}
+                {% endcomment %}
+                <li class="fullInput">
+                    <label for="id_location_address1_{{ count|add:"1" }}" class="block">Street Address Line 1 (optional) &nbsp;<span class="small open_address2_{{ count|add:"1" }} open_address2 nodec">Add line 2 &raquo;</span></label>
+                    {% get_dynamic_value create_location_form location_address1_ count %}
+                </li>
+    
+                {#{{ create_location_form.location_address2_2.errors }}#}
+                <li class="fullInput hide li_address2_{{ count|add:"1" }}">
+                    <label id="id_label_location_address2_{{ count|add:"1" }}" for="id_location_address2_{{ count|add:"1" }}" class="block hidden">Street Address Line 2 (optional)</label>
+                    {% get_dynamic_value create_location_form location_address2_ count %}
+                    {{ create_location_form.location_address2_ }}
+                </li>
+    
+                {#{{ create_location_form.location_city_{{ count }}.errors }}#}
+                <li class="fullInput">
+                    <label for="id_location_city_{{ count|add:"1" }}" class="block">City (optional)</label>
+                    {% get_dynamic_value create_location_form location_city_ count %}
+                </li>
+    
+                {#{{ create_location_form.location_state_province_{{ count }}.errors }}#}
+                <li>
+                    {% get_dynamic_value create_location_form location_state_province_ count %}
+                    (optional)
+                    <div class="clear"></div>
+                </li>
+    
+                {#{{ create_location_form.location_zip_postal_{{ count }}.errors }}#}
+                <li>
+                    <label for="id_location_zip_postal_{{ count|add:"1" }}" class="block">Zip Code (optional)</label>
+                    {% get_dynamic_value create_location_form location_zip_postal_ count %}
+                </li>
+                <li>
+                    <label class="block">Phone number for this location (optional)</label>
+                    {% get_dynamic_value create_location_form location_area_code_ count %}- {% get_dynamic_value create_location_form location_exchange_ count %}- {% get_dynamic_value create_location_form location_number_ count %}
+                </li>
+                {# {{ create_location_form.location_description_.errors }}#}   
+                <li class="fullInput">
+                    <label for="id_location_description_{{ count|add:"1" }}" class="block">Location Description (optional)</label>
+                    {% get_dynamic_value create_location_form location_description_ count %}
+                    <div class="small light">Ex: Corner of 14th Street &amp; Broadway. <a class="nodec modaltrigger" name="modalDescription" href="#">More examples &raquo;</a></div>
+                </li>
+    
+            </ol>
+        </div>
+    {% endfor %}
+</div>
+
+<p align="center" id="add_location_container" class="small"><a class="nodec add_location" href="#">Add another location</a> or click below to continue.</p>
+
+<ol>
+    <li>
+        <input class="button fullBtn" type="submit" tabindex="11" name='add_location' value="Next: Offer Restrictions &raquo;" />
+        <p align="center" class="tiny light nomargin"><em>Changes can be made before completing your purchase.</em></p>
+    </li>
+</ol>
+
+</form>
+
+<div id="modalDescription" class="hidden">
+
+    <h3>Location Description</h3>
+
+    <p><strong>Definitely not required! (Useful in certain situations.)</strong></p>
+
+    <p class="small">Help customers to find you and redeem this coupon. A <strong>Location Description</strong> can be used along with a traditional street address, or instead of one.</p>
+
+    <p class="small">Cross streets can be helpful when added to the street address:<br>
+    
+    <em>Between 33rd and 34th Streets</em></p>
+
+    <p class="small">A familiar location can have an unfamiliar street address. Just say where you are:<br>
+    
+    <span class="strike">3500 Highway 6</span> &nbsp; <em>Upper Level Fresh Meadows Galleria</em></p>
+
+    <p class="small">You may choose to describe several places with a simple phrase:<br>
+    
+    <em>"Find our kiosk at all Metro Train Stops."</em></p>
+
+    <p class="small">If you have included a Street Address, a Location Description will display under it.</p>
+
+    <p><img src="{{ safe_static_url }}images/example_location_description.gif" width="500" height="125" border="0"/></p>
+
+    <p><br/></p>
+
+</div>

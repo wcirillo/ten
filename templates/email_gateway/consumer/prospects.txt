@@ -1,0 +1,36 @@
+{% block email_content %}
+Hi,
+
+My name is Eric Straus,
+President of {{ site.domain }}.
+
+Thanks for signing up.
+You'll now receive 10 money-saving coupons each week!
+
+We're glad you joined!
+Please tell all your friends so they can save too.
+
+{% if not ad_rep_url %}Know a business that could benefit from publishing coupons?
+Please forward this email. Have them contact me right away.
+
+We're also looking for local Advertising Representatives.
+If you or someone you know is interested follow this link:
+{{ base_url }}{% url become-an-ad-rep %}
+
+{% endif %}
+Welcome aboard!
+
+Eric Straus
+President
+{{ site.domain }}
+Phone: 914-920-3059
+Email: Eric@10Coupons.com
+{% include 'email_gateway/generic_corporate_address.txt' %}
+{% if ad_rep_url %}
+P.S. Know any local business owners?
+They may benefit from publishing and distributing coupons.
+Interested in extra income?
+Follow/share this link:
+{{ base_url }}{% url become-an-ad-rep %}{{ ad_rep_url }}/
+{% endif %}
+{% endblock %}

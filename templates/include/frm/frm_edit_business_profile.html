@@ -1,0 +1,120 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<form name="frm_edit_business_profile" action="" method="post">{% csrf_token %}
+
+    <ol>
+
+        <li>
+            <label for="id_categories" class="block">Category</label>
+            {{ edit_business_profile_form.category }}
+            <em class="tiny" style="display:block;">Help customers find you fast. Choose a category for {{ business.business_name }}.</em>
+        </li>
+
+        {{ edit_business_profile_form.slogan.errors }}
+        <li id="sloganhiddenform">
+            <label for="id_slogan" class="block">Slogan</label>
+            {{ edit_business_profile_form.slogan }}
+            <em class="tiny">Optional</em>
+        </li>
+        {{ web_url_form.web_url.errors }}
+        <li class="fullInput">
+            <label for="id_web_url" class="block">Website URL</label>
+            {{ web_url_form.web_url }}
+            <em class="tiny">Optional</em>
+            <p class="small smallmargin light">example.com</p>
+        </li>
+    </ol>
+            
+    <div class="hr"></div>
+
+    <h5><img src="{{ safe_static_url }}images/display_page_number_1.gif" border="0" height="25" width="25"/><strong class="top" style="line-height: 27px;"> Business Description</strong></h5>
+
+    <p class="small">
+        Supply a description of {{ business.business_name }}.
+    </p>
+
+    <ol>
+
+        {{ edit_business_profile_form.business_description.errors }}
+        <li class="tiny">
+            {{ edit_business_profile_form.business_description }}
+            <p class="smallmargin"><em>Optional</em></p>
+        </li>
+
+    </ol>
+
+    <div class="hr"></div>
+
+    <div id="id_form_show_map">
+
+        <h5><img src="{{ safe_static_url }}images/display_page_number_2.gif" border="0" height="25" width="25"/><strong class="top" style="line-height: 27px;"> Google Map Settings</strong></h5>
+
+        <p class="small">
+            A Google Map is provided for a location that includes a zip code, or a City/State combination.
+            A street address included in the location improves the map.
+        </p>
+
+        <ol>
+
+            <li>
+                {{ edit_business_profile_form.show_map }}
+                <label for="id_show_map" class="small">&nbsp;Display maps for my location(s).</label>
+            </li>
+
+            {% if location_coords %}
+                <li id="id_maps_form_display">
+                {% include "include/dsp/dsp_map_location.html" %}
+                </li>
+            {% endif %}
+
+        </ol>
+
+    </div>
+
+    <div class="hr"></div>
+
+    <h5><img src="{{ safe_static_url }}images/display_page_number_3.gif" border="0" height="25" width="25"/><strong class="top" style="line-height: 27px;"> Website URL/Image Settings</strong></h5>
+
+    <ol>
+
+        {% if coupon.offer.business.web_snap_path %}        
+        <li>
+            {{ edit_business_profile_form.show_web_snap }}
+            <label for="id_show_web_snap" class="small">&nbsp;Display this linked image.</label>
+        </li>
+        <li>
+            <div class="grid_4 alpha">
+                <div class="boxBorderTight"><img class="websnap" src="{{ safe_media_url }}images/web-snap/{{ coupon.offer.business.web_snap_path }}" alt="{{ coupon.offer.business.web_url }}"/></div>
+                <div class="clear"></div>
+            </div>
+        </li>
+        {% endif %}
+
+    </ol>
+
+    <div class="hr"></div>
+
+    <ol>
+        <li>
+            <input class="button fullBtn" type="submit" tabindex="6" value="Save Settings" />
+        </li>
+    </ol>
+
+</form>
+
+<div id="modalGoogleMap" class="hidden">
+
+    <h2>Always show a map?</h2>
+
+    <p>
+        Google Maps are the perfect way to show precise locations.
+        For some businesses however, a map may not be appropriate.
+    </p>
+
+    <p>Ask us about including a map. <strong>800-581-3380</strong></p>
+
+</div>

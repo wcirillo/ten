@@ -1,0 +1,91 @@
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+    <tr>
+        <td>
+            <table cellpadding="4" cellspacing="0" align="center" style="background-color: #fdfdfa; border: 5px #333333 solid; margin-bottom: 0;">
+                <tr>
+                    <td>
+                        <table cellpadding="15" cellspacing="0" style="border: 1px #666666 dashed; width: 612px;">
+                            <tr>
+                                <td align="left">
+
+                                    <p align="center" style="color: #222; font-family: Arial, Helvetica, sans-serif; font-size: 27px; line-height: 27px; margin: 0 0 5px 0;">
+                                        {% if coupon %}
+                                            {{ coupon.offer.business.business_name }}
+                                        {% else %}
+                                            {{ business.business_name }}
+                                        {% endif %}
+                                    </p>
+
+                                    <p align="center" style="margin: 0 0 5px 0;">
+                                        <img src="{{media_url}}images/email/buttons/coupon_line.gif" border="0" height="1" width="545"/>
+                                    </p>
+
+                                    <p align="center" style="color: #222; font-family: Arial, Helvetica, sans-serif; font-size: 55px; font-weight: bold; letter-spacing: -2px; line-height: 55px; margin: 0 0 5px 0;">
+                                    {% if coupon.offer.headline %}
+                                        {{ coupon.offer.headline }}
+                                    {% else %}
+                                        30% OFF
+                                    {% endif %}
+                                    </p>
+
+                                    <p align="center" style="color: #222; font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 30px; font-style: italic; line-height: 27px; margin: 0 0 15px 0;">
+                                    {% if coupon.offer.qualifier %}
+                                        {{ coupon.offer.qualifier }}
+                                    {% else %}
+                                        Limited time offer
+                                    {% endif %}
+                                    </p>
+
+                                    <p align="center" style="margin: 0 0 6px 0;">
+                                        <img alt="Display images to view how customers would see this coupon." src="{{media_url}}images/email/buttons/coupon_buttons.gif" border="0" height="60" width="545"/>
+                                    </p>
+
+                                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                        <tr>
+                                            <td align="left" valign="bottom">
+
+                                            <h5 class="alt_font" style="font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 16px; font-style: italic; font-weight: normal; margin: 0 0 5px 0;">The Fine Print:</h5>
+
+                                            <ul style="color: #333; font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 13px; margin: 2px 0 0 0; padding: 0 0 0 16px;">
+
+                                            {% if coupon.custom_restrictions %}
+                                                <li style="padding: 6px 0 0 0;">{{ coupon.custom_restrictions }}</li>
+                                            {% endif %}
+
+                                                <li style="padding: 6px 0 0 0;">One coupon per household.</li>
+
+                                                <li style="padding: 6px 0 0 0;">No cash value. Not valid in combination with other offers. Coupon void if altered.</li>
+
+                                                <li style="padding: 6px 0 0 0;">
+                                                    {% if coupon.valid_days %}
+                                                        {{ coupon.valid_days }}
+                                                    {% else %}
+                                                        Offer good 7 days a week.
+                                                    {% endif %}
+                                                </li>
+
+                                            {% if coupon.expiration_date %}
+                                                <li style="padding: 6px 0 0 0;">
+                                                    Valid through {{ coupon.expiration_date }}
+                                                </li>
+                                            {% endif %}
+
+                                            </ul>
+
+                                            </td>
+                                            <td align="center" valign="bottom" width="75">
+                                                <p style="font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 14px; font-style: italic; letter-spacing: 0; margin: 0 0 5px 0;">Sample</p>
+                                                <img src="{{media_url}}images/qrcodesample.gif" border="0" height="75" width="75" style="display: block;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

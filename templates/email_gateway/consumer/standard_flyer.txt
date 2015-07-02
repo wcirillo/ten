@@ -1,0 +1,23 @@
+{% extends "email_gateway/base_email.txt" %}
+{% block email_content %}
+
+10 {{ site.name }} Coupons for {% now "F j, Y" %}
+
+{% for flyer_coupon in flyer_coupons %}
+{{ flyer_coupon.coupon.offer.business.business_name }}
+{{ flyer_coupon.coupon.offer.headline }}
+
+To get this coupon follow this link:
+{{ base_url }}{% url flyer-click flyer_coupon.coupon.id payload %}
+
+-----------------
+{% endfor %}
+
+We'll send 10 more coupons in a week or so.
+
+Thanks for being a member of {{ site.domain }}!
+
+Eric Straus
+President - {{ site.domain }}
+Phone: 800-581-3380 x301
+{% endblock %}

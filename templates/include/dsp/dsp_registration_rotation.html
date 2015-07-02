@@ -1,0 +1,30 @@
+{% if is_email_subscription and not is_a_subscriber and subscriber_reg_form %}
+
+    <div class="box1 largeForm">
+        {% include "include/dsp/dsp_subscriber_registration.html" %}
+        {% include "include/frm/frm_subscriber_registration.html" %}
+        <div class="clear"></div>
+    </div>
+
+{% else %}
+
+    {% if is_email_subscription %}
+
+        <div class="box2">
+            {% include "include/dsp/dsp_share_site.html" %}
+            <div class="clear"></div>
+        </div>
+
+    {% else %}
+
+        <div class="box1 largeForm">
+            {% include "include/dsp/dsp_consumer_registration.html" %}
+            {% include "include/frm/frm_consumer_registration.html" %}
+            <div class="clear"></div>
+        </div>
+
+    {% endif %}
+
+{% endif %}
+
+{% include "include/dsp/dsp_pricing_unlocked.html" %}

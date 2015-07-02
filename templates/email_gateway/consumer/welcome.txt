@@ -1,0 +1,44 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+A request was made for coupons sent to:
+{{ recipient_email }}
+
+{% if not coupon and contest_is_running %}Get qualified for the next $10,000 Drawing!*{% endif %}
+
+{% if coupon %}
+Use the link to print this coupon:
+{{ coupon.offer.headline }}
+{{ coupon.offer.qualifier }}
+from {{ coupon.offer.business.business_name }}
+
+{% url print-single-coupon coupon.id %}
+{% else %}
+Use the link to verify your email address.
+
+{{base_url}}{% url email_verify_consumer payload=payload %}
+{% endif %}
+
+{% if coupon and contest_is_running %}
+Get qualified for the next $10,000 Drawing!*
+{% endif %}
+
+{% if contest_is_running %}
+*Eligibility requires current complete signup.
+Signup includes both Email and Text Messages.
+
+Use the link below to read the rules:
+{{base_url}}{% url contest-rules %}
+{% endif %}
+
+{{ current_site.domain }}
+Customer Care: 800-581-3380
+{% if ref_num %}Ref: {{ ref_num }}{% endif %}
+
+For Customer Service by email: help@{{ current_site.domain }}
+
+If you no longer wish to receive awesome deals from us, please unsubscribe by going to the following link in your browser:
+{{ base_url }}{{ unified_host }}{% url opt_out payload=payload %}
+
+
+{% endblock %}

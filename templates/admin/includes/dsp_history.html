@@ -1,0 +1,15 @@
+{% if original %}
+{% regroup original.history.all by event_datetime as events %}
+<fieldset class="module aligned ">
+<h2>History of {{ original.email }}:</h2>
+<table border=1>    <tr bgcolor="#ccc"><td>When</td><td>Event Type</td><td>Source IP</td><td>Event Data (if any)</td></tr>
+{% for event in original.history.all|dictsortreversed:"event_datetime" %}
+    <tr bgcolor=#{% cycle 'fff' 'eee' %} 
+    {% if event.event_type.name == "SpamComplaint" or event.event_type.name == "BounceReceived"%}
+        style='color: #f00;'
+    {% endif %}><td>{{ event.event_datetime }}</td><td>{{event.event_type}} - {{event.get_event_type_display }}</td><td>{{event.ip}}</td><td>{{ event.data }}</td></tr>
+{% empty %}
+    <tr>(None)</tr>
+{% endfor %}</table>
+</fieldset>
+{% endif %}

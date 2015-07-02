@@ -1,0 +1,164 @@
+[
+    {
+        "pk": 2, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 2, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Another biz"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 2, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "A biz for bad credit card"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 2, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Has a cc but no billing record"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 3
+        }
+    }, 
+    {
+        "pk": 12,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": true,
+            "encrypted_number": "bar",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "",
+            "business": 2
+        }
+    },
+    {
+        "pk": 13,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": true,
+            "encrypted_number": "bar",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "",
+            "business": 3
+        }
+    },
+    {
+        "pk": 14,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": true,
+            "encrypted_number": "bar",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "cc of biz without billing record",
+            "business": 4
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 2, 
+            "end_date": "2011-03-17", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 3, 
+            "end_date": "2011-03-17", 
+            "site": 3, 
+            "renewal_rate": "100.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 4, 
+            "end_date": "2011-03-17", 
+            "site": 4, 
+            "renewal_rate": "100.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 2, 
+            "end_date": "2011-03-17", 
+            "site": 2, 
+            "renewal_rate": "100.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": false
+        }
+    }
+]

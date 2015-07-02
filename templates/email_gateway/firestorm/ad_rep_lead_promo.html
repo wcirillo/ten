@@ -1,0 +1,62 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+<p>Hi{% if ad_rep_lead.first_name or ad_rep_lead.last_name %} {{ ad_rep_lead.first_name }} {{ ad_rep_lead.last_name }}{% endif %},
+</p>
+
+<p><strong>Thanks</strong> for the interest you've shown in joining our team as an <strong>Advertising Representative</strong>.</p>
+
+<p>Here's some important news. Since you completed the form on our website we've experienced some rapid growth.
+We're now aggressively seeking candidates to <a href='{{ base_url }}{% url show-offer-to-enroll payload %}'>start immediately</a>
+in the <strong>{{ ad_rep_lead.site.region }}</strong>, and all enrollment fees have been eliminated.
+</p>
+
+<p>Just click the "Get Started" button to finalize your <strong>approved</strong> application.</p>
+
+<table cellpadding="0" cellspacing="0" width="190" border="0" align="center" style="margin-bottom: 5px;">
+    <tr>
+        <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 40px;">
+            <a href="{{ base_url }}{% url show-offer-to-enroll payload %}" style="color: #222222; display: block; height: 40px; font-size: 16px; font-weight: bold; line-height: 39px; padding: 0; text-align: center; text-decoration: none;">
+                <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;">Get Started &raquo;</span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<p>We're thrilled to offer you this opportunity.</p> 
+
+<p><strong>Next</strong>, you’ll be asked:<br/>
+{% if not ad_rep_lead.has_usable_password %}
+- to create a unique <strong>Password</strong>.<br/>{% endif%}
+- to choose a unique "name" for your <strong>Personalized Website</strong>.<br/>
+- to read and agree to three important documents:<br/>
+<ul>
+<li><a href='{{ base_url }}{% url terms-of-agreement %}'>Terms of Agreement</a></li>
+<li><a href='{{ base_url }}{% url policies-procedures %}'>Policies & Procedures</a></li>
+<li><a href='{{ base_url }}{% url compensation-plan %}'>Compensation Plan</a></li>
+</ul>  
+</p>
+
+<p><strong>And</strong> you <strong>won't</strong> be asked for any payment or additional information.</p>
+
+<p>Your <strong>Social Security</strong> number or <strong>Tax ID</strong> number are only important <strong>after</strong>
+you've made a sale. (We will need that information so that we can <strong>pay you</strong> your commission!) You'll be notified by email..
+</p>
+
+<p>Good luck! Please call or email with any questions. </p>
+
+{% if firestorm_id == 43096 %}
+
+{% include "email_gateway/three_person_signature.html" %}
+
+{% else %}
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+
+{% endif %}
+
+<br/><br/>
+<p style='text-align:center;font-size:small;'>
+{% include 'email_gateway/generic_email_unsubscribe.html' %}
+</p>
+{% endblock %}

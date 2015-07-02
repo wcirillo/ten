@@ -1,0 +1,142 @@
+function set_subdivision_consumer_count(){
+    var consumer_count = 0;
+    var id_zip;
+    var zip_id;
+    var county_id;
+    var city_id;
+    var city_count;
+    var county_count;
+    var selected_divisions = ol_map.report_selected_geoms();
+    var county_array = new Array();
+    var county_alpha_array = new Array();
+    var city_array = new Array();
+    var city_alpha_array = new Array();
+    var zip_array = new Array();
+    var zip_count; 
+    var zip_item_index;
+    var zip_numeric_array = new Array();
+    for(count=0; count < selected_divisions.length; count++){
+        id_zip = $(".zip." + selected_divisions[count]).attr('id');
+        if(id_zip == undefined){
+            //alert(selected_divisions);
+            id_county = $(".county." + selected_divisions[count].replace(/ /g, '_')).attr('id');
+            if(id_county == undefined){
+                //alert(selected_divisions);
+                id_city = $(".city." + selected_divisions[count].replace(/ /g, '_')).attr('id');
+                //alert(id_city);
+                id_city_split = id_city.split("_");
+                city_id = id_city_split[1];
+                city_count = Number(id_city_split[2]);
+                consumer_count = consumer_count + city_count;
+                city_array[city_array.length] = city_id;
+                city_alpha_array[city_alpha_array.length] = selected_divisions[count].replace(/ /g, '_').replace(/county_/g, 'region_');
+
+            }else{
+                //alert(id_county);
+                id_county_split = id_county.split("_");
+                county_id = id_county_split[1];
+                county_count = Number(id_county_split[2]);
+                consumer_count = consumer_count + county_count;
+                county_array[county_array.length] = county_id;
+                county_alpha_array[county_alpha_array.length] = selected_divisions[count].replace(/ /g, '_').replace(/county_/g, 'region_');
+            }
+        }else{
+            id_zip_split = id_zip.split("_");
+            zip_id = id_zip_split[1];
+            zip_count = Number(id_zip_split[2]);
+            consumer_count = consumer_count + zip_count;
+            zip_array[zip_array.length] = zip_id;
+            zip_numeric_array[zip_numeric_array.length] = selected_divisions[count].replace(/'zip_'/g, '');
+        }
+    }
+    for(county_alpha_item=0; county_alpha_item < county_alpha_array.length; county_alpha_item++){
+        for(zip_numeric_item=0; zip_numeric_item < zip_numeric_array.length; zip_numeric_item++){
+            zip_item = $(".zip." + zip_numeric_array[zip_numeric_item]);
+            if((zip_item.hasClass(county_alpha_array[county_alpha_item]))){
+                id_zip = $(".zip." + zip_numeric_array[zip_numeric_item]).attr('id');
+                id_zip_split = id_zip.split("_");
+                zip_id = id_zip_split[1];
+                
+                zip_count = Number(id_zip_split[2]);
+                consumer_count = consumer_count - zip_count;
+                zip_item_index = jQuery.inArray(zip_id, zip_array);
+                if(zip_item_index != -1){                    
+                    zip_array.splice(zip_item_index, 1); 
+                }
+            }
+        }
+    }
+    $("#id_county_array").val(county_array);
+    $("#id_city_array").val(city_array);
+    $("#id_zip_array").val(zip_array);
+    $(".subdivision_consumer_count").val(consumer_count);
+    return $("#subdivision_consumer_count").html(consumer_count);
+}
+
+function set_zip_data(data){
+    $("#zip_data").val(data);
+}
+
+function get_zip_data(){
+    return $("#zip_data").val();                            
+}
+
+function set_city_data(data){
+    $("#city_data").val(data);
+}
+
+function get_city_data(){
+    return $("#city_data").val();                            
+}
+
+function prime_checkboxes(){
+    $(":checked.county").each(
+        function() {
+            check_this_checkbox($(this));
+        });                        
+    $(":checked.city").each(
+        function() {
+            check_this_checkbox($(this));
+        }); 
+    $(":checked.zip").each(
+        function() {
+            check_this_checkbox($(this));
+        }); 
+}
+
+function check_this_checkbox(checkbox_object){
+    if (checkbox_object.is(':checked') == true){
+        ol_map.display_layer(checkbox_object.attr("name"));        
+    }else{
+        ol_map.hide_layer(checkbox_object.attr("name"));
+    }
+    set_subdivision_consumer_count();
+    set_single_flyer_price(get_subdivision_consumer_count());
+}
+
+function get_flyer_price(flyer_count, subdivision_consumer_count){
+    var price;
+    var total_flyer_price;
+    if (subdivision_consumer_count < 1000){
+        price = (subdivision_consumer_count * .05);
+    }else if (subdivision_consumer_count < 10000){
+        price = (1000 * .05) + ((subdivision_consumer_count - 1000) * .03);
+    }else{
+        price = (1000 * .05) + (9000 * .03) + ((subdivision_consumer_count - 10000) * .01);
+    }
+    total_flyer_price = price * flyer_count;
+    return total_flyer_price;
+}
+
+function set_single_flyer_price(subdivision_consumer_count){
+    var single_flyer_price = get_flyer_price(1, subdivision_consumer_count);                           
+    $("#single_flyer_price").html('$' + formatCurrency(single_flyer_price));
+
+}
+
+
+
+function formatCurrency(num) {
+    num = isNaN(num) || num === '' || num === null ? 0.00 : num;
+    return parseFloat(num).toFixed(2);
+}

@@ -1,0 +1,9 @@
+{% load currency %}
+
+Publish as many as 10 coupons for
+ 
+{% if request.session.ad_rep_id %}
+    just {{ annual_slot_price|currency:"False" }}!
+{% else %}
+    one low price!
+{% endif %}

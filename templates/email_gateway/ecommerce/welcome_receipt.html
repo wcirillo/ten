@@ -1,0 +1,107 @@
+{% extends "frames/email/full.html" %}
+{% load currency %}
+
+{% block email_content %}
+
+    <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 15px 0;">
+        <tr>
+            <td valign="top" style="padding-right: 25px;">
+                <p style="font-size: 13px; margin: 0 0 12px 0;">                    
+                    Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},<br/>
+                </p>
+                <p style="font-size: 13px; margin: 0 0 12px 0;">
+                    Thanks for your order!
+                    {% if prev_orders < 2 %}
+                        <br/>Welcome to {{ current_site.domain }}.
+                    {% endif %}
+                </p>
+                {% if product_id  == 2 or product_id == 3 %}
+                    <p style="font-size: 13px; margin: 0 0 12px 0;">
+                        Your {% if prev_orders < 2 %}first{% endif %} coupon: <strong>"{{ coupon.offer.headline }}"</strong> has been published.
+                    </p>
+                {% endif %}
+                {% if product_id != 1 or open_slot_count < 10 %}
+                    <p style="font-size: 13px; margin: 0 0 12px 0;">
+                        Remember, your {% if product_id == 2 %}Monthly{% else %}{% if product_id == 3 %}Annual{% endif %}{% endif %} Coupon Publishing Plan
+                        allows <strong>{{ business.business_name }}</strong> to display as many as <strong>10 different coupon offers</strong> at the same time.
+                    </p>
+                {% endif %}
+                
+                <p style="font-size: 13px; margin: 0 0 10px 0;">
+                {{ current_site.region }} customers can find <strong>{{ business.business_name }}</strong> coupons using our search tool. 
+                They can also view coupons by category. <strong>{{ business.business_name }}</strong> is currently included in our <strong>{{ business.categories.all.0.name|safe }}</strong> category.
+                </p>
+                
+                <p style="font-size: 13px; margin: 0 0 10px 0;">
+                <strong>TIP</strong>: Here's an easy way to get even more people to see your coupons: <a href='{{ base_url }}{{ window_display_url }}'>Print</a> 
+                and display a <a href='{{ base_url }}{{ window_display_url }}'>custom window sign</a> letting {{ current_site.region }} customers 
+                know how to find money-saving (and loyalty-building) coupons for {{ business.business_name }}.
+                </p>
+                
+                {% if not business.advertiser.has_usable_password %}
+                    <p style="font-size: 13px; margin: 0 0 10px 0;">
+    
+                        <a href="{{base_url}}{% url login-advertiser-from-email payload=payload %}">Your account</a> is set up and ready to use.
+                    </p>
+                {% endif %}
+            </td>
+          
+            <td align="right" valign="top">
+
+                <table cellpadding="0" cellspacing="0" border="0" style="border: 1px #e0e0e0 solid; margin-bottom: 10px;">
+                    <tr>
+                        <td>
+                            <table cellpadding="10" cellspacing="0" border="0" style="background-color: #fafafa; border: 1px #ffffff solid;">
+                                <tr>
+                                    <td>
+
+                                    {% include "include/dsp/dsp_email_button_go_to_account.html" %}
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 0;">
+                                        <table cellpadding="0" cellspacing="0" border="0" style="font-size: 13px;">
+                                            <tr>
+                                                <td valign="top">&bull;&nbsp;</td>
+                                                <td valign="top" style="padding-bottom: 12px; padding-right: 10px;">Make unlimited <strong>changes!</strong></td>
+                                            </tr>
+                                             <tr>
+                                                <td valign="top">&bull;&nbsp;</td>
+                                                <td valign="top" style="padding-bottom: 12px; padding-right: 10px;">Create <strong>more</strong> coupons now.</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top">&bull;&nbsp;</td>
+                                                <td valign="top" style="padding-bottom: 12px; padding-right: 10px;">Update the <strong>business profile</strong>.</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top">&bull;&nbsp;</td>
+                                                <td valign="top" style="padding-bottom: 12px; padding-right: 10px;">Track coupon <strong>performance</strong>.</td>
+                                            </tr>
+                                            {% if product_id  == 2 or product_id == 3 %}
+                                                <tr>
+                                                    <td valign="top">&bull;&nbsp;</td>
+                                                    <td valign="top" style="padding-bottom: 12px; padding-right: 10px;"><strong>Distribute</strong> your coupon{{ coupon_count|pluralize }} in {% if num_flyers > 0 %}more <strong>Email Flyers</strong>{% else%}an upcoming <strong>Email Flyer</strong>{% endif %}.</td>
+                                                </tr>
+                                            {% endif %}
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    {% include "include/dsp/dsp_receipt.html" %}
+    
+    <p>
+        {% if prev_orders > 1 %}Please contact us with any questions.{% else %}Got questions? Give me a ring, or email anytime.{% endif %}
+    </p>
+
+
+    {% include 'include/dsp/dsp_email_html_signature.html' %}
+  
+{% endblock %}

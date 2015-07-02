@@ -1,0 +1,41 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+{{ ad_rep_dict.first_name }} {{ ad_rep_dict.last_name }} 
+{% now "F j, Y " %}
+
+Hi {{ ad_rep_dict.first_name }},
+
+Congratulations!
+Thanks for being part of {{ site.domain }}!
+
+Your Website
+Your very own free personalized website has been generated.
+
+Start earning money!
+Refer friends, family or anyone you know to:  
+{{ site.domain }}/{{ ad_rep_dict.url }}
+
+Refer people outside of
+the {{ site.region }} to:
+10LocalCoupons.com/{{ ad_rep_dict.url }}
+
+Referrals must verify their email address
+
+Sign in to Your Virtual Office
+1) Go to {{ site.domain }}
+2) Click the "Sign In" link in the upper right corner.
+3) Use this email address and: {{ ad_rep_dict.password }}
+
+Referral Bonus Manager shows each referral.
+*To review the compensation plan use this link:
+{{base_url}}{% url compensation-plan %}
+
+Get started, and Good Luck!
+
+Thanks,
+
+Customer Care Team!
+(800) 581-3380
+
+{% endblock %}

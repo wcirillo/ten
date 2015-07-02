@@ -1,0 +1,39 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+Dear {{ ad_rep_lead_first_name }},
+
+We have just made a MAJOR new announcement.
+Our compensation plan at 10LocalCoupons.com has changed.
+
+If you're considering joining up with us.... we should talk!
+We're looking for ONE great Market Manager in your market!
+
+As Market Manager, you earn:
+
+1) 37.5% of all your sales!
+
+2) An override of 12.5%
+for ALL sales made by ad reps in your market.
+
+3) A $150 Quick Start Performance Bonus
+when an Ad Rep you recruit meets minimum performance goals.
+
+4) An override of 5%
+on sales made by EVERY Ad Rep you recruit... forever!
+
+We are gearing up -- FAST --
+We'd love to talk to you about joining our team.
+
+Please call me, Eric Straus, CEO.
+Give me your questions/thoughts/comments!
+
+I look forward to the opportunity of working with you!!!!
+
+
+Best,
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+{% include "email_gateway/generic_email_unsubscribe.txt" %}
+{% endblock %}

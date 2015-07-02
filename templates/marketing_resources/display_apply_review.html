@@ -1,0 +1,55 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - Become an Advertising Representative{% endblock %}
+{% block meta %}
+<link rel="canonical" href="{% url show-apply-review %}"/>
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+
+    {% if ad_rep_lead.right_person_text and ad_rep_lead.right_person_text|length > 5 %}
+
+        <h2 align="center">Your application is being reviewed.</h2>
+
+        <div class="message">
+
+            <h4 class="nomargin" align="center">Check your inbox at: {{ ad_rep_lead.email }}</h4>
+
+            <div class="clear"></div>
+        </div>
+
+        <p align="center">
+            Our response should be delivered within a business day of your completed application.<br/>
+            Check your Junk and Spam filters.
+        </p>
+
+    {% else %}
+
+        <h3 align="center">We need more information to review your application.</h3>
+
+        {% include "include/frm/frm_ad_rep_question_form.html" %}
+
+    {% endif%}
+
+    <p class="small smallmargin" align="center">
+        <em>We wish you success,</em>
+    </p>
+
+    <h4 class="alt_font2" align="center">
+        {% if request.session.ad_rep_id %}
+            {{ ad_rep.first_name }} {{ ad_rep.last_name }}
+        {% else %}
+            The {{ current_site.domain }} Team
+        {% endif %}
+    </h4>
+
+    <br/>
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

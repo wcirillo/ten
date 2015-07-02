@@ -1,0 +1,47 @@
+{% extends "frames/web/leftCol.html" %}
+
+{% block title %}{% if contest_is_running %}Sign up for {{ current_site.name }} Coupons. Qualify to Win $10,000!{% else %}{{ current_site.name }} Coupons and Deals That Save You Money Weekly | {{ current_site.domain }}{% endif %}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{% if market_coverage %}{% if county_list %}Map of {{ current_site.default_state_province.name }} {{ municipality_division|title }} within the {{ current_site.name }} consisting of {{ county_list }} {{ municipality_division }}.{% endif %}{% else %}Map of {{ current_site.name }} region{% endif %}"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Add Email Flyers</span>
+{% endblock %}
+
+{% block full_content %}
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+    <h3>Add Email Flyers</h3>
+
+    <p>
+
+        <!--
+        {% if locked_consumer_count > 500 %}{{ locked_consumer_count }} c{% else %}C{% endif %}onsumers have requested Hudson Valley coupons by email.
+        Distribute your coupon for <strong class="highlight">just a nickel per inbox</strong>.
+        -->
+        
+        Reserve space in upcoming Email Coupon Flyers.
+        <a class="small modaltrigger" href="#" name="modal_flyer_pricing">About pricing</a>
+
+    </p>
+
+    {% include "include/modals/flyer_pricing.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% include "include/frm/frm_add_flyer_dates.html" %}
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    <div id="map_counties_block" style="height: 0; overflow: hidden;"><textarea id="map_counties" style="scrolling: no; height: 0;">{{ market_coverage }}</textarea></div>
+
+{% endblock %}

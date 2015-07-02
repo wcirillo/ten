@@ -1,0 +1,12 @@
+$(".facebook").click(function(){
+    $.ajax(
+        {
+        url: "{% url facebook-coupon coupon_id=coupon.id %}",
+        type: "POST",
+        data: {ajax_mode:'facebook_coupon'},
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) {},
+        error: function() {}
+    });
+});

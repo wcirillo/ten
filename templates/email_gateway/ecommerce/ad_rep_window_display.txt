@@ -1,0 +1,28 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+{{ rep_first_name }},
+
+Congratulations on the sale to:
+{{ business.business_name }}.
+Great job!
+
+The {% if product_id == 3 %}Annual Coupon Publishing Package{% else %}Monthly Coupon Publishing Package{% endif %}
+is the first purchase from {{ business.business_name }}.
+
+Encourage local traffic. Make your new client happy!
+Print a window sticker to lead customers to more coupons.
+Follow this link:
+{{base_url}}{{ window_display_url }}
+
+We sent the link to {{ business.business_name }} as well.
+However, we suggest you and deliver a copy in person.
+
+Again, well done and keep up the good work!
+
+David Sage
+Chief Marketing Officer
+10LocalCoupons.com
+Phone: 800 581 3380 x306
+Email: David@10LocalCoupons.com
+{% endblock %}

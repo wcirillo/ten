@@ -1,0 +1,11 @@
+[
+    {
+        "pk": "real-time-search-index",
+        "model": "gargoyle.switch", 
+        "fields": {
+            "value": {
+                "is_active": false
+            }
+        }
+    }
+]

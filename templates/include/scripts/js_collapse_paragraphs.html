@@ -1,0 +1,14 @@
+function hideAnswers(){
+    $(".faqAnswer").slideUp();
+    $(".faqQuestion").removeClass("dark");
+}
+
+hideAnswers();
+
+$(".faqQuestion").click(function(e){
+    e.preventDefault();
+    var answer = $(this).attr("name");
+    hideAnswers();
+    $(this).addClass("dark");
+    $("#answer" + answer).slideDown();    
+});

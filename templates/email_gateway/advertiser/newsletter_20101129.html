@@ -1,0 +1,62 @@
+{% block email_content %}
+<body style="color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+
+    <p style="font-size: 13px;">
+        Greetings!                
+    </p>
+
+    <p style="font-size: 13px;">
+        We hope you had a wonderful Thanksgiving.
+    </p>
+
+    <p style="font-size: 13px;">
+        {{ site.domain }} is growing nicely... and we're about to increase our prices (finally!)
+    </p>
+
+    <p style="font-size: 13px;">
+        Presently: You can post your coupon on {{ site.domain }} for THREE months (and get your offer emailed out to all our subscribers in the market THREE times over that 3 month period)... for just $49.
+    </p>
+
+    <p style="font-size: 13px;">
+        Starting Wednesday 12/1.... that same $49... will buy you just a ONE month coupon posting and ONE emailing!
+    </p>
+
+    <p style="font-size: 13px;">
+        So... if you're thinking of posting your coupon soon... then NOW is the time to ACT!
+    </p>
+
+    <p style="font-size: 13px;">
+        Post your coupon here: <a href="http://{{ site.domain }}/create-coupon/">{{ site.domain }}/create-coupon/</a> or call me at 800-581-3380 x1 for more information!
+    </p>
+
+    <p style="font-size: 13px;">
+        We look forward to working with you!
+    </p>
+
+    <p style="font-size: 13px;">
+        Sincerely,
+    </p>
+
+    <p style="font-size: 13px;">
+        <strong>Eric Straus</strong><br/>
+        President<br/>
+        {{ site.domain }}<br/>
+        Phone: 800-581-3380 x301<br/>
+        Email: <a href="mailto:Eric@10Coupons.com?subject=RE: {{ site.domain }}">Eric@10Coupons.com</a>
+    </p>
+
+    <p style="font-size: 13px;">
+        PS: If you already have a coupon on the site with us, you may want to post a second coupon while our price is so low!
+    </p>
+
+    <p style="font-size: 13px;">
+        PPS: If you know other business owners who may be interested in our services.... please forward this email to them! Thanks so much!!!
+    </p>
+
+    <p style="font-size: 13px;">
+        I'll very occasionally send updates like these to let you know what's going on with our site.
+        If you'd prefer not to receive them, please use this <a href="{{base_url}}{% url opt_out payload=payload %}">unsubscribe</a> link to cancel these newsletters instantly.
+    </p>
+
+</body>
+{% endblock %}

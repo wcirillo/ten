@@ -1,0 +1,34 @@
+
+function submitAddSlot(){
+    $("form[name='frm_add_slot']").submit();
+}
+
+$("#addFlyer0").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_slot_choices_0']").attr("checked", "checked");
+    submitAddSlot();
+});
+
+$("#addFlyer1").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_slot_choices_1']").attr("checked", "checked");
+    submitAddSlot();
+});
+
+$("#addFlyer2").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_slot_choices_2']").attr("checked", "checked");
+    submitAddSlot();
+});
+
+$("#addFlyer3").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_slot_choices_3']").attr("checked", "checked");
+    submitAddSlot();
+});
+
+$("#addFlyer4").click(function(e){
+    e.preventDefault();
+    $("input[id='id_add_slot_choices_4']").attr("checked", "checked");
+    submitAddSlot();
+});

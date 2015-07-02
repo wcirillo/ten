@@ -1,0 +1,10 @@
+{% extends "frames/web/full.html" %}
+{% block title %}Add {{ current_site.domain }} to your website{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/widgets/"/>
+{% endblock %}
+{% block body_class %}full{% endblock %}
+
+{% block base_content %}
+    {% include "include/dsp/dsp_widgets.html" %}
+{% endblock %}

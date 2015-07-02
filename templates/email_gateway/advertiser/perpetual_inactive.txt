@@ -1,0 +1,32 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+Hi {% if business.advertiser.advertiser_name %}{{ business.advertiser.advertiser_name }}{% endif %},
+Rerun your coupon or create a new one.
+{% if promo_code %}
+Get your first month for just $10!
+{% endif %}
+Follow this link:
+{% if promo_code %}
+{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}
+{% else %}
+{{ base_url }}{% url sale-redirect payload=payload %}
+{% endif %}
+Your coupon can say (almost) anything you want.
+
+Put your business back on the website.
+You can make unlimited changes.
+Change a single word or the entire offer.
+Display one coupon after another all for one low price.
+
+Let me help you get new customers. Call or email me anytime.
+
+Thanks,
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+{% if promo_code %}
+PS. Don't wait! $10 offer good today ({% now "n/j/Y" %}) only.
+{% endif %}
+
+{% include "email_gateway/generic_email_unsubscribe.txt" %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "email_gateway/base_email.txt" %}
+{% load format_phone_number %}
+
+{% block email_content %}
+{{ parent_ad_rep.first_name }} {{ parent_ad_rep.last_name }}
+{% now "F j, Y " %}
+
+Great News!
+
+There's a new member of your team.
+
+{% if child_ad_rep.first_name or child_ad_rep.last_name %}{{ child_ad_rep.first_name }} {{ child_ad_rep.last_name }}{% else %}{{ child_ad_rep.email }}{% endif %}
+You are this Ad Rep's Recruiter.
+
+Your new recruit can help you earn more:
+For qualifying sales, you earn a 25% recruiter's bonus.
+Follow this link for details:
+{{ base_url }}{% url compensation-plan %}
+
+{% if child_ad_rep.primary_phone_number %}We've provided info to contact your recruit{% else %}Contact your recruit{% endif %}.
+{{ child_ad_rep.first_name }} {{ child_ad_rep.last_name }}
+{{ child_ad_rep.email }}
+{% if child_ad_rep.primary_phone_number %}{{ child_ad_rep.primary_phone_number|format_phone_number  }}{% endif %}
+
+Wishing you success,
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+{% include "email_gateway/generic_corporate_address.txt" %}
+{% endblock %}

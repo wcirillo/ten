@@ -1,0 +1,67 @@
+<form name="frm_refer_enroll" action="" method="post">{% csrf_token %}
+
+    {{ ref_consumer_form.non_field_errors }}
+
+    <ol>
+
+        {{ ref_consumer_form.first_name.errors }}
+        <li>
+            <label for="id_first_name" class="block">First Name</label>
+            {{ ref_consumer_form.first_name }}
+        </li>
+
+        {{ ref_consumer_form.last_name.errors }}
+        <li>
+            <label for="id_last_name" class="block">Last Name</label>
+            {{ ref_consumer_form.last_name }}
+        </li>
+
+        {{ ref_consumer_form.email.errors }}
+        <li>
+            <label for="id_email" class="block">Email Address</label>
+            {{ ref_consumer_form.email }}
+        </li>
+
+        {{ ref_consumer_form.consumer_zip_postal.errors }}
+        <li>
+            <label for="id_consumer_zip_postal" class="block">Zip Code</label>
+            {{ ref_consumer_form.consumer_zip_postal }}
+        </li>
+
+        {{ ad_rep_url_form.ad_rep_url.errors }}
+        <li>
+            <label for="id_ad_rep_url" class="block">
+                Choose the name of your personalized website
+                <p class="tiny smallmargin">
+                    Use a name that is continuous (one word,) and contains no spaces, punctuation or special characters.
+                    The name should be easy to remember and share with other people.
+                </p>
+                <span class="tiny">{{ site.domain }}/<strong>yoursitename</strong></span>
+            </label>
+            {{ ad_rep_url_form.ad_rep_url }}
+        </li>
+
+        {{ create_password_form.password1.errors }}
+        <li>
+            <label for="id_password1" class="block">Password</label>
+            {{ create_password_form.password1 }}
+        </li>
+
+        {{ create_password_form.password2.errors }}
+        <li>
+            <label for="id_password2" class="block">Confirm Password</label>
+            {{ create_password_form.password2 }}
+        </li>
+
+        {{ terms_of_use_form.terms_of_use.errors }}
+        <li>
+            {{ terms_of_use_form.terms_of_use }}&nbsp;<label for="id_terms_of_use"><span class="small">I agree to the {{ site.domain }} <a class="nodec ajaxtrigger" href="{% url loader 'load_terms_of_use' %}">Terms of Use</a></span></label>          
+        </li>
+
+        <li>
+            <input class="button largeBtn" type="submit" tabindex="9" value="Create my website!"/>
+        </li>
+        
+    </ol>
+
+</form> 

@@ -1,0 +1,5 @@
+{{ signature_name }}{% if signature_title %}
+{{ signature_title }}{% endif %}
+{{ signature_email }}{% if signature_phone %}
+{{ signature_phone }}{% endif %}
+{{ site.domain }}{% if signature_ad_rep_url %}/{{ signature_ad_rep_url }}/{% endif %}

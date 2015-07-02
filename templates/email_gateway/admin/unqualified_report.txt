@@ -1,0 +1,9 @@
+{% block email_content %}
+
+    {% for msg in summary %}
+    
+        {{ msg }}
+        
+    {% endfor %}
+
+{% endblock %}

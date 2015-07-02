@@ -1,0 +1,21 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }}{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+        <div class="message center">
+
+            Congratulations{% if request.session.consumer.first_name %} {{ request.session.consumer.first_name }}{% endif %}!
+            <strong>Your Advertising Representative Account has been created.</strong></br>
+
+            <div class="clear"></div>
+            
+        </div>
+        
+        <p style='text-align:center;'>
+            <a id="btnVirtualOffice" href="{% url sign-in %}" class="button largeBtn">Launch Virtual Office &raquo;</a>
+        </p>
+{% endblock %}

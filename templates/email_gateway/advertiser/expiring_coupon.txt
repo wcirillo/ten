@@ -1,0 +1,45 @@
+{% if is_to_ad_rep %}
+{{ rep_first_name }},
+
+Below is a message sent on your behalf.
+
+{{ sales_rep_signature_name }}
+{% if sales_rep_signature_title %}{{ sales_rep_signature_title }}
+{% endif %}{{ sales_rep_signature_email }}
+{% if sales_rep_signature_phone %}{{ sales_rep_signature_phone }}
+{% endif %}
+
+-----------------------------------------------------------
+{% endif %}{{ business.business_name }}
+{% now "M jS, Y" %}
+
+{% if business.advertiser.advertiser_name %}Hi {{ business.advertiser.advertiser_name }},
+{% else %}Hi,{% endif %}
+
+{% if coupon %}This coupon expires soon:
+
+{{ coupon.offer.headline }}
+expires {{ coupon.expiration_date|date:"F j" }}
+{% else %}These coupons expire soon:
+{% for coupon in coupons %}
+{{ coupon.offer.headline }}
+expires {{ coupon.expiration_date|date:"F j" }}
+{% endfor %}
+{% endif %}
+
+Expiration dates are automatically extended for 90 days
+Unless:
+- The display is turned off
+OR
+- The expiration date is changed
+
+Go to your account using this link:
+{{ base_url }}{% url advertiser-account %}
+
+Want help? Got questions? Contact me.
+Let's continue to work together to get new customers.
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+{% include "email_gateway/generic_corporate_address.txt" %}
+
+{% include "email_gateway/generic_email_unsubscribe.txt" %}

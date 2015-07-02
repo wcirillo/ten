@@ -1,0 +1,65 @@
+{%  load cache %}
+{% if msg_mobile_phone_number_already_exists %}
+    <p class="small highlight"><strong>This number is already registered with {{ current_site.domain }}.</strong> Please check that the cell phone number is typed correctly. <a href="{% url contact-us %}">Contact Us</a> for help.</p>
+{% endif %}
+
+<form id="id_form_subscriber" name="frm_subscriber_registration" class="largeForm" method="post">{% csrf_token %}
+
+    <ol {% if is_home %} class="inline"{% endif %}>
+
+        <li {% if not is_home %} class="fullInput"{% endif %}>
+            <div id="mobile_phone_number_errors" class="errorlist">{{ subscriber_reg_form.mobile_phone_number.errors }}</div>
+            <label for="id_mobile_phone_number" class="infield">cell phone number</label>
+            {{ subscriber_reg_form.mobile_phone_number }}
+        </li>
+
+        <li id="id_subscriber_zip_postal_li">
+            <div id="subscriber_zip_postal_errors" class="errorlist">{{ subscriber_reg_form.subscriber_zip_postal.errors }}</div>
+            <label for="id_subscriber_zip_postal" class="infield">zip code</label>
+            {{ subscriber_reg_form.subscriber_zip_postal }}
+        </li>
+
+        <li>
+            <div id="carrier_errors" class="errorlist">{{ subscriber_reg_form.carrier.errors }}</div>
+            <div class="sprite dropdownOuter">
+                <label for="id_carrier" class="hidden">Cell Phone Carrier:</label>
+                {% cache 6000 form-carriers %}{{ subscriber_reg_form.carrier }}{% endcache %}
+                <div class="clear"></div>
+            </div>
+        </li>
+
+        <li>
+            <input id="submit_subscriber_reg" class="button{% if is_home %} largeBtn{% else %} fullBtn fullBtnTight{% endif %}" type="submit" value="{{ button_text }} &raquo;" tabindex="4">
+        </li>
+
+        <div class="clear"></div>
+    </ol>
+
+    {% if is_home %}
+
+        <div class="signup_terms small">
+            Click "Finish" to receive a verification message on this cell phone.&nbsp;
+            <strong><a class="nodec modaltrigger" name="modal_cellphone" href="#">Why enter my cell phone?</a></strong>
+            <div class="clear"></div>
+        </div>
+
+    {% else %}
+
+        <p class="tiny {% if not is_logged_in %}smallmargin{% endif %}">
+            Accept the <a class="nodec ajaxtrigger" href="{% url loader 'load_terms_of_use' %}">Terms &amp; Conditions</a> of the 10Coupons Alerts Text Service by signing up.
+            {% if contest_is_running %}
+                *Eligibility requires current and complete signup. No purchase necessary.
+                <a class="nodec" href="{% url contest-rules %}">Rules</a>
+            {% endif %}
+        </p>
+
+        {% if is_logged_in %}
+            <p class="tiny smallmargin">
+                This phone will be associated with <strong>{{ is_logged_in }}</strong>.
+                <a class="nodec" href="{% url log-out-subscriber-registration %}">That's not me</a>
+            </p>
+        {% endif %}
+
+    {% endif %}
+
+</form>

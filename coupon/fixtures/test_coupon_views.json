@@ -1,0 +1,1584 @@
+[
+    {
+        "pk": 1, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "is_paid_traffic": false, 
+            "is_approved": true, 
+            "end_date": null, 
+            "create_datetime": "2010-06-21 15:24:51", 
+            "is_active": true, 
+            "object_id": null, 
+            "promoter_cut_percent": "0.00", 
+            "content_type": null, 
+            "guid": null, 
+            "start_date": "2010-06-21", 
+            "name": "I am"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "is_paid_traffic": false, 
+            "is_approved": true, 
+            "end_date": null, 
+            "create_datetime": "2010-06-24 15:59:18", 
+            "is_active": true, 
+            "object_id": null, 
+            "promoter_cut_percent": "0.00", 
+            "content_type": null, 
+            "guid": null, 
+            "start_date": "2010-06-24", 
+            "name": "Straus Digital Media"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "Free All-1",
+            "description": "Free All",
+            "end_date": "2011-06-21", 
+            "promo_type": "1", 
+            "create_datetime": "2010-06-21 15:25:00", 
+            "is_active": true, 
+            "promoter": 2, 
+            "start_date": "2010-06-21", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "2"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "50off",
+            "description": "50off",
+            "end_date": "2020-10-05", 
+            "promo_type": "1", 
+            "create_datetime": "2010-10-05 15:34:07", 
+            "is_active": true, 
+            "promoter": 2, 
+            "start_date": "2010-10-05", 
+            "promo_amount": 50, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1 ], 
+            "name": "one-time-use free-all-1",
+            "description": "one-time-use free-all",
+            "end_date": "2021-04-26", 
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 2, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "2"
+        }
+    },   
+    {
+        "pk": 1, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 1, 
+            "code": "Free-All-1", 
+            "used_count": 99
+        }
+    },  
+    {
+        "pk": 2, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 2, 
+            "code": "50off", 
+            "used_count": 6
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 3, 
+            "code": "one-time-free-1",
+            "used_count": 0
+        }
+    },  
+    {
+        "pk": 10, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "previewEdit", 
+            "first_name": "PreviewEdit", 
+            "last_name": "PreviewEdit", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "bounce-test-null-previewedit@bounces.10coupons.com", 
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },  
+    {
+        "pk": 10, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-09-02 12:29:45", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": null, 
+            "email_hash": "9f47955c2ab98e84e4bc5f73b1f97bb01fa7727f", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-09-02 11:56:50", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 10,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": "Preview Edit Business", 
+            "is_active": true, 
+            "business_name": "Preview Edit Business"
+        }
+    }, 
+    {
+        "pk": 10,
+        "model": "advertiser.businessprofiledescription",
+        "fields": {
+            "business_description": "Our business strives to be the best and have the happiest customers and the best customer support. We demand high expectations because that is what sets us apart from the rest.",
+            "business": 10
+            }
+    },
+    {
+        "pk": 10, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 10
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 1", 
+            "location_state_province": "AL", 
+            "location_exchange": "111", 
+            "business": 10, 
+            "location_area_code": "111", 
+            "location_description": "Across from 1", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "11111", 
+            "location_address1": "1 Road", 
+            "location_address2": "Apartment 1", 
+            "location_number": "1111", 
+            "location_url": ""
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0001", 
+        "location_longitude": "-72.0001"}
+    },
+    {
+        "pk": 102, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 2", 
+            "location_state_province": "AL", 
+            "location_exchange": "222", 
+            "business": 10, 
+            "location_area_code": "222", 
+            "location_description": "Across from 2", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "22222", 
+            "location_address1": "4 Road", 
+            "location_address2": "Apartment 2", 
+            "location_number": "2222", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 102, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0002", 
+        "location_longitude": "-72.0002"}
+    },
+    {
+        "pk": 103, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 3", 
+            "location_state_province": "AL", 
+            "location_exchange": "333", 
+            "business": 10, 
+            "location_area_code": "333", 
+            "location_description": "Across from 3", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "33333", 
+            "location_address1": "3 Road", 
+            "location_address2": "Apartment 3", 
+            "location_number": "3333", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 103, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0003", 
+        "location_longitude": "-72.0003"}
+    },
+    {
+        "pk": 104, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 4", 
+            "location_state_province": "AL", 
+            "location_exchange": "444", 
+            "business": 10,
+            "location_area_code": "444", 
+            "location_description": "Across from 4", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "44444", 
+            "location_address1": "4 Road", 
+            "location_address2": "Apartment 4", 
+            "location_number": "4444", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 104, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0004", 
+        "location_longitude": "-72.0004"}
+    },
+    {
+        "pk": 105, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 5", 
+            "location_state_province": "AL", 
+            "location_exchange": "555", 
+            "business": 10, 
+            "location_area_code": "555", 
+            "location_description": "Across from 5", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "55555", 
+            "location_address1": "5 Road", 
+            "location_address2": "Apartment 5", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 105, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0005", 
+        "location_longitude": "-72.0005"}
+    },
+    {
+        "pk": 106, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 6", 
+            "location_state_province": "AL", 
+            "location_exchange": "666", 
+            "business": 10, 
+            "location_area_code": "666", 
+            "location_description": "Across from 6", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "66666", 
+            "location_address1": "6 Road", 
+            "location_address2": "Apartment 6", 
+            "location_number": "6666", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 106, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0006", 
+        "location_longitude": "-72.0006"}
+    },
+    {
+        "pk": 107, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 7", 
+            "location_state_province": "AL", 
+            "location_exchange": "777", 
+            "business": 10, 
+            "location_area_code": "777", 
+            "location_description": "Across from 7", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "77777", 
+            "location_address1": "7 Road", 
+            "location_address2": "Apartment 7", 
+            "location_number": "7777", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 107, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0007", 
+        "location_longitude": "-72.0007"}
+    },
+    {
+        "pk": 108, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 8", 
+            "location_state_province": "AL", 
+            "location_exchange": "888", 
+            "business": 10, 
+            "location_area_code": "888",
+            "location_description": "Across from 8", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "88888", 
+            "location_address1": "8 Road", 
+            "location_address2": "Apartment 8", 
+            "location_number": "8888", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 108, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0008", 
+        "location_longitude": "-72.0008"}
+    },
+    {
+        "pk": 109, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 9", 
+            "location_state_province": "AL", 
+            "location_exchange": "999", 
+            "business": 10, 
+            "location_area_code": "999",
+            "location_description": "Across from 9", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "99999", 
+            "location_address1": "9 Road", 
+            "location_address2": "Apartment 9", 
+            "location_number": "9999", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 109, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0009", 
+        "location_longitude": "-72.0009"}
+    },
+    {
+        "pk": 110, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 10", 
+            "location_state_province": "AL", 
+            "location_exchange": "101", 
+            "business": 10, 
+            "location_area_code": "101",
+            "location_description": "Across from 10", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "10101", 
+            "location_address1": "10 Road", 
+            "location_address2": "Apartment 10", 
+            "location_number": "1010", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 110, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0010", 
+        "location_longitude": "-72.0010"}
+    }, 
+    {
+        "pk": 110, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit Headline", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Preview Edit Qualifier", 
+            "business": 10
+        }
+    },
+    {
+        "pk": 110, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-05-12 16:12:40", 
+            "coupon_create_datetime": "2010-05-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 110, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "previewEdit1", 
+            "first_name": "PreviewEdit1", 
+            "last_name": "PreviewEdit1", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "bounce-test-null-previewedit1@bounces.10coupons.com", 
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },  
+    {
+        "pk": 11, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-09-02 12:29:45", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": null, 
+            "email_hash": "9f47955c2ab98e84e4bc5f73b1f97bb01fa7727f", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-09-02 11:56:50", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 11,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Preview Edit Business",
+            "web_snap_path": "test_websnap_1.png",
+            "show_web_snap": true,
+            "show_map": true
+        }
+    },   
+    {
+        "pk": 11, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 11
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Preview Edit", 
+            "business": 11
+        }
+    },
+    {
+        "pk": 111, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-05-12 16:12:40", 
+            "coupon_create_datetime": "2010-05-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 111, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "previewEdit12", 
+            "first_name": "PreviewEdit1", 
+            "last_name": "PreviewEdit1", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "bounce-test-null-previewedit12@bounces.10coupons.com", 
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },  
+    {
+        "pk": 12, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-09-02 12:29:45", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": null, 
+            "email_hash": "9f47955c2ab98e84e4bc5f73b1f97bb01fa7727f", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-09-02 11:56:50", 
+            "email_subscription": []
+        }
+    },  
+    {
+        "pk": 12, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 12
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 12,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Preview Edit Business"
+        }
+    },   
+    {
+        "pk": 112, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Preview Edit", 
+            "business": 12
+        }
+    },
+    {
+        "pk": 112, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-05-12 16:12:40", 
+            "coupon_create_datetime": "2010-05-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 112, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },  
+    {
+        "pk": 111, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 10", 
+            "location_state_province": "AL", 
+            "location_exchange": "101", 
+            "business": 12, 
+            "location_area_code": "101", 
+            "location_description": "Across from 10", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "10101", 
+            "location_address1": "10 Road", 
+            "location_address2": "Apartment 10", 
+            "location_number": "1010", 
+            "location_url": ""
+        }
+    },  
+    {
+        "pk": 113, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit 1", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Preview Edit 1", 
+            "business": 12
+        }
+    },
+    {
+        "pk": 113, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-05-12 16:12:40", 
+            "coupon_create_datetime": "2010-05-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                111
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 113, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 13, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "previewEdit13", 
+            "first_name": "PreviewEdit1", 
+            "last_name": "PreviewEdit13", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "bounce-test-null-previewedit13@bounces.10coupons.com", 
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },  
+    {
+        "pk": 13, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-09-02 12:29:45", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": null, 
+            "email_hash": "9f47955c2ab98e84e4bc5f73b1f97bb01fa7727f", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-09-02 11:56:50", 
+            "email_subscription": []
+        }
+    },  
+    {
+        "pk": 13, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 13,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business 1"
+        }
+    },   
+    {
+        "pk": 114, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Headline Match", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Preview Edit", 
+            "business": 13
+        }
+    },
+    {
+        "pk": 114, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-05-12 16:12:40", 
+            "coupon_create_datetime": "2010-05-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                112
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 114, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },  
+    {
+        "pk": 112, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 112", 
+            "location_state_province": "AK", 
+            "location_exchange": "112", 
+            "business": 13, 
+            "location_area_code": "112", 
+            "location_description": "Across from 112", 
+            "location_create_datetime": "2010-04-12 16:12:40", 
+            "location_zip_postal": "11211", 
+            "location_address1": "112 Road", 
+            "location_address2": "Apartment 112", 
+            "location_number": "1121", 
+            "location_url": ""
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 13,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan",        
+            "business_modified_datetime": "2010-07-12 16:12:24", 
+            "business_create_datetime": "2010-07-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business 2"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 11,
+            "web_url": "http://www.google.com/", 
+            "slogan": "My Slogan", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Preview Edit Business 2",
+            "web_snap_path": "test_websnap_1.png",
+            "show_web_snap": true,
+            "show_map": true
+        }
+    },   
+    {
+        "pk": 115, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit 1", 
+            "create_datetime": "2010-07-12 16:12:24", 
+            "qualifier": "Preview Edit 1", 
+            "business": 14
+        }
+    },
+    {
+        "pk": 115, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 115, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "normal coupon", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },    
+     {
+        "pk": 116, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                114, 115
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2010-05-12", 
+            "is_valid_tuesday": true, 
+            "offer": 115, 
+            "expiration_date": "2010-08-10", 
+            "custom_restrictions": "coupon with two locations one without city", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 114, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "555", 
+            "business": 14, 
+            "location_area_code": "555", 
+            "location_description": "Across from Nothing", 
+            "location_create_datetime": "2010-07-12 16:12:40", 
+            "location_zip_postal": "99999", 
+            "location_address1": "No Road", 
+            "location_address2": "Apartment No", 
+            "location_number": "9999", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 115, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 10", 
+            "location_state_province": "AL", 
+            "location_exchange": "101", 
+            "business": 14, 
+            "location_area_code": "101", 
+            "location_description": "Across from 10", 
+            "location_create_datetime": "2010-07-12 16:12:40", 
+            "location_zip_postal": "10101", 
+            "location_address1": "10 Road", 
+            "location_address2": "Apartment 10", 
+            "location_number": "1010", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 116, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Poughkeepsie", 
+            "location_state_province": "NY", 
+            "location_exchange": "896", 
+            "business": 11, 
+            "location_area_code": "845", 
+            "location_description": "Valid location with coords", 
+            "location_create_datetime": "2010-07-12 16:12:40", 
+            "location_zip_postal": "12603", 
+            "location_address1": "510 Maloney Rd", 
+            "location_address2": "Apartment P4", 
+            "location_number": "5554", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 117, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Newburgh", 
+            "location_state_province": "NY", 
+            "location_exchange": "565", 
+            "business": 11, 
+            "location_area_code": "914", 
+            "location_description": "location with BAD coords", 
+            "location_create_datetime": "2011-03-22 16:12:40", 
+            "location_zip_postal": "12550", 
+            "location_address1": "1001 Broadway", 
+            "location_address2": "Apartment 2", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 117, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                116
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2011-03-22", 
+            "is_valid_tuesday": true, 
+            "offer": 111, 
+            "expiration_date": "2099-08-10", 
+            "custom_restrictions": "change coupon values if you want. used for location testing", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 118, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Dallas", 
+            "location_state_province": "PA", 
+            "location_exchange": "565", 
+            "business": 11, 
+            "location_area_code": "570", 
+            "location_description": "location with no coords", 
+            "location_create_datetime": "2011-03-22 16:12:40", 
+            "location_zip_postal": "18612", 
+            "location_address1": "11 Orchard Street", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+     {
+        "pk": 119, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Middletown", 
+            "location_state_province": "NY", 
+            "location_exchange": "565", 
+            "business": 11, 
+            "location_area_code": "845", 
+            "location_description": "location with no coords", 
+            "location_create_datetime": "2011-03-22 16:12:40", 
+            "location_zip_postal": "10940", 
+            "location_address1": "88 W Main St", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "565", 
+            "business": 10, 
+            "location_area_code": "845", 
+            "location_description": "location with nothing but state", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 121, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Wappingers Falls", 
+            "location_state_province": "NY", 
+            "location_exchange": "561", 
+            "business": 10, 
+            "location_area_code": "914", 
+            "location_description": "shares coupon with 2 locations same city", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "12590", 
+            "location_address1": "100 Main Street", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 122, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Wappingers Falls", 
+            "location_state_province": "NY", 
+            "location_exchange": "297", 
+            "business": 10, 
+            "location_area_code": "845", 
+            "location_description": "shares coupon with same city location", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "12590", 
+            "location_address1": "3D White Gate Road", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 123, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Wappingers Falls", 
+            "location_state_province": "NY", 
+            "location_exchange": "297", 
+            "business": 10, 
+            "location_area_code": "845", 
+            "location_description": "shares coupon with same city location", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "12590", 
+            "location_address1": "11 Dennis Road", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 124, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Poughkeepsie", 
+            "location_state_province": "NY", 
+            "location_exchange": "561", 
+            "business": 10, 
+            "location_area_code": "914", 
+            "location_description": "shares coupon with 2 locations same city", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "12601", 
+            "location_address1": "100 Church Street", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 125, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "Wappingers Falls", 
+            "location_state_province": "NY", 
+            "location_exchange": "297", 
+            "business": 10, 
+            "location_area_code": "845", 
+            "location_description": "shares coupon with same city location", 
+            "location_create_datetime": "2011-04-05 16:12:40", 
+            "location_zip_postal": "12590", 
+            "location_address1": "5213 Princess Circle", 
+            "location_address2": "", 
+            "location_number": "5555", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 118, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                117
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2011-03-22", 
+            "is_valid_tuesday": true, 
+            "offer": 111, 
+            "expiration_date": "2099-08-10", 
+            "custom_restrictions": "change coupon values if you want. used for location testing", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 119, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                118,
+                119
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2011-03-22", 
+            "is_valid_tuesday": true, 
+            "offer": 111, 
+            "expiration_date": "2099-08-10", 
+            "custom_restrictions": "used for location testing", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                121,
+                122
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2011-04-12", 
+            "is_valid_tuesday": true, 
+            "offer": 111, 
+            "expiration_date": "2099-08-10", 
+            "custom_restrictions": "used for location list testing", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 116, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Preview Edit 2", 
+            "create_datetime": "2010-07-12 16:12:24", 
+            "qualifier": "Preview Edit 2", 
+            "business": 15
+        }
+    },
+    {
+        "pk": 119, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Expired Slot", 
+            "create_datetime": "2008-07-12 16:12:24", 
+            "qualifier": "Inactive business", 
+            "business": 119
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "Expired Slot", 
+            "create_datetime": "2008-07-12 16:12:24", 
+            "qualifier": "Inactive even business", 
+            "business": 120
+        }
+    },
+    {
+        "pk": 121, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+                121,
+                122,
+                123,
+                124,
+                125
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2011-04-12", 
+            "is_valid_tuesday": true, 
+            "offer": 116, 
+            "expiration_date": "2099-08-10", 
+            "custom_restrictions": "coupon used for dup city test", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 122, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2008-04-12", 
+            "is_valid_tuesday": true, 
+            "offer": 119, 
+            "expiration_date": "2011-01-10", 
+            "custom_restrictions": "coupon paid, slot expired", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 123, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-07-12 16:12:40", 
+            "coupon_create_datetime": "2010-07-12 16:12:40", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "default_restrictions": [
+                3, 
+                2, 
+                4
+            ], 
+            "location": [
+            ], 
+            "is_valid_friday": true, 
+            "start_date": "2008-04-12", 
+            "is_valid_tuesday": true, 
+            "offer": 120, 
+            "expiration_date": "2011-01-10", 
+            "custom_restrictions": "coupon paid, slot expired", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 116, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "41.7015594000000010", 
+        "location_longitude": "-73.9204285000000000"}
+    },
+    {
+        "pk": 117, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "41.048484048415", 
+        "location_longitude": "0.0"}
+    },
+    {
+        "pk": 500, 
+        "model": "coupon.couponcode", 
+        "fields": {
+            "coupon": 111, 
+            "code": "Y3V4QZ", 
+            "used_count": 0
+        }
+    }
+]

@@ -1,0 +1,64 @@
+$("li.hiddenform").hide();
+
+// Business Name
+
+function default_business_name(){
+    if ($("input[id='id_business_name']").val().length > 0){
+        $(".business_name").html($("input[id='id_business_name']").val());
+    }else{
+        $(".business_name").html("Business Name");
+    }
+}
+default_business_name();
+
+$("#id_business_name").blur(function(){
+    $(".business_name").removeClass("editHover");
+    default_business_name();
+});
+$("#id_business_name").keyup(function(){
+    $(".business_name").addClass("editHover");
+    $(".business_name").html($("input[id='id_business_name']").val());
+    default_business_name();
+});
+
+// Slogan
+
+function default_slogan(){
+    if ($("input[id='id_slogan']").val().length > 0){
+        $(".slogan").html("- " + $("input[id='id_slogan']").val() + " -");
+        $("#sloganhiddenform").show();
+    }else{
+        $(".slogan").html("");
+    }
+}
+default_slogan();
+
+$("#id_slogan").blur(function(){
+    $(".slogan").removeClass("editHover");
+    default_business_name();
+});
+$("#id_slogan").keyup(function(){
+    $(".slogan").addClass("editHover");
+    if ($("input[id='id_slogan']").val().length > 0){
+        $(".slogan").html("- " + $("input[id='id_slogan']").val() + " -");
+    }else{
+        $(".slogan").html("");
+    }
+    default_business_name();
+});
+
+// open and close slogan
+$("#openslogan").click(function(e){
+    e.preventDefault();
+    $("#sloganhiddenform").slideDown("slow"),
+    $("#openslogan").fadeOut();
+    return false;
+});
+$("#closeslogan").click(function(e){
+    e.preventDefault();
+    $("#sloganhiddenform").slideUp("slow"),
+    $("#openslogan").fadeIn();
+    $("input[id='id_slogan']").val("")
+    $(".slogan").html("");
+    return false;
+});

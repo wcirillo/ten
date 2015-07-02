@@ -1,0 +1,48 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p style="margin-top: 0;">
+    Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},<br/>
+    A coupon for {{ business.business_name }} is almost ready to <strong> display to potential customers </strong> in 
+    the {{ current_site.region }}. {% if consumer_count > 500 %} Over {{ consumer_count }} <strong>
+    consumers</strong> have <strong>registered</strong> for <strong>local coupons</strong>.{% endif %}
+</p>
+
+{% comment %}
+<p>                         
+    If you use this link to <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}">finish your purchase today</a> we'll
+    knock the coupon's cost down to a cool $10 for the first month.
+</p>
+{% endcomment %}
+    Use this link to <a href="{{ base_url }}{% url sale-redirect payload=payload %}">finish your purchase today</a>.
+
+
+<p style="font-size: 18px; margin-bottom: 5px;">
+    Your coupon could look like this or say (almost) anything you want:
+</p>
+
+{% include "include/dsp/dsp_coupon_in_email.html" %}
+
+<p>
+    You can make <strong>unlimited changes</strong> to your coupon. Change a <strong>single word</strong> or the <strong>
+    entire offer</strong> - instantly, as many times as you want, for <strong>one low price</strong>.
+</p>
+{% comment %}
+    <p>
+     <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}" style="background-color: #a6206a; background-image: url('{{media_url}}images/email/buttons/btn200x40.gif'); color: #ffffff; display: block; font-size: 18px; height: 40px; line-height: 38px; margin: 0 auto 20px auto; text-align: center; text-decoration: none; width: 400px;"><span style="color: #ffffff;">Do it now for $10 &raquo;</span></a>
+    </p>
+{% endcomment %}
+
+<p>
+Let me help you get new customers. Call or email me anytime.
+</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+{% comment %}
+    PS. Don't wait! The $10 offer is good today ({% now "n/j/Y" %}) only.
+{% endcomment %}
+
+{% include "email_gateway/generic_email_unsubscribe.html" %}
+
+{% endblock %}

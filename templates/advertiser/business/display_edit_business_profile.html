@@ -1,0 +1,32 @@
+{% extends "frames/web/columns.html" %}}
+{% block title %}{{ current_site.domain }} - Customize Display Page{% endblock %}
+
+{% block body_onload %}
+    {% if location_coords %}
+         onload="ol_map.build_location_map({{ location_coords }});"
+    {% endif %}
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url advertiser-account %}">Advertiser Account</a> &nbsp;&rsaquo;&nbsp;
+    <span>Customize Display Page</span>
+{% endblock %}
+
+{% block base_content %}
+
+    <h3>{{ business.business_name }} Display Page</h3>
+    <p class="small">
+        Enhancing your display page with additional information is <strong>entirely optional</strong>.
+    </p>
+
+    {% include "include/frm/frm_edit_business_profile.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <p align="center">
+        <img src="{{ safe_static_url }}images/display_page_sample_1_2_3.gif" border="1" height="200" width="280"/>
+    </p>
+
+{% endblock %}

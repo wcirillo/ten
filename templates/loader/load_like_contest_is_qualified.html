@@ -1,0 +1,22 @@
+{% extends "frames/web/iframeBox.html" %}
+
+{% block meta %}
+
+    <meta name="robots" content="noindex, follow">
+    {% include "include/dsp/dsp_facebook_meta.html" %}
+    
+{% endblock %}
+
+{% block open_content %}
+
+    {% include "include/dsp/dsp_facebook_like_small.html" %}
+
+    <a class="sprite twitter" href="http://twitter.com/share" data-text="{{ current_site.domain }} I'm in the Drawing for $10,000! Sign up for Coupons, Qualify to Win! Rules Online" data-url="http://{{ current_site.domain }}" data-related="{{ current_site.twitter_name }}" data-count="none"></a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+     
+{% endblock %}
+
+{% block base_footer %}
+    <script type="text/javascript">
+        {% include "include/scripts/js_facebook_like_button.html" %}
+    </script>
+{% endblock %}

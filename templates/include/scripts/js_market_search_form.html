@@ -1,0 +1,54 @@
+ $("#frm_market_search").keypress(function(e) {
+    if (!e.which && ((e.charCode || e.charCode === 0) ? e.charCode: e.keyCode)) {
+        e.which = e.charCode || e.keyCode;
+    }
+    if (e.keyCode == 13) {
+         ajax_market_search_submit(e);
+         return false;
+    }
+ });
+         
+$("#submit_frm_market_search").click(function(e){
+    ajax_market_search_submit(e);
+});
+
+function ajax_market_search_submit(e)
+{
+    var form = e.target;
+    e.preventDefault();
+    while (form.tagName != "FORM" && form.nodeName != "FORM")
+    {
+        if (form.parentNode == null || form.parentNode == undefined)
+        {break;}
+        form = form.parentNode;
+    }
+
+    disable_element($('input[type=submit]', form));
+    $.ajax({
+        url: "{% url market-zip-search %}",
+        type: "POST",
+        async: true,
+        data: {
+            'consumer_zip_postal':$("#id_consumer_zip_postal").val()
+              },
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) 
+            {
+                if(data['errors']){
+                    if(data['errors']['consumer_zip_postal']){
+                        $("#consumer_zip_postal_errors").html(data.errors.consumer_zip_postal.toString());
+                    }else{
+                        $("#consumer_zip_postal_errors").html('');
+                    }
+                enable_submit_btn();
+                }else{
+                /* SUCCESS redirect to url in page element.*/
+                    window.parent.location = window.parent.$("span#id_success_url_path").html();
+                }
+                
+            },
+        error: function() {}
+    });
+
+}

@@ -1,0 +1,71 @@
+{% extends "frames/email/full.html" %}
+{% load currency %}
+{% block email_content %}
+    {% for key, value_dict in results_dict.items %}
+    <h1>For Abandoned {{ key }} Days Ago...</h1>
+    {% if value_dict.offers %}
+    <h2> Warm leads sent for the following abandoned offers/coupons: <h2>
+
+    <table border=0>
+        <tr >
+            <td width=150><strong>Market</strong></td>
+            <td width=150><strong>Advertiser</strong></td>
+            <td width=150><strong>BizName</strong></td>
+            <td width=150 ><strong>Offer</strong></td>
+        </tr>
+        {% for offer in value_dict.offers %}
+        {% if offer.business.advertiser.email != 'BULK@BULK.COM' %}
+            <tr bgcolor={% cycle '#eeeeee' '#dddddd' %}>
+                <td>{{ offer.business.advertiser.site.name }}</td>
+                <td><a href="{{ base_url }}/captain/advertiser/advertiser/{{offer.business.advertiser.id}}/" >
+                    {% if offer.business.advertiser.advertiser_name %}
+                      {{ offer.business.advertiser.advertiser_name }}
+                    {% else %}
+                      {{ offer.business.advertiser.email }}
+                    {% endif %}
+                    </a></td>
+                <td><a href="{{ base_url }}/captain/advertiser/business/{{offer.business.id}}/"
+                    >{{ offer.business.business_name }}</a></td>
+                <td>{{ offer.headline }}</td>
+              </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    {% else %}
+          {% if value_dict.businesses %}
+                <br>
+          {% else %}
+                <h2> Sorry, No orphaned coupons or businesses since {{ last_run }} - {{ key }} days ago, found </h2>
+          {% endif %}
+    {% endif %}
+
+    <br>
+
+    {% if  value_dict.businesses %}
+    <h2> Warm leads sent to the following businesses who never filled-in an offer <h2>
+    <table border=0>
+        <tr>
+            <td width=150><strong>Market</strong></td>
+            <td width=150><strong>Advertiser</strong></td>
+            <td width=150><strong>BizName</strong></td>
+        </tr>
+        {% for business in value_dict.businesses %}
+        <tr bgcolor={% cycle '#eeeeee' '#dddddd' %}>
+            <td>{{ business.advertiser.site.name }}</td>
+            <td><a href="{{ base_url }}/captain/advertiser/advertiser/{{business.advertiser.id}}/" >
+                {% if business.advertiser.advertiser_name %}
+                    {{ business.advertiser.advertiser_name }}
+                {% else %}
+                    {{ business.advertiser.email }}
+                {% endif %}
+              </a></td>
+            <td><a href="{{ base_url }}/captain/advertiser/business/{{ business.id }}/"
+                >{{ business.business_name }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% endif %}
+{% endfor %}
+{% endblock %}

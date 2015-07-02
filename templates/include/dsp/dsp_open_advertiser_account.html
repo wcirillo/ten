@@ -1,0 +1,14 @@
+{% if advertiser.has_usable_password %}
+    <h4><a href="{% url advertiser-account %}">Go to your Advertiser Account now</a></h4>
+{% else %}
+    <h3>Open your Advertiser Account</h3>
+    <p><em>Click <strong>Go to your account</strong> in the receipt email to:</em></p>
+{% endif %}
+
+<ul>
+    <li>Display additional information about {{ business_name }}.</li>
+    <li>Send your coupons to {{ current_site.region }} consumers in our weekly Email Flyer.</li>
+    <li>Make <strong>unlimited changes</strong> to your coupons.</li>
+    <li>Track performance with views and clicks for each coupon.</li>
+    <li>Create more coupons!</li>
+</ul>

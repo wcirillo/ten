@@ -1,0 +1,519 @@
+[
+    {
+        "pk": 103,
+        "model": "ecommerce.product", 
+        "fields": {
+            "base_units": "1", 
+            "is_active": true, 
+            "name": "Different Active", 
+            "base_days": 7, 
+            "base_rate": "29.95",
+            "content_type": [
+                "coupon", 
+                "coupon"
+            ]
+        }
+    }, 
+    {
+        "pk": 104,
+        "model": "ecommerce.product", 
+        "fields": {
+            "base_units": "1", 
+            "is_active": false, 
+            "name": "Inactive product", 
+            "base_days": 7, 
+            "base_rate": "25.00",
+            "content_type": [
+                "coupon", 
+                "coupon"
+            ]
+        }
+    },
+        {
+        "pk": 1, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Testy Promoter", 
+            "end_date": null, 
+            "create_datetime": "2010-04-26 10:13:33", 
+            "is_active": true, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": true
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Testy Affiliate", 
+            "end_date": null, 
+            "create_datetime": "2010-04-26 10:13:57", 
+            "is_active": true, 
+            "promoter_cut_percent": "10.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": true
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Not Approved", 
+            "end_date": null, 
+            "create_datetime": "2010-04-26 10:14:43", 
+            "is_active": true, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": false
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Not Active", 
+            "end_date": null, 
+            "create_datetime": "2010-04-26 10:15:11", 
+            "is_active": false, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": true
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Not Yet", 
+            "end_date": null, 
+            "create_datetime": "2010-04-26 10:17:17", 
+            "is_active": true, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2099-04-26", 
+            "is_approved": true
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Already Ended", 
+            "end_date": "2010-04-27", 
+            "create_datetime": "2010-04-26 10:17:17", 
+            "is_active": true, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": true
+        }
+    },  
+    {
+        "pk": 201,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "Free Flyer Placement",
+            "description": "Free Flyer Placement",
+            "end_date": "2099-12-31",
+            "promo_type": "3", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 202,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                104
+            ], 
+            "name": "Not active product",
+            "description": "Not active product",
+            "end_date": "2099-12-31",
+            "promo_type": "3", 
+            "create_datetime": "2010-04-26 10:21:01", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 203,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                103
+            ], 
+            "name": "Another product",
+            "description": "Another product",
+            "end_date": "2099-12-31",
+            "promo_type": "3", 
+            "create_datetime": "2010-04-26 10:22:19", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 204,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1, 
+                2,
+                103
+            ], 
+            "name": "25% off multiple products",
+            "description": "25% off multiple products",
+            "end_date": "2099-12-31",
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:24:04", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 25, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 205,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1, 
+                2, 
+                103
+            ], 
+            "name": "15% off affiliate code",
+            "description": "15% off affiliate code",
+            "end_date": "2099-12-31",
+            "promo_type": "1",
+            "create_datetime": "2010-04-26 10:25:24", 
+            "is_active": true, 
+            "promoter": 2, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 15, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 206,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "Not approved promoter",
+            "description": "Not approved promoter",
+            "end_date": "2099-12-31",
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:26:23", 
+            "is_active": true, 
+            "promoter": 3, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 207,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "Not Active Promoter",
+            "description": "Not Active Promoter",
+            "end_date": "2099-12-31",
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:27:22", 
+            "is_active": true, 
+            "promoter": 4, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 208,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "1x per month promo",
+            "description": "1x per month promo",
+            "end_date": "2099-12-31",
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:29:20", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 50, 
+            "monthly_usages_allowed": 1, 
+            "code_method": "one", 
+            "use_method": "4"
+        }
+    }, 
+    {
+        "pk": 209,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "once per advertiser",
+            "description": "once per advertiser",
+            "end_date": "2099-12-31",
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:30:07", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 50, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "2"
+        }
+    }, 
+    {
+        "pk": 210,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "gift certificate",
+            "description": "gift certificate",
+            "end_date": "2099-12-31",
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "3"
+        }
+    }, 
+    {
+        "pk": 211,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "not active promotion",
+            "description": "not active promotion",
+            "end_date": "2099-12-31",
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": false, 
+            "promoter": 1, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "unique", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 212,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "promotion not started yet",
+            "description": "promotion not started yet",
+            "end_date": "2100-04-26", 
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "2099-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "unique", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 213,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "promotion already over",
+            "description": "promotion already over",
+            "end_date": "2009-04-26", 
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": true, 
+            "promoter": 1, 
+            "start_date": "1999-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "unique", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 214,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ], 
+            "name": "promoter not started",
+            "description": "promoter not started",
+            "end_date": "2099-12-31",
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": true, 
+            "promoter": 5, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "unique", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 215,
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [
+                1
+            ],
+            "name": "promoter already ended",
+            "description": "promoter already ended",
+            "end_date": "2099-12-31",
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:31:29", 
+            "is_active": true, 
+            "promoter": 6,
+            "start_date": "2010-04-26", 
+            "promo_amount": 0, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "unique", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 201,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 201,
+            "code": "free flyer", 
+            "used_count": 1
+        }
+    }, 
+    {
+        "pk": 202,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 202,
+            "code": "not active product", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 203,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 203,
+            "code": "different product", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 204,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 204,
+            "code": "25% off multiple products", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 205,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 205,
+            "code": "15% off affiliate code", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 206,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 206,
+            "code": "not approved promoter", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 207,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 207,
+            "code": "Not active promoter", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 208,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 208,
+            "code": "1x per month", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 209,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 209,
+            "code": "once per advertiser", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 210,
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 210,
+            "code": "gift certificate", 
+            "used_count": 1
+        }
+    }
+]

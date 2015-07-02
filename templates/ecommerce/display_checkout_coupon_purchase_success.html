@@ -1,0 +1,48 @@
+{% extends "frames/web/leftCol.html" %}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    <div class="message">
+
+        {% include "include/dsp/dsp_checkout_purchase_success.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="boxBorder">
+
+        {% include "include/dsp/dsp_open_advertiser_account.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    <div class="boxBorderTight">
+
+        {% include "include/dsp/dsp_order_summary.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+    {% if coupon.is_redeemed_by_sms %}
+        <p class="center">
+            <em>
+                <a href="{% url contact-us %}">Contact Us</a> for help with <strong>Mobile Coupons</strong>.
+            </em>
+        </p>
+        {% include "include/dsp/dsp_sample_phone.html" %}
+    {% endif %}
+
+{% endblock %}

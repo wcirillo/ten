@@ -1,0 +1,29 @@
+{% extends "frames/print/frame1.html" %}
+{% block meta %}<meta name="robots" content="noindex, follow">{% endblock %}
+
+{% block base_header_top %}
+
+    <div class="header_top">
+        <a class="button back" href="#">&laquo; Back &nbsp;</a>
+        <a class="button" href="JavaScript:window.print();">Print this page</a>
+        <div class="clear"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a.back').click(function(e){
+                e.preventDefault();
+                parent.history.back();
+                return false;
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_benefits_for_business.html" %}
+    {% include "include/dsp/dsp_print_marketing_footer.html" %}
+
+{% endblock %}

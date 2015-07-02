@@ -1,0 +1,606 @@
+<form name="frm_edit_coupon" method="post" action="">{% csrf_token %}
+
+    <div id="accordion">
+
+        <div class="accordionHeader hidden" id="accordion_coupon_business"><strong>Business Name / Slogan / Website</strong></div>
+        <div class="accordionContent">
+            <ol>
+                {{ form.business_name.errors }}
+                <li>
+                    <label for="id_business_name" class="block">Business Name (required)</label>
+                    {{ form.business_name }}
+                </li>
+
+                {{ form.slogan.errors }}
+                <li>
+                    <label for="id_slogan" class="block">Slogan (optional)</label>
+                    {{ form.slogan }}
+                </li>
+
+                {{ form.web_url.errors }}
+                <li>
+                    <label for="id_web_url" class="block">website URL (optional)</label>
+                    {{ form.web_url }}
+                </li>
+            </ol>         
+        </div>
+
+        <div class="accordionHeader" id="accordion_coupon_offer"><strong>Coupon Offer</strong></div>
+        <div class="accordionContent">
+            <ol>
+                {{ form.headline.errors }}
+                <li>
+                    <label for="id_headline" class="block">Coupon Offer (required)</label>
+                    {{ form.headline }}                   
+                </li>
+
+                {{ form.qualifier.errors }}
+                <li>
+                    <label for="id_qualifier" class="block">Coupon Offer Line 2 (optional)</label>
+                    {{ form.qualifier }}
+                </li>
+            </ol>
+        </div>
+
+        <div class="accordionHeader" id="accordion_coupon_location"><strong>Location{% if location_count > 1 %}s{% endif %}</strong></div>
+        <div class="accordionContent">
+
+            {% if location_count > 1 %}
+                <p class="tiny">Change this location, or click to choose a location in the coupon preview.</p>
+            {% endif %}
+
+            <ol id="form_edit_location_1" class="form_edit_location" title="1">
+
+                {{ form.location_address1_1.errors }}
+                <li>
+                    <label for="id_location_address1_1" class="block">Address 1</label>
+                    {{ form.location_address1_1 }}
+                </li>
+
+                {{ form.location_address2_1.errors }}
+                <li>
+                    <label for="id_location_address2_1" class="block">Address 2</label>
+                    {{ form.location_address2_1 }}
+                </li>
+
+                {{ form.location_city_1.errors }}
+                <li>
+                    <label for="id_location_city_1" class="block">City</label>
+                    {{ form.location_city_1 }}
+                </li>
+
+                {{ form.location_state_province_1.errors }}
+                <li>
+                    <label for="id_location_state_province_1" class="hidden">State</label>
+                    {{ form.location_state_province_1 }}
+                </li>
+
+                {{ form.location_zip_postal_1.errors }}
+                <li>
+                    <label for="id_location_zip_postal_1" class="block">Zip</label>
+                    {{ form.location_zip_postal_1 }}
+                </li>
+
+                {{ form.location_description_1.errors }}
+                <li>
+                    <label for="id_location_description_1" class="block">Description</label>
+                    {{ form.location_description_1 }}
+                </li>
+
+                {{ form.location_area_code_1.errors }}
+                {{ form.location_exchange_1.errors }}
+                {{ form.location_number_1.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_1" class="block small">Phone Number:</label>
+                    {{ form.location_area_code_1 }}-{{ form.location_exchange_1 }}-{{ form.location_number_1 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_2" class="form_edit_location hidden" title="2">
+
+                {{ form.location_address1_2.errors }}
+                <li>
+                    <label for="id_location_address1_2" class="block">Address 1</label>
+                    {{ form.location_address1_2 }}
+                </li>
+
+                {{ form.location_address2_2.errors }}                
+                <li>
+                    <label for="id_location_address2_2" class="block">Address 2</label>
+                    {{ form.location_address2_2 }}
+                </li>
+
+                {{ form.location_city_2.errors }}                
+                <li>
+                    <label for="id_location_city_2" class="block">City</label>
+                    {{ form.location_city_2 }}
+                </li>
+
+                {{ form.location_state_province_2.errors }}                
+                <li>
+                    <label for="id_location_state_province_2" class="hidden">State</label>
+                    {{ form.location_state_province_2 }}
+                </li>
+
+                {{ form.location_zip_postal_2.errors }}                
+                <li>
+                    <label for="id_location_zip_postal_2" class="block">Zip</label>
+                    {{ form.location_zip_postal_2 }}
+                </li>
+
+                {{ form.location_description_2.errors }}                
+                <li>
+                    <label for="id_location_description_2" class="block">Description</label>
+                    {{ form.location_description_2 }}
+                </li>
+
+                {{ form.location_area_code_2.errors }}
+                {{ form.location_exchange_2.errors }}
+                {{ form.location_number_2.errors }}
+                <li>  
+                    <label for="id_location_phone_number_2" class="block">Phone Number</label>
+                    {{ form.location_area_code_2 }}-{{ form.location_exchange_2 }}-{{ form.location_number_2 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_3" class="form_edit_location hidden" title="3">
+
+                {{ form.location_address1_3.errors }}
+                <li>
+                    <label for="id_location_address1_3" class="block">Address 1</label>
+                    {{ form.location_address1_3 }}
+                </li>
+
+                {{ form.location_address2_3.errors }}                
+                <li>
+                    <label for="id_location_address2_3" class="block">Address 2</label>
+                    {{ form.location_address2_3 }}
+                </li>
+
+                {{ form.location_city_3.errors }}
+                <li>
+                    <label for="id_location_city_3" class="block">City</label>
+                    {{ form.location_city_3 }}
+                </li>
+
+                {{ form.location_state_province_3.errors }}
+                <li>
+                    <label for="id_location_state_province_3" class="hidden">State</label>
+                    {{ form.location_state_province_3 }}
+                </li>
+
+                {{ form.location_zip_postal_3.errors }}
+                <li>
+                    <label for="id_location_zip_postal_3" class="block">Zip</label>
+                    {{ form.location_zip_postal_3 }}
+                </li>
+
+                {{ form.location_description_3.errors }}
+                <li>
+                    <label for="id_location_description_3" class="block">Description</label>
+                    {{ form.location_description_3 }}
+                </li>
+
+                {{ form.location_area_code_3.errors }}
+                {{ form.location_exchange_3.errors }}
+                {{ form.location_number_3.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_3" class="block">Phone Number</label>
+                    {{ form.location_area_code_3 }}-{{ form.location_exchange_3 }}-{{ form.location_number_3 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_4" class="form_edit_location hidden" title="4">
+
+                {{ form.location_address1_4.errors }}
+                <li>
+                    <label for="id_location_address1_4" class="block">Address 1</label>
+                    {{ form.location_address1_4 }}
+                </li>
+
+                {{ form.location_address2_4.errors }}
+                <li>
+                    <label for="id_location_address2_4" class="block">Address 2</label>
+                    {{ form.location_address2_4 }}
+                </li>
+
+                {{ form.location_city_4.errors }}
+                <li>
+                    <label for="id_location_city_4" class="block">City</label>
+                    {{ form.location_city_4 }}
+                </li>
+
+                {{ form.location_state_province_4.errors }}
+                <li>
+                    <label for="id_location_state_province_1" class="hidden">State</label>
+                    {{ form.location_state_province_4 }}
+                </li>
+
+                {{ form.location_zip_postal_4.errors }}
+                <li>
+                    <label for="id_location_zip_postal_4" class="block">Zip</label>
+                    {{ form.location_zip_postal_4 }}
+                </li>
+
+                {{ form.location_description_4.errors }}
+                <li>
+                    <label for="id_location_description_4" class="block">Description</label>
+                    {{ form.location_description_4 }}
+                </li>
+
+                {{ form.location_area_code_4.errors }}
+                {{ form.location_exchange_4.errors }}
+                {{ form.location_number_4.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_4" class="block">Phone Number</label>
+                    {{ form.location_area_code_4 }}-{{ form.location_exchange_4 }}-{{ form.location_number_4 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_5" class="form_edit_location hidden" title="5">
+
+                {{ form.location_address1_5.errors }}
+                <li>
+                    <label for="id_location_address1_5" class="block">Address 1</label>
+                    {{ form.location_address1_5 }}
+                </li>
+
+                {{ form.location_address2_5.errors }}
+                <li>
+                    <label for="id_location_address2_5" class="block">Address 2</label>
+                    {{ form.location_address2_5 }}
+                </li>
+
+                {{ form.location_city_5.errors }}
+                <li>
+                    <label for="id_location_city_5" class="block">City</label>
+                    {{ form.location_city_5 }}
+                </li>
+
+                {{ form.location_state_province_5.errors }}
+                <li>
+                    <label for="id_location_state_province_5" class="hidden">State</label>
+                    {{ form.location_state_province_5 }}
+                </li>
+
+                {{ form.location_zip_postal_5.errors }}
+                <li>
+                    <label for="id_location_zip_postal_5" class="block">Zip</label>
+                    {{ form.location_zip_postal_5 }}
+                </li>
+
+                {{ form.location_description_5.errors }}
+                <li>
+                    <label for="id_location_description_5" class="block">Description</label>
+                    {{ form.location_description_5 }}
+                </li>
+
+                {{ form.location_area_code_5.errors }}
+                {{ form.location_exchange_5.errors }}
+                {{ form.location_number_5.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_5" class="block">Phone Number</label>
+                    {{ form.location_area_code_5 }}-{{ form.location_exchange_5 }}-{{ form.location_number_5 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_6" class="form_edit_location hidden" title="6">
+
+                {{ form.location_address1_6.errors }}
+                <li>
+                    <label for="id_location_address1_6" class="block">Address 1</label>
+                    {{ form.location_address1_6 }}
+                </li>
+
+                {{ form.location_address2_6.errors }}
+                <li>
+                    <label for="id_location_address2_6" class="block">Address 2</label>
+                    {{ form.location_address2_6 }}
+                </li>
+
+                {{ form.location_city_6.errors }}
+                <li>
+                    <label for="id_location_city_6" class="block">City</label>
+                    {{ form.location_city_6 }}
+                </li>
+
+                {{ form.location_state_province_6.errors }}
+                <li>
+                    <label for="id_location_state_province_6" class="hidden">State</label>
+                    {{ form.location_state_province_6 }}
+                </li>
+
+                {{ form.location_zip_postal_6.errors }}
+                <li>
+                    <label for="id_location_zip_postal_6" class="block">Zip</label>
+                    {{ form.location_zip_postal_6 }}
+                </li>
+
+                {{ form.location_description_6.errors }}
+                <li>
+                    <label for="id_location_description_6" class="block">Description</label>
+                    {{ form.location_description_6 }}
+                </li>
+
+                {{ form.location_area_code_6.errors }}
+                {{ form.location_exchange_6.errors }}
+                {{ form.location_number_6.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_6" class="block">Phone Number</label>
+                    {{ form.location_area_code_6 }}-{{ form.location_exchange_6 }}-{{ form.location_number_6 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_7" class="form_edit_location hidden" title="7">
+
+                {{ form.location_address1_7.errors }}                
+                <li>
+                    <label for="id_location_address1_7" class="block">Address 1</label>
+                    {{ form.location_address1_7 }}
+                </li>
+
+                {{ form.location_address2_7.errors }}                
+                <li>
+                    <label for="id_location_address2_7" class="block">Address 2</label>
+                    {{ form.location_address2_7 }}
+                </li>
+
+                {{ form.location_city_7.errors }}
+                <li>
+                    <label for="id_location_city_7" class="block">City</label>
+                    {{ form.location_city_7 }}
+                </li>
+
+                {{ form.location_state_province_7.errors }}
+                <li>
+                    <label for="id_location_state_province_7" class="hidden">State</label>
+                    {{ form.location_state_province_7 }}
+                </li>
+
+                {{ form.location_zip_postal_7.errors }}
+                <li>
+                    <label for="id_location_zip_postal_7" class="block">Zip</label>
+                    {{ form.location_zip_postal_7 }}
+                </li>
+
+                {{ form.location_description_7.errors }}
+                <li>
+                    <label for="id_location_description_7" class="block">Description</label>
+                    {{ form.location_description_7 }}
+                </li>
+
+                {{ form.location_area_code_7.errors }}
+                {{ form.location_exchange_7.errors }}
+                {{ form.location_number_7.errors }}
+                <li>                            
+                   <label for="id_location_phone_number_7" class="block">Phone Number</label>
+                    {{ form.location_area_code_7 }}-{{ form.location_exchange_7 }}-{{ form.location_number_7 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_8" class="form_edit_location hidden" title="8">
+
+                {{ form.location_address1_8.errors }}
+                <li>
+                    <label for="id_location_address1_8" class="block">Address 1</label>
+                    {{ form.location_address1_8 }}
+                </li>
+
+                {{ form.location_address2_8.errors }}
+                <li>
+                    <label for="id_location_address2_8" class="block">Address 2</label>
+                    {{ form.location_address2_8 }}
+                </li>
+
+                {{ form.location_city_8.errors }}
+                <li>
+                    <label for="id_location_city_8" class="block">City</label>
+                    {{ form.location_city_8 }}
+                </li>
+
+                {{ form.location_state_province_8.errors }}
+                <li>
+                    <label for="id_location_state_province_8" class="hidden">State</label>
+                    {{ form.location_state_province_8 }}
+                </li>
+
+                {{ form.location_zip_postal_8.errors }}
+                <li>
+                    <label for="id_location_zip_postal_8" class="block">Zip</label>
+                    {{ form.location_zip_postal_8 }}
+                </li>
+
+                {{ form.location_description_8.errors }}
+                <li>
+                    <label for="id_location_description_8" class="block">Description</label>
+                    {{ form.location_description_8 }}
+                </li>
+
+                {{ form.location_area_code_8.errors }}
+                {{ form.location_exchange_8.errors }}
+                {{ form.location_number_8.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_8" class="block">Phone Number</label>
+                    {{ form.location_area_code_8 }}-{{ form.location_exchange_8 }}-{{ form.location_number_8 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_9" class="form_edit_location hidden" title="9">
+
+                {{ form.location_address1_9.errors }}
+                <li>
+                    <label for="id_location_address1_9" class="block">Address 1</label>
+                    {{ form.location_address1_9 }}
+                </li>
+
+                {{ form.location_address2_9.errors }}
+                <li>
+                    <label for="id_location_address2_9" class="block">Address 2</label>
+                    {{ form.location_address2_9 }}
+                </li>
+
+                {{ form.location_city_9.errors }}
+                <li>
+                    <label for="id_location_city_9" class="block">City</label>
+                    {{ form.location_city_9 }}
+                </li>
+
+                {{ form.location_state_province_9.errors }}
+                <li>
+                    <label for="id_location_state_province_9" class="hidden">State</label>
+                    {{ form.location_state_province_9 }}
+                </li>
+
+                {{ form.location_zip_postal_9.errors }}
+                <li>
+                    <label for="id_location_zip_postal_9" class="block">Zip</label>
+                    {{ form.location_zip_postal_9 }}
+                </li>
+
+                {{ form.location_description_9.errors }}
+                <li>
+                    <label for="id_location_description_9" class="block">Description</label>
+                    {{ form.location_description_9 }}
+                </li>
+
+                {{ form.location_area_code_9.errors }}
+                {{ form.location_exchange_9.errors }}
+                {{ form.location_number_9.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_9" class="block">Phone Number</label>
+                    {{ form.location_area_code_9 }}-{{ form.location_exchange_9 }}-{{ form.location_number_9 }}
+                </li>
+            </ol>
+
+            <ol id="form_edit_location_10" class="form_edit_location hidden" title="10">
+
+                {{ form.location_address1_10.errors }}
+                <li>
+                    <label for="id_location_address1_10" class="block">Address 1</label>
+                    {{ form.location_address1_10 }}
+                </li>
+
+                {{ form.location_address2_10.errors }}
+                <li>
+                    <label for="id_location_address2_10" class="block">Address 2</label>
+                    {{ form.location_address2_10 }}
+                </li>
+
+                {{ form.location_city_10.errors }}
+                <li>
+                    <label for="id_location_city_10" class="block">City</label>
+                    {{ form.location_city_10 }}
+                </li>
+
+                {{ form.location_state_province_10.errors }}
+                <li>
+                    <label for="id_location_state_province_10" class="hidden">State</label>
+                    {{ form.location_state_province_10 }}
+                </li>
+
+                {{ form.location_zip_postal_10.errors }}
+                <li>
+                    <label for="id_location_zip_postal_10" class="block">Zip</label>
+                    {{ form.location_zip_postal_10 }}
+                </li>
+
+                {{ form.location_description_10.errors }}
+                <li>
+                    <label for="id_location_description_10" class="block">Description</label>
+                    {{ form.location_description_10 }}
+                </li>
+
+                {{ form.location_area_code_10.errors }}
+                {{ form.location_exchange_10.errors }}
+                {{ form.location_number_10.errors }}
+                <li>                            
+                    <label for="id_location_phone_number_10" class="block">Phone Number</label>
+                    {{ form.location_area_code_10 }}-{{ form.location_exchange_10 }}-{{ form.location_number_10 }}
+                </li>
+            </ol>
+
+        </div>
+
+        <div class="accordionHeader" id="accordion_restrictions"><strong>Restrictions</strong></div>
+        <div class="accordionContent">
+            <ol>
+                <li>
+                    <ol class="level2">
+                        {{ form.default_restrictions.errors }}
+                        {{ form.default_restrictions }}
+                        <li id="restrictionhiddenform" class="hiddenform">
+                            <ol class="level3">
+                                <li>
+                                {{ form.custom_restrictions.errors }}
+                                {{ form.custom_restrictions }}
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="accordionHeader" id="accordion_valid_days"><strong>Days Available</strong></div>
+        <div class="accordionContent">
+            <p class="small">Select which <strong>days of the week</strong> this offer is available.</p>
+            <ol>
+                <li>
+                    <ol class="level2">
+                        <li>
+                            {{ form.is_valid_monday }}
+                            <label for="id_is_valid_monday">Monday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_tuesday }}
+                            <label for="id_is_valid_tuesday">Tuesday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_wednesday }}
+                            <label for="id_is_valid_wednesday">Wednesday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_thursday }}
+                            <label for="id_is_valid_thursday">Thursday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_friday }}
+                            <label for="id_is_valid_friday">Friday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_saturday }}
+                            <label for="id_is_valid_saturday">Saturday</label>
+                        </li>
+                        <li>
+                            {{ form.is_valid_sunday }}
+                            <label for="id_is_valid_sunday">Sunday</label>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="accordionHeader" id="accordion_redemption_window"><strong>Expiration Date </strong> <span class="redemption_window">(Valid through <span><noscript>{{ coupon.expiration_date }}</noscript></span>)</span></div>
+        <div class="accordionContent">
+            {# outputing min date for jQuery to pull #}
+            <span id="id_minimum_expiration_date" class="hidden">{{ minimum_expiration_date|date:"n/j/y" }}</span>
+            {{ form.expiration_date }}
+            <div id="id_calendar"></div>
+        </div>
+
+        <div class="accordionHeader" id="accordion_redemption_method"><strong>Coupon Redemption</strong></div>
+        <div class="accordionContent">
+            <ol>
+                <li>
+                    <ol class="level2">
+                        {{ form.is_redeemed_by_sms.errors }}
+                        {{ form.is_redeemed_by_sms }}
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        
+
+    </div>
+    <p><input class="button fullBtn fullBtnTight" type="submit" name="submit_frm_edit_coupon" value="{% if coupon_mode == 'EDIT' %}Save My Changes {% else %}{% if coupon_mode == 'PUBLISH' %}Publish Now{% else %}Continue to Checkout {% endif %}{% endif %} &raquo;"/></p>
+</form>

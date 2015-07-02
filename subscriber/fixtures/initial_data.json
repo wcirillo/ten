@@ -1,0 +1,614 @@
+[
+    {
+        "pk": 1, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [], 
+            "is_major_carrier": true, 
+            "carrier": "Other", 
+            "password": null, 
+            "user_name": null, 
+            "carrier_display_name": "Other"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "ATTUS", 
+            "password": "3ztxt1n", 
+            "user_name": "uscieztext5", 
+            "carrier_display_name": "AT&T"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "BOOSTUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usboeztext5", 
+            "carrier_display_name": "Boost Mobile"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "NEXTELUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usnxeztext5", 
+            "carrier_display_name": "Nextel"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "SPRINTUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usspeztext5", 
+            "carrier_display_name": "Sprint PCS"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "TMOBILEUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ustmeztext5", 
+            "carrier_display_name": "T-Mobile"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "VERIZONUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usvzeztext5", 
+            "carrier_display_name": "Verizon Wireless"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "CELLCOMUS", 
+            "password": "3ztxt1n", 
+            "user_name": "uscceztext5", 
+            "carrier_display_name": "Cellcom"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "CELLULARSOUTHUS", 
+            "password": "3ztxt1n", 
+            "user_name": "uscseztext5", 
+            "carrier_display_name": "Cellular South"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "CRICKETUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usckeztext5", 
+            "carrier_display_name": "Cricket"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [], 
+            "is_major_carrier": true, 
+            "carrier": "NTELOSUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usnteztext5", 
+            "carrier_display_name": "nTelos"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "VIRGINUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usvieztext5", 
+            "carrier_display_name": "Virgin Mobile"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "USCELLULARUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usuceztext5", 
+            "carrier_display_name": "US Cellular"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "ALLTELUS", 
+            "password": "3ztxt1n", 
+            "user_name": "usaleztext5", 
+            "carrier_display_name": "AllTel"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "ACSUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "ACS Wireless"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "BLUEGRASSUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Bluegrass Cellular"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "CENTENNIALUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Centennial Wireless"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "COXUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Cox Communications"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "ECITUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "ECIT - Cell One of East Central IL"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "APPALACHIANUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "EKN/Appalachian Wire"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "GCIUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "GCI Communications"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "IVCUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Illinois Valley Cellular"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "IMMIXUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Immix Wireless/PC Management"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "INLANDUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Inland Cellular"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "NEXTECHUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Nex-Tech Wireless"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "RURALCELUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RCC/Unicel"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "REVOLUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Revol"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "ALLWESTUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/All West Wireless"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "CTCUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/CTC Telecom-Cambridge"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "FARMERSMUTUALUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/FMTC-Farmers Mutual Telephone Co."
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "NUCLANATURITAUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/Nucla-Naturita Telephone Co."
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "GOLDSTARUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/Silverstar"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "EAGLEUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/Snake River PCS"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "SOUTHCENTRALUTAHUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/South Central"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "SYRINGAUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/Syringa Wireless"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "UNITAHBASINUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "RINA/UBET"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "THUMBUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Thumb Cellular"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "UNITEDWIRELESSUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "United Wireless"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "WCENTRALUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "West Central Wireless"
+        }
+    },
+    {
+        "pk": 40, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": true, 
+            "carrier": "CINBELLUS", 
+            "password": "3ztxt1n", 
+            "user_name": "uscbeztext5", 
+            "carrier_display_name": "Cincinnati Bell"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "GENERALCOMUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "GCI - GENERALCOMUS"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "TIER3US", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Tier 3 Carrier"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "subscriber.carrier", 
+        "fields": {
+            "site": [
+                1
+            ], 
+            "is_major_carrier": false, 
+            "carrier": "GOLDENSTATEUS", 
+            "password": "3ztxt1n", 
+            "user_name": "ust3eztext5", 
+            "carrier_display_name": "Golden State Wireless"
+        }
+    }, 
+    {
+    "pk": 1, 
+        "model": "subscriber.smssubscription", 
+        "fields": {
+            "sms_subscription_name": "SMS"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "subscriber.smssubscription", 
+        "fields": {
+            "sms_subscription_name": "Advertiser"
+        }
+    }
+]

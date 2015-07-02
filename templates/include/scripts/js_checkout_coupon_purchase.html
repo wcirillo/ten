@@ -1,0 +1,46 @@
+$("#id_code_fieldset").addClass("hidden");
+
+if ($("#id_total").text() == "$0.00"){
+}else{
+    $("#id_code_clone_div").removeClass("hidden");
+}
+
+// prepopulate tracking code clone if code already exists
+var code = $("input[id='id_code']").val();
+if (code !== ""){
+    $("input[id='id_code_clone']").val(code);
+}
+
+// tracking code error
+var code_error = $("#id_code_fieldset .errorlist li").text();
+if (code_error !== ""){
+    $("#id_code_clone_errorlist").removeClass("hidden");
+    $("#id_code_clone_errorlist_li").html(code_error);    
+}
+
+$("#id_code_clone").keyup(function(){
+    $("input[id='id_code']").val($("input[id='id_code_clone']").val());
+});
+
+$("#id_pay_option").click(function(){
+    if ($("input[id='id_selected_product_id']").val() == 3)
+    {
+        $("input[id='id_selected_product_id']").val(2);
+    }
+    else if ($("input[id='id_selected_product_id']").val() == 2)
+    {
+        $("input[id='id_selected_product_id']").val(3);
+    }
+    submitCheckout();
+});
+
+function submitCheckout(){
+    /* Do not purchase when tracking code entered or pay option changed */
+    $('#id_post_reload').val(1);
+    $("form[name='frm_checkout_coupon_purchase']").submit();
+}
+
+$('#id_code_btn').click( function() 
+{ 
+submitCheckout(); return false; } );
+

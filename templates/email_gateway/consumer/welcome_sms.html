@@ -1,0 +1,51 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+    <br/>
+
+    {% if not coupon %}
+
+        <p align="center" style="font-size: 13px; margin: 0 0 20px 0;">
+            A request was made by Text Message ({{ mobile_phone_number }}) for email coupons.<br/>
+            Confirm your request to get email coupons sent to: <strong style="color: #1ab1e8;">{{ recipient_email }}</strong>
+        </p>
+        
+        {% if contest_is_running %}
+            <h1 align="center" style="font-size: 19px; font-weight: normal; margin: 0 0 20px 0;">
+                Get qualified for the next <strong>$10,000 Drawing!*</strong>
+            </h1>
+        {% endif %}
+
+    {% endif %}
+
+    <table cellpadding="0" cellspacing="0" width="300" border="0" align="center" style="margin-bottom: 25px;">
+        <tr>
+            <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 40px;">
+                <a href="{{base_url}}{% url email_verify_consumer payload=payload %}" style="color: #222222; display: block; height: 40px; font-size: 19px; font-weight: bold; line-height: 39px; padding: 0; text-align: center; text-decoration: none;">
+                    <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;">
+                        Send My Coupons! &raquo;
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <p align="center" style="font-size: 14px; margin: 0 0 25px 0;">
+        Click "Send My Coupons!" to accept the <a href="{{base_url}}{% url terms-of-use %}" style="color: #1ab1e8;"><span style="color: #1ab1e8;">Terms of Use</a> and verify your email address.
+    </p>
+
+    <p align="center" style="font-size: 12px; margin: 0 0 5px 0;">
+        No action is required{% if contest_is_running %} if you <strong>DO NOT</strong> wish to qualify for the next <strong>$10,000 Drawing!*</strong>{% else %}.{% endif %}
+    </p>
+
+    {% if contest_is_running %}
+        <p align="center" style="font-size: 12px; margin: 0 0 20px 0;">
+            <strong>*</strong>Eligibility requires current and complete signup. No purchase necessary.
+            <a href="{{base_url}}{% url contest-rules %}" style="color: #1ab1e8;"><span style="color: #1ab1e8;">Rules</span></a>
+        </p>
+    {% endif %}
+
+    <br/><br/>
+
+{% endblock %}

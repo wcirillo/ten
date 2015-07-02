@@ -1,0 +1,66 @@
+// Headline
+
+function default_headline(){
+    if ($("input[id='id_headline']").val().length > 0){
+        $(".headline").html($("input[id='id_headline']").val());
+    }else{
+        $(".headline").html("Coupon Offer");
+    }
+}
+default_headline();
+
+$("#id_headline").blur(function(){
+    $(".headline").removeClass("editHover");
+    default_headline();
+});
+$("#id_headline").keyup(function(){
+    $(".headline").addClass("editHover");
+    $(".headline").html($("input[id='id_headline']").val());
+    default_headline();
+});
+
+// Qualifier
+
+function default_qualifier(){
+    if ($("input[id='id_qualifier']").val().length > 0){
+        $(".qualifier").html($("input[id='id_qualifier']").val());
+    }else{
+        $(".qualifier").html("");
+    }
+}
+default_qualifier();
+
+$("#id_qualifier").blur(function(){
+    $(".qualifier").removeClass("editHover");
+    default_qualifier();
+});
+$("#id_qualifier").keyup(function(){
+    $(".qualifier").addClass("editHover");
+    $(".qualifier").html($("input[id='id_qualifier']").val());
+    default_qualifier();
+});
+
+// Expiration Date
+
+$("#openexpirationdate").click(function(e){
+    e.preventDefault();
+    $("#set_expiration_date").slideDown("slow"),
+    $("#openexpirationdate").fadeOut();
+    return false;
+});
+
+$("#id_expiration_date_text").html($("input[id='id_expiration_date']").val());
+
+$("#id_calendar").datepicker({
+    onSelect: function(dateText, inst) {
+        $("#id_expiration_date").val(dateText);
+        $("#id_expiration_date_text").html(dateText);
+        $(".redemption_window span").html(dateText);
+        $("#set_expiration_date").slideUp(),
+        $("#openexpirationdate").fadeIn();
+    },
+    dateFormat: "m/d/y",
+    defaultDate: $("input[id='id_expiration_date']").val(),
+    minDate: "0",
+    maxDate: "+364"
+});

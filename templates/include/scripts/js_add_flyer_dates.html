@@ -1,0 +1,40 @@
+set_single_flyer_price(get_subdivision_consumer_count());
+calculate_price();
+
+function get_subdivision_consumer_count(){
+    return $("#id_subdivision_consumer_count").val();
+}
+
+$(".next_month_text").html(function() {
+    var getThisMonth = $(this).closest(".month").attr("id");                                      
+    var getNextMonth = $("#" + getThisMonth).next(".month").attr("id");
+    return getNextMonth;
+});
+
+// Open next month
+$(".next_month").click(function(e){
+    e.preventDefault();
+    var thisMonth = $(this).closest(".month").attr("id");
+    var nextMonth = $("#" + thisMonth).next(".month").attr("id");
+    $("#" + nextMonth).slideDown();
+    $(this).fadeOut();
+});
+
+function calculate_price(){
+    flyer_count = $("input[type=checkbox]:checked").length;
+    subdivision_consumer_count = get_subdivision_consumer_count();
+    $("#flyer_count").html(flyer_count);
+    if(flyer_count == 1){
+        flyer_count_text = 'flyer'
+    }else{
+        flyer_count_text = 'flyers'          
+    }
+    $("#flyer_count_text").html(flyer_count_text);
+    total_flyer_price = get_flyer_price(flyer_count, subdivision_consumer_count);
+    $("#total_flyer_price").html('$' + formatCurrency(total_flyer_price));
+    $("#total_flyer_price_modal").html('$' + formatCurrency(total_flyer_price));
+}
+
+$("input[type=checkbox]").change(function(){
+    calculate_price();
+});

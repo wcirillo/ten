@@ -1,0 +1,14 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+
+    <h1 style="color: #be3685; font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif; font-size: 25px; margin: 0 0 20px 0;">ADVERTISER_SMS Just one more "click" to receive {{ current_site.name }} every week or so.</h1>
+
+    <p style="margin: 0 0 20px 0;">This message is a response to a request using <strong>{{ consumer.email }}</strong>.<br/>We need this confirmation to send your offers.</p>
+
+    <a href="http://{{unified_host}}{% url email_verify_consumer payload=payload %}" alt="Confirm My Email &amp; Send My Coupons!"><img src="{{media_url}}images/email/buttons/btnConfirmEmail.gif" width="400" height="40" border="0" style="margin-bottom: 20px;"/></a>
+
+    <p class="tiny" style="font-size: 11px;">(No action or response is required if you <strong>DO NOT</strong> wish to receive these emails)</p>
+
+{% endblock %}
+    

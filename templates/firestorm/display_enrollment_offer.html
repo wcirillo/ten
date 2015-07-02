@@ -1,0 +1,62 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - {% if user.has_usable_password %}Sign In To Get Started{% else %}Complete Enrollment{% endif %}{% endblock %}
+
+{% block meta %}
+<link rel="canonical" href="{% url show-offer-to-enroll %}"/>
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+
+    {% if is_ad_rep %}
+
+        <div class="message center">
+
+            {% if is_ad_rep %}Congratulations{% else %}Welcome {% endif %}{% if first_name %} {{ first_name }}{% endif %}!
+            <strong>Your Advertising Representative Account has been created.</strong></br>
+
+            <div class="clear"></div>
+            
+        </div>
+        
+        <p style='text-align:center;'>
+            <a id="btnVirtualOffice" href="{% url ad-rep-account %}" class="button largeBtn">Launch Virtual Office &raquo;</a>
+        </p>
+        
+    {% else %}
+
+        <div class="message center">
+
+            Welcome{% if first_name %} {{ first_name }}{% endif %}!
+            Thanks for responding to our invitation.
+            Finalize your application to become an Independent Advertising Representative.
+
+            <div class="clear"></div>
+        </div>
+
+        {% include "include/frm/frm_enroll_ad_rep.html" %}
+
+        <p class="smallmargin" align="center">
+            <em>We wish you success,</em>
+        </p>
+
+        <h4 class="alt_font2" align="center">
+            {% if request.session.ad_rep_id %}
+                {{ ad_rep.first_name }} {{ ad_rep.last_name }}
+            {% else %}
+                The {{ current_site.domain }} Team
+            {% endif %}
+        </h4>
+
+        <br/>
+
+    {% endif %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

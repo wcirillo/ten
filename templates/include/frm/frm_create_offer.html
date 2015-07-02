@@ -1,0 +1,88 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<form name="frm_create_offer" action="" method="post">{% csrf_token %}
+
+    <ol>
+        {{ form.headline.errors }}
+        <li class="fullInput">
+            <label for="id_headline" class="block">Coupon Offer (required)</label>
+            {{ form.headline }}
+            <div class="small light">Describe the deal or discount. <a class="nodec modaltrigger" name="modalOfferExample" href="#">Examples &raquo;</a></div>
+        </li>
+
+        {{ form.qualifier.errors }}
+        <li class="fullInput">
+            {{ form.qualifier.errors }}
+            <label for="id_qualifier" class="block">Coupon Offer Line 2 (optional)</label>
+            {{ form.qualifier }}
+        </li>
+        
+        <li>
+            <span class="small">This offer will be valid through <strong id="id_expiration_date_text"></strong>.
+            <a class="nodec" id="openexpirationdate" href="#">Change &raquo;</a></span>
+        </li>
+
+        <li id="set_expiration_date" class="hidden">
+
+            {{ form.expiration_date }}
+            <div id="id_calendar"></div>
+
+        </li>
+
+        <li class="fullInput">
+            {{ form.category.errors }}
+            <label for="id_category" class="block">Business Category</label>
+            {{ form.category }}
+            <div class="clear"></div>
+            <div class="small light">Help customers find you fast by choosing a category.</div>
+        </li>
+    </ol>
+
+    <ol>
+        <li>
+            <input class="button fullBtn" type="submit" tabindex="3" value="Next: Add Your Location &raquo;" />
+            <p align="center" class="tiny light nomargin"><em>Changes can be made before completing your purchase.</em></p>
+        </li>
+    </ol>
+
+</form>
+
+<div id="modalOfferExample" class="hidden">
+
+    <h2>Coupon Offer Examples</h2>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>$8 Pizza Pie</strong><br/>
+        <span>&nbsp;</span>
+    </div></div>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>$5 0ff Car Wash</strong><br/>
+        <span>Silver or Gold Package</span>
+    </div></div>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>50% Off All Nursery Items</strong><br/>
+        <span>Flowering Shrubs Included</span>
+    </div></div>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>Half Price Haircut</strong><br/>
+        <span>Summer Special</span>
+    </div></div>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>$2 Off Total</strong><br/>
+        <span>To go or Delivery</span>
+    </div></div>
+
+    <div class="couponOfferExample"><div class="padding">
+        <strong>Free Bowling at AlleyWay</strong><br/>
+        <span>Third Game Free</span>
+    </div></div>
+
+</div>

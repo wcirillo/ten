@@ -1,0 +1,22 @@
+<div id="location_{% if count %}{{ count|add:"1" }}{% else %}{{ forloop.counter }}{% endif %}" class="locationList small {% if not location %}hidden{% endif %}"  title="{% if count %}{{ count|add:"1" }}{% else %}{{ forloop.counter }}{% endif %}">
+
+    <div class="sprite iconPin {% if not location %}hidden{% endif %}"></div>
+
+    <div class="address1">{{ location.location_address1 }}</div>
+    <div class="address2">{{ location.location_address2 }}</div>
+
+    <div>
+        <span class="city">{{ location.location_city }}</span><span class="city_state_comma hidden"></span>{% if location.location_city and location.location_state_province %}<span class="default_city_state_comma">, </span>{% endif %}
+        <span class="state">{{ location.location_state_province }} </span>
+        <span class="zip_postal">{{ location.location_zip_postal }}</span>
+    </div>
+
+    <div>
+        <span class="phone_paren_open hidden"></span>{% if location.location_area_code %}<span class="default_phone_paren_open">(</span>{% endif %}<span class="area_code">{{ location.location_area_code }}</span>{% if location.location_area_code %}<span class="default_phone_paren_close">) </span>{% endif %}<span class="phone_paren_close hidden"></span>
+        <span class="exchange">{{ location.location_exchange }}</span><span class="phone_hyphen hidden"></span>{% if location.location_exchange and location.location_number %}<span class="default_phone_hyphen">-</span>{% endif %}<span class="number">{{ location.location_number }}</span>
+    </div>
+
+    <div class="description">{{ location.location_description }}</div>
+
+    <div class="clear"></div>
+</div>

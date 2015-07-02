@@ -1,0 +1,313 @@
+[
+    {
+        "pk": 1000, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test-ad-rep@example.com",
+            "email": "test-ad-rep@example.com",
+            "first_name": "Test",
+            "last_name": "Account", 
+            "groups": [], 
+            "user_permissions": [], 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2011-01-01 00:00:00", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "last_login": "2011-01-01 00:00:00"
+        }
+    },
+    {
+        "pk": 1001, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test-ad-rep2@example.com",
+            "email": "test-ad-rep2@example.com",
+            "first_name": "Test2",
+            "last_name": "Account2", 
+            "groups": [], 
+            "user_permissions": [], 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2011-01-01 00:00:00", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "last_login": "2011-01-01 00:00:00"
+        }
+    },
+    {
+        "pk": 1002, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "cust-ad-rep3@example.com",
+            "email": "cust-ad-rep3@example.com",
+            "first_name": "Test3",
+            "last_name": "Account3", 
+            "groups": [], 
+            "user_permissions": [], 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2011-01-01 00:00:00", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "last_login": "2011-01-01 00:00:00"
+        }
+    },
+    {
+        "pk": 1003, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "ad_rep_lead1@example.com",
+            "email": "ad_rep_lead1@example.com",
+            "first_name": "Adam",
+            "last_name": "Sandler", 
+            "groups": [], 
+            "user_permissions": [], 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2011-01-01 00:00:00", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "!", 
+            "last_login": "2011-01-01 00:00:00"
+        }
+    },
+    {
+        "pk": 1000, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2011-01-01 00:00:00", 
+            "consumer_zip_postal": 12550, 
+            "email_hash": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": true, 
+            "geolocation_id": 23181, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_create_datetime": "2011-01-01 00:00:00", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 1001, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2011-01-01 00:00:00", 
+            "consumer_zip_postal": 12601, 
+            "email_hash": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": true, 
+            "geolocation_id": 23181, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_create_datetime": "2011-01-01 00:00:00", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 1002, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2011-01-01 00:00:00", 
+            "consumer_zip_postal": 12590, 
+            "email_hash": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": true, 
+            "geolocation_id": 23181, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_create_datetime": "2011-01-01 00:00:00", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 1003, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2011-01-01 00:00:00", 
+            "consumer_zip_postal": "12550", 
+            "email_hash": "", 
+            "site": 2,
+            "subscriber": null, 
+            "is_emailable": true, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_create_datetime": "2011-01-01 00:00:00", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 1001, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-18 16:12:24"
+        }
+    },
+    {
+        "pk": 1000, 
+        "model": "firestorm.adrep", 
+        "fields": {
+            "firestorm_id": 1,
+            "url": "jenkins_test", 
+            "company": "JSON Inc.",
+            "primary_phone_number": "123-555-1111",
+            "consumer_points": 0,
+            "home_phone_number": "123-555-1112",
+            "fax_phone_number": "123-555-1113",
+            "mailing_address1": "12 Main St",
+            "mailing_city": "Poughkeepsie",
+            "mailing_state_province": "NY",
+            "mailing_zip_postal": "12601",
+            "ad_rep_create_datetime": "2011-01-01 00:00:00",
+            "ad_rep_modified_datetime": "2011-01-01 00:00:00",
+            "is_fulfilled": "False",
+            "rank": "ADREP"  
+        }
+    },
+    {
+        "pk": 1001, 
+        "model": "firestorm.adrep", 
+        "fields": {
+            "firestorm_id": 2,
+            "url": "jenkins_test1001", 
+            "company": "JSON2 Inc.",
+            "primary_phone_number": "123-555-1114",
+            "consumer_points": 0,
+            "home_phone_number": "123-555-1115",
+            "fax_phone_number": "123-555-1116",
+            "mailing_address1": "122 Main St",
+            "mailing_city": "Newburgh",
+            "mailing_state_province": "NY",
+            "mailing_zip_postal": "12550",
+            "ad_rep_create_datetime": "2011-01-01 00:00:00",
+            "ad_rep_modified_datetime": "2011-01-01 00:00:00",
+            "is_fulfilled": "False"
+        }
+    },
+    {
+        "pk": 1002, 
+        "model": "firestorm.adrep", 
+        "fields": {
+            "firestorm_id": 3,
+            "url": "jenkins_test1002", 
+            "company": "No company.",
+            "primary_phone_number": "123-555-1114",
+            "consumer_points": 0,
+            "home_phone_number": "123-555-1115",
+            "fax_phone_number": "123-555-1116",
+            "mailing_address1": "12 Church St",
+            "mailing_city": "Fishkill",
+            "mailing_state_province": "NY",
+            "mailing_zip_postal": "12524",
+            "ad_rep_create_datetime": "2011-01-01 00:00:00",
+            "ad_rep_modified_datetime": "2011-01-01 00:00:00",
+            "is_fulfilled": "False",
+            "rank": "CUSTOMER" 
+        }
+    },
+    {
+        "pk": 1,
+        "model": "firestorm.adrepwebgreeting",
+        "fields": {
+            "web_greeting": "Greetings from the test_ad_rep JSON.",
+            "ad_rep": 1000
+        }
+    },
+    {
+        "pk": 2,
+        "model": "firestorm.adrepwebgreeting",
+        "fields": {
+            "web_greeting": "Howdy compadre.",
+            "ad_rep": 1001
+        }
+    },
+    {
+        "pk": 3,
+        "model": "firestorm.adrepwebgreeting",
+        "fields": {
+            "web_greeting": "Hey, what's up yo",
+            "ad_rep": 1002
+        }
+    },
+    {
+        "pk": 1001, 
+        "model": "consumer.uniqueusertoken", 
+        "fields": {
+            "timestamp": "2011-08-23 11:16:07", 
+            "hashstamp": "082ff819d989b0d004f913dbb95018c221453fdb",
+            "user": 1001, 
+            "has_expiration": true, 
+            "lifetime": 259200
+        }
+    },
+    {
+        "pk": 1002, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [7], 
+            "advertiser": 1001, 
+            "slogan": "Yours=Mine", 
+            "business_modified_datetime": "2010-05-18 16:12:24", 
+            "business_create_datetime": "2010-05-18 16:12:24", 
+            "short_business_name": "adrep biz1", 
+            "is_active": true, 
+            "business_name": "My10Coupons"
+        }
+    },
+    {
+        "pk": 1003,
+        "model": "firestorm.adreplead", 
+        "fields": {
+            "ad_rep": 1001,
+            "primary_phone_number": "8455551117"
+        }
+    }
+]

@@ -1,0 +1,22 @@
+{% extends "frames/web/full.html" %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_consumer_registration_confirmation.html" %}
+
+    <br/>
+
+    {% if contest_is_running %}
+        {% if not is_eligible_to_win %}
+            <h2 class="large highlight alt_font2" align="center">Win $10,000!*</h2>
+            <p class="tiny center">
+                <strong>*</strong>Eligibility requires current and complete signup. No purchase necessary.
+                <a href="{% url contest-rules %}">Rules</a>
+            </p>
+        {% else %}
+            <h2 class="center"><strong>You're Qualified to Win $10,000!*</strong></h2>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+<table width="100%"><tr>
+<td>
+<h2>Coupon Action Counts:</h2>
+<ul>{% for coupon_action in original.coupon_actions.all %}
+    <li>{{ coupon_action.action.name }}: {{coupon_action.count }}</li>      
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+</tr></table>
+{% if original %}
+<h2>Advertiser: <a href="{% url admin:advertiser_advertiser_change original.offer.business.advertiser.id %}">{{ original.offer.business.advertiser.email }}</a></h2>
+<h3>Business: <a href="{% url admin:advertiser_business_change original.offer.business.id %}">{{ original.offer.business.business_name }}</a></h3>
+<h3>Offer: <a href="{% url admin:coupon_offer_change original.offer.id %}">{{ original.offer.headline }}</a></h3>
+
+{% if original.slot_time_frames.all %}
+<h3>Slot Time Frames:</h3>
+    {% for slot_time_frame in original.slot_time_frames.all %}
+        <a href="{% url admin:coupon_slottimeframe_change slot_time_frame.id %}">{{ slot_time_frame.id }}</a> for <a href="{% url admin:coupon_slot_change slot_time_frame.slot.id %}">{{ slot_time_frame.slot }}</a>
+    {% endfor %}
+{% endif %}
+
+{% endif %}
+{% endblock %}

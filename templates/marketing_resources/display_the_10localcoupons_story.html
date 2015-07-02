@@ -1,0 +1,18 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - Become an Advertising Representative{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/the-10localcoupons-story/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url become-an-ad-rep %}">Become an Advertising Representative</a> &nbsp;&rsaquo;&nbsp;
+    <span>The 10LocalCoupons.com Story</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_the_10localcoupons_story.html" %}
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

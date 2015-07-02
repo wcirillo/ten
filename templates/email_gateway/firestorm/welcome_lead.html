@@ -1,0 +1,46 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+<p>{% if ad_rep_lead.first_name %}{{ ad_rep_lead.first_name }},{% else %}Hi!{% endif %}</p>
+
+<p>Thank you for contacting us.</p>
+
+<p>I'm delighted that you are interested in our opportunity and look forward to visiting with you personally.</p>
+
+<p>
+I'm sure you've heard of Groupon and Living Social and many of the other digital coupon companies that offer discounts to restaurants, 
+beauty salons, and other businesses.  They are successful for themselves, but not always very successful for their clients because the 
+advertiser almost always loses money on the offer. Our company has a fresh, business-friendly model that is much more like direct mail, 
+but amazingly more affordable and profitable for our clients.
+</p>
+
+<p>
+I would love to tell you our story in more detail and see whether or not our business is what you are looking for.
+</p>
+
+<p>Learn more about our company, <a href="{{ media_url }}spots/etc/10LocalCoupons_AdRep_Four_Minute_Overview.mp3">click to hear a quick 4 minute recording</a> 
+or read <a href="{{ base_url }}/{% url the-10localcoupons-story %}">our story</a> on the website.
+</p>
+
+<p>
+This is a wonderful time to take control of your professional destiny and personal future. Some people think you have to be born lucky
+to be successful, and some people just wish that "something wonderful" would happen to change their life.  At 10LocalCoupons.com, you 
+can create the future that you desire, and all of us here would be delighted to help you achieve it.
+</p>
+
+<p>Thanks again for your interest. Please feel free to contact me or call Eric at any time.</p>
+
+<table width='100%' cellpadding=0 cellspacing=0>
+<tr>
+<td style='vertical-align:top;width:65%;'>{% include "include/dsp/dsp_email_html_signature.html" %}</td>
+<td style='vertical-align:top;padding-top:15px'>
+<span style='color:#00A9E7;font-weight:bold;'>Eric Straus</span><br/>
+CEO<br/>
+ <a style='color:#00A9E7;' href="mailto:Eric@10LocalCoupons.com">Eric@10LocalCoupons.com</a><br/>
+(914) 920-3059<br/>
+</td>
+</tr>
+</table>
+
+{% endblock %}

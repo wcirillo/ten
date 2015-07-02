@@ -1,0 +1,28 @@
+{% extends "frames/web/columns.html" %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_variable_opt_out_confirmation.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% if live_help_banner %}
+
+        <div class="bgBoxAlt"><div class="padding center">
+            <h5 class="highlight">Live Help: (800) 581-3380</h5>
+        </div></div>
+    
+        <div class="bgBoxAlt"><div class="padding">
+            {% include "include/dsp/dsp_opt_in_opt_out_mobile_phone.html" %}
+        </div></div>
+
+    {% else %}
+        {% include "include/dsp/dsp_live_help.html" %}
+        <div class="hr"></div>
+        
+
+    {% endif %}
+
+{% endblock %}

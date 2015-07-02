@@ -1,0 +1,52 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+{{ company_name }}: 
+
+I wanted to take this time to say "hello"... and "thank you" for being one of our CHARTER advertisers on {{ site.domain }}!!!
+
+We have been seeing significant increases in our business since we launched this site. The number of folks receiving your coupons continues to rise on a daily basis... thanks to heavy and ongoing broadcast advertising! Across the board, we are currently in 77 markets in the United States; and our database of consumers is growing rapidly. 
+
+As you know, the easiest and cheapest way to grow a successful business is by word of mouth. That said, please pass the word around to people that you think might benefit from getting great local coupons...
+
+We will touch base every once in a while to share with you what we have going on since we are in the very early stages of growth and change! We need your input! Please let us know your thoughts/comments/complaints!!!!  Testimonials are always welcome and we can share them with everyone so please, don't be shy... tell us about your successes using {{ site.domain }}!!!
+
+Just a little insight for you...
+
+Our sites are never complete and our team is continually working to build and grow the sites.
+
+**********
+
+Some site features that have been recently deployed:
+
+- Ability to Facebook "like" coupon offers and automatically show this on recipients FB page
+
+- Create A Coupon page has visual of coupon with data populated as coupon data is being submitted (you can watch your coupon get built as data is input)
+
+- Google maps integrated into coupons to show business location
+
+**********
+
+Upcoming site features in development:
+
+- Advertiser Login - will allow advertisers to view performance metrics of their coupons (number of coupons clicked through, printed, emailed, etc.)
+
+- Business website thumbnail on coupon page
+
+- Business profile
+
+- Tweeting coupons
+
+
+We are excited to have you as a charter advertiser! Thank you for being part of this growing family and we look forward to a long and beneficial relationship! Please feel free to call me or email me 24/7. 
+
+Best,
+
+Eric Straus
+President
+{{ site.domain }}
+Phone: 914-920-3059
+Email: Eric@10Coupons.com
+ 
+ I'll very occasionally send updates like these to let you know what's going on with our site. If you'd prefer not to receive them, please use this link to unsubscribe: {{ base_url }}{{ unified_host }}{% url opt_out payload=payload %}
+{% endblock %}

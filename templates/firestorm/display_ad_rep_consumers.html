@@ -1,0 +1,110 @@
+{% extends "frames/web/iframeBody.html" %}
+
+{% block open_content %}
+
+    <h3 align="center">
+        Get Paid for Sharing 10LocalCoupons.com
+    </h3>
+
+    <p align="center">
+        <em>Earn Money by collecting Referral Bonus Points</em>
+    </p>
+
+    {% if consumer_count > 0 %}
+
+        {% if verified_consumers_count > 9 %}
+            <h4 align="center">
+                Referral Bonus Points for {{ ad_rep.first_name }} {{ ad_rep.last_name }}:
+                <strong style="font-size: 17px;">{{ consumer_points }}</strong>
+            </h4>
+        {% endif %}
+
+        <p class="smallmargin" align="center">
+            You've referred <strong style="font-size: 17px;">{{ consumer_count }}</strong>
+            {% if consumer_count == 1 %}person{% else %}people{% endif %} to 10LocalCoupons.com.
+        </p>
+
+        {% if consumer_count > 0 %}
+        {% comment %}Start roster section{% endcomment %}
+
+        <table class="util" cellpadding="8" cellspacing="0" border="0" align="center" style="border-bottom: 1px #222 solid; margin-bottom: 15px;">
+
+            <tr style="background-color: #222;">
+                <td align="left" class="small light"><strong>Email Address</strong></td>
+                <td align="center" class="small light"><strong>Signed Up for Email Flyers?</strong></td>
+            </tr>
+
+            {% for consumer in consumers %}
+            <tr>
+                <td align="left" class="small">
+                    {{ consumer.email }}
+                </td>
+                <td align="center" class="small">
+                    {% if consumer.is_email_subscription %}
+                        YES
+                    {% else %}
+                        <strong style="color: #ff0000;">NO</strong>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <p align="center" class="small">
+            <em>
+                YES indicates that person is counted toward a Referral Bonus.<br/>
+                <strong style="color: #ff0000;">NO</strong> means the person is not counted.
+            </em>
+        </p>
+        {% comment %}End roster section{% endcomment %}
+        {% endif %}
+
+    {% endif %}
+
+    <div class="hr"></div>
+
+    <h2>
+        Referral Bonus Points Facts
+    </h2>
+
+    <h5>
+        <strong class="highlight">What will I be paid?</strong>
+    </h5>
+
+    <p>
+        <strong>That's up to you.</strong><br/>
+        Essentially you'll earn a bonus whenever a Coupon Publishing Package is
+        sold by {% if ad_rep.rank != 'CUSTOMER' %}you or by{% endif %} a nearby
+        Advertising Representative. We'll reward you for supplying potential
+        customers to receive those local coupons via the Email Flyer. Your share
+        of a bonus is determined by the number of people you've referred. The
+        more folks you've provided and the longer they stay signed up, the
+        bigger your share. Payment of bonuses is monthly. Details are spelled
+        out in our
+        <a href="{% url compensation-plan %}" target="_parent">Compensation Plan</a>.
+    </p>
+
+    <h5>
+        <strong class="highlight">How do I refer people?</strong>
+    </h5>
+
+    <p>
+        <strong>Any way you can.</strong><br/>
+        In person, on the phone, through email.
+        Spread the word about 10coupons.com/{{ ad_rep.url }}.
+        Every person signed up through your website can increase your Referral Bonus Points.
+    </p>
+
+    <h5>
+        <strong class="highlight">Where does the money come from?</strong>
+    </h5>
+
+    <p>
+        <strong>Sales.</strong><br/>
+        Independent Advertising Representatives{% if ad_rep.rank != 'CUSTOMER' %}, like you,{% endif %}
+        sell Coupon Publishing Packages to local businesses. A portion of each
+        sales is dedicated to funding the Referral Bonus.
+    </p>
+
+{% endblock %}

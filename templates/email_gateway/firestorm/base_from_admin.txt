@@ -1,0 +1,6 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+{{ message }}
+
+{% endblock %}

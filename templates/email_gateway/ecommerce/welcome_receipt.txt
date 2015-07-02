@@ -1,0 +1,57 @@
+{% extends "email_gateway/base_email.txt" %}
+{% load currency %}
+{% block email_content %}
+Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }},{% endif %}
+
+Thanks for your order!{% if prev_orders < 2 %}
+Welcome to {{ current_site.domain }}.{% endif %}
+{% if product_id == 1 %}You've {% if coupon %} also {% endif %} reserved a position in {% if num_flyers > 1 %}{{ num_flyers }}{% else %}an upcoming{% endif %} {{ current_site.name }} Email Flyer{{ num_flyers|pluralize }}.
+{% comment %}{% else %}{% if num_consumers > 100 %}Reserve a guaranteed position in an upcoming {{ current_site.name }} Email Flyer (Thursday, {{ next_flyer_date }}){% endif %}.{% endif %}{% endif %} Go to your Advertiser Account{% if not business.advertiser.has_usable_password %} now. It's all set up and ready to use.{% endcomment%}
+{% endif %}
+
+{% if product_id == 2 or product_id == 3 %}"{{ coupon.offer.headline }}" has been published.
+
+Customers can find your coupons using our search tool.
+They can also view coupons by category.
+{{ business.business_name }} is listed in our {{ business.categories.all.0.name|safe }} category.
+
+Get more people to see your coupons.
+Print and display a custom window sign.
+Follow this link:
+{{base_url}}{{ window_display_url }}
+{% endif %}
+
+Sign in to your account with this link:
+{{base_url}}{% url login-advertiser-from-email payload=payload %}
+
+
+Make unlimited changes!
+Create more coupons now.
+Update the business profile.
+{% if product_id  == 2 or product_id == 3 %}Distribute your coupons.{% endif %}
+Track coupon performance.
+
+
+_________ Receipt {{ order.invoice }}  __________
+
+{{ business.business_name }},
+This is a receipt for your {{ order.create_datetime|date:"M j, Y" }} {% if order.total > 0 %}purchase{% else %}transaction{% endif %}:
+
+{% if coupon %}Coupon Offer:                             {{ coupon.offer.headline }}{% endif %}
+{% for order_item in order.order_items.all %}{{ order_item.description }}                     {{ order_item.amount|currency }}{% endfor %}
+{% if order.amount_discounted > 0 or order.tax > 0 %}
+{% if order.promotion_code %}Tracking Code {{ order.promotion_code.code }}: -{{ order.amount_discounted|currency }}{% endif %}
+                                     {% if order.tax > 0 %}{{ order.tax|currency }} tax{% endif %}{% endif %}
+{% if order.total > 0 %}--------------------------------------------------------------------------
+Total charged to {{ cc_type }}{% ifnotequal cc_type 'MasterCard' %} card{% endifnotequal %} XXXX-{% if cc_type == 'American Express' %}XXXXXX-X{% else %}XXXX-XXXX-{% endif %}{{ payment.credit_card.last_4 }}{% endif %} {{ order.total|currency }}
+
+{% if product_id = 2 and renewal_rate %}You will be charged each month. 
+Change auto-renew setting to cancel.
+
+{% endif %}
+{% if prev_orders > 1 %}Please contact us with any questions.{% else %}Got questions? Give me a ring, or email anytime.{% endif %}
+
+{% include 'include/dsp/dsp_email_text_signature.txt' %}
+Ensure delivery of your coupons.
+Add Coupons@10Coupons.com as a contact in your email program.
+{% endblock %}

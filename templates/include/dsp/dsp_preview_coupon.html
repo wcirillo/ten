@@ -1,0 +1,126 @@
+{% load difference_range %}
+{% load range %}
+
+<div class="coupon">
+    <div class="couponInner">
+
+        <div class="coupon_business">
+
+            <h1 class="business_name"><noscript>{{ business.business_name }}</noscript></h1>
+
+            <h2 class="slogan"><noscript>{% if business.slogan %}- {{ business.slogan }} -{% endif %}</noscript></h2>
+
+<!--
+            <span class="hidden web_url url"><noscript>{% if business.web_url %}{{ business.web_url|cut:'http://' }}{% endif %}</noscript></span>
+-->
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="coupon_offer edit">
+
+            <h3 class="headline"><noscript>{{ offer.headline }}</noscript></h3>
+
+            <h4 class="qualifier"><noscript>{{ offer.qualifier }}</noscript></h4>
+
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="redemption_method">
+
+            <div class="clear"></div>
+        </div>
+
+        <h5 class="alt_font">The Fine Print:</h5>
+        <ul class="fine_print small">
+
+            <li class="restriction_0 hidden"></li>
+            <li class="restriction_1 hidden"></li>
+            <li class="restriction_2 hidden"></li>
+            <li class="restriction_3 hidden"></li>
+            <li class="restriction_4 hidden"></li>
+            <li class="restriction_5 hidden"></li>
+            <li class="restriction_6 hidden"></li>
+            <li class="restriction_7 hidden"></li>
+            <li class="restriction_8 hidden"></li>
+            <li class="restriction_9 hidden"></li>
+            <li class="restriction_10 hidden"></li>
+
+            <li class="custom_restriction hidden"></li>
+            <li class="ten_coupon_restrictions">
+                {{ ten_coupon_restrictions }}
+            </li>
+            <li class="valid_days edit hidden"></li>
+
+            {% if valid_days %}
+                <li class="default_valid_days edit">
+                    {{ valid_days }}
+                </li>
+            {% endif %}
+
+            <noscript>
+                {% for restriction in default_restrictions %}
+                    <li>{{ restriction }}</li>
+                {% endfor %}
+                {% if custom_restrictions %}
+                    <li>{{ custom_restrictions }}</li>
+                {% endif %}
+                <li>{{ ten_coupon_restrictions }}</li>
+                <li>{{ valid_days }}</li>
+            </noscript>
+            
+            <li class="redemption_window edit">
+                Valid through <span><noscript>{{ coupon.expiration_date }}</noscript></span>
+            </li>
+        </ul>
+
+        <div class="qrcodesample">
+            <div class="center alt_font2 smallmargin">Sample</div>
+            <img class="block" src="{{ safe_static_url }}images/qrcodesample.gif" height="75" width="75"/>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="coupon_location">
+
+    <div class="grid_5 alpha">
+
+        {% if coupon.location %}
+
+            {% for location in coupon.location %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+            {% for count in coupon.location|length|difference_range:10 %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+        {% else %}
+
+            {% for count in 10|get_range %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+        {% endif %}
+
+        <br/>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_5 omega">
+
+        <div class="boxBorderTight">
+            <img class="block" src="{{ safe_static_url }}images/sample_map.gif" height="190" width="295" border="0"/>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>

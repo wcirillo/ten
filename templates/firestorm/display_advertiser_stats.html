@@ -1,0 +1,14 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url ad-rep-account %}">Virtual Office</a> &nbsp;&rsaquo;&nbsp;
+    <span>Advertiser Stats</span>
+{% endblock %}
+
+{% block base_content %}
+
+    <h2 align="center">{{ ad_rep.first_name }} {{ ad_rep.last_name }} - Advertiser Stats</h2>
+
+    {% include "include/frm/frm_coupon_stats.html" %}
+
+{% endblock %}

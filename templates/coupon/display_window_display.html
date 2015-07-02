@@ -1,0 +1,14 @@
+{% extends "frames/print/frame1.html" %}
+{% block meta %}<meta name="robots" content="noindex, follow">{% endblock %}
+
+{% block base_header_top %}
+    <div class="header_top">
+            <a class="button" href="{% if referer %}{{ referer }}{% else %}{% url view-single-coupon coupon.slug coupon.id %}{% endif %}">&laquo; Back &nbsp;</a>
+            <a class="button" href="JavaScript:window.print();">Print this window display</a>
+        <div class="clear"></div>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+    {% include "include/dsp/dsp_window_display.html" %}
+{% endblock %}

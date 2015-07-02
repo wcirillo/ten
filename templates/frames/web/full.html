@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body_class %}full{% endblock %}
+
+{% block frame %}
+
+    {% block breadcrumbs %}
+    <div class="breadcrumbs sprite tiny">
+        <a href="{% url all-coupons %}">{{ current_site.name }} Coupons</a> &nbsp;&rsaquo;&nbsp;
+        {% block breadcrumbs_content %}{% endblock %}
+        <div class="clear"></div>
+    </div>
+    {% endblock %}
+
+    {% block top_content %}
+    {% endblock %}
+
+    <div class="grid_16">
+        {% block base_content %}
+        {% endblock %}
+    </div>
+
+{% endblock %}

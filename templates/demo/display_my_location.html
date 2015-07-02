@@ -1,0 +1,28 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - test{% endblock %}
+{% block meta %}
+<link rel="canonical" href="{% url become-an-ad-rep %}"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>test</span>
+{% endblock %}
+
+{% block base_content %}
+
+
+<h3>Geolocation Navigator Prototype</h3>
+zipcode in session : {{ request.session.consumer.consumer_zip_postal }}</br>
+
+<p><em>Get my zip code based on my geographic coordinates:</em></p>
+<span id='id_update_me2' name='id_update_me2'></span>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <img src="{{ safe_static_url }}images/be_your_own_boss.jpg" border="0" height="350" width="350" alt="Be your own boss"/>
+
+{% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

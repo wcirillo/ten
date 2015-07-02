@@ -1,0 +1,48 @@
+{% extends "frames/web/iframeBody.html" %}
+
+{% block open_content %}
+
+    <h3 align="center">{{ ad_rep.first_name }} {{ ad_rep.last_name }} - Virtual Office</h3>
+    <h3 align="center">Recruitment Activity for {{ report_ad_rep.first_name }} {{ report_ad_rep.last_name }}</h3>
+
+    <p align="center">Encourage recruits to maintain at least 10 customers.<br/>
+    Recruitment Activity for {{ report_ad_rep.first_name }} {{ report_ad_rep.last_name }} is shown below. 
+    Click a name to view that Advertising Representative's Recruitment Activity.
+    </p>
+
+    <table cellpadding="5" cellspacing="0" border="0" align="center">
+
+        <tr bgcolor="#222">
+            <td align="left" class="small light"><strong>Team Member</strong></td>
+            <td align="center" class="small light"><strong>Annual Coupon Packages Sold</strong></td>
+            <td align="center" class="small light"><strong>Customers</strong></td>
+        </tr>
+
+        {% for downline_ad_rep, consumers, annuals, has_downline in data_set %}
+        <tr>
+            <td align="left" class="small">
+                <strong>{% if has_downline %}
+                    {% if is_admin %}<a href="{% url admin-downline-consumers-drill-down ad_rep_id=ad_rep.id downline_ad_rep_id=downline_ad_rep.id %}">
+                    {% else %}<a href="{% url downline-consumers-drill-down downline_ad_rep_id=downline_ad_rep.id %}?id={{ ad_rep.firestorm_id }}">{% endif %}{% endif %}{{ downline_ad_rep.first_name }} {{ downline_ad_rep.last_name }}{% if has_downline %}</a>{% endif %}</strong>
+            </td>
+            <td align="center" class="small">
+                    <strong>{{ annuals }}</strong>
+            </td>
+            <td align="center" class="small">
+                {% if consumers > 9 %}
+                    <strong style="color: #009933;">{{ consumers }}</strong>
+                {% else %}
+                    <strong>{{ consumers }}</strong>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% if report_ad_rep.get_rank_display == 'Market Manager' %}
+    <p align="center">
+    (Effective 12.2.11) When an Advertising Representative you've recruited sells an Annual Coupon Publishing Package 
+    (subject to the <a href="{% url compensation-plan %}" target="_parent">compensation plan</a>) commission is paid to you.
+    </p>
+    {% endif %}
+{% endblock %}

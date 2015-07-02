@@ -1,0 +1,49 @@
+{% load difference_range %}
+{% load range %}
+
+<div class="coupon_location {% if not coupon.location %}hidden{% endif %}">
+
+    <div id="message_map" class="message small hidden">
+
+        A Google map is provided with your coupon for up to 10 business locations.
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_5 alpha">
+
+        {% if coupon and coupon.location %}
+
+            {% for location in coupon.location %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+            {% for count in coupon.location|length|difference_range:10 %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+        {% else %}
+
+            {% for count in 10|get_range %}
+                {% include "include/dsp/dsp_preview_single_location.html" %}
+            {% endfor %}
+
+        {% endif %}
+
+        <br/>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_5 omega">
+
+        <div class="boxBorderTight">
+            <img class="block" src="{{ safe_static_url }}images/sample_map.gif" height="190" width="295" border="0"/>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>

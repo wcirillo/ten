@@ -1,0 +1,4 @@
+{% if recipient_email %}Message sent to: {{ recipient_email }}{% endif %}
+Use the following link link to cancel these email messages instantly:
+{{base_url}}{% url opt_out payload=payload %}
+

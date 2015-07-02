@@ -1,0 +1,45 @@
+$("#submit_consumer_reg").click(function(e){
+    e.preventDefault();
+    coupon_id = $(".coupon_id").html();
+    
+    $.ajax({
+        url: "{% url show-email-coupon coupon_id=coupon_id %}",
+        type: "POST",
+        data: {'email':$("input[id='id_email']").val(),
+               'consumer_zip_postal':$("input[id='id_consumer_zip_postal']").val()},
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) {
+                                enable_submit_btn();
+                                if(data['errors']){
+                                    if(data['errors']['email']){
+                                        $("#email_errors").html('Enter a valid e-mail address.');
+                                    }else{
+                                        $("#email_errors").html('');
+                                    }
+                                    if(data['errors']['consumer_zip_postal']){
+                                        $("#consumer_zip_postal_errors").html('Please enter a 5 digit zip.');
+                                    }else{
+                                        $("#consumer_zip_postal_errors").html('');
+                                    }
+                                }else{
+                                    if(data['is_already_registered']){
+                                        window.parent.location = "{% url print-single-coupon coupon_id %}";
+                                    }else{
+                                        window.parent.location = "{% url email-coupon-confirmation coupon_id %}";
+                                    }
+                                }
+                },
+        error: function() {}
+    });
+});
+
+$(".terms").click(function(e){
+    e.preventDefault();
+    window.parent.location = "{% url terms-of-use %}";
+});
+
+$(".rules").click(function(e){
+    e.preventDefault();
+    window.parent.location = "{% url contest-rules %}";
+});

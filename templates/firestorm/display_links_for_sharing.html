@@ -1,0 +1,65 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+
+<div class="box2">
+
+    <h4>Market Coupon Publishing to Local Businesses</h4>
+
+    <p class="small">
+        Direct <strong>local business owners/operators</strong> to a webpage explaining the <strong>benefits</strong> of publishing local coupons.
+        There's a short <strong>'how to" video</strong> too.
+    </p>
+
+    <textarea id="how_to_textarea">http://{{ how_it_works_link }}</textarea><br/>
+    <input type="button" class="button" value="Select" onClick="javascript:getElementById('how_to_textarea').select();"/>&nbsp;<strong>Copy and Paste</strong> this web address.
+
+    <div class="clear"></div>
+</div>
+
+<div class="box2">
+
+    <h4>Recommend New Advertising Representatives</h4>
+
+    <p class="small">
+        Present new recruits with a <strong>pre-approved sign-up form</strong>.
+        They'll become Ad Reps <strong>instantly</strong> based on your <strong>recommendation</strong>.
+        You'll earn a bonus equal to <strong>25%*</strong> of the commissions earned by any (and all) Advertising Representatives you've recommended. 
+        Your bonus is an <strong>additional</strong> "override." 
+        It is <strong>not</strong> a cut of your recruits' earnings.
+        To ensure each recruit is credited to you, use the web address supplied here.
+    </p>
+
+    <textarea id="recommend_textarea">http://{{ recommend_enrollment_link }}</textarea><br/>
+    <input type="button" class="button" value="Select" onClick="javascript:getElementById('recommend_textarea').select();"/>&nbsp;<strong>Copy and Paste</strong> this web address.
+
+    <div class="clear"></div>
+</div>
+
+<div class="box2">
+
+    <h4>Increase the number of Customers using {{ ad_rep.site.domain }}</h4>
+
+    <p class="small">
+        Share the <strong>address</strong> of your <strong>personalized website</strong> with everyone else.
+        When they sign up for <strong>free local coupons</strong>, they'll increase the value of {{ ad_rep.site.domain }} to local businesses.
+        They'll also remain <strong>linked to you</strong>.
+        If they become <strong>Advertisers</strong> in the future, <strong>you'll earn the commissions</strong>. 
+        If they become <strong>Advertising Representatives</strong>, you could earn a <strong>recruiter's bonus*</strong> based on their earnings.
+    </p>
+
+    <textarea id="consumers_textarea">http://{{ personal_website_link }}</textarea><br/>
+    <input type="button" class="button" value="Select" onClick="javascript:getElementById('consumers_textarea').select();"/>&nbsp;<strong>Copy and Paste</strong> this web address.
+
+    <div class="clear"></div>
+</div>
+
+<div class="hr"></div>
+
+{% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "frames/web/modal.html" %}
+
+{% block frame %}
+
+    <div class="content largeForm">
+
+        <h3>Send this coupon as a text message to my cell phone!</h3>
+
+        <p class="small">
+            Redeem your coupon by presenting this message on your cell phone at <strong class="highlight">{{ business_name }}</strong>.
+            All restrictions displayed on {{ current_site.domain }} apply to text coupons.
+        </p>
+
+        {% include "include/frm/frm_subscriber_registration.html" %}
+
+    </div>
+
+    {% include "include/dsp/dsp_sample_phone.html" %}
+
+{% endblock %}

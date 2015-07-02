@@ -1,0 +1,25 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+ADVERTISER_SMS Get 10 {{ current_site.name }} Coupons every week or so.
+
+This message is a response to a request using:
+{{ consumer.email }}
+
+Use this link to confirm the request:
+http://{{unified_host}}{% url email_verify_consumer payload=payload %}
+
+(No action needed if you do not wish to receive email.)
+
+{{ current_site.domain }}
+Customer Care
+800-581-3380
+
+Insure delivery of your Coupons. 
+Add Coupons@10Coupons.com to your contacts. 
+
+{% if ref_num %} Ref: {{ ref_num }} {% endif %}
+
+If you no longer wish to receive awesome deals from us, please unsubscribe by going to the following link in your browser:
+http://{{unified_host}}{% url opt_out payload=payload %}
+{% endblock %}

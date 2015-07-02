@@ -1,0 +1,26 @@
+{% extends "frames/web/full.html" %}
+{% block title %}Media Partner Reports{% endblock %}
+
+{% block top_content %}{% endblock %}
+
+{% block base_content %}
+
+    <div>
+
+        <div class="left">
+            <h4 class="nomargin">Media Partner Account</h4>
+        </div>
+
+        <div class="right small">
+            <strong>Transaction Reports</strong> &nbsp;|&nbsp;
+            <a href="{% url media-partner-consumer-sign-ups 'since-launch' %}">Consumer Trends</a> &nbsp;|&nbsp;
+            <a href="{% url media-partner-home %}">Info for Media Partners</a> &nbsp;|&nbsp;
+            <a href="{% url widgets %}">Banner Ads</a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    {% include "include/rpt/rpt_transaction_report.html" %}
+
+{% endblock %}

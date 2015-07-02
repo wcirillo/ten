@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "firestorm-feeds",
+        "model": "gargoyle.switch",
+        "fields": {
+            "status": 3,
+            "description": "Determines if our feeds to Firestorm are available.",
+            "value": {
+                "is_active": true
+            },
+            "label": "firestorm feeds"
+        }
+    }
+]

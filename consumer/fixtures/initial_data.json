@@ -1,0 +1,151 @@
+[
+    {
+        "pk": 1, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "Email"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "Advertiser Updates"
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "External"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "Advertiser_Marketing"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "AdRepLead"
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "consumer.emailsubscription", 
+        "fields": {
+            "email_subscription_name": "Ad Rep Meeting Reminder"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "bouncing", 
+            "description": "Email to this user has been bouncing"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "perm_optout", 
+            "description": "User asked to never be emailed again"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "blacklist_spam_complaint", 
+            "description": "User filed our email as spam"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "blacklist_abuse", 
+            "description": "User abusive to out service or staff"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "blacklist_fraud", 
+            "description": "User made fraudulent transactions"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "blacklist_scammer", 
+            "description": "User posted links to scams"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "consumer.unemailablereason", 
+        "fields": {
+            "name": "test_user", 
+            "description": "User was created for testing only"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "consumer.baduserpattern", 
+        "fields": {
+            "pattern": "@mail.ru"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "consumer.baduserpattern", 
+        "fields": {
+            "pattern": "@example.com"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "consumer.baduserpattern", 
+        "fields": {
+            "pattern": "@tom.com"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "consumer.baduserpattern", 
+        "fields": {
+            "pattern": "@eric.com"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "consumer.baduserpattern", 
+        "fields": {
+            "pattern": "@jerm.org"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Coldcall-Leads", 
+            "permissions": []
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "advertisers__do_not_market", 
+            "permissions": []
+        }
+    }
+]

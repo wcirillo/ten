@@ -1,0 +1,27 @@
+{% extends "frames/web/sidenav.html" %}
+{% block title %}{{ current_site.domain }} - Terms of Agreement{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/terms-of-agreement/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Terms of Agreement</span>
+{% endblock %}
+
+{% block links %}
+    {% include "include/navigation/nav2.html" %}
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_terms_of_agreement.html" %} 
+
+{% endblock %}
+
+{% block bottom_content %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

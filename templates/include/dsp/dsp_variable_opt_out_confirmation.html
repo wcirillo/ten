@@ -1,0 +1,51 @@
+{% if optout_type == 'External' %}
+    
+    <h2>Just coupons please!</h2>
+
+    <h4>We heard you!</h4>
+    
+    <p class="small">
+
+        {% if is_consumer_recent  %} 
+            We'll send 10 {{ current_site.name }} coupons each week.
+            Your email address <strong>will not</strong> be shared.
+        {% else %}
+            We'll stop sharing your email address <strong>immediately</strong>.
+            Use the unsubscribe link in an email to be removed for that company's list.
+        {% endif %}
+    </p>   
+
+    <br/>
+
+    <p>
+        <a class="button largeBtn" href="{% url all-coupons %}">Browse recent coupons &raquo;</a>
+    </p>
+{% else %}
+{% if optout_type == 'Ad Rep Meeting Reminder' %}
+
+    <p>Unsubscribed from Email Invitations to Conference Calls</p> 
+    
+    <p>Email invitations will no longer be sent to: <br />
+    <strong>{{ email }}</strong></p>
+    
+    <p>However, you are welcome to dial in any Tues 9pm ET. <br />
+    Your hosts will be: <br />
+    Eric Straus, Founder and CEO <br /> 
+    David Sage, Chief Marketing Officer</p>
+    
+    <p>Learn about opportunities as an Independent Advertising Representative. <br /> 
+    Conference Dial-in Number: (218) 339-4600 <br />
+    Participant Access Code: 509938#</p>
+
+{% else %}
+
+    <h4>Unsubscribed from{%if optout_type %} {{optout_type}} on{% endif %} {{ current_site.domain }}</h4>
+    
+    <p class="small">
+        We'll no longer send{%if optout_type %} {{optout_type}}{% endif %} email to you at this address: <strong>{{ email }}</strong>
+    </p>
+    
+    <div class="hr"></div>
+
+{% endif %}
+{% endif %}

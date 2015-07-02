@@ -1,0 +1,72 @@
+[
+    {
+        "pk": 1, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Automotive"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Computers & Electronics"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Entertainment"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Health & Beauty"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Pets"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Restaurants & Bars"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Retail Goods & Stores"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Services"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Sports & Recreation"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "category.category", 
+        "fields": {
+            "name": "Home Improvement"
+        }
+    }
+]

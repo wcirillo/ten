@@ -1,0 +1,24 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+Hi {% if business.advertiser.advertiser_name %}{{ business.advertiser.advertiser_name }}{% endif %},
+
+Rerun your coupon or create a new one.
+
+Follow this link:
+{{ base_url }}/{{site.directory_name}}/create-coupon/
+
+Your coupon can say (almost) anything you want.
+
+Put your business back on the website.
+You can make unlimited changes.
+Change a single word or the entire offer.
+Display one coupon after another all for one low price.
+
+Let me help you get new customers. Call or email me anytime.
+
+
+Thanks,
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+{% endblock %}

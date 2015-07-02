@@ -1,0 +1,40 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+{% if original %}
+<fieldset class="module aligned ">
+
+<h2>Consumer:</h2>
+<table width="100%" border="0">
+    <tr>
+        <td>
+            <a href="{% url admin:consumer_consumer_change original.id %}">{{ original.username }}</a>
+        </td>
+    </tr>
+</table>
+<h2>Businesses of {{ original.username }}:</h2>
+<table width="100%"><tr>
+<td>
+<ul>{% for business in original.businesses.all %}
+    <li><a href="{% url admin:advertiser_business_change business.id %}">{{ business.business_name }}</a></li>
+        <ul>{% for offer in business.offers.all %}
+                <li>Offer: <a href="{% url admin:coupon_offer_change offer.id %}">{{ offer.headline }}</a></li>
+                    <ul>{% for coupon in offer.coupons.all %}
+                        <li>Coupon: <a href="{% url admin:coupon_coupon_change coupon.id %}">{{ coupon.coupon_type.coupon_type_name }},
+                            expiration date: {{ coupon.expiration_date }}</a></li>
+                    {% endfor %}</ul>
+            {% empty %}
+                <li>(None)</li>
+            {% endfor %}</ul>
+        </ul>      
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+</tr></table>
+</fieldset>
+{% include "admin/includes/dsp_history.html" %}
+</td>
+</tr></table>
+{% endif %}
+{% endblock %}

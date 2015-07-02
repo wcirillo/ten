@@ -1,0 +1,125 @@
+{% load currency %}
+{% load gargoyle_tags %}
+
+<h3 class="competition_print_header printhidden" align="center">Competition</h3>
+
+<table cellpadding="20" cellspacing="0" border="0" style="font-size: 14px; margin-bottom: 10px;">
+    <tr>
+        <td align="center" valign="top" width="50%" style="padding-bottom: 5px;">
+
+            <img src="{{ safe_static_url }}images/groupon_logo_200x80.gif" border="0" height="80" width="200"/>
+
+        </td>
+        <td align="center" valign="top" width="50%" style="padding-bottom: 5px;">
+
+            <img class="competition_local_logo" src="{{ safe_static_url }}images/10LC_logo_200x80.gif" border="0" height="80" width="200"/>
+
+            <table cellpadding="0" cellspacing="0" border="0" align="center" class="hidden">
+                <tr>
+                    <td valign="top" width="245">
+                        <div class="weblogo printhidden">
+                            <a id="weblogo" href="{% url all-coupons %}"><p>{{ current_site.name_no_spaces }}</p></a>
+                        </div>
+                        <div class="sprite printlogo printhidden">
+                            <img src="{{ safe_static_url }}images/logo_print_blue_825x225.png" alt="{{ current_site.name }}"/>
+                            <div class="printmarket">{{ current_site.name_no_spaces }}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            With Groupon your discount <strong>MUST be 50% or greater<strong>.
+        </td>
+        <td valign="top">
+            With 10LocalCoupons.com, <strong>YOU</strong> choose what discount to offer consumers.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            Groupon is actually a <strong>gift certificate</strong> purchased by the consumer.
+        </td>
+        <td valign="top">
+            10LocalCoupons.com is a <strong>FREE coupon</strong> with a discount offer.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            With Groupon, you <strong>give up at least 75%</strong> (SEVENTY FIVE %!) off your retail price!
+            (50% to the consumer, and 50% of the balance to Groupon!)
+            Your advertising expense is ENORMOUS!
+        </td>
+        <td valign="top">
+            With 10LocalCoupons.com, a local business can publish <strong>up to 10 coupons at any time</strong> for a <em>low fixed price</em>.
+            <br/><br/>
+            The investment is just <strong>{% if request.session.ad_rep_id %}{{ annual_slot_price|currency }}/year{% else %}{{ slot_price|currency }}/month{% endif %}</strong>.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            With Groupon you need to accept an unlimited number of discounted sales.
+            <br/><br/>
+            Is your business READY to <strong>give up 75%</strong> on hundreds of sales?
+            Can you handle that much low-margin or no-margin business?
+        </td>
+        <td valign="top">
+            With 10LocalCoupons.com, you can make <strong>unlimited changes</strong> to your coupon for FREE... 24/7... so you can change and tweak and test and measure to find the BEST offer for your business and for your customers.
+            You can improve your offer, reduce it, or take it down ANYTIME.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            With Groupon (BY LAW) you MUST accept their 50% off certificates for <em>at least</em> 5 years!
+        </td>
+        <td valign="top">
+            With 10LocalCoupons.com, you can set the expiration date for <strong>any date</strong>.
+            It's your choice.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+    <tr>
+        <td valign="top" style="background-color: #d6eff7;">
+            <h4>
+                <strong>FOR EXAMPLE:</strong>
+            </h4>
+            - You get 100 new customers @ 50% discount<br/>
+            - Each pays $50 for $100 of your product or service<br/>
+            - <strong>You'll pay Groupon $2,500</strong>
+        </td>
+        <td valign="top" style="background-color: #d6eff7;">
+            <h4>
+                <strong>OR...</strong>
+            </h4>
+            Pay 10LocalCoupons.com $499 and put over $2,000 cash on <strong>YOUR</strong> bottom line, where it belongs.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 0;"><div class="hr" style="margin: 0;"></div></td>
+    </tr>
+</table>
+
+<p class="padding tiny">
+    <em>
+        Google, Yahoo, Facebook, Twitter, Groupon, Valpak and other companies mentioned on this website in no way endorse or are related to 10Local Coupons.com. The contents of and statements on this website are solely those of 10LocalCoupons.com and should not be interpreted to be those of any other company.
+    </em>
+</p>

@@ -1,0 +1,28 @@
+Here is some important information:
+
+1) Our Quick Start page provides:
+- A printable version of our Success Guide.
+- A Slide Show for Sales Presentations.
+- The 10LocalCoupons.com Compensation Plan.
+- A free business card tool and instructions to purchase
+    business cards from Zazzle.com
+Access the Quick Start page using this link:
+{{ base_url }}{% url quick-start payload %}
+
+2) We have three training calls each week. Please join us!
+Tuesday Night 9pm ET: Company Overview
+Thursday at 1pm ET: Website, Virtual Office and Q&A.
+Saturday at Noon ET: Sales Techniques.
+(218) 339-4600 Access Code: 509938#
+
+3) Show how easy it is to Create a Coupon.
+Get your advertising prospects to try our Demo website.
+It's a fully functional copy of {{ ad_rep.site.domain }}.
+Show clients that they can publish a coupon in 5 minutes.
+Let them experience the "ease of use."
+Use this link for the "demo" website:
+http://demo.10coupons.com/demo/
+
+4) 10WestMichiganCoupon.com has lots of great local coupons.
+
+5) Call us with any questions you may have!

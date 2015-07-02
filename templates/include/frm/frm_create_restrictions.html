@@ -1,0 +1,71 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<form name="frm_create_restrictions" action="" method="post">{% csrf_token %}
+
+    <ol>
+        <li>
+            <label class="block"><h5>Coupon Restrictions:</h5></label>
+            {{ restrictions_form.default_restrictions.errors }}
+            <ol class="level2">
+                {{ restrictions_form.default_restrictions }}
+                <li id="restrictionhiddenform" class="hiddenform">
+                    <ol class="level3">
+                        {{ restrictions_form.custom_restrictions.errors }}
+                        <li>
+                        {{ restrictions_form.custom_restrictions }}
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+            <div class="hr"></div>
+
+            <label class="block"><h5>Valid Days:</h5></label>
+            <ol id="valid_days_list" class="level2">
+                <li>
+                    {{ valid_days_form.is_valid_monday }}
+                    <label for="id_is_valid_monday">Monday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_tuesday }}
+                    <label for="id_is_valid_tuesday">Tuesday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_wednesday }}
+                    <label for="id_is_valid_wednesday">Wednesday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_thursday }}
+                    <label for="id_is_valid_thursday">Thursday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_friday }}
+                    <label for="id_is_valid_friday">Friday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_saturday }}
+                    <label for="id_is_valid_saturday">Saturday</label>
+                </li>
+                <li>
+                    {{ valid_days_form.is_valid_sunday }}
+                    <label for="id_is_valid_sunday">Sunday</label>
+                </li>
+            </ol>
+            <div class="hr"></div>            
+
+            <label class="block"><h5>Coupon Redemption:</h5></label>
+            <ol class="level2">
+                {{ restrictions_form.is_redeemed_by_sms.errors }}
+                {{ restrictions_form.is_redeemed_by_sms }}
+            </ol>            
+        </li>
+        <li>
+            <input class="button fullBtn" type="submit" tabindex="3" value="Almost Done! Continue &raquo;"/>
+            <p align="center" class="small light nomargin"><em>Changes can be made before completing your purchase.</em></p>
+        </li>
+    </ol>
+
+</form>

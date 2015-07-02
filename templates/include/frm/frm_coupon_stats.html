@@ -1,0 +1,205 @@
+<style type="text/css">
+
+.headerContainer {margin: 0 10px;}
+
+.tableContainer {
+    height: 300px;
+    margin: 0 10px 19px 10px;
+    overflow: auto;
+    position: relative;
+}
+
+th {
+    padding-top: 0;
+    white-space: nowrap;
+}
+
+td {overflow: hidden;}
+
+.expiring_soon {color: red;}
+
+</style>
+
+<div id="id_header_container" class="headerContainer">
+
+    <table id="id_table_header" class="util" cellpadding="8" cellspacing="1" border="0" width="100%">
+        <thead>
+            <tr>
+                <th id="header_business_name" align="left">Business Name</th>
+                <th id="header_headline" align="left">Coupon Offer</th>
+                <th id="header_flyers_scheduled" align="center">Next Scheduled Flyer</th>
+                <th id="header_expiration_date" align="center">Expires</th>
+                <th id="header_views" align="center">Views <a class="modaltrigger" name="modalViews" href="#">?</a></th>
+                <th id="header_clicks" align="center">Clicks <a class="modaltrigger" name="modalClicks" href="#">?</a></th>
+                <th id="header_prints" align="center">Prints <a class="modaltrigger" name="modalPrints" href="#">?</a></th>
+                <th id="header_shares" align="center">Facebook <a class="modaltrigger" name="modalShares" href="#">?</a></th>
+                {% if show_edit %}
+                <th id="header_actions" align="center"><!--Edit--></th>
+                {% endif %}
+            </tr>
+        </thead>
+    </table>
+
+    <div class="clear"></div>
+</div>
+
+<div id="id_table_container" class="tableContainer">
+
+    <table id="id_table_coupons" class="util" cellpadding="8" cellspacing="1" border="0" width="100%">
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="clear"></div>
+</div>
+
+<div id="view_coupons"></div>
+
+<div class="hidden">
+    <form method="POST"><div id="csrf_token">{% csrf_token %}</div>
+        <select name="business_id" id="id_select_business">
+            <option value="0">- View All Businesses -</option>
+            {% for business in businesses %}
+                <option value="{{business.id}}">
+                    -
+                    {% if business.business_name|length > 30 %}
+                        {{ business.business_name|slice:':30' }}
+                    {% else %}
+                        {{ business.business_name }}
+                    {% endif %}
+                    -
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+
+<script type="text/javascript">
+
+    var size_limit = {{ size_limit }};
+    var coupon_list = '';
+    var end_of_data = false;
+    var load_triggered = false;
+    var initialized = false;
+    var row_id = 0;
+    var expiration_class;
+    function buildTable(){
+        var business = $("#id_select_business").val();
+        var table = $("#id_table_coupons");
+        var csrf_token = $('#csrf_token >div >input').attr("value");
+        var modalWindows = $("#modalWindows");
+        load_triggered = true;
+        $(".dataLoading").remove();
+        if (!initialized){initialized=true;
+        $(".dataRow").remove();
+        }
+        table.append('<tr class="dataLoading"><td class="center" colspan="9" height="100" width="100%"><img src="{{ safe_static_url }}images/ajax-loader.gif" height="16" width="16" border="0"/></td></tr>');
+        $.ajax({
+            type: "POST",
+            data: {'business_id': business, 'csrfmiddlewaretoken': csrf_token, 'size_limit': size_limit, 'coupon_list': coupon_list},
+            dataType: "json",
+            timeout: 10000,
+            success: function(data) {
+                $('.dataLoading').remove();
+                for (i=0; i < data.length; i++){
+                    row_id += i;
+                    expiration_class = '';
+                    if (data[i].expiring_soon)
+                    {
+                        expiration_class = 'expiring_soon';
+                    }
+                    if (typeof data[i].coupon_count != 'undefined'){
+                        if (data[i].coupon_count == 0){end_of_data = true;} continue;}
+                    coupon_list += ',' + data[i].coupon_id;
+                    $("#id_table_coupons tbody").append("<tr id='row" + row_id + "' class='dataRow'></tr>");
+
+                    $('#row' + row_id).append("<td id='business_name" + row_id + "' class='tdAlt'>" + data[i].business_name + "</td>");
+                    $('#row' + row_id).append("<td id='headline" + row_id + "'>" + "<a class='dark nodec' href='" + data[i].coupon_url + "'>" + data[i].headline + "</a>" + "</td>");
+                    $('#row' + row_id).append("<td width='160' id='flyers_scheduled" + row_id + "' class='tdAlt center'>" + "<span class='flyer_scheduled_data'>" + data[i].flyers_scheduled + "</span>" + "</td>");
+                    
+                    $('#row' + row_id).append("<td width='80' id='expiration_date" + row_id + "' class='small center " + expiration_class + "'>" + data[i].expiration_date + "</td>");
+                    $('#row' + row_id).append("<td width='80' id='views" + row_id + "' class='tdAlt small center'><span class='views_data'>" + data[i].views + "</span></td>");
+                    $('#row' + row_id).append("<td width='80' id='clicks" + row_id + "' class='small center'><span class='clicks_data'>" + data[i].clicks + "</span></td>");
+                    $('#row' + row_id).append("<td width='80' id='prints" + row_id + "' class='tdAlt small center'><span class='prints_data'>" + data[i].prints + "</span></td>");
+                    $('#row' + row_id).append("<td width='100' id='shares" + row_id + "' class='small center'><span class='shares_data'>" + data[i].shares + "</span></td>");
+                    {% if show_edit %}
+                    $('#row' + row_id).append("<td id='actions" + row_id + "' class='tdAlt small center'><a class='nodec' href='" + data[i].edit_coupon_url + "' title='Edit this coupon'>Edit</a></td>");
+                    {% endif %}
+                }
+                $(".flyer_scheduled_data:empty").append("--");
+                $(".views_data:empty").append("--");
+                $(".clicks_data:empty").append("--");
+                $(".prints_data:empty").append("--");
+                $(".shares_data:empty").append("--");
+                load_triggered = false;
+
+                // set header width to td width for each column
+                $('#id_table_header').css('width', $('#id_table_coupons').css('width'));
+                $('#header_business_name').css('width', $('#business_name0').css('width'));
+                $('#header_headline').css('width', $('#headline0').css('width'));
+                $('#header_flyers_scheduled').css('width', $('#flyers_scheduled0').css('width'));
+                $('#header_expiration_date').css('width', $('#expiration_date0').css('width'));
+                $('#header_views').css('width', $('#views0').css('width'));
+                $('#header_clicks').css('width', $('#clicks0').css('width'));
+                $('#header_prints').css('width', $('#prints0').css('width'));
+                $('#header_shares').css('width', $('#shares0').css('width'));
+                {% if show_edit %}
+                $('#header_actions').css('width', $('#actions0').css('width'));
+                {% endif %}
+
+            },
+            error: function(data) {        
+                $('.dataLoading').remove();
+                table.append('<tr><td class="dataloading center" colspan="7" height="100"><em>Sorry, there was a problem.</em></td></tr>')
+                load_triggered = false;
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        buildTable();
+        $("#id_select_business").change(buildTable);
+    });
+
+    $("#id_table_container").scroll(function(){
+        if (end_of_data){return}
+        if (load_triggered==false && $("#id_table_container").scrollTop() >= ($("#id_table_coupons").height() - $("#id_table_container").height() ) ){
+            load_triggered = true;
+            buildTable();
+        }
+    });
+
+</script>
+
+<div id="modalWindows" class="hidden">
+
+    <div id="modalViews">
+        <h4>Coupon Views</h4>
+        <p>The number of times this coupon has been viewed on the website in a
+        list with other coupons.</p>
+    </div>
+
+    <div id="modalClicks">
+        <h4>Total Clicks</h4>
+        <p>The number of times people clicked on your coupon, either on the
+        website or from the Email Flyer, to see the details of your coupon.</p>
+    </div>
+    
+    <div id="modalPrints">
+        <h4>Total Prints</h4>
+        <p>The number of times people clicked on "Get this Coupon!" to print it
+        out.</p>
+    </div>
+
+    <div id="modalShares">
+        <h4>"Liked" on Facebook</h4>
+        <p>The number of people who clicked on the Facebook "Like" button on this
+        coupon. We use this as a way of measuring the popularity of a coupon;
+        coupons with more "Likes" are listed above other coupons. By "Liking"
+        a coupon, it appears in your Facebook news stream, exposing it to all of
+        your Facebook friends. This is a great way to advertise!</p>
+        <p>While you are at it, go ahead and use the "Tweet" and Google "+1"
+        buttons on your coupons, too!</p>
+    </div>
+
+</div>

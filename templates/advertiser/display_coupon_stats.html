@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ current_site.domain }} - Advertiser Account - Stats and Data{% endblock %}
+
+{% block open_content %}
+    <div class="growl"></div>
+{% endblock %}
+
+{% block frame %}
+
+    <div class="breadcrumbs"></div>
+
+    <div class="grid_16">
+
+        <div class="toolbar">
+            <a class="button" href="{% url edit-business-profile business_id %}">Customize Business Info</a>
+            <a class="button" href="{% url advertiser-account %}">Manage Coupons</a>
+            <a class="button" id="btnNewCoupon" href="{% url advertiser-registration %}">Create a New Coupon &raquo;</a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+
+    {% include "include/frm/frm_coupon_stats.html" %}
+
+    <div class="grid_16">
+
+        <a id="btnNewCoupon" href="{% url advertiser-registration %}" class="button fullBtn">Create a New Coupon &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

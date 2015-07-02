@@ -1,0 +1,3817 @@
+#ctl00_MasterPageBodyTag {
+	background-color: #c5e4f0;
+	border: 0;
+	margin: -1px 0 0 0;
+}
+
+#ctl00_BannerTable {display: none;}
+
+/* Dropdown Navbar */
+
+#ctl00_RadHorizontalMenuRow {
+	background-color: #222;
+	height: 7px;
+}
+#ctl00_InfragisticsMenuRow {display: none;}
+
+#ctl00_RadHorizMenuCell {
+	background-color: #222;
+	border-bottom: 1px #fff solid;
+}
+#ctl00_RadHorizontalMenu {background-image: none;}
+
+.RadMenu_Web20 .rmRootGroup,
+.RadMenu_Black .rmRootGroup {
+    background-color: #222!important;
+	background-image: none!important;
+    border: 2px solid #222!important;
+	border-top: 3px solid #222!important;
+	margin: 0 auto!important;
+	width: 1060px!important;
+}
+.rmLink:hover,
+.rmLink:active,
+.rmLink:hover .rmText,
+.rmLink:active .rmText {
+	background-color: #58b6da!important;
+	background-image: none!important;
+	color: #fff!important;
+}
+.rmExpanded,
+.rmExpanded:active,
+.rmExpanded .rmText,
+.rmExpanded:active .rmText {
+	background-color: #555!important;
+	background-image: none!important;
+	color: #efefef!important;
+}
+.rmSelected,
+.rmClicked,
+.rmSelected .rmText,
+.rmClicked .rmText {
+	background-image: none!important;
+	color: #fff;
+}
+.rmVertical {
+	background-image: none!important;
+	border: 1px #000 solid!important;
+}
+.rmVertical .rmFocused,
+.rmVertical .rmFocused .rmText {background-image: none!important;}
+
+.rmLeftImage {display: none;}
+
+/* Content Menu Tabs */
+
+#ctl00_MainContent_MainTab {
+	background-color: #222;
+	border: 0;
+	margin: 0 0 10px 0;
+	-moz-border-radius : 3px;
+	border-radius : 3px;
+}
+#ctl00_MainContent_MainTab .rtsLevel {
+	background-image: none;
+	border: 0;
+}
+#ctl00_MainContent_MainTab .rtsLI {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+#ctl00_MainContent_MainTab .rtsLink,
+#ctl00_MainContent_MainTab .rtsLink span {
+	background-image: none;
+	color: #fff;
+	padding: 0;
+	-moz-border-radius : 3px;
+	border-radius : 3px;
+}
+#ctl00_MainContent_MainTab .rtsLink {
+	height: 23px;
+	line-height: 25px;
+	margin: 5px 0 5px 5px;
+	padding: 1px 10px;
+}
+#ctl00_MainContent_MainTab .rtsLink:hover {background-color: #555;}
+#ctl00_MainContent_MainTab .rtsSelected {background-color: #58b6da;}
+
+/* Home dynamic content */
+#ctl00_MainContent_tblDynamicContent table[border="0"] {
+	padding: 0;
+	width: 100%;
+}
+#ctl00_MainContent_tblDynamicContent table[cellspacing="0"],
+#ctl00_MainContent_tblDynamicContent table[cellspacing="0"] tr,
+#ctl00_MainContent_tblDynamicContent table[cellspacing="0"] td {
+	background-image: none!important;
+	border: 0!important;
+	font-family: arial, helvetica, sans-serif!important;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+/* Referring Consumer */
+#ctl00_MainContent_SubIFrame {
+	height: 1000px!important;
+	margin: 0 48px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 960px!important;
+}
+
+/* Default CSS Stylesheet for a new Web Application project */
+
+BODY {
+	background-color: #fff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: .8em;
+    FONT-WEIGHT: normal;
+    LETTER-SPACING: normal;
+    TEXT-TRANSFORM: none;
+    WORD-SPACING: normal;
+    height:100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#ctl00_MasterPageBodyTag {background-color: #c5e4f0;}
+
+H1, H2, H3, H4, H5, DT, H6, TH, THEAD, TFOOT {
+    color: #003366;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style:	normal;
+	font-weight: 700;
+	letter-spacing:	normal;
+	text-decoration: none;
+	text-transform:	none;
+	word-spacing: normal;
+}
+H1 {font-size: 2.00em;}
+H2 {font-size: 1.75em;}
+H3 {font-size: 1.58em; font-weight: 500;}
+H4 {font-size: 1.33em; font-weight: 500;}
+H5, DT {font-size: 1em;}
+H6 {font-size: .8em;}
+
+TFOOT, THEAD {font-size: 1em;}
+
+TH	{
+	vertical-align:	baseline;
+	font-size: 1em;
+	font-weight: bold;
+	color: Teal;
+}
+
+A:link {
+	color: #0066cc;
+	text-decoration: none;
+}	
+A:visited {
+	color: #6699cc;
+	text-decoration: none;
+}	
+A:active {
+	color: #000066;
+	text-decoration: none;
+}	
+A:hover	{	
+	text-decoration: underline;
+	color:	#000066;
+}
+
+SMALL {font-size: .7em;}
+BIG	{font-size:	1.17em;}
+
+BLOCKQUOTE, PRE	{font-family: Courier New, monospace;}
+
+UL LI {list-style-type:	square;}
+UL LI LI {list-style-type: disc;}
+UL LI LI LI	{list-style-type: circle;}
+	
+OL LI {list-style-type:	decimal;}
+OL OL LI {list-style-type: lower-alpha;}
+OL OL OL LI	{list-style-type: lower-roman;}
+
+TABLE {
+	font-family: arial, helvetica, sans-serif;
+	font-size: small;
+}
+
+#wrapper {background-color: #c5e4f0;}
+
+.FirestormPageBackground #Table1,
+.FirestormPageBackground #wrapper {
+	background-color: #fff;
+	background-image: url('https://10static.com/media/images/10LC_logo.png');
+	background-position: -10px 10px;
+	background-repeat: no-repeat;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: 1060px!important;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.FirestormPageBackground #wrapper {height: 100%!important;}
+
+#ctl00_MainContent_RadPageView_Personal #Table1,
+#ctl00_MainContent_RadPageView_Address #Table1,
+#ctl00_MainContent_RadPageView_Contact #Table1,
+#ctl00_MainContent_RadPageView_Replicated #Table1,
+#ctl00_MainContent_RadPageView_Email #Table1,
+#ctl00_MainContent_RadPageView_SMS #Table1 {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	width: 100%!important;
+}
+
+tr[style="background-color: #336699;"] {background-color: #c5e4f0!important;}
+
+.ShoppingCartHeader,
+.ShoppingCartBody #table1,
+.ShoppingCartFooter {background-image: none;}
+
+.ShoppingCartHeader {
+	display: block;
+	position: relative;
+}
+.ShoppingCartBody {
+	background-color: transparent;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10px;
+	height: 100%;
+	padding-top: 80px;
+	width: 1060px;
+}
+.ShoppingCartError,
+.ShoppingCartStatusMessage {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.ShoppingCartStatusMessage {background-color: mediumseagreen;}
+
+.ErrorBox {
+	font-size: 10px;
+	font-family: arial, helvetica, sans-serif;
+}
+.FirestormPageBackground {
+	background-color: transparent;
+	background-image: url('https://10static.com/media/images/10LC_logo.png');
+	background-position: 0 20px;
+	background-repeat: no-repeat;
+	padding: 5px 0 25px 0;
+	margin: 0 auto;
+	width: 1080px;
+}
+
+.FirestormMenuBackground {background-color: black;}
+.FirestormHeaderBackground {background-color: #ccccff;}
+
+#ctl00_MainContent_lblPageHeader {display: none;}
+
+#ctl00_MainContent_lblLanguage { /* language dropdown label */
+	display: none;
+	position: absolute;
+	right: 125px;
+	top: 44px;
+}
+#ctl00_MainContent_cboLanguage { /* language dropdown */
+	display: none;
+	position: absolute;
+	right: 23px;
+	top: 40px;
+}
+#ctl00_MainContent_lblDealerName {
+	background-image: none;
+	color: #222;
+	font-size: 13px;
+	left: auto;
+	position: absolute;
+	right: 25px;
+	top: 30px;
+	width: auto;
+}
+#ctl00_MainContent_btnSave,
+#ctl00_MainContent_btnReturn {
+	font-size: 19px;
+	position: absolute;
+	right: 30px;
+	top: 26px;
+}
+
+.ShoppingCartFooter .FirestormPageHeaderText {display: none;}
+
+.FirestormPageHeaderTinyText,
+.FirestormCatalogSelectionText,
+.FirestormPricing,
+.FirestormPricingWholesale {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;	
+	font-size: 12px;
+}
+.FirestormPricing {
+	font-weight: bold;
+	color: steelblue;
+}
+.FirestormPricingWholesale {
+	font-weight: bold;
+	color: mediumseagreen;
+}
+/********************/
+/* Spotlight Report */
+/********************/
+.SpotlightReport,
+.SpotlightReportDetails,
+.DealerAddress {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.SpotlightReport {
+	background-color: #edf5f9;
+	border: 1px #c5e4f0 solid!important;
+	padding: 5px;
+	width: 280px!important;
+}
+.OddRow {background-color: gainsboro;}
+.EvenRow {background-color: white;}
+
+/************************/
+/* End Spotlight Report */
+/************************/
+/*=============================*/
+/*      LOGIN FORM STYLES      */
+/*=============================*/
+.FirestormTextBox,
+.FirestormLabel,
+.FirestormMsg {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.FirestormLabel {
+	color: white;
+	font-variant: small-caps;
+}
+.FirestormMsg {
+	color: white;
+	text-align: center;
+	font-variant: small-caps;
+}
+.FirestormCenterTable {
+	background-color: #cc0000;
+	border: black 3px solid;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	width: 500px;
+}
+.FirestormLoginForm {background-color: #fff;}
+
+/*=============================*/
+/*    END LOGIN FORM STYLES    */
+/*=============================*/
+.FirestormText {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+/*=============================*/
+/* Standard Reports Begin      */
+/*=============================*/
+.ReportBody,
+.Site_Header,
+.Report_Main {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;	
+}
+.ReportBody {
+	background-color: transparent;
+	height: 100%;
+	padding-top: 115px;
+}
+.Site_Header {
+	color: white;
+	background-color: white;
+	border: 0;
+	border-bottom: 1px #000 solid;
+	width: 600px;
+	margin-top: 0;
+}
+.Report_Main {
+	color: black;
+	background-color: white;
+	border: 1px #000 solid;
+	border-top: 0;
+	width: 600px;
+	margin-top: 0;
+}
+.FirestormReportTable {
+	width: 90%;
+	padding: 3px;
+}
+.FirestormSubTable {
+	width: 100%;
+	padding: 0;
+}
+
+.FirestormReportTitle,
+.FirestormReportEnd,
+.FirestormReportHeaderOddCenter,
+.FirestormReportHeaderOddLeft,
+.FirestormReportHeaderOddRight,
+.FirestormReportHeaderEvenCenter,
+.FirestormReportHeaderEvenLeft,
+.FirestormReportHeaderEvenRight,
+.FirestormReportCrossHeaderCenter,
+.FirestormReportCrossHeaderLeft,
+.FirestormReportCrossHeaderRight,
+.FirestormReportDataOddCenter,
+.FirestormReportDataOddLeft,
+.FirestormReportDataOddRight,
+.FirestormReportDataEvenCenter,
+.FirestormReportDataEvenLeft,
+.FirestormReportDataEvenRight,
+.FirestormReportReturnCenter,
+.FirestormReportReturnLeft,
+.FirestormReportReturnRight,
+.FirestormReportTotalText,
+.FirestormReportTotalData,
+.FirestormReportNote,
+.FirestormReportNoData {
+	background-color: #fff;
+	font-size: 11px;
+	font-family: arial, helvetica, sans-serif;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.FirestormReportTitle {
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+.FirestormReportHeaderOddLeft {text-align: left;}
+.FirestormReportHeaderOddRight {text-align: right;}
+
+.FirestormReportHeaderEvenCenter {background-color: gainsboro;}
+.FirestormReportHeaderEvenLeft {
+	background-color: gainsboro;
+	text-align: left;
+}
+.FirestormReportHeaderEvenRight {
+	background-color: gainsboro;
+	text-align: right;
+}
+
+.FirestormReportCrossHeaderCenter {background-color: #000;}
+.FirestormReportCrossHeaderLeft {
+	background-color: #000;
+	text-align: left;
+}
+.FirestormReportCrossHeaderRight {
+	background-color: #000;
+	text-align: right;
+}
+
+.FirestormReportDataOddCenter {vertical-align: top;}
+.FirestormReportDataOddLeft {
+	vertical-align: top;
+	text-align: left;
+}
+.FirestormReportDataOddRight {
+	vertical-align: top;
+	text-align: right;
+}
+
+.FirestormReportDataEvenCenter {
+	background-color: gainsboro;
+	vertical-align: top;
+}
+.FirestormReportDataEvenLeft {
+	background-color: gainsboro;
+	vertical-align: top;
+	text-align: left;
+}
+.FirestormReportDataEvenRight {
+	background-color: gainsboro;
+	vertical-align: top;
+	text-align: right;
+}
+
+.FirestormReportReturnCenter {vertical-align: middle;}
+.FirestormReportReturnLeft,
+.FirestormReportReturnRight {
+	vertical-align: middle;
+	text-align: left;
+}
+.FirestormReportReturnRight {text-align:right;}
+
+.FirestormReportTotalText {
+	color: red;
+	text-align: right;
+}
+
+.FirestormReportTotalData {
+	color: green;
+	text-align: right;
+}
+
+.FirestormReportNote {color: blue;}
+.FirestormReportNoData {color: green;}
+
+/*=============================*/
+/* Reports End                 */
+/*=============================*/
+/**************/
+/* Login Form */
+/**************/
+.login-Body {
+	background-color: #c5e4f0;
+	background-image: none;
+	color: #222;
+	margin: 0;
+	padding: 0;
+}
+.login-body #Table2 {
+	background-color: #fff;
+	padding: 10px 10px 20px 10px;
+	width: 500px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.login-TitleTD {
+	background-image: url('https://10static.com/media/images/10LC_logo_320x100.gif');
+	background-position: 80px 20px;
+	background-repeat: no-repeat;
+	height: 140px;
+	width: 480px;
+}
+.login-FormTD {
+	background-image: none;
+	width: 480px;
+	height: auto;
+}
+.login-LabelTD {
+	color: #222;
+	font: bold 14px Arial, Helvetica, sans-serif;
+	padding: 5px;
+	text-align: right;
+	width: 120px!important;
+}
+.login-FooterTD {
+	background-repeat: no-repeat;
+	background-image: none;
+	width: 416px;
+	height: 20px;
+}
+.login-PasswordTD {text-align:right}
+.login-PasswordTD a {
+	font-weight:bold;
+	text-decoration:none;
+	font-size:11px;
+	color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.login-PasswordTD a:hover {text-decoration:underline;}
+
+.login-WelcomeTD {
+	padding: 15px 0 10px 0;
+	text-align: center;
+}
+
+.login-WelcomeTD h1,
+.login-WelcomeTD h2 {
+	color: #222;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+.login-WelcomeTD h2 {
+	color: #ce5eaa;
+	font-size: 14px;
+}
+.login-WelcomeTD a {
+	color: #17b0e8;
+	text-decoration: underline;
+}
+
+#txtLostEmailAddress,
+#txtDealerURL,
+#txtDealerID,
+#Password {
+	border: 1px #333 solid;
+	font-size: 15px;
+	padding: 4px;
+	width: 180px!important;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+	box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+}
+
+#lblDealerURL,
+#txtDealerURL,
+#lblDealerID,
+#txtDealerID {display: none;}
+
+.login-Error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ff0000;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginLink {
+	font-size: 10pt;
+	font-family: arial, helvetica, sans-serif;
+}
+
+#LoginLinkDiv a,
+#LoginLinkDiv a:link {
+	font-weight: bold;
+	font-size: 19px;
+	color: #17b0e8;
+	font-family: arial, helvetica, sans-serif;
+	text-decoration: underline;
+}
+#LoginLinkDiv a:hover {
+	font-weight: bold;
+	font-size: 19px;
+	color: #17b0e8;
+	font-family: arial, helvetica, sans-serif;
+	text-decoration: none;
+}
+.LoginMustHaveCookies {
+	color: #222;
+	display: block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 2px 0 20px 0;
+	text-align: center;
+}
+
+#lblLogin,
+#txtDealerID,
+#lblPassword,
+#Password,
+#lblCountry,
+#cboCountry,
+#lblContext,
+#btnLogin {display: none!important;}
+
+/******************/
+/* Login Form End */
+/******************/
+/******************/
+/* Member Profile */
+/******************/
+.MemberProfileMainTitle,
+.MemberProfileDescription,
+.MemberProfileErrorMessage,
+.MyProfileAutoshipHeader,
+.MyProfileAutoshipTable,
+.MyProfileNoAutoships,
+.MyProfileAutoshipEvenRow,
+.MyProfileAutoshipOddRow {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.MemberProfileLeftColumn {background-repeat: no-repeat;}
+.MemberProfileRightColumn {}
+.MemberProfileMainTitle {
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 1.1;
+	margin: 0;
+}
+.MemberProfileDescription {line-height: 17px;}
+.MemberProfileErrorMessage {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+.MyProfileAutoshipHeader {
+	background-color: steelblue;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.MyProfileAutoshipTable {
+	border-style: solid;
+	border-width: thin;
+}
+.MyProfileNoAutoships {background-color: #CCCCCC;}
+.MyProfileAutoshipEvenRow {background-color: #CCCCCC;}
+.MyProfileAutoshipOddRow {background-color: #F5E7E7;}
+
+/**********************/
+/* End Member Profile */
+/**********************/
+/****************************/
+/* USER CONTROL: Load Image */
+/****************************/
+.PULoadImageHeader,
+.PUDescription,
+.PUStatusMessage,
+.PUErrorMessage {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.PULoadImageTable {
+	border: 0;
+	padding: 7px;
+}
+.PULoadImageTable tr:first-child {height: 25px!important;}
+
+.PULoadImageHeader {
+	background-color: #edf5f9;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.PUDescription {line-height: 17px;}
+.PUStatusMessage {
+	color: green;
+	text-align: center;
+}
+.PUErrorMessage {
+	color: red;
+	text-align: center;
+}
+.PULoadImageTable td[style="WIDTH: 28px"] {display: none;}
+
+#ctl00_MainContent_PictureUpload1_FilePathName {
+	box-shadow: 0 0 1px #888;
+	padding: 6px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/********************************/
+/* END USER CONTROL: Load Image */
+/********************************/
+/**************************************/
+/* USER CONTROL: Update Personal Info */
+/**************************************/
+.PITinyText,
+.PIHeader,
+.PIErrorMessage,
+.PIStatusMessage,
+.PIFieldName,
+.PIFieldData,
+#ctl00_MainContent_PersonalInfo1_lblMemberID,
+#ctl00_MainContent_PersonalInfo1_lblMemberIDData,
+#ctl00_MainContent_PersonalInfo1_lblSSNData {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.PITinyText {
+	font-size: 11px;
+	font-style: italic;
+}
+.PIHeader {
+	background-color: #edf5f9;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.PIErrorMessage {
+	color: red;
+	text-align: center;
+}
+.PIStatusMessage {
+	font-weight: bold;
+	color: white;
+	background-color: #009900;
+	text-align: center;
+}
+.PIFieldName {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 30px;
+	padding-right: 10px;
+	text-align: right;
+	white-space: nowrap;
+	width: auto;
+}
+.PIFieldData {color: green;}
+#ctl00_MainContent_PersonalInfo1_lblMemberID,
+#ctl00_MainContent_PersonalInfo1_lblMemberIDData,
+#ctl00_MainContent_PersonalInfo1_lblSSNData {color: #222; line-height: 30px;}
+
+.PIPersonalInfoTable {
+	border: 0;
+	padding: 4px;
+	height: 100%!important;
+}
+/******************************************/
+/* END USER CONTROL: Update Personal Info */
+/******************************************/
+/*******************************************/
+/* START USER CONTROL: Update Mail Address */
+/*******************************************/
+.MATable {
+	border: 0;
+	padding: 4px;
+}
+
+#ctl00_MainContent_RadPageView_Address #Table5 {
+	margin: 0 auto;
+	/*width: auto;*/
+}
+
+/* for awkward checkbox */
+#ctl00_MainContent_RadPageView_Address #Table5 td,
+#ctl00_MainContent_RadPageView_Address #tblBillingMain td {
+	position: relative;
+}
+#ctl00_MainContent_MailingAddress1_lblUpdateAutoshipsShipping,
+#ctl00_MainContent_BillingAddress1_lblUpdateAutoshipsBilling {
+	font-size: 11px;
+	font-weight: normal;
+	position: absolute;
+	right: -245px;
+	top: 2px;
+}
+#ctl00_MainContent_MailingAddress1_txtAddress1, #ctl00_MainContent_BillingAddress1_txtAddress1 {margin-right: 55px;}
+
+.MAHeader,
+.MAErrorMessage,
+.MAField,
+.MATinyText,
+.MAStatusMessage {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.MAHeader {
+	background-color: #edf5f9;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.MAErrorMessage {
+	font-weight: bold;
+	color: red;
+	text-align: center;
+}
+.MAField {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+	padding-right: 10px;
+	text-align: right;
+}
+.MATinyText {color: #a1b9c3;}
+.MAStatusMessage {
+	font-weight: bold;
+	color: green;
+	text-align: center;
+}
+
+/* Billing Address */
+#tblBillingParent {
+	background-color: #fff;
+	border: 0;
+}
+/******************************************/
+/* END USER CONTROL: Update Mail Address  */
+/******************************************/
+/*******************************************/
+/* START USER CONTROL: Contact Information */
+/*******************************************/
+.CITable {
+	border: 0;
+	padding: 7px;
+}
+
+#ctl00_MainContent_RadPageView_Contact .style3 {
+	margin: 0 auto;
+	width: auto;
+}
+
+.CIHeader,
+.CIErrorMessage,
+.CIField,
+.CITinyText,
+.CIStatusMessage {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.CIHeader {
+	background-color: #edf5f9;
+	border-bottom: 15px #fff solid;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.CIErrorMessage {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.CIField {
+	display: block;
+	font-weight: bold;
+	padding-right: 10px;
+	text-align: right;
+}
+.CITinyText {
+	font-size: 11px;
+	color: green;
+}
+.CIStatusMessage {
+	font-weight: bold;
+	color: green;
+	text-align: center;
+}
+#ctl00_MainContent_ContactInfo1_btnUpdate {margin-bottom: 20px;}
+
+/******************************************/
+/* END USER CONTROL: Contact Information  */
+/******************************************/
+/**************************************/
+/* START USER CONTROL: Replicated Web */
+/**************************************/
+.RWTable {
+	background-color: #fff;
+	border: 0;
+	padding: 1px;
+	width: 459px;
+}
+.RWTable[id="Table3"] {width: 938px;}
+.RWTable[id="Table5"] {display: none;}
+
+.RWHeader,
+.RWErrorMessage,
+.RWField,
+.RWTinyText,
+.RWStatusMessage,
+.RWWarning {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.RWHeader {
+	background-color: #edf5f9;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.RWErrorMessage {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.RWField {
+	font-weight: bold;
+	color: steelblue;
+}
+.RWStatusMessage {
+	font-weight: bold;
+	color: green;
+	text-align: center;
+}
+.RWWarning {color: red;}
+
+#ctl00_MainContent_ReplicatedWeb1_txtWebMessageTop,
+#ctl00_MainContent_ReplicatedWeb1_txtWebMessage_ModesWrapper {display: none!important;}
+
+/*************************************/
+/* END USER CONTROL: Replicated Web  */
+/*************************************/
+/************************************/
+/* START USER CONTROL: Email Config */
+/************************************/
+.EMCTable {
+	border: 0;
+	height: 300px!important;
+	padding: 7px;
+}
+#ctl00_MainContent_RadPageView_SMS #Table4,
+#ctl00_MainContent_RadPageView_Email #Table4 {
+	margin: 10px auto 0 auto;
+	width: auto;
+}
+#ctl00_MainContent_RadPageView_Email #Table4 td {padding: 5px;}
+#ctl00_MainContent_RadPageView_SMS #Table4 .style1 {width: auto;}
+
+.EMCHeader,
+.EMCErrorMessage,
+.EMCField,
+.EMCTinyText,
+.EMCOption,
+.EMCStatusMessage,
+.EMCWarning {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.EMCHeader {
+	background-color: #edf5f9;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+}
+.EMCErrorMessage {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.EMCField {
+	display: block;
+	font-weight: bold;
+	padding-right: 10px;
+	text-align: right;
+}
+.EMCTinyText {
+	font-size: 11px;
+	text-align: center;
+}
+#ctl00_MainContent_RadPageView_SMS #Table4 .EMCTinyText {text-align: left;}
+
+.EMCOption input {margin-right: 5px;}
+.EMCStatusMessage {
+	font-weight: bold;
+	color: green;
+	text-align: center;
+}
+.EMCWarning {color: red;}
+
+/***********************************/
+/* END USER CONTROL: Email Config  */
+/***********************************/
+/*****************/
+/* LOST PASSWORD */
+/*****************/
+.LostPasswordTable,
+.LostPasswordHeader,
+.LostPasswordText,
+.LostPasswordTinyText,
+.LostPasswordLink,
+.LostPasswordError {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.LostPasswordTable {
+	border: 0;
+	width: 450px;
+}
+.LostPasswordTable tr:nth-child(3),
+.LostPasswordTable tr:nth-child(4) {
+	display: none;
+}
+.LostPasswordHeader {
+	background-color: #222;
+    background-image: none;
+    background-repeat: repeat-x;
+	border-bottom: 15px #fff solid;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+	padding: 5px;
+    text-align: center;
+}
+.LostPasswordText {font-weight: bold;}
+.LostPasswordTinyText {
+	font-size: 11px;
+	color: #222;
+}
+.LostPasswordError {
+	font-weight: bold;
+	color: #ff0000;
+}
+#txtLostEmailAddress,
+#txtDealerURL,
+.LostPasswordTable #txtDealerID {
+	margin-bottom: 5px;
+}
+#lblLostPassword {
+	float: right;
+	padding-right: 10px;
+}
+
+/*********************/
+/* END LOST PASSWORD */
+/*********************/
+/*************************/
+/* General Table Styles  */
+/*************************/
+.FirestormTableHeader,
+.FirestormTableRowOdd,
+.FirestormTableRowEven,
+.FirestormGeneralText {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.FirestormTableHeader {
+	font-weight: bold;
+	color: #0033cc;
+	background-color: darkgray;
+}
+.FirestormTableRowOdd {background-color: white;}
+.FirestormTableRowEven {background-color: gainsboro;}
+
+/*************************/
+/* General Table Styles  */
+/*************************/
+/*************************/
+/* Dealer Wire Setup     */
+/*************************/
+.DWSMainTitle,
+.DWSMainDescription,
+.DWSMainErrorCell,
+.DWSMainLabelCell {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.DWSMainTitle {
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.DWSMainDescription {line-height: 17px;}
+
+.DWSMainErrorCell,
+.DWSMainLabelCell,
+.DWSMainDataCell,
+.DWSMainButtonCell {
+	padding: 5px;
+}
+.DWSMainErrorCell {
+	color: red;
+	text-align: left;
+}
+.DWSMainLabelCell {text-align: right;}
+.DWSMainDataCell {text-align: left;}
+.DWSMainButtonCell {text-align: center;}
+
+.DWSMainButtons {font-variant: small-caps;}
+
+.DWSMainBody {width: 100%;}
+
+/******************************/
+/* End Dealer Wire Setup      */
+/******************************/
+/********************/
+/* Binary Tree View */
+/********************/
+.BinaryTreeviewMainTitle
+{
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.BinaryTreeviewDescription
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+	text-align:left;	
+}
+.BinaryTreeviewError
+{
+	border-right: yellow 1px solid;
+	border-top: yellow 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: yellow 1px solid;
+	color: white;
+	border-bottom: yellow 1px solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ff0000;
+	text-align: center;	
+}
+.BinaryTreeviewPositionName
+{
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.BinaryTreeviewVolume
+{
+	font-weight: bold;
+	font-size: 8pt;
+	color: green;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.BinaryTreeviewDealerID
+{
+	font-size: 8pt;
+	color: navy;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.BinaryTreeViewMainTable
+{
+	font-size: 10pt;
+	border-left-color: black;
+	border-bottom-color: black;
+	color: black;
+	border-top-style: double;
+	border-top-color: black;
+	font-family: arial, helvetica, sans-serif;
+	border-right-style: double;
+	border-left-style: double;
+	background-color: lemonchiffon;
+	border-right-color: black;
+	border-bottom-style: double;
+}
+.BinaryTreeViewLegend
+{
+	font-weight: bold;
+	font-size: 11pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: black;
+	text-align: left;
+}
+.BinaryTreeviewLegendDescription
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+.BinaryTreeviewTeamCount
+{
+	border-right: black thin solid;
+	border-top: black thin solid;
+	font-size: 8pt;
+	border-left: black thin solid;
+	color: black;
+	border-bottom: black thin solid;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.BinaryTreeviewHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #660066;
+	text-align: center;
+}
+.BinaryTreeviewSearchResultsBox
+{
+	border-left-color: black;
+	border-bottom-color: black;
+	border-top-style: double;
+	border-top-color: black;
+	border-right-style: double;
+	border-left-style: double;
+	background-color: lemonchiffon;
+	border-right-color: black;
+	border-bottom-style: double;
+}
+.BinaryTreeViewStatusMessage
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #009900;
+	text-align: center;
+}
+.BinaryTreeViewLegendTable
+{
+	border-right: #006699 thin solid;
+	border-top: #006699 thin solid;
+	font-size: 7pt;
+	border-left: #006699 thin solid;
+	color: black;
+	border-bottom: #006699 thin solid;
+	font-family: arial, helvetica, sans-serif;
+}
+.BinaryTreeViewLegendTableText
+{
+	border-right: #006699 thin solid;
+	border-top: #006699 thin solid;
+	font-size: 7pt;
+	border-left: #006699 thin solid;
+	color: black;
+	border-bottom: #006699 thin solid;
+	font-family: arial, helvetica, sans-serif;
+}
+/************************/
+/* End Binary Tree View */
+/************************/
+/***************************/
+/* Upline Sponsor View     */
+/***************************/
+
+.UplineSponsorMainTitle
+{
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.UplineSponsorMainDescription
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+	text-align:left;
+}
+
+.UplineSponsorMainBody
+{
+	width:100%;
+	background-color:Lemonchiffon;
+	border-bottom-style:double;
+	border-left-style:double;
+	border-right-style:double;
+	border-top-style:double;
+	border-bottom-color:Black;
+	border-left-color:Black;
+	border-right-color:Black;
+	border-top-color:Black;
+
+}
+
+.UplineSponsorMainErrorCell
+{
+	font-size: 10pt;
+	color: red;
+	font-family: arial, helvetica, sans-serif;
+	text-align:center;
+}
+
+.UplineSponsorMainInfoCell
+{
+	text-align:center;
+}
+
+.UplineSponsorInfo
+{
+	background-color: Lemonchiffon;
+	font-size: 10pt;
+	font-family: Arial, System;
+	Color: DarkBlue;
+	vertical-align:top;
+	text-align:left;
+}
+
+.UplineSponsorDealerName
+{
+	background-color: Lemonchiffon;
+	font-size: 10pt;
+	font-family: Arial, System;
+	Color: DarkBlue;
+	vertical-align:top;
+	text-align:left;
+	text-decoration: underline overline;
+	font-weight:bold;
+}
+
+.UplineSponsorBoxInfo
+{
+	background-color: Lemonchiffon;
+	font-size: 9pt;
+	font-family: Arial, System;
+	Color: DarkBlue;
+	vertical-align:top;
+	text-align:left;
+}
+
+.UplineSponsorImageCell
+{
+	background-color: Lemonchiffon;
+	font-size: 9pt;
+	font-family: Arial, System;
+	Color: Black;
+	vertical-align:top;
+	text-align:center;
+}
+
+.UplineSponsorImage
+{
+	height:120px;
+	width:120px;
+}
+
+.UplineSponsorDealerNameCell
+{
+	background-color: Lemonchiffon;
+	font-size: 12pt;
+	font-family: Arial, System;
+	font-weight:bold;
+	Color: DarkBlue;
+	vertical-align:top;
+	text-align:center;
+}
+
+/********************************/
+/* End Upline Sponsor View      */
+/********************************/
+/**************************/
+/* Trouble Ticket Manager */
+/**************************/
+.TTMLeftColumn,
+.TTMRightColumn {
+	font-size: 10pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+}
+
+.TTMBody {
+	background-color: white;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+.TTMBody hr {display: none;}
+
+.TTMBody #Table5,
+.TTMBody #Table6 {
+	background-color: #edf5f9;
+	display: block;
+	margin: 10px 0 0 0;
+	padding: 10px;
+
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.TTMBody #Table5 td,
+.TTMBody #Table6 td {line-height: 30px;}
+
+.TTMBody #Table8,
+.TTMBody #Table9 {padding: 20px 15px 0 15px;}
+
+.TTMBody #Table10 {display: none;}
+
+.TTMBody td[width="95"] {width: 0;}
+.TTMBody td[width="95"] img {display: none;}
+
+.TTMBody #Table7 td:first-child img {display: none;}
+
+.TTMBody #Table5 td[width="146"],
+.TTMBody #Table6 td[width="146"] {width: 200px;}
+
+#ctl00_MainContent_btnNew,
+#ctl00_MainContent_btnReview {width: 180px;}
+
+.TTMMainTitle {
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.TTMDescription {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+
+.TTMHeader {
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: black;
+	text-align: center;
+}
+.TTMColumnHeader {
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #3366cc;
+}
+.TTMEvenRow {
+	font-size: 7pt;
+	font-family: arial, helvetica, sans-serif;
+	background-color: gainsboro;
+}
+.TTMOddRow {
+	font-size: 7pt;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;	
+}
+.TTMError {
+	border-right: yellow 1px solid;
+	border-top: yellow 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: yellow 1px solid;
+	color: white;
+	border-bottom: yellow 1px solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ff0000;
+	text-align: center;
+}
+.TTMStatusMessage {
+	border-right: yellow 1px solid;
+	border-top: yellow 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: yellow 1px solid;
+	color: white;
+	border-bottom: yellow 1px solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #006600;
+	text-align: center;
+}
+.TTMBoldText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+.TTMContactUsBox {
+	background-color: #fff;
+	border: 0;
+}
+.TTMFieldLabel {
+	color: #222;
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: arial, helvetica, sans-serif;
+	padding-right: 10px;
+	text-align: right;
+}
+.TTMSubHeader {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: normal;
+}
+.TTMBody #Table8 .TTMSubHeader,
+.TTMBody #Table9 .TTMSubHeader {
+	display: block;
+	text-align: center;
+}
+
+.TTMData {
+	font-size: 10pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.TTMItalicText {
+	display: block;
+	font-size: 10pt;
+	color: #333;
+	font-style: italic;
+	font-family: arial, helvetica, sans-serif;
+	margin: 0 0 15px 0;
+}
+.TTMBoxHeader {
+	background-color: #edf5f9;
+	background-image: none;
+	border: 0;
+	border-bottom: 10px #fff solid;
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	padding: 5px 0;
+	text-align: center;
+}
+.TTMTicketEntryBox {
+	background-color: #fff!important;
+	border: 3px #c5e4f0 solid;
+	width: 964px;
+	-webkit-border-radius: 0!important;
+	-moz-border-radius: 0!important;
+	border-radius: 0!important;
+}
+.TTMTicketEntryBox #Table6 {
+	background-color: #fff;
+	margin: 0 auto;
+	width: auto;
+}
+.TTMTinyText {
+	font-size: 8pt;
+	color: #003399;
+	font-family: arial, helvetica, sans-serif;
+}
+#ctl00_MainContent_lblMaxChars {padding-right: 10px;}
+#ctl00_MainContent_lblInstructions {
+	color: #222;
+	font-style: italic;
+}
+
+.TTMReviewHeader {
+	font-weight: bold;
+	font-size: 7pt;
+	color: #ffffff;
+	font-family: arial, helvetica, sans-serif;
+	background-color: goldenrod;
+}
+.TTMRedBold {
+	font-weight: bold;
+	font-size: 7pt;
+	color: #ff0000;
+	font-family: arial, helvetica, sans-serif;
+}
+.TTMTicketDetailBox {
+	border-left-color: black;
+	border-bottom-color: black;
+	border-top-style: double;
+	border-top-color: black;
+	font-family: arial, helvetica, sans-serif;
+	border-right-style: double;
+	border-left-style: double;
+	background-color: #ffffff;
+	border-right-color: black;
+	border-bottom-style: double;
+}
+.TTMTicketDetailHeader {
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+	text-align: center;
+}
+.TTMComment {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: whitesmoke;
+}
+.TTMHistoryEvenRow {
+	font-size: 8pt;
+	font-family: arial, helvetica, sans-serif;
+	background-color: palegoldenrod;
+}
+.TTMHistoryOddRow {
+	font-size: 8pt;
+	font-family: arial, helvetica, sans-serif;
+	background-color: palegoldenrod;
+}
+
+/******************************/
+/* End Trouble Ticket Manager */
+/******************************/
+/**************************/
+/* Default Placement Tool */
+/**************************/
+.DPMainTitle
+{
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.DPDescription
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+.DPError
+{
+	border-right: yellow 1px solid;
+	border-top: yellow 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: yellow 1px solid;
+	color: white;
+	border-bottom: yellow 1px solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ff0000;
+	text-align: center;
+}
+.DPBox
+{
+	border-right: #006699 solid;
+	border-top: #006699 solid;
+	border-left: #006699 solid;
+	border-bottom: #006699 solid;
+}
+.DPBoxHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #006699;
+	text-align: center;
+}
+.DPField
+{
+	font-weight: bold;
+	font-size: 9pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+}
+.DPDealerName
+{
+	font-weight: bold;
+	font-size: 9pt;
+	color: #cc0099;
+	font-family: arial, helvetica, sans-serif;
+}
+.DPStatusMessage
+{
+	border-top-width: thin;
+	font-weight: bold;
+	border-left-width: thin;
+	font-size: 10pt;
+	border-left-color: yellow;
+	border-bottom-width: thin;
+	border-bottom-color: yellow;
+	color: white;
+	border-top-color: yellow;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #006600;
+	text-align: center;
+	border-right-width: thin;
+	border-right-color: yellow;
+}
+/******************************/
+/* End Default Placement Tool */
+/******************************/
+/*****************/
+/* Email Manager */
+/*****************/
+
+.EMMMainTitle
+{
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.EMMDescription
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+.EMMError
+{
+	border-right: yellow 1px solid;
+	border-top: yellow 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: yellow 1px solid;
+	color: white;
+	border-bottom: yellow 1px solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ff0000;
+	text-align: center;
+}
+.EMMBox {
+	border: 3px #c5e4f0 solid;
+	padding: 10px 10px 25px 10px;
+}
+.EMMBoxHeader {
+	background-color: #edf5f9;
+	background-image: none;
+	border: 0;
+	border-bottom: 10px #fff solid;
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	padding: 5px 0;
+	text-align: center;
+}
+.EMMFieldLabel {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	padding-right: 15px;
+}
+#ctl00_MainContent_lblFromData {color: #222!important;}
+
+.EMMStatusMessage {
+	font-weight: normal;
+	font-size: 8pt;
+	color: white;
+	border-top-style: none;
+	font-family: arial, helvetica, sans-serif;
+	border-right-style: none;
+	border-left-style: none;
+	background-color: #006600;
+	text-align: center;
+	border-bottom-style: none;
+}
+.EMMGroupListBox {
+	border-width: 1px;
+	border-color: #666666;
+	font-size: 9pt;
+	color: black;
+	border-top-style: solid;
+	font-family: arial, helvetica, sans-serif;
+	border-right-style: solid;
+	border-left-style: solid;
+	background-color: whitesmoke;
+	border-bottom-style: solid;
+}
+.EMMGroupListHeader {
+	font-weight: normal;
+	font-size: 8pt;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #C0C0C0;
+	text-align: center;
+}
+.EMMGroupListEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #E9E9E9;
+}
+.EMMGroupListOddRow {
+	font-size: 8pt;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+.EMMGroupListChildEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FAF8E4;
+}
+.EMMGroupListChildOddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+.EMMSmallRedText {
+	font-size: 8pt;
+	color: red;
+	font-family: arial, helvetica, sans-serif;
+}
+.EMMGroupListSubHeader {
+	background-position: top;
+	font-weight: normal;
+	font-size: 8pt;
+	color: #000099;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+.EMMCreateGroupBox {
+	border-right: indigo thin solid;
+	border-top: indigo thin solid;
+	font-size: 8pt;
+	border-left: indigo thin solid;
+	color: black;
+	border-bottom: indigo thin solid;
+	font-family: arial, helvetica, sans-serif;
+	border-width: 1px;
+	border-color: #666666;
+}
+.EMMCreateGroupHeader {
+	font-weight: normal;
+	font-size: 8pt;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FDF9FF;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #666666;
+}
+.EMMSearchBox {
+	border-right: blue thin solid;
+	border-top: blue thin solid;
+	font-size: 8pt;
+	border-left: blue thin solid;
+	color: black;
+	border-bottom: blue thin solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ECECFF;
+	border-width: 1px;
+	border-color: #000099;
+}
+.EMMSearchHeader {
+	font-weight: normal;
+	font-size: 8pt;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #CECEFF;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #666666;
+}
+.EMMSearchDescription {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+.EMMSearchResultsTable {
+	border-right: #003399 thin solid;
+	border-top: #003399 thin solid;
+	font-size: 8pt;
+	border-left: #003399 thin solid;
+	color: black;
+	border-bottom: #003399 thin solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	border-width: 1px;
+}
+.EMMSearchResultsOddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #F0F0FF;
+}
+.EMMSearchResultsEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+.EMMSearchResultsHeader {
+	font-weight: bold;
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #BBBBFF;
+	text-align: left;
+}
+.EMMSearchResultsPanel {background-color: #BBBBFF;}
+.EMMSearchResultsColumnHeader {
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+}
+
+.EMMBox #Table7 {width: 780px;} /* buttons table */
+
+.EMMButton {width: auto!important;}
+#ctl00_MainContent_btnSend {width: 200px!important;}
+
+/*********************/
+/* End Email Manager */
+/*********************/
+/********************/
+/* Select A Country */
+/********************/
+.SCField,
+.SCHeader,
+.SCBox,
+.SCError {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.SCField {
+	font-weight: bold;
+	color: #006699;
+}
+.SCHeader {
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	text-align: center;
+}
+.SCBox {
+	border: black thin solid;
+	background-color: lightyellow;
+}
+.SCError {color: red;}
+
+/************************/
+/* End Select A Country */
+/************************/
+/*********************/
+/* Product Questions */
+/*********************/
+.PQMainTitle,
+.PQDescription,
+.PQError,
+.PQProductInformation,
+.PQQuestion,
+.PQItemRow {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.PQMainTitle {
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.PQDescription {
+	color: #333333;
+	line-height: 17px;
+}
+.PQError {
+	background-color: #ff0000;
+	border: yellow 1px solid;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.PQProductInformation {
+	font-weight: bold;
+	color: black;
+	background-color: gainsboro;
+}
+.PQQuestion {color: black;}
+.PQItemRow {
+	color: black;
+	background-color: #ffffcc;
+}
+/**************************/
+/* End Product Questions */
+/*************************/
+/************/
+/* Defaults */
+/************/
+.DefaultMainTitle,
+.DefaultDescription,
+.DefaultError,
+.DefaultStatus,
+.DefaultWhiteText,
+.DefaultTinyRedText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.DefaultMainTitle {
+	font-weight: normal;
+	font-size: 25px;
+	color: #222;
+	line-height: 1.1;
+	margin: 0;
+}
+.DefaultDescription {
+	font-size: 12px;
+	color: #333333;
+	line-height: 17px;
+}
+.DefaultError,
+.DefaultStatus {
+	background-color: #ff0000;
+	border: 0;
+	color: white;
+	font-weight: bold;
+	margin: 0 0 15px 0;
+	padding: 5px;
+	text-align: center;
+}
+.DefaultStatus {background-color: #339900;}
+
+.DefaultWhiteText {
+	font-weight: bold;
+	color: white;
+}
+.DefaultTinyRedText {
+	font-size: 11px;
+	color: red;
+}
+/****************/
+/* End Defaults */
+/****************/
+/****************/
+/* New Checkout */
+/****************/
+.NCOHeaderLabel
+{
+	font-weight: bold;
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+}
+.NCOBox
+{
+	border-right: black thin solid;
+	border-top: black thin solid;
+	border-left: black thin solid;
+	border-bottom: black thin solid;
+}
+.NCOBoxHeader {background-repeat: repeat-x;}
+.NCOFieldLabel
+{
+	font-size: 8pt;
+	color: #006699;
+	font-family: arial, helvetica, sans-serif;
+	font-variant: normal;
+}
+.NCOWarningText
+{
+	font-weight: bold;
+	font-size: 8pt;
+	color: red;
+	font-family: arial, helvetica, sans-serif;
+}
+.NCOCartSummaryEvenRow
+{
+	font-size: 8pt;
+	color: black;
+	font-family: verdan,arial;
+	background-color: #ccccff;
+}
+.NCOCartSummaryOddRow
+{
+	font-size: 8pt;
+	color: black;
+	font-family: verdan,arial;
+}
+.NCOOrderSummaryHeader
+{
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+}
+.NCOCurrency
+{
+	font-size: 8pt;
+	color: green;
+	font-family: arial, helvetica, sans-serif,rial;
+}
+/********************/
+/* End New Checkout */
+/********************/
+/**********************************/
+/* New Personal Enrollment Report */
+/**********************************/
+.EnrollmentMainReportTable,
+.EnrollmentReportHeader,
+.EnrollmentReportEvenRow,
+.EnrollmentReportOddRow,
+.NoEnrolledLabel {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.EnrollmentMainReportTable,
+.EnrollmentReportHeader {
+	color: #fff;
+	background-color: #222;
+}
+.EnrollmentReportHeader,
+.EnrollmentReportEvenRow,
+.EnrollmentReportOddRow {
+	padding: 5px;
+}
+.EnrollmentReportHeader {
+	background-image: none;
+	text-align: left;
+}
+.EnrollmentReportEvenRow {
+	border-left-style: none;
+	background-color: #edf5f9;
+}
+.EnrollmentReportOddRow {
+	border-left-style: none;
+	background-color: #dbecf5;
+}
+.NoEnrolledLabel {
+	border-left-style: none;
+	background-color: purple;
+	color: yellow;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/**********************************/
+/* End Personal Enrollment Report */
+/**********************************/
+/**********************************/
+/* New Personal Sponsored Report */
+/**********************************/
+
+.SponsoredMainReportTable
+{
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+}
+
+.SponsoredReportHeader
+{
+	font: bold 13px Arial, helvetica, sans-serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+.SponsoredReportEvenRow
+{
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	border-left-style: none;
+	background-color: #ebecff;
+}
+
+.SponsoredReportOddRow
+{
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	border-left-style: none;
+	background-color: #dadcfd;
+}
+
+.NoSponsoredLabel
+{
+	font: bold 15px Arial, helvetica, sans-serif;
+	color: yellow;
+	border-left-style: none;
+	background-color: purple;
+}
+
+/**********************************/
+/* End Personal Sponsored Report */
+/**********************************/
+
+
+/**********************************/
+/* New Personal Customers Report */
+/**********************************/
+
+.CustomerMainReportTable
+{
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+}
+
+.CustomerReportHeader
+{
+	font: bold 13px Arial, helvetica, sans-serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+.CustomerReportEvenRow
+{
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	border-left-style: none;
+	background-color: #ebecff;
+}
+
+.CustomerReportOddRow
+{
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	border-left-style: none;
+	background-color: #dadcfd;
+}
+
+.NoCustomerLabel
+{
+	font: bold 15px Arial, helvetica, sans-serif;
+	color: yellow;
+	border-left-style: none;
+	background-color: purple;
+}
+
+/**********************************/
+/* End Personal Customers Report */
+/**********************************/
+/***************************************/
+/* Preferred Customers Activity Report */
+/***************************************/
+.PCBox,
+.PCBoxHeader,
+.PCDataHeader,
+.POTinyRedText,
+.PCEvenRow,
+.PCOddRow {
+	color: #000;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.PCBox {
+	border: black thin solid;
+	font-style: normal;
+}
+.PCBoxHeader {
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+.PCDataHeader {
+	color: white;
+	background-color: black;
+}
+.POTinyRedText {
+	font-weight: bold;
+	color: red;
+	text-align: center;
+}
+.PCOddRow {background-color: powderblue;}
+.PCLeftColumn {BACKGROUND-POSITION-Y: top;}
+
+/*******************************************/
+/* End Preferred Customers Activity Report */
+/*******************************************/
+/******************/
+/* Check Register */
+/******************/
+.CRHiddenRow {padding: 10px;}
+.CRSubTotalsPositionCell {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FF0000;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #FF0000;
+}
+.CRSubTotalsCell {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #CE7B00;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #CCCCCC;
+	padding-bottom: 10px;
+}
+.CRPositionNumberRow {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+	color: #006600;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.CRFieldLabel {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+}
+.CRBoxHeader {
+	background-color: #FFFFFF;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.CRBox {
+	border: 1px solid #C0C0C0;
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+}
+.CRBoxHeaderLabel {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #008080;
+	font-family: arial, helvetica, sans-serif;
+}
+.CRSubHeader {
+	font-weight: normal;
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000000;
+}
+.CREvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	text-decoration: none;
+}
+.CROddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: whitesmoke;
+	text-decoration: none;
+}
+.CRTinyRedText {
+	font-size: 7pt;
+	color: red;
+	font-family: arial, helvetica, sans-serif;
+}
+.CRDetailSubHeader {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #794800;
+	font-family: arial, helvetica, sans-serif;
+	padding-bottom: 5px;
+}
+.CRDetailSubHeader2 {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #009900;
+	font-family: arial, helvetica, sans-serif;
+	padding-bottom: 5px;
+}
+.CRDetailEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	text-decoration: none;
+}
+.CRDetailOddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #ffffcc;
+	text-decoration: none;
+}
+.CRFullDetailEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	text-decoration: none;
+}
+.CRFullDetailOddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #E7FFCE;
+	text-decoration: none;
+}
+.CRDetailSubTotalsRow {
+	border-color: #000000;
+	font-weight: bold;
+	font-size: 8pt;
+	color: #003399;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.CRDetailTitle {
+	padding: 3px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #006699;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+}
+.CRDetailTitleNormalCell {
+	padding: 3px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FF3300;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+}
+.CRCheckAmount {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #009933;
+	font-weight: bold;
+}
+.CRDetailTotalsRow {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #008000;
+	border-top-style: double;
+	border-top-color: #000000;
+}
+.CRFindButton {
+	background-position: top;
+	border: black 1px solid;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 9pt;
+	background-color: #FFFFFF;
+	cursor: hand;
+}
+/**********************/
+/* End Check Register */
+/**********************/
+/********************************/
+/* Unilevel Structure Move Tool */
+/********************************/
+.UMFieldLabel {
+	font-weight: bold;
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+}
+.UMFieldData {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #006600;
+	font-family: arial, helvetica, sans-serif;
+}
+.UMLargeText {
+	font-weight: bold;
+	font-size: 11pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+}
+.UMEvenRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: gainsboro;
+}
+.UMOddRow {
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+}
+.UMTinyRedText {
+	font-size: 7pt;
+	color: red;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.UMBox {
+	border-right: black thin solid;
+	border-top: black thin solid;
+	font-size: 8pt;
+	border-left: black thin solid;
+	color: black;
+	border-bottom: black thin solid;
+	font-family: arial, helvetica, sans-serif;
+}
+.UMHeader {
+	font-weight: bold;
+	font-size: 8pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #006699;
+}
+.UMConfirmBox {
+	border-right: #3300ff thin solid;
+	border-top: #3300ff thin solid;
+	font-size: 8pt;
+	border-left: #3300ff thin solid;
+	color: black;
+	border-bottom: #3300ff thin solid;
+	font-family: arial, helvetica, sans-serif;
+	background-color: lemonchiffon;
+}
+.UMConfirmHeader {
+	font-weight: bold;
+	font-size: 9pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+.UMMoveComplete {
+	font-weight: bold;
+	font-size: 12pt;
+	color: #006699;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+/************************************/
+/* End Unilevel Structure Move Tool */
+/************************************/
+/***************/
+/* Menu Styles */
+/***************/
+.HorizontalMenuBackground {background-color: black;}
+.VerticalMenuBackground {background-color: midnightblue;}
+
+/*******************/
+/* End Menu Styles */
+/*******************/
+/************************/
+/* Firestorm Dialog Box */
+/************************/
+.FirestormDialogBox {
+	border: black thin solid;
+	font-size: 10pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+}
+.FirestormDialogBoxHeader {
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	text-align: center;
+}
+/****************************/
+/* End Firestorm Dialog Box */
+/****************************/
+/***********************/
+/* ACH Profile Manager */
+/***********************/
+.ACHPActiveProfileHeader,
+.ACHPActiveProfileData,
+.ACHPEvenRow,
+.ACHPOddRow,
+.ACHPRedText,
+.ACHPMakeActiveButton,
+.ACHPCancelButton,
+.ACHPSaveProfileButton,
+.ACHPActivateProfileButton,
+.ACHPListHeader,
+.ACHPProfileHeader,
+.ACHPFieldLabel,
+.ACHPEditButton,
+.ACHPActiveProfiletext,
+.ACHPFieldDataReadOnly,
+.ACHPRedText,
+.ACHPCreateButton,
+.ACHPDeleteProfileButton,
+.ACHPStatusMessage {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;	
+}
+
+.ACHPActiveProfileHeader {
+	font-weight: bold;
+	padding-bottom: 10px;
+	color: #990000;
+	text-decoration: none;
+}
+.ACHPActiveProfileData {
+	font-size: 10pt;
+	color: #009900;
+	font-weight: bold;
+}
+.ACHPEvenRow {
+	color: #000000;
+	background-color: palegoldenrod;
+}
+.ACHPOddRow {background-color: lemonchiffon;}
+.ACHPRedText {
+	color: red;
+	text-decoration: none;
+}
+.ACHPMakeActiveButton {
+	border: #ffcc00 1px solid;
+	background-color: #ffffcc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+	width: 200px;
+}
+.ACHPCancelButton {
+	border: #ffcc00 1px solid;
+	background-color: #ffffcc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPSaveProfileButton {
+	border: #ffcc00 1px solid;
+	background-color: #ffffcc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPActivateProfileButton {
+	border: #006600 1px solid;
+	background-color: lightgreen;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPListHeader {
+	padding-bottom: 10px;
+	color: #006600;
+}
+.ACHPProfileHeader {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.ACHPFieldLabel {
+	font-weight: bold;
+	color: #006699;
+	text-decoration: none;
+}
+.ACHPProfileBox {border: black 1px solid;}
+.ACHPEditButton {
+	border: #ffcc00 1px solid;
+	background-color: #ffffcc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPActiveProfiletext {color: red;}
+.ACHPFieldDataReadOnly {
+	color: #006699;
+	text-decoration: none;
+}
+.ACHPRedText {
+	color: #cc0000;
+	text-decoration: none;
+}
+.ACHPCreateButton {
+	border: #ffcc00 1px solid;
+	background-color: #ffffcc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPDeleteProfileButton {
+	border: #ff0000 1px solid;
+	background-color: #ffcccc;
+	cursor: hand;
+	height: 17px;
+	font-weight: bold;
+}
+.ACHPStatusMessage {
+	border: #006600 1px solid;
+	color: #006600;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+}
+/***************************/
+/* End ACH Profile Manager */
+/***************************/
+/**************************/
+/* PROPAY RequestAccount  */
+/**************************/
+.PPFieldLabel,
+.PPInfoTable,
+.PPAccountSetupHeader,
+.PPAccountSetupDialogBox,
+.PPAccountSetupDescription,
+.PPDialogPanel,
+.PPFieldData,
+.PPStatusMessage,
+.PPUnderlineLabel {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.PPFieldLabel {font-weight: bold;}
+.PPInfoTable {
+	border: 1px solid #003399;
+	background-color: #C1F0FF;
+}
+.PPAccountSetupHeader {
+	background-color: #336600;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+}
+.PPAccountSetupDialogBox {
+	border: 1px solid #336600;
+	background-color: #D9FFD9;
+}
+.PPAccountSetupDescription {padding: 10px;}
+.PPDialogPanel {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	margin-left: -222px;
+	margin-top: -130px;
+}
+.PPFieldData {font-weight: bold;}
+.PPStatusMessage {
+	background-color: #D5FFEA;
+	border: 1px solid #009900;
+	text-align: center;
+	font-weight: bold;
+}
+.PPUnderlineLabel {
+	font-weight: normal;
+	color: #9E3469;
+	text-decoration: underline;
+}
+/*****************************/
+/* End PROPAY RequestAccount */
+/*****************************/
+/*******************************/
+/* Firestorm Standard Controls */
+/*******************************/
+.FirestormStandardTextBox,
+.FirestormStandardHiddenTextBox,
+#ctl00_MainContent_txtDealerID,
+#ctl00_MainContent_txtContactEmail,
+#ctl00_MainContent_txtCC_AccountNumber,
+#ctl00_MainContent_txtCC_CVV2,
+#ctl00_MainContent_txtCC_CardholderName,
+.SCNGeneralTextBox {
+	background-color: #fafafa;
+	border: 1px #333 solid;
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	height: auto;
+	padding: 5px;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+	box-shadow: inset 2px 2px 4px rgba(0,0,0,0.20);
+}
+.FirestormStandardHiddenTextBox {display: none;}
+
+.FirestormStandardTextBox[disabled="disabled"],
+#ctl00_MainContent_txtDealerID[disabled="disabled"] {
+	border: 1px #ccc solid;
+	color: #d9d9d9;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.FirestormStandardButton,
+.EMMButton,
+#ctl00_MainContent_btnNew,
+#ctl00_MainContent_btnReview,
+#ctl00_MainContent_btnSubmitTicket,
+#ctl00_MainContent_btnCancel,
+#ctl00_MainContent_btnRefresh,
+#btnLogin,
+#ctl00_MainContent_tblDynamicContent table[cellspacing="0"] td a,
+#btnGetPassword,
+#ctl00_MainContent_btnComplete {
+	background: #ffbddf;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffcee7), to(#ff93ca));
+	background: -moz-linear-gradient(top, #ffcee7, #ff93ca);
+	border: 1px solid #ff85c4;
+	border-bottom-color: #ce5eaa;
+	color: #222!important;
+	cursor: pointer;
+	display: inline-block;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcee7', endColorstr='#ff93ca');
+	font: bold 14px/26px Arial, Helvetica, sans-serif;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 0;
+	padding: 0 25px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #ffeef7;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0), inset 0 1px 0 #ffeef7;
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0), inset 0 1px 0 #ffeef7;
+	box-shadow: 0 0 0 rgba(0,0,0,0), inset 0 1px 0 #ffeef7;
+}
+.FirestormStandardButton[type="file"] {
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+	background: -moz-linear-gradient(top, #fff, #fff);
+	border: 0;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff');
+	padding: 0;
+
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+#ctl00_MainContent_btnRefresh {padding: 0 15px;}
+#ctl00_MainContent_tblDynamicContent table[cellspacing="0"] td a {margin: 20px 0;}
+#my10coupons_SignIn_btn,
+#my10coupons_Enroll_btn {
+	font-size: 16px;
+	padding: 4px 10px;
+	width: 330px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#btnGetPassword {margin: 5px 0 25px 0;}
+
+.FirestormStandardButton:hover,
+.EMMButton:hover,
+#ctl00_MainContent_btnNew:hover,
+#ctl00_MainContent_btnReview:hover {
+	text-decoration: none;
+	-webkit-box-shadow: 0 1px 7px rgba(0,0,0,0.4), inset 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 7px rgba(0,0,0,0.4), inset 0 1px 0 #fff;
+	box-shadow: 0 1px 7px rgba(0,0,0,0.4), inset 0 1px 0 #fff;
+}
+.FirestormStandardDropDown {
+	border: 1px solid black;
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+}
+.FirestormStandardDropDown {
+	border: 1px solid black;
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+}
+
+#ctl00_MainContent_cboStartDate_input,
+#ctl00_MainContent_cboEndDate_input {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 17px;
+	padding: 3px;
+}
+
+/*******************************/
+/* Firestorm Standard Controls */
+/*******************************/
+/*****************/
+/* Email Opt Out */
+/*****************/
+.EOOHeader,
+.EOODialogBox,
+.EOOText {
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+}
+.EOOHeader {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #000000;
+}
+.EOODialogBox {
+	border: 1px solid #000000;
+	width: 400px;
+	height: 250px;
+}
+.EOOText {text-align: center;}
+
+/*********************/
+/* End Email Opt Out */
+/*********************/
+/***********************/
+/* Firestorm Tree View */
+/***********************/
+#ctl00_MainContent_lblDescription {
+	display: block;
+	margin: 0 0 15px 0;
+}
+#ctl00_MainContent_lblDescription font[color="red"] {
+	color: #222;
+	display: block;
+	font-style: italic;
+	font-weight: bold;
+	margin: 0 0 -30px 0;
+}
+.FirestormTreeViewDisclaimer {
+	padding: 3px;
+	margin: 0;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF0000;
+	vertical-align: middle;
+	text-align: center;
+	background-color: transparent;
+	border: 0;
+	display: block;
+}
+.FirestormTreeViewControlPanel {
+	font-family: arial, helvetica, sans-serif;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #F1F1F1;
+	font-size: 12px;
+}
+.FirestormTreeViewControlPanel img[style="width: 1px; height: 20px"] {height: 10px!important;}
+
+.FirestormTreeViewDealerInfo {
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	position: relative!important;
+	right: auto!important;
+	top: 0!important;
+}
+.FirestormTreeViewControlPanelText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+}
+.FirestormTreeViewControlPanelTextSmall {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #777;
+}
+.FirestormTreeViewControlPanelHeaderText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.FirestormTreeViewTextBox {
+	border: 1px solid black;
+	font-size: 8pt;
+	color: black;
+	font-family: arial, helvetica, sans-serif;
+	background-color: white;
+	height: 17px;
+}
+.FirestormTreeViewLegend {
+	font-family: arial, helvetica, sans-serif;
+	vertical-align: middle;
+	text-align: left;
+	background-color: #F1F1F1;
+	font-size: 8pt;
+}
+.ShortNameText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	padding-bottom: 8px;
+	color: #993300;
+	text-align: center;
+}
+.ShortNameText A:link {color: #0000FF;}
+.ShortNameText A:visited {color: #9900CC;}
+.ShortNameText A:active {color: #0000FF;}
+.ShortNameText A:hover {
+	color: #0000FF;
+	text-decoration: underline;
+}
+.StructureViewCell {vertical-align: top;}
+
+.FirestormTreeViewDateLastRun {
+	border: 1px solid #008000;
+	font-family: arial, helvetica, sans-serif;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 8pt;
+	background-color: #E6FFE6;
+}
+.FirestormTreeViewStructureMessage {
+	font-family: arial, helvetica, sans-serif;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: bold;
+}
+.FirestormTreeViewCurrentlyViewing {
+	font-family: arial, helvetica, sans-serif;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 8pt;
+	color: #006600;
+}
+.FirestormTreeViewLoadingPanel {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      margin-left: -222px;
+      margin-top: -130px;
+}
+.FirestormTreeViewNoSearchResults {
+	border: yellow 1px solid;
+	font-weight: bold;
+	font-size: 9pt;
+	color: white;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #000099;
+	text-align: center;
+	border-width: 2px;
+}
+.FirestormTreeViewPopUpHeaderText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #000066;
+}
+.FirestormTreeViewPopUpText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000000;
+}
+.FirestormTreeViewLoadingBox {
+	border: 2px solid #000000;
+	background-color: #DFDFDF;
+}
+.FirestormTreeViewLoadingBoxInnerCell {background-color: #DFDFDF;}
+.FirestormTreeViewButton{}
+
+/***************************/
+/* End Firestorm Tree View */
+/***************************/
+/**********************/
+/* Active Legs Report */
+/**********************/
+#ctl00_MainContent_lblDescription b {color: #ce5eaa;}
+
+.ALRFieldLabel {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: -5px;
+	margin-right: -2px;
+	white-space: nowrap;
+}
+#ctl00_MainContent_cboDealership {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 19px;
+	height: 25px;
+	margin-left: 4px;
+}
+.ALRColumnHeaderRow {
+	background-color: #c5e4f0;
+    border: 1px #c5e4f0 solid;
+	border-top: 1px #222 solid;
+	background-image: none;
+	background-repeat: repeat-x;
+}
+.ALRColumnHeader {
+    border-bottom: 1px #c5e4f0 solid;
+    color: #222;
+    font: 11px Arial, helvetica, sans-serif;
+	padding: 6px 3px;
+}
+.ALREvenRow {
+    font: 11px Arial, helvetica, sans-serif;
+	background-color: #EDEDED;
+}
+.ALROddRow {
+    font: 11px Arial, helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+.ALRTinyMessagetext {
+	background-color: #FFFFFF;
+	color: #FF0000;
+    font: 11px Arial, helvetica, sans-serif;
+	text-align: center;
+}
+#ALRMainGridDiv {
+	border-top: 10px #222 solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.ALRMainGrid {
+    border: 1px #c5e4f0 solid;
+    font: 11px Arial, helvetica, sans-serif;
+	padding: 3px;
+}
+
+#ALRMainGridDiv a,
+#ALRMainGridDiv a:visited,
+#ALRMainGridDiv a:link,
+#ALRMainGridDiv a:hover {
+	color: #222;
+    font: 11px Arial, helvetica, sans-serif;
+}
+#ALRMainGridDiv a:hover {text-decoration: underline;}
+
+.ALRLeftColumn {background-position: center top;}
+.ALRSpecial {
+	background-color: #fdeffa;
+	color: #222;
+    font: 11px Arial, helvetica, sans-serif;
+}
+.ALRNotes {
+	color: #666666;
+    font: 11px Arial, helvetica, sans-serif;
+}
+.ALRLastPromotion {
+	color: #222;
+    font: 16px Arial, helvetica, sans-serif;
+}
+/**************************/
+/* End Active Legs Report */
+/**************************/
+/**********************************/
+/* New Order History Report */
+/**********************************/
+.OrderHistoryMainReportTable,
+.OrderHistorySubTable,
+.OrderHistoryLeftCell, .OrderHistoryRightCell,
+.OrderHistoryReportHeaderDealer, .OrderHistoryReportHeaderCustomer, .OrderHistoryReportHeaderAffiliate,
+.OrderHistoryReportEvenRow, .OrderHistoryReportOddRow,
+.OrderHistoryNoOrders,
+.OrderHistoryReportTableFooter, .OrderHistoryReportTableHeader,
+.OrderHistoryReportSummaryFooter, .OrderHistoryReportSummaryItem, .OrderHistoryReportSummaryItemMoney,
+.OrderHistoryReportDetailHeader, .OrderHistoryReportDetailRow,
+.OrderHistoryDisclaimer,
+.OrderHistoryDateLabel,
+.OrderHistoryReportTableFooterItem, .OrderHistoryReportTableFooterItemMoney, .OrderHistoryReportTableFooterBlank,
+.OrderHistoryReportSummaryBlank,
+
+.OrderHistoryButton,
+.OrderHistoryLeftColumn,
+.OrderHistoryReportTrackingPopUpRow,
+.OrderHistoryReportTrackingPopUpRowTop,
+.OrderHistoryReportTrackingPopUpRowTopLeft,
+.OrderHistoryReportTrackingPopUpRowTopRight,
+.OrderHistoryReportTrackingPopUpRowMiddleLeft,
+.OrderHistoryReportTrackingPopUpRowMiddleRight,
+.OrderHistoryReportTrackingPopUpRowBottomLeft,
+.OrderHistoryReportTrackingPopUpRowBottom,
+.OrderHistoryReportTrackingPopUpRowBottomRight,
+.OrderHistoryReportPrintLink {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.OrderHistoryMainReportTable {
+	color: white;
+	background-color: #222;
+}
+.OrderHistorySubTable {border-bottom: 1px #c5e4f0 solid;}
+.OrderHistoryLeftCell {
+    background-color: inherit;
+    border-left: 1px #c5e4f0 solid;
+}
+.OrderHistoryRightCell {
+    background-color: inherit;
+    border-right: 1px #c5e4f0 solid;
+}
+.OrderHistoryReportHeaderDealer,
+.OrderHistoryReportHeaderCustomer,
+.OrderHistoryReportHeaderAffiliate {
+	background-color: #c5e4f0;
+    border-bottom: 1px #c5e4f0 solid;
+    border-right: 1px #c5e4f0 solid;
+	padding: 6px 3px;
+}
+.OrderHistoryReportAffiliateInfo {
+    font: bold 9px Arial, helvetica, sans-serif;
+    text-align: center;
+    background-color: #FFFFCC;
+    border-left: 1px #c5e4f0 solid;
+    border-right: 1px #c5e4f0 solid;
+}
+.OrderHistorySingleCell {
+    border-left: 1px #c5e4f0 solid;
+    border-right: 1px #c5e4f0 solid;
+}
+.OrderHistoryReportEvenRow {background-color: #edf5f9;}
+.OrderHistoryReportOddRow {background-color: #FFFFFF;}
+.OrderHistoryReportEvenRow td,
+.OrderHistoryReportOddRow td {
+	padding: 6px 3px
+}
+.OrderHistoryReportEvenRowPadded {
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	background-color: #ebecff;
+	padding-right: 25px;
+}
+.OrderHistoryReportOddRowPadded {
+	font: 9px Arial, helvetica, sans-serif;
+	color: #555555;
+	background-color: #dadcfd;
+	padding-right: 25px;
+}
+.NoOrdersLabel {
+	font: bold 15px Arial, helvetica, sans-serif;
+	border-left-style: none;
+	background-color: #CC9900;
+}
+.OrderHistoryNoOrders {
+    background-color: #fff;
+    border-left: 1px #c5e4f0 solid;
+    border-right: 1px #c5e4f0 solid;
+    font-style: italic;
+	padding: 18px 10px 20px 10px;
+	text-align: center;
+}
+.OrderHistoryReportTableFooter {
+    background-color: #fff;
+	border-left-style: none;
+	border-top: 1px #c5e4f0 solid;
+	font-weight: normal;
+	margin: 0;
+	padding: 8px 1px 6px 2px;
+}
+.OrderHistoryReportTableFooter[width="7px"] {width: 1px;}
+.OrderHistoryReportTableFooter[width="13px"] {width: 10px;}
+
+.OrderHistoryReportTableFooterItem,
+.OrderHistoryReportTableFooterItemMoney {
+	background-color: #fff;
+	border-top: 1px #c5e4f0 solid;	
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px 2px 6px 2px;
+}
+
+.OrderHistoryReportTableFooterBlank {
+	font-size: 9px;
+	border-left-style: none;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+
+.OrderHistoryReportTableHeader {
+	background-color: #222;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 4px 5px;
+	-webkit-border-radius-topleft: 3px;
+	-webkit-border-radius-topright: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.OrderHistoryReportTableHeader br {display: none;}
+
+#ctl00_MainContent_tblSummary {
+	border: 1px #c5e4f0 solid;
+	padding: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#ctl00_MainContent_tblSummary br {display: none;}
+
+.OrderHistoryReportSummaryFooter {
+	margin: 0;
+	padding: 2px 2px 2px 2px;
+	font-size: 17px;
+	border: 0;
+	background-color: #FFFFFF;
+	font-weight: normal;
+}
+.OrderHistoryReportSummaryFooter[width="7px"] {width: 1px;}
+
+.OrderHistoryReportSummaryItem {
+	margin: 0;
+	padding: 2px;
+	font-size: 19px;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.OrderHistoryReportSummaryItemMoney {
+	margin: 0;
+	padding: 2px;
+	font-size: 19px;
+	color: #ce5eaa;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.OrderHistoryReportSummaryBlank {
+	font-size: 9px;
+	border-left-style: none;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.OrderHistoryReportDetailHeader {
+	margin: 0;
+	padding: 2px;
+	font-weight: bold;
+	background-color: #FFFFCC;
+}
+.OrderHistoryReportDetailHeaderBlank {
+	margin: 0;
+	padding: 2px;
+	font: bold 9px Arial, helvetica, sans-serif;
+	color: #FFFFFF;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+.OrderHistoryReportDetailRow {
+	margin: 0;
+	padding: 2px;
+	border-left-style: none;
+	border-left-style: none;
+	background-color: #FFFFFF;
+}
+.OrderHistoryDisclaimer {
+    border-right: 1px #c5e4f0 solid;
+    color: #FF0000;
+    font-size: 9px;
+	padding: 8px 8px 6px 2px;
+}
+.OrderHistoryDateLabel {
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: -5px;
+	margin-right: -2px;
+	white-space: nowrap;
+}
+.OrderHistoryButton {
+	background-color: #FFFFFF;
+	background-image: none;
+	background-repeat: repeat-x;
+	border: 0;
+	cursor: hand;
+	font-weight: normal;
+}
+.OrderHistoryLeftColumn {
+    vertical-align: top;
+    background-image: none;
+}
+.OrderHistoryReportTrackingPopUpRow {background-color: #E1F0FF;}
+
+.OrderHistoryReportTrackingPopUpRowTop,
+.OrderHistoryReportTrackingPopUpRowTopLeft,
+.OrderHistoryReportTrackingPopUpRowTopRight,
+.OrderHistoryReportTrackingPopUpRowMiddleLeft,
+.OrderHistoryReportTrackingPopUpRowMiddleRight,
+.OrderHistoryReportTrackingPopUpRowBottomLeft,
+.OrderHistoryReportTrackingPopUpRowBottom,
+.OrderHistoryReportTrackingPopUpRowBottomRight {
+	background-color: #E1F0FF;
+	border-color: #000000;
+	border-width: 1px;	
+}
+.OrderHistoryReportTrackingPopUpRowTop {border-top-style: solid;}
+.OrderHistoryReportTrackingPopUpRowTopLeft {border-top-style: solid; border-left-style: solid;}
+.OrderHistoryReportTrackingPopUpRowTopRight {border-top-style: solid; border-right-style: solid;}
+.OrderHistoryReportTrackingPopUpRowMiddleLeft {border-left-style: solid;}
+.OrderHistoryReportTrackingPopUpRowMiddleRight {border-right-style: solid;}
+.OrderHistoryReportTrackingPopUpRowBottomLeft {border-left-style: solid; border-bottom-style: solid;}
+.OrderHistoryReportTrackingPopUpRowBottom {border-bottom-style: solid;}
+.OrderHistoryReportTrackingPopUpRowBottomRight {border-right-style: solid; border-bottom-style: solid;}
+.OrderHistoryReportPrintLink {color: #0066FF;}
+
+/**********************************/
+/* End New Order History Report */
+/**********************************/
+/**************************/
+/* New Enrollment Process */
+/**************************/
+.NEPurchaseNotRequired,
+.NEConfigrationError,
+.NEButton,
+.NEBoxHeaderText,
+.NESectionTitle, .NESectionTitleSpecial,
+.NEFieldLabel
+.NEPlacementLabel,
+.NEProductDescription,
+.NEIdentificationLabel,
+.NEHelpText,
+.NEPrice,
+.NEAutoshipGroupName, .NEAutoshipGroupDescription, .NEAutoshipRequired, .NEAutoshipGroupOptionDescription,
+.NEDescriptionText,
+.NEGetStartedDescription,
+.NERankSelectionDescription,
+.NEAutoshipOptionsDescription,
+.NEReplicatingWebsiteDescription,
+.NEEnterPaymentDescription,
+.NECompleteOrderDescription,
+.NEEnrollmentCompleteDescription,
+.NEFieldData,
+.NEOrderTotalsLabel, .NEOrderTotalsData, .NEOrderTotalsGrandTotalLabel, .NEOrderTotalsGrandTotalData,
+.NECouponResult,
+.NETermsAndConditionsDescripton,
+.NEPositionLabel, .NEPositionData,
+.NEErrorBox, .NEErrorBoxText,
+.NESummaryFieldLabel, .NESummaryFieldLabelData,
+.NESpecialSelectionError,
+.NESpecialStatusMessage {
+	color: #222;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+.NESpecialsProductListImage {
+    height: 50px;
+    width: 50px;
+}
+.NEPurchaseNotRequired {
+	color: #336600;
+	font-weight: normal;
+}
+.NEConfigrationError {
+	color: #FF0000;
+	text-align: right;
+}
+.NEButton {
+	border: 1px solid black;
+	background-image: none;
+    background-position: 50% top;
+    font-weight: normal;
+    background-color: #FFFFFF;
+	cursor: hand;
+    height: 20px;
+}
+
+#ctl00_MainContent_btnComplete {
+	font: bold 19px/40px Arial, Helvetica, sans-serif!important;
+	height: 40px!important;
+	padding: 0 40px;
+}
+
+.NEHeaderLeft,
+.NEHeaderMiddle,
+.NEHeaderRight,
+.NEFooterLeft,
+.NEFooterMiddle,
+.NEFooterRight {
+	background-image: none;
+	display: none;
+}
+
+.NESectionBox {border: 0;}
+
+.NEBoxHeaderText {
+	font-size: 19px;
+	font-weight: bold;
+	color: #58b6da;
+	font-style: normal;
+	vertical-align: middle;
+}
+.NESectionTitle,
+.NESectionTitleSpecial {
+	font-style: normal;
+	font-weight: normal;
+}
+
+.NEGettingStartedImage {background-position: center;}
+.NERankSelectionImage {height: 25px;}
+.NEAutoshipSelectionImage {height: 200px;}
+.NEReplicatingWebsiteImage {height: 200px;}
+.NEEnrollmentFinalImage {height: 125px;}
+.NEEnrollmentCompleteImage {height: 125px;}
+.NECustomerEnrollmentCompleteImage {height: 250px;}
+.NEAdditionalProductSelectionImage {background-position: center;}
+.NESpecialProductSelectionImage {background-position: center;}
+.NEPositionPlacementImage {background-position: center;}
+
+.NEPlacementLabel {font-size: 10px;}
+.NEProductDescription {
+	font-size: 10px;
+	color: #999999;
+	margin: 5px;
+}
+.NEIdentificationLabel {
+	background-color: #efefef;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 5px;
+}
+.NEHelpText {
+	font-size: 10px;
+	font-weight: normal;
+	color: #663300;
+}
+.NEPrice {
+	font-size: 10px;
+	color: #336600;
+	font-weight: bold;
+}
+.NEAutoshipGroupName {
+	font-size: 10px;
+	font-weight: bold;
+	color: #336699;
+	text-decoration: underline;
+}
+.NEAutoshipGroupDescription {
+	color: #666666;
+	line-height: 17px;
+}
+.NEAutoshipDetailTable {padding: 3px;}
+.NEAutoshipRequired {
+	font-size: 10px;
+	color: #CC3300;
+	text-decoration: none;
+}
+.NEAutoshipGroupOptionDescription {
+	color: #333333;
+	line-height: 17px;
+}
+.NEAutoshipGroupOptionImage {}
+.NEDescriptionText {
+	font-size: 11px;
+	color: #666666;
+	text-align: left;
+}
+
+.NEGetStartedDescription,
+.NERankSelectionDescription,
+.NEAutoshipOptionsDescription,
+.NEReplicatingWebsiteDescription,
+.NEEnterPaymentDescription,
+.NECompleteOrderDescription,
+.NEEnrollmentCompleteDescription {
+	padding: 0!important;
+	border: 1px solid #C5C5C5;
+	font-size: 12px!important;
+	background-color: #F7F7F7;
+	width: 100%;
+	text-align: left;
+	height: auto;	
+}
+.NEStandardBox {
+	background-color: #FFFFFF;
+	width: 800px!important;
+}
+.NEHeaderTextRow {background-image: inherit;}
+.NEContainerBox {background-color: #FFFFFF;}
+
+.NEFieldData,
+.NEOrderTotalsLabel,
+.NEOrderTotalsData,
+.NEOrderTotalsGrandTotalLabel,
+.NEOrderTotalsGrandTotalData,
+.NECouponResult,
+.NETermsAndConditionsDescripton,
+.NEPositionLabel,
+.NEPositionData,
+.NEErrorBox,
+.NEErrorBoxText,
+.NESummaryFieldLabel,
+.NESummaryFieldLabelData,
+.NESpecialSelectionError,
+.NESpecialStatusMessage {
+	font-size: 10px;
+}
+.NEFieldData {
+	color: #006600;
+	font-weight: bold;
+}
+.NEOrderTotalsLabel {
+	color: #996633;
+	width: 200px;
+}
+.NEOrderTotalsData {
+	color: #006600;
+	text-align: right;
+}
+.NEOrderTotalsGrandTotalLabel {
+	font-weight: bold;	
+	color: #990033;
+}
+.NEOrderTotalsGrandTotalData {
+	color: #990033;
+	font-weight: bold;
+	border-top-style: double;
+	border-top-color: #000000;
+	text-align: right;
+}
+.NECouponResult {
+	color: #FF0000;
+	text-align: right;
+}
+.NEPositionLabel {color: #808080;}
+.NEPositionData {color: #660033;}
+.NEErrorBox {
+	border: 1px solid #CC3300;	
+	background-color: #FFF4F4;
+	color: #CC3300;
+}
+.NEErrorBoxText {color: #CC3300;}
+.NESummaryFieldLabel {color: #808080;}
+.NESummaryFieldLabelData {color: #990033;}
+
+.NECustomerTypeSelectionImage {height: 200px;}
+
+.NEDynamicSelectionError {
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    text-align: center;
+    font-weight: bold;
+}
+.NEDynamicStatusMessage {
+    border: 1px solid #008000;
+    color: #008000;
+    text-align: center;
+    font-weight: bold;
+}
+
+#ctl00_MainContent_tblTermsAndConditions {width: 750px!important;}
+
+#ctl00_MainContent_btnComplete {margin-right: 260px;}
+
+/* Product Specials During Enrollment */
+.NESpecialSelectionError {
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    text-align: center;
+    font-weight: bold;
+}
+.NESpecialStatusMessage {
+    border: 1px solid #008000;
+    text-align: center;
+    font-weight: bold;
+}
+/******************************/
+/* End New Enrollment Process */
+/******************************/
+/****************************************/
+/* STANDARD WAIT SPINNER AND ERROR LIST */
+/****************************************/
+.WSLoadingPanel {}
+.WSLoadingBox {
+	border: 2px solid #000000;
+	background-color: #FFFFFF;
+	width: 400px;
+}
+.WSLoadingBoxInnerCell {background-color: #FFFFFF;}
+.WSLoadingBoxText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	text-align: center;
+}
+#WaitSpinner {    
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    width: 400px;
+    display: none;
+}
+#horizon {}
+#PopUpErrorList {
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    width: 400px;
+    display: none;
+}
+
+.PopUpErrorBox,
+.PopUpErrorBoxHeader,
+.PopUpErrorBoxRow,
+.PopUpErrorBoxLinkText {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+}
+.PopUpErrorBox {
+	border: 2px solid #CC0000;
+	background-color: #FFFFFF;
+	width: 400px;
+	color: #CC0000;
+}
+.PopUpErrorBoxHeader {
+	border-bottom: 2px #CC0000 solid;
+	color: #990033;
+	font-weight: bold;
+	text-align: center;
+}
+.PopUpErrorBoxRow {color: #CC0000;}
+.PopUpErrorBoxLinkText {
+	color: #336699;
+	font-weight: bold;
+}
+/********************************************/
+/* END STANDARD WAIT SPINNER AND ERROR LIST */
+/********************************************/
+
+td[width="48"] img, td[width="46"] img {display: none;}

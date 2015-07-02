@@ -1,0 +1,31 @@
+{% block info_links %}
+
+    {% block info_link1 %}
+        <!--<a class="button{{ nav_home }}" href="{% url home %}">get coupons</a>-->
+    {% endblock %}
+    {% block info_link2 %}
+        <a class="button{{ nav_who_we_are }}" href="{% url who-we-are %}">who we are</a>
+    {% endblock %}
+    {% block info_link3 %}
+        <a class="button{{ nav_terms_of_use }}" href="{% url terms-of-use %}">terms of use</a>
+    {% endblock %}
+    {% block info_link4 %}
+        <a class="button{{ nav_privacy_policy }}" href="{% url privacy-policy %}">privacy policy</a>
+    {% endblock %}
+    {% block info_link5 %}
+        <a class="button{{ nav_opt_in_opt_out }}" href="{% url unsubscribe %}">unsubscribe</a>
+    {% endblock %}
+    {% block info_link6 %}
+        <a class="button{{ nav_contact_us }}" href="{% url contact-us %}">contact us</a>
+    {% endblock %}
+    {% block info_link7 %}
+        <a class="button{{ nav_sample_flyer }}" href="{% url sample-flyer %}">sample flyer</a>
+    {% endblock %}
+    {% block info_link8 %}
+        <a class="button{{ nav_help }}" href="{% url help %}">help / faq</a>
+    {% endblock %}
+    {% block info_link9 %}
+        {% if contest_is_running %}<a class="button{{ nav_contest_rules }}" href="{% url contest-rules %}">sweepstakes rules</a>{% endif %}
+    {% endblock %}
+
+{% endblock %}

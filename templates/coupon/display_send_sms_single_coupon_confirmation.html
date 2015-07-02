@@ -1,0 +1,18 @@
+{% extends "frames/web/modal.html" %}
+{% include "include/dsp/dsp_facebook_head_tag.html" %}
+{% block meta %}{% include "include/dsp/dsp_facebook_meta.html" %}{% endblock %}
+{% block frame %}
+
+    <h2>This coupon was sent as a text message to your cell phone.</h2>
+
+    <p class="small">Redeem your Text Coupon by presenting the message on your cell phone at <strong>{{ business_name }}</strong>. All restrictions displayed on {{ current_site.domain }} apply to text coupons.</p>
+
+    <div class="grid_8 alpha omega">
+        <p class="small">Problems with Text Coupons? Call our Live Help Line at (800) 581-3380 or email <a href="mailto:help@10Coupons.com?subject=Help on {{ current_site.domain }}">Help@10Coupons.com</a>.</p>
+    </div>
+
+    <div class="grid_4 alpha omega">
+        {% include "include/dsp/dsp_sample_phone.html" %}
+    </div>
+
+{% endblock %}

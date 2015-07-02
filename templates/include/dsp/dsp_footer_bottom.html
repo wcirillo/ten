@@ -1,0 +1,8 @@
+<a class="dark nodec" href="{% url media-partner-home %}">Media Partner Info</a> &nbsp;&#149;&nbsp;
+{% if not request.user.is_authenticated %}
+<a class="dark nodec" href="{% url media-partner-sign-in %}">Media Partner Login</a> &nbsp;&#149;&nbsp;
+{% else %}
+<a class="dark nodec" href="{% url media-partner-view-report %}">Media Partner Account</a> &nbsp;&#149;&nbsp;
+{% endif %}
+<a class="dark nodec" href="{% url zinnia_entry_archive_index %}">Our Blog</a> &nbsp;&#149;&nbsp;
+&copy; {% now "Y" %} <a class="dark nodec" href="http://www.strausdigital.com">Straus Digital Media, LLC.</a>

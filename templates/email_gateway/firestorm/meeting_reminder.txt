@@ -1,0 +1,27 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Please join us for a Company Overview Phone Conference.
+
+The Overview Conference is each Tues 9pm ET.
+
+{% if is_ad_rep %}Brush up on basic company information and opportunities
+{% else %}Learn about opportunities as an Advertising Representative.{% endif %}
+
+Dial in!
+Conference Dial-in Number: (218) 339-4600
+Participant Access Code: 509938#
+
+You'll be joined by:
+Eric Straus, Founder and CEO
+David Sage, Chief Marketing Officer
+
+We hope to talk to you Tuesday night!
+
+Thanks,
+Your 10LocalCoupons.com Customer Care Team!
+800 581 3380
+
+Cancel invitations to Conference Calls with this link:
+{{ base_url }}{% url opt_out payload=payload %}
+{% endblock %}

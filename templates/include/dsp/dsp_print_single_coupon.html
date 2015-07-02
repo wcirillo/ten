@@ -1,0 +1,107 @@
+<div class="coupon">
+    <div class="couponInner">
+
+        <div class="coupon_business">
+
+            <h1 class="business_name">{% if coupon.business.business_name %}{{ coupon.business.business_name }}{% endif %}</h1>
+
+            {% if coupon.business.slogan %}
+                <h2 class="slogan">- {{ coupon.business.slogan }} -</h2>
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="coupon_offer">
+
+            <h3 class="headline">{{ coupon.offer.headline }}</h3>
+            <h4 class="qualifier">{% if coupon.offer.qualifier %}{{ coupon.offer.qualifier }}{% endif %}</h4>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="coupon_bottom">
+
+            <div class="qr"> <!-- order important for mobile -->
+                <p class="smallmargin">{{ coupon_code.code }}</p>
+                <img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=M|2&chl={{ http_protocol_host }}{{ single_coupon_qr_code_link }}{{ coupon_code.code }}"/>
+            </div>
+
+            <h5 class="alt_font">The Fine Print:</h5>
+
+            <ul class="fine_print small">
+                {% for restriction in coupon.default_restrictions.all %}
+                    <li>{{ restriction }}</li>
+                {% endfor %}
+                {% if coupon.custom_restrictions %}
+                    <li>{{ coupon.custom_restrictions }}</li>
+                {% endif %}
+                <li>{{ ten_coupon_restrictions }}</li>
+                {% if valid_days %}<li class="valid_days">{{ valid_days }}</li>{% endif %}
+                <li class="redemption_window">Valid through {{ coupon.expiration_date }}.</li>
+            </ul>
+
+            <div class="clear"></div>
+        </div>
+
+        <a class="weblogo" href="{{ all_coupons_link }}"><p>{{ site.get_name_no_spaces }}</p></a>
+
+        <div class="printlogocontainer">
+            <div class="printlogo">
+                <img src="{{ safe_static_url }}images/logo_print_blue_725x225.png" alt="{{ site.name }}"/>
+                <div class="printmarket">{{ site.get_name_no_spaces }}</div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="coupon_location">
+
+    <div class="left print_locationList">
+
+        {% if all_locations %}
+
+            {% for location in all_locations %}
+                {% include "include/dsp/dsp_single_location.html" %}
+            {% endfor %}
+
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="right print_map">
+
+        {% if all_locations %}
+            {% if coupon.offer.business.show_map %}
+                {% if location_coords %}
+                    {% include "include/dsp/dsp_map_location.html" %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+{% if coupon.business.web_url %}
+    <h5 class="alt_font">Visit Us Online:</h5>
+    <p class="small">
+        <span class="url">
+            {% if coupon.offer.business.web_url|cut:'http://'|length > 30 %}
+                {{ coupon.offer.business.web_url|cut:'http://'|slice:':30' }}...
+            {% else %}
+                {{ coupon.offer.business.web_url|cut:'http://' }}
+            {% endif %}
+        </span>
+    </p>
+{% endif %}

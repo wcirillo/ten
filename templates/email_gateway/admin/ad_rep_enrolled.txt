@@ -1,0 +1,5 @@
+Advertising Representatives Enrolled
+    
+{% for ad_rep in ad_reps %}
+    {{ ad_rep.site }}, {{ ad_rep.first_name }} {{ ad_rep.last_name }}, {{ ad_rep.email }}, {{ ad_rep.primary_phone_number }}, {% if ad_rep.parent_ad_rep %}{{ ad_rep.parent_ad_rep.first_name }} {{ ad_rep.parent_ad_rep.last_name }}, {% endif %}
+{% endfor %}    

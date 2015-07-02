@@ -1,0 +1,24 @@
+{% extends "frames/email/full.html" %}
+{% load currency %}
+
+{% block email_content %}
+{% if warning %}
+<h1> {{warning}} </h2>
+{% endif %}
+<h2> Flyer Results for {% now "F j, Y " %} <h2>
+{% if flyer_log %}
+<table border = 0>
+    <tr align=center><td> Market</td><td>Recipient count</td><td>Send Duration<br>(seconds)</td></tr>
+    {% for flyer in flyer_log %}
+        
+        <tr bgcolor='#{% cycle 'eeeeee' 'dddddd' %}'>
+        {% for item in flyer %}
+            <td 
+            {% if 0 <= item and item < 999999999 %}
+              align=center {% endif %}>{{ item }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+{% endblock %}

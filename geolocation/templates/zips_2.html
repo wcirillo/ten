@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+{{ gmap.xhtml }}
+{{ gmap.style }}
+{{ gmap.scripts }}
+</head>
+<body onload="initialize()">
+    <div id="{{ gmap.dom_id }}"></div>
+    <div id="counties">
+    {{ current_site.name }}
+    {{ county.name }}
+    {% for zip in zips %}
+        <div id="{{zip.code}}" class="zips linkOFF">
+            <a href="javascript:polygon_{{zip.code}}.setOptions({fillOpacity: 0.75});">{{ zip.code }}</a> ({{ zip.coordinate.latitude }}, {{ zip.coordinate.longitude }})
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% block email_content %}
+{% endblock %}
+{% if show_unsubscribe %}
+{% include "email_gateway/generic_email_unsubscribe.txt" %}
+{% endif %}
+
+10LocalCoupons.com corporate address:
+{% include 'email_gateway/generic_corporate_address.txt' %}

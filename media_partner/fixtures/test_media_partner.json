@@ -1,0 +1,557 @@
+[
+    {
+        "pk": 401, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "affiliate", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_affiliate@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },   
+    {
+        "pk": 401, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 401, 
+        "model": "media_partner.mediapartner", 
+        "fields": {
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "groups": []
+        }
+    }, 
+    {
+        "pk": 402, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "media_group", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_media_group@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },
+    {
+        "pk": 406, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "media_group406", 
+            "first_name": "Tommy", 
+            "last_name": "Richards", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_media_406@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },
+    {
+        "pk": 402, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [],  
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 406, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "12550", 
+            "email_hash": null, 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [],  
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": [1]
+        }
+    },  
+    {
+        "pk": 402, 
+        "model": "media_partner.mediapartner", 
+        "fields": {
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "groups": []
+        }
+    },
+    {
+        "pk": 406, 
+        "model": "media_partner.mediapartner", 
+        "fields": {
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "groups": []
+        }
+    },   
+    {
+        "pk": 1, 
+        "model": "media_partner.affiliate", 
+        "fields": {
+            "state_province": "", 
+            "city": "", 
+            "media_group": null, 
+            "name": "Will of the Hudson Valley", 
+            "zip_postal": "", 
+            "address1": "", 
+            "address2": "", 
+            "site": 2, 
+            "free_coupons": 0, 
+            "medium": 1, 
+            "contact_email": "test_affiliate_1@example.com",
+            "affiliate_partner": [
+                401
+            ], 
+            "contact_name": "Will", 
+            "contact_phone": "8458458454"
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "media_partner.affiliate", 
+        "fields": {
+            "state_province": "", 
+            "city": "", 
+            "media_group": null, 
+            "name": "Magic Media LLC", 
+            "zip_postal": "", 
+            "address1": "", 
+            "address2": "", 
+            "site": 2, 
+            "free_coupons": 0, 
+            "medium": 3, 
+            "contact_email": "test_affiliate_406@example.com",
+            "affiliate_partner": [
+                406
+            ], 
+            "contact_name": "Manny", 
+            "contact_phone": "8458458456"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "media_partner.mediagroup", 
+        "fields": {
+            "media_group_partner": [
+                402
+            ], 
+            "contact_email": "test_media_group@example.com",
+            "contact_name": "Me", 
+            "contact_phone": "8768788787", 
+            "name": "Clear Channel"
+        }
+    },    
+    {
+        "pk": 405, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "affiliate2", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_affiliate_2@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },   
+       {
+        "pk": 405, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 405, 
+        "model": "media_partner.mediapartner", 
+        "fields": {
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "groups": []
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "media_partner.affiliate", 
+        "fields": {
+            "state_province": "", 
+            "city": "", 
+            "media_group": 1, 
+            "name": "Will of the Hudson Valley", 
+            "zip_postal": "", 
+            "address1": "", 
+            "address2": "", 
+            "site": 2, 
+            "free_coupons": 0, 
+            "medium": 1, 
+            "contact_email": "test_affiliate_2@example.com",
+            "affiliate_partner": [
+                405
+            ], 
+            "contact_name": "Will", 
+            "contact_phone": "8458458454"
+        }
+    },    
+    {
+        "pk": 1, 
+        "model": "media_partner.mediapieshare", 
+        "fields": {
+            "share": 0.20000000000000001, 
+            "affiliate": 1, 
+            "site": 2, 
+            "end_date": "2010-05-30", 
+            "start_date": "2010-06-28"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "media_partner.mediapieshare", 
+        "fields": {
+            "share": 0.20000000000000001, 
+            "affiliate": 1, 
+            "site": 2, 
+            "end_date": null, 
+            "start_date": "2010-07-01"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "media_partner.mediapieshare", 
+        "fields": {
+            "share": 0.20000000000000001, 
+            "affiliate": 5, 
+            "site": 2, 
+            "end_date": null, 
+            "start_date": "2010-07-01"
+        }
+    }, 
+    {
+        "pk": "403", 
+        "model": "auth.user", 
+        "fields": {
+            "username": "consumer", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_media_partner_consumer@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },
+           {
+        "pk": 403, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49",
+            "email_subscription": [
+                1
+            ]
+        }
+    },  
+    {
+        "pk": 404, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "advertiser", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test_media_partner_advertiser@example.com",
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },
+    {
+        "pk": 404, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 404, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": "", 
+            "advertiser_city": "", 
+            "advertiser_address2": "", 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-09-15 12:57:00", 
+            "advertiser_zip_postal": "", 
+            "advertiser_state_province": "", 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [
+                1
+            ], 
+            "advertiser_modified_datetime": "2010-09-15 12:57:00"
+        }
+    }, 
+    {
+        "pk": 401, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 404, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-19 15:50:51", 
+            "business_create_datetime": "2010-05-19 15:50:51", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Transaction Report Bizz", 
+            "business_zip_postal": null
+        
+    }}, 
+    {
+        "pk": 401, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "business": 1, 
+            "billing_address2": null, 
+            "billing_zip_postal": "", 
+            "billing_city": null, 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "", 
+            "billing_address1": null
+        }
+    }, 
+    {
+        "pk": 401, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.00", 
+            "billing_record": 1, 
+            "is_locked": false, 
+            "create_datetime": "2010-08-31 10:37:43", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "1-1", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.00", 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 402, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.00", 
+            "billing_record": 1, 
+            "is_locked": false, 
+            "create_datetime": "2010-08-31 10:37:43", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "1-2", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.00", 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 401, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "Flyer Placement", 
+            "business": 401, 
+            "site": 2, 
+            "is_taxable": false, 
+            "units": 1, 
+            "amount": "49.00", 
+            "end_datetime": "2010-05-31 18:50:04", 
+            "content_type": 50, 
+            "start_datetime": "2010-05-24 18:48:48", 
+            "item_id": 1, 
+            "order": 401
+        }
+    }, 
+    {
+        "pk": 402, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "Flyer Placement", 
+            "business": 401, 
+            "site": 2, 
+            "is_taxable": false, 
+            "units": 1, 
+            "amount": "49.00", 
+            "end_datetime": "2010-06-01 18:50:04", 
+            "content_type": 50, 
+            "start_datetime": "2010-06-24 18:48:48", 
+            "item_id": 1, 
+            "order": 402
+        }
+    },
+    {
+        "pk": 401, 
+        "model": "ecommerce.creditcard", 
+        "fields": {
+            "is_storage_opt_in": false, 
+            "business": 1, 
+            "encrypted_number": "", 
+            "cc_type": null, 
+            "last_4": "1111", 
+            "exp_month": 12, 
+            "exp_year": 12, 
+            "card_holder": "slkdfj"
+        }
+    }, 
+    {
+        "pk": 401, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "A", 
+            "is_locked": false, 
+            "create_datetime": "2010-05-28 11:04:20", 
+            "is_void": false, 
+            "order": 401, 
+            "amount": "49.00", 
+            "credit_card": 401, 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 402, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "A", 
+            "is_locked": false, 
+            "create_datetime": "2010-07-20 11:04:20", 
+            "is_void": false, 
+            "order": 402, 
+            "amount": "49.00", 
+            "credit_card": 401, 
+            "method": "C"
+        }
+    }
+]

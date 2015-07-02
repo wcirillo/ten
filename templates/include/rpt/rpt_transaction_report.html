@@ -1,0 +1,132 @@
+<div class="left">
+    {% if media_group %}
+        <h3>{{ media_group.name }}</h3>
+    {% else %}
+        <h3>{{ affiliate.name }}</h3>
+        <p>{% if affiliate.media_group %}{{ affiliate.media_group.name }}{% endif %}</p>
+    {% endif %}
+    <div class="clear"></div>
+</div>
+
+<div class="right">
+    {% if media_group %}
+        <h3>{{ affiliate.id }}</h3>
+    {% else %}
+        <h3>{% if affiliate.id %}{{ affiliate.id }}{% endif %}</h3>
+        <p class="center">{% if affiliate.media_group_id %}{{ affiliate.media_group_id }}{% endif %}</p>
+    {% endif %}
+    <div class="clear"></div>
+</div>
+
+<div class="hr"></div>
+
+<div class="bar">
+    <div class="left">
+        <h5>Transaction Report for {{ affiliate.name }}</h5>
+        <div class="clear"></div>
+    </div>
+    <div class="right">
+        <form action="" method="POST"><div id="csrf_token">{% csrf_token %}</div>
+            <select name="report" id="id_select_report">
+                {% for report in report_list %}
+                <option value="{{ report }}">{{ report }}</option>
+                {% endfor %}
+            </select>
+        </form>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<table id="id_table_revenue" class="util" cellpadding="6" cellspacing="0" border="0" width="100%">
+    <tr>
+        <th align="left">Invoice</th>
+        <th align="left">Date</th>
+        <th align="left">Business</th>
+        <th class="amount" align="right">Subtotal</th>
+    </tr>
+</table>
+
+<br/>
+
+<table class="util total" cellpadding="6" cellspacing="0" border="0" width="100%">
+    <tr id="id_subtotals">
+        <td>
+            <div>Gross Collected Revenue</div>
+            <div>Variable Expense</div>
+            <div>Net Collected</div>
+        </td>
+        <td align="right" class="amount">
+            <div><span id="id_gross_collected_revenue"></span></div>
+            <div><span id="id_variable_expenses" class="equation_line" style="border-bottom: 1px #333 solid; padding: 0 0 3px 0;"></span></div>
+            <div><span id="id_net_collected_revenue"></span></div>
+        </td>
+    </tr>
+    <tr id="id_share">
+        <td>
+            <div>Media Partner Revenue</div>
+            <div>&nbsp;</div>
+        </td>
+        <td align="right" class="amount">
+            <div><span id="id_media_partner_revenue"></span></div>
+            <div>&nbsp;<em id="id_media_pie_share"></em></div>
+        </td>
+    </tr>            
+    <tr>
+        <td>
+            <h5 id="id_selected_report"><strong></strong></h5>
+        </td>
+        <td align="right" class="amount">
+            <h5><strong id="id_total"></strong></h5>
+        </td>
+    </tr>
+</table>
+<script language="javascript" type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    
+    function buildTable(){
+        var selected = $('#id_select_report :selected').text();
+        var islaunch = 'Launch'; //case sensitive!
+        var csrf_token = $('#csrf_token >div >input').attr("value");
+        var range = $('#id_select_report').val(); 
+        var table = $('#id_table_revenue');
+        $('.dataRow').remove();
+        table.append('<tr class="dataloading"><td class="center" colspan="4" height="100"><img src="{{ safe_static_url }}images/ajax-loader.gif" height="16" width="16" border="0"/></td></tr>')
+        $.ajax({
+            url: '{% url media-partner-view-report %}',
+            type: 'POST',
+            data: {report: range, csrfmiddlewaretoken : csrf_token},
+            success: function(data) {
+                $('.dataloading').remove();
+                for (i=0; i < data.items.length; i++){
+                    table.append("<tr class='dataRow'><td>" + data.items[i].invoice + "</td><td>" + data.items[i].date + "</td><td>" + data.items[i].business + "</td><td class='amount' align='right'>" + data.items[i].subtotal + "</td></tr>");
+                }
+                $('#id_gross_collected_revenue').html(data.gross_collected_revenue);                   
+                $('#id_variable_expenses').html(data.variable_expenses);
+                $('#id_net_collected_revenue').html(data.net_collected_revenue);
+                $('#id_media_partner_revenue').html(data.media_partner_revenue);
+                $('#id_media_pie_share').html(data.media_pie_share);
+                // hide subtotals section if revenue since launch selected, show otherwise
+                if (selected.indexOf(islaunch) != -1){
+                    $('#id_subtotals').addClass('hidden');
+                    $('#id_share').addClass('hidden');
+                    $('#id_selected_report').html('Total Revenue ' + selected);
+                    $('#id_total').html(data.gross_collected_revenue);
+                }else{
+                    $('#id_subtotals').removeClass('hidden');
+                    $('#id_share').removeClass('hidden');
+                    $('#id_selected_report').html('Total Earnings ' + selected);
+                    $('#id_total').html(data.total_earnings);
+                }
+            },
+            error: function() {
+                $('.dataLoading').remove();
+                table.append('<tr><td class="dataloading center" colspan="4" height="100"><em>Sorry, there was a problem.</em></td></tr>')
+            }
+        });
+    }
+    $(document).ready(function(){
+        buildTable();
+        $('#id_select_report').change(buildTable);
+    });
+</script>

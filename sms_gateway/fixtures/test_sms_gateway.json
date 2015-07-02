@@ -1,0 +1,27 @@
+[
+     {
+        "pk": 2, 
+        "model": "sms_gateway.smsmessage", 
+        "fields": {
+            "smsto": "1115550001", 
+            "mobile_phone": 1, 
+            "subaccount": "", 
+            "smsfrom": "71010", 
+            "smsid": 2, 
+            "note": "", 
+            "vp": null, 
+            "report": 0
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "sms_gateway.smsmessagesent", 
+        "fields": {
+            "smsmsg": "10Coupons Alrts: U will now receive MobileCoupons & Offers from10Coupons Alrts (max 4msgs/mo). Reply HELP for Help. Reply STOP to Stop. Msg&Data Rates May Apply", 
+            "smsudh": null, 
+            "flash": false, 
+            "split": 0, 
+            "sent_datetime": "2010-03-22 13:23:56"
+        }
+    }
+]

@@ -1,0 +1,39 @@
+{% extends "frames/web/full.html" %}}
+{% block title %}{{ current_site.domain }} - Become a Referrer{% endblock %}
+
+{% block breadcrumbs_content %}Earn Money{% endblock %}
+
+{% block base_content %}
+
+    <div class="grid_8 alpha">
+
+        <h2>Earn money spreading the word about {{ site.domain }}</h2>
+
+        <p>
+            <strong>Get your own personalized website.</strong>
+            You send people to your website.
+            When they register and receive coupons by email, you earn money.
+        </p>
+
+        <p>
+            <strong>Complete this form.</strong>
+            We'll build your personalized website.
+        </p>
+
+        {% include "include/frm/frm_ref_consumer_enroll.html" %}
+
+        <br/>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_8 omega">
+
+        <br/>
+
+        <img class="right" src="{{ safe_static_url }}images/homepage_screenshot_101911.jpg" border="0" height="285" width="500"/>
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

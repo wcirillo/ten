@@ -1,0 +1,198 @@
+[
+    {
+        "pk": 1, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "Enter Custom Restriction(s).", 
+            "sort_order": "z"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "One Coupon per Person, per Visit.", 
+            "sort_order": "a"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "Tax and Gratuity Not Included.", 
+            "sort_order": "b"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "One Coupon per Household.", 
+            "sort_order": "c"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "Offer Requires Purchase at Regular Price.", 
+            "sort_order": "d"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "Free Item must be of Equal or Lesser Value.", 
+            "sort_order": "e"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.defaultrestrictions", 
+        "fields": {
+            "restriction": "Sale Items are Excluded.", 
+            "sort_order": "f"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "In Progress"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "Free"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "Paid"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "Bulk"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "MediaPartner"
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "National"
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "Abandoned"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Viewed in list"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Details viewed"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Printed"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Sent to Phone"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Sent to Friend"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Redeemed"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Shared on FB"
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Clicked Link"
+        }
+    },    
+    {
+        "pk": 9, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Viewed From Flyer"
+        }
+    },
+    {
+        "pk": 10, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "dupe, plz replace"
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Text Blasted"
+        }
+    },
+    {
+        "pk": 12, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Viewed From QR"
+        }
+    },
+    {
+        "pk": 13, 
+        "model": "coupon.action", 
+        "fields": {
+            "name": "Shared on Twitter"
+        }
+    }
+]

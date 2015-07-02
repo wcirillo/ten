@@ -1,0 +1,16 @@
+/* To render & access facebook like */
+window.fbAsyncInit = function() {
+    FB.init({appId: '220054864689032', status: true, cookie: true,
+             xfbml: true});
+  
+    FB.Event.subscribe('edge.create', function(href, widget) {
+      // do something with response.session
+        $(".facebook").click();
+      });
+    };
+(function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());

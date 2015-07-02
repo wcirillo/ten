@@ -1,0 +1,7 @@
+<meta property="fb:app_id" content="163697727054356" />
+<meta property="og:title" content="{% if fb_dict.title %}{{ fb_dict.title }}{% else %}Sign up for {{ current_site.name }} Coupons.{% if contest_is_running %} Qualify to Win $10,000!{% endif %}{% endif %}" />
+<meta property="og:type" content="coupon" />
+<meta property="og:url" content="{% if fb_dict %}{{ http_protocol_host }}{{ request.path }}{% else %}{{ http_protocol_host }}/{{ current_site.directory_name }}/{% endif %}" />
+<meta property="og:image" content="{{ safe_static_url }}images/fb_logo_100x100.gif" />
+<meta property="og:site_name" content="{{ http_protocol_host }}/{{ current_site.directory_name }}/" />
+<meta property="og:description" content="{% if fb_dict %}{{ fb_dict.description }}{% else %}{% if contest_is_running %}Drawings for $10,000 Rules and details at {{ current_site.name }}. {% endif %}Save money at the best places to eat, drink, play and shop. It's simple, so get started today!{% endif %}" />

@@ -1,0 +1,30 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<div class="clear"></div>
+<div id="consumer_zip_postal_errors" class="errorlist">{{ market_search_form.consumer_zip_postal.errors }}</div>
+
+<div class="center">
+
+    <style>
+        #id_consumer_zip_postal {
+            border: 1px #333 solid;
+        }
+    </style>
+
+    <form class="largeForm" id="frm_market_search" name="frm_market_search" method="post">{% csrf_token %}
+        <ol class="inline">
+            <li>
+                {{ market_search_form.consumer_zip_postal.errors }}
+                <label for="id_consumer_zip_postal" class="infield">your zip code</label>
+                {{ market_search_form.consumer_zip_postal }}
+    	        <input id="submit_frm_market_search" name="submit_frm_market_search" class="button largeBtn" type="submit" tabindex="2" value="GO! &raquo;" />
+            </li>
+        </ol>
+    </form>
+
+    <div class="clear"></div>
+</div>

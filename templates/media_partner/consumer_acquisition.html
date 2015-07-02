@@ -1,0 +1,37 @@
+{% extends "frames/web/full.html" %}
+{% block title %}Media Partner Reports{% endblock %}
+
+{% block top_content %}
+{% endblock %}
+
+{% block base_content %}
+
+    <div>
+
+        <div class="left">
+            <h4 class="nomargin">Media Partner Account</h4>
+        </div>
+
+        <div class="right small">
+            <a href="{% url media-partner-view-report %}">Transaction Reports</a> &nbsp;|&nbsp;
+            <strong>Consumer Trends</strong> &nbsp;|&nbsp;
+            <a href="{% url media-partner-home %}">Info for Media Partners</a> &nbsp;|&nbsp;
+            <a href="{% url widgets %}">Banner Ads</a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="bar">
+        <div class="left">
+            <h5>Total Consumer Accounts{% if graph_title %}:  {{ graph_title }}{% endif %}</h5>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="monthly-breakdown-graph" style="width: 1000px; height: 500px;"></div>
+
+{% endblock %}

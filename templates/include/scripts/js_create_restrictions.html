@@ -1,0 +1,93 @@
+$("li.hiddenform").hide();
+
+$("#id_default_restrictions_0").change(function(){
+    if ($("#id_default_restrictions_0").is(":checked")){
+        $(".restriction_0").html($("label[for='id_default_restrictions_0']").text());
+        $(".restriction_0").show();
+    } else {
+        $(".restriction_0").hide();
+    }
+});
+$("#id_default_restrictions_1").change(function(){
+    if ($("#id_default_restrictions_1").is(":checked")){
+        $(".restriction_1").html($("label[for='id_default_restrictions_1']").text());
+        $(".restriction_1").show();
+    } else {
+        $(".restriction_1").hide();
+    }
+});
+$("#id_default_restrictions_2").change(function(){
+    if ($("#id_default_restrictions_2").is(":checked")){
+        $(".restriction_2").html($("label[for='id_default_restrictions_2']").text());
+        $(".restriction_2").show();
+    } else {
+        $(".restriction_2").hide();
+    }
+});
+$("#id_default_restrictions_3").change(function(){
+    if ($("#id_default_restrictions_3").is(":checked")){
+        $(".restriction_3").html($("label[for='id_default_restrictions_3']").text());
+        $(".restriction_3").show();
+    } else {
+        $(".restriction_3").hide();
+    }
+});
+$("#id_default_restrictions_4").change(function(){
+    if ($("#id_default_restrictions_4").is(":checked")){
+        $(".restriction_4").html($("label[for='id_default_restrictions_4']").text());
+        $(".restriction_4").show();
+    } else {
+        $(".restriction_4").hide();
+    }
+});
+$("#id_default_restrictions_5").change(function(){
+    if ($("#id_default_restrictions_5").is(":checked")){
+        $(".restriction_5").html($("label[for='id_default_restrictions_5']").text());
+        $(".restriction_5").show();
+    } else {
+        $(".restriction_5").hide();
+    }
+});
+
+var customRestrictionId = $("label:contains('Enter Custom Restriction')").attr("for");
+
+if ($("#" + customRestrictionId).is(":checked"))
+        $("#restrictionhiddenform").slideDown("slow");
+
+$("#" + customRestrictionId).change(function(){
+    if ($("#" + customRestrictionId).is(":checked")) {
+        $("#restrictionhiddenform").show();
+        $("#id_custom_restrictions").focus();
+        $(".custom_restriction").removeClass("hidden");
+    } else {
+        $("#restrictionhiddenform").slideUp("slow");
+        $("#id_custom_restrictions").val("");
+        $(".custom_restriction").addClass("hidden").html("");
+    }
+});
+
+$("#id_custom_restrictions").keyup(function(){
+    $(".custom_restriction").html($("#id_custom_restrictions").val());
+});
+
+// Valid Days of the Week
+
+$("#valid_days_list").columnize({
+    columns: 3,
+    lastNeverTallest: true
+});
+
+// Redemption
+
+function default_redemption(){
+    if ($("input[name='is_redeemed_by_sms']:checked").val() == '1') {
+        $("#btnSMS").css("left", "0");
+    } else {
+        $("#btnSMS").css("left", "-9000px");
+    }
+}
+default_redemption();
+
+$("input[name='is_redeemed_by_sms']").change(function(){
+    default_redemption();
+});

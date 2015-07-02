@@ -1,0 +1,66 @@
+<businesses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://shooger.com/partners/shooger.xsd">
+{% spaceless %}
+{% for coupon in coupons.all %}
+    {% ifchanged coupon.offer.business.id %}
+        {% if not forloop.first %}
+            </promos>
+        </business>
+        {% endif %}
+            <business id="{{ coupon.offer.business.id }}">
+            <name>{{ coupon.offer.business.business_name }}</name>
+            <webSite>{{ coupon.offer.business.web_url }}</webSite>
+            <email>advertiser{{ coupon.offer.business.id }}@10localcoupons.com</email>
+                  
+            <locations>
+                {% for location in coupon.location.all %}
+                       	<location id="{{ location.id }}">
+                       		<default>{% if forloop.first %}true{% else %}false{% endif %}</default>
+                      		<ISOCountryCode>US</ISOCountryCode>
+                            <stateCode>{% if location.location_state_province %}{{ location.location_state_province }}{% else %}{{ coupon.offer.business.advertiser.site.default_state_province.abbreviation }}{% endif %}</stateCode>
+                            <city>{{ location.location_city }}</city>
+                            <address>{{ location.location_address1 }}{% if location.location_address2 %}, {{ location.location_address2 }}{% endif %}</address>
+                            <zipCode>{% if location.location_zip_postal and location.location_zip_postal|cut:" "|length_is:"5" %}{{ location.location_zip_postal|cut:" " }}{% else %}{{ coupon.offer.business.advertiser.site.default_zip_postal }}{% endif %}</zipCode>
+                            <phone>{{ location.location_area_code }}{{ location.location_exchange }}{{ location.location_number }}</phone>
+                        </location>
+                {% endfor %}
+            </locations>
+                     
+            <categories>
+                {% for category in coupon.offer.business.categories.all %}
+                	{% if forloop.first %}
+                    	{% for shooger_category_id, shooger_category_name in shooger_category_dict.items %}
+                        	{% if shooger_category_name == category.name %}
+                            	<category id="{{ shooger_category_id }}"></category>
+                            {% endif %}
+                        {% endfor %}    
+                    {% endif %}
+                {% endfor %}
+                {% if not coupon.offer.business.categories.all %}
+                    <category id="19"/>
+                {% endif %}
+            </categories>
+        <promos>
+    {% endifchanged %}
+            <promo id="{{ coupon.id }}">
+                <locations>
+                    {% for location in coupon.location.all %}
+                        {% if forloop.first %}
+                                <location id="{{ location.id }}"/>
+                        {% endif %}
+                    {% endfor %}
+                </locations>
+                <promoTitle>{{ coupon.offer.headline }} - {{ coupon.offer.business.business_name }}{% for location in coupon.location.all %}{% if forloop.first and location.location_city and location.location_state_province %} in {{ location.location_city }}, {{ location.location_state_province }}{% endif %}{% endfor %}</promoTitle> 
+                <promoText>{{ coupon.offer.headline }}{% if coupon.offer.qualifier %} {{ coupon.offer.qualifier }}{% endif %} - {% for restriction in coupon.default_restrictions.all %} {{ restriction }}{% endfor %} {{ coupon.custom_restrictions }} {% for coupon_id, valid_days in valid_days_dict.items %}{% if coupon_id == coupon.id %}{{ valid_days }}{% endif %}{% endfor %} Valid through {{ coupon.expiration_date }}. Another local deal from {{ coupon.offer.business.advertiser.site.domain }}</promoText>
+                <startDate>{{ coupon.start_date|date:"Y-m-d" }}</startDate>
+                <endDate>{{ coupon.expiration_date|date:"Y-m-d" }}</endDate>
+                <DistributeViaSMS>{{ coupon.is_redeemed_by_sms|lower }}</DistributeViaSMS>
+                <DistributeViaWeb>true</DistributeViaWeb>
+                <url>http://10Coupons.com{{ coupon.get_absolute_url }}</url>
+            </promo>
+    {% if forloop.last %}
+        </promos>
+     </business>
+    {% endif %}
+{% endfor %}
+{% endspaceless %}
+</businesses>

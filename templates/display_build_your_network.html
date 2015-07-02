@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Build Your Network On {{ current_site.domain }}{% endblock %}
+{% block meta %}
+<link rel="canonical" href="http://10coupons.com/build-your-network/"/>
+{% endblock %}
+
+{% block frame %}
+
+    {% block breadcrumbs %}
+    <div class="breadcrumbs">
+        {% block breadcrumbs_content %}{% endblock %}
+    </div>
+    {% endblock %}
+
+    <div style="height: 350px;">
+
+        {% include "include/dsp/dsp_ad_rep_menu.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

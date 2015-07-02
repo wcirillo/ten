@@ -1,0 +1,223 @@
+<h3>Frequently Asked Questions</h3>
+
+<p><em>Answers to the most Frequently Asked Questions by local businesses.</em></p>
+
+<h5 class="highlight">Coupons for Local Business (Advertising on {{ site.domain }})</h5>
+
+<p>
+    <a href="#answer1">When are my coupons available to consumers?</a><br/>
+    <a href="#answer2">Can I make changes to my coupons?</a><br/>
+    <a href="#answer3">Can I change the name of my business?</a><br/>
+    <a href="#answer4">Can I list multiple locations for my business? How much does that cost?</a><br/>
+    <a href="#answer5">I no longer want to make a coupon available to website users. How do I remove it?</a><br/>
+    <a href="#answer6">Can I change the Autorenew setting to control charges made to my credit card?</a><br/>
+    <a href="#answer7">Can I add my logo to the coupon?</a><br/>
+    <a href="#answer8">I don't know how to design a coupon. Can you guys help?</a>
+</p>
+
+<h5 class="highlight">Email Flyers to distribute coupons for your business</h5>
+
+<p>
+    <a href="#answer9">When are the Email Flyers sent to Hudson Valley consumers?</a><br/>
+    <a href="#answer10">How do I distribute coupons in the weekly Email Flyers?</a><br/>
+    <a href="#answer11">Will you send my coupon in an Email Flyer to Hudson Valley consumers if I don't publish it on the website?</a><br/>
+    <a href="#answer12">Can I have a look at a recent Email Flyer?</a>
+</p>
+
+<h5 class="highlight">General Questions about {{ current_site.domain }}</h5>
+
+<p>
+    <a href="#answer13">How are local consumers driven to my coupons?</a><br/>
+    <a href="#answer14">Why is this better for my business than ValPak, Money Mailer or SuperCoups?</a><br/>
+    <a href="#answer15">What about Groupon and the "Daily Deal" websites out there?</a><br/>
+    <a href="#answer16">You guys have 89 local coupon websites. What markets do they cover? Can I publish a coupon to multiple websites?</a><br/>
+    <a href="#answer17">Where are you guys located? How big is your company?</a><br/>
+    <a href="#answer18">Can I discuss any of this with the CEO?</a>
+</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">Coupons for Local Business (Advertising on {{ site.domain }})</h4>
+
+<h5 id="answer1"><strong>When are my coupons available to consumers?</strong></h5>
+<p>
+    Immediately!
+    Coupons take just minutes to build.
+    <a href="{% url advertiser-registration %}">Try it</a>.
+    Your coupons are published instantly.
+</p>
+
+
+<h5 id="answer2"><strong>Can I make changes to my coupons?</strong></h5>
+<p>
+    Yes, you can make changes as often as you like to any or all of your coupons. 
+    Add a word, remove a comma, change the expiration date, or switch one coupon for another. 
+    Publish up to 10 Coupons at any time! 
+    You decide which offers are available, and when. 
+    Changes are immediate, unlimited and free of charge!
+</p>
+
+
+<h5 id="answer3"><strong>Can I change the name of my business?</strong></h5>
+<p>
+    <a href='{% url contact-us %}'>Contact Customer Care</a>.
+</p>
+
+
+<h5 id="answer4"><strong>Can I list multiple locations for my business? How much does that cost?</strong></h5> 
+<p>
+    Yes.
+    And there's no additional charge.
+</p>
+
+
+<h5 id="answer5"><strong>I no longer want to make a coupon available to website users. How do I remove it?</strong></h5> 
+<p>
+    It's Easy!
+    To stop displaying any current coupon, just turn the "Display" button for that coupon "OFF," (from your account.) 
+    Any coupons with the "Display" button set to "ON" will display through the expiration date you choose. 
+    Changing the display status of any one coupon does not affect your billing.
+</p>
+
+
+<h5 id="answer6"><strong>Can I change the Autorenew setting to control charges made to my credit card?</strong></h5>
+<p>
+    Of course! And that's easy too.<br/>
+    {% if parent_slot_count > 0 %}
+        When Autorenew is set to "ON," your account is renewed, and your card is charged automatically.  
+        There's no interruption in the availability of your coupons.<br/><br/>
+        If Autorenew is set to "OFF," a coupon will only be available through it's expiration date or until the account renewal date, whichever is first.
+    {% endif %}  
+</p>
+
+
+<h5 id="answer7"><strong>Can I add my logo to the coupon?</strong></h5>
+<p>
+    Not currently.
+    Consider that coupon users are seeking a great deal. 
+    Research suggests they'll respond to your offer before your logo. 
+    We encourage you to make the coupon's offer as compelling as possible.
+</p>
+
+
+<h5 id="answer8"><strong>I don't know how to design a coupon. Can you guys help?</strong></h5> 
+<p>
+    We'll bet you can build your coupon without a hitch.
+    We've done our best to make it fast and easy! 
+    <a href='{% url advertiser-registration %}'>Try it now</a>.
+    Of course, we're here to help!
+    Just contact Customer Care with any questions.
+</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">Email Flyers to distribute coupons for your business</h4>
+
+<h5 id="answer9"><strong>When are the Email Flyers sent to {{ current_site.name }} consumers?</strong></h5> 
+<p>
+    Email Flyers are scheduled each Thursday.
+</p>
+
+
+<h5 id="answer10"><strong>How do I distribute coupons in the weekly Email Flyers?</strong></h5>
+<p>
+    {% if consumer_count < 100 %}
+        We'll do it for you. Free! Your coupon may be included in our Email Flyers on a "space available" basis at no charge. 
+        We'll do this for a limited time. As {{ current_site.domain }} grows, they'll be a separate charge for Email Flyers.
+    {% else %}
+        There are two answers. We think you'll like both of them.<br/></br/>
+        <strong>First answer:</strong> We'll do it for you. Free! Your coupon may be included in our Email Flyers on a "space available" basis at no charge. 
+        It is also without any guarantees. When (and if) there's less than 10 paid market coupons scheduled in a weekly Email Flyer, 
+        we'll fill the spaces using other coupons. This is great if you're not particular about when your coupon is distributed.<br/><br/>
+    
+        <strong>Second answer:</strong> Pennies per registered consumer. 
+        If you need to guarantee your coupon is distributed during a specific time, choose this option. 
+        {% if current_site.phase >= 2 %}
+        Your paid Email Flyer Positions are also targeted by the geography you select. 
+        Choose the whole market region, or choose individual counties and postal codes.
+        ** Prices are based on the volume of registered consumers at the time of purchase. 
+        With new consumers registering all the time, the price will continue to rise for local businesses advertisers who reserve their spaces after you.
+        {% endif %}    
+    {% endif %}
+</p>
+
+
+<h5 id="answer11"><strong>Will you send my coupon in an Email Flyer to {{ current_site.name }} consumers if I don't publish it on the website?</strong></h5>
+<p>
+    No.
+    Only the coupons on the website may be included in an Email Flyer.
+</p>
+
+
+<h5 id="answer12"><strong>Can I have a look at a recent Email Flyer?</strong></h5>
+<p>
+    Sure!
+    Here's a <a href='{% url sample-flyer %}'>sample</a>
+</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">General Questions about {{ current_site.domain }}</h4>
+
+<h5 id="answer13"><strong>How are local consumers driven to my coupons?</strong></h5>
+<p>Local media, and lots of it. We give away $10,000 prizes to lucky registered consumers. 
+    We use local media to promote the $10,000 drawings and our local advertisers' coupons.
+    <a href='{% url show-spots %}'>Recent Commercials</a>.
+</p>
+
+
+<h5 id="answer14"><strong>Why is this better for my business than ValPak, Money Mailer or SuperCoups?</strong></h5>
+<p>
+    Consumers visit domain looking for coupons. 
+    We send the weekly Email Flyers only to potential customers who have requested local coupons. 
+    Direct mail is often viewed as junk mail. 
+    It's likely more than 90% of the coupons delivered in an overstuffed envelope will end up in the landfill!
+    <br/><br/>
+    In the time it takes to read our FAQ's your coupons can be built and scheduled for Email Flyers. 
+    Direct mail coupons can take days to finalize. 
+    You're also tied to a distribution date that may not work for your business. 
+    There's also no guarantee your prospects will open the envelope.
+    <br/><br/>
+    {{ current_site.domain }} is simply a less expensive and more effective way to distribute coupons.
+</p>
+
+
+<h5 id="answer15"><strong>What about Groupon and the "Daily Deal" websites out there?</strong></h5>
+<p>
+    That's easy!
+    <a href='{% url our-competition %}'>Here are few differences</a>.
+</p>
+
+
+<h5 id="answer16"><strong>You guys have {{ site_count }} local coupon websites. What markets do they cover? Can I publish a coupon to multiple websites?</strong></h5>
+<p>
+    {% if neighbor_sites %}
+        {% if neighbor_sites.count > 1 %}These sites are {% else %}This site is {% endif %} near you:
+        {% for market in neighbor_sites %} 
+            <a href="{{ http_protocol_host }}/{{ market.directory_name }}/">{{ market.domain }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    See a map of <a href='{% url site-directory %}'>all our markets and their websites</a>.
+    Put a coupon on as many as you like. 
+    Just contact customer service and we'll give you pricing info and help you display the coupon wherever you wish.
+</p>
+
+
+<h5 id="answer17"><strong>Where are you guys located? How big is your company?</strong></h5>
+<p>
+    {{ current_site.domain }} is part of 10LocalCoupons.com, a division of Straus Digital Media, LLC. 
+    We are presently operating in {{ site_count }} local markets.
+    We are growing every day.
+</p>
+
+
+<h5 id="answer18"><strong>Can I discuss any of this with the CEO?</strong></h5>
+<p>
+    Sure.
+    My name is <strong>Eric Straus</strong>.
+    I'm the CEO, and I approved these FAQ's.
+    Email or call me anytime.
+    <a href="mailto:Eric@10LocalCoupons.com">Eric@10LocalCoupons.com</a>, 914-920-3059.
+    <br/>
+    Also, find me on <a href="http://www.facebook.com/profile.php?id=641638662">Facebook</a> or <a href="http://twitter.com/EricStraus" rel="nofollow" >Twitter</a>.
+</p>

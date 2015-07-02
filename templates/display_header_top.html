@@ -1,0 +1,49 @@
+{% if request.flags.is_mobile %}
+
+    <a href="{% url home %}" class="header">{{ current_site.domain }}</a>
+
+    <div class="mobile_nav">
+
+        <a class="button {% if nav_home %} on{% endif %}" href="{% url home %}">sign up</a>
+        <a class="button {% if nav_coupons %} on{% endif %}" href="{% url all-coupons %}">browse coupons</a>
+        <a class="button {% if nav_how_it_works %} on{% endif %}" href="{% url how-it-works %}">advertise</a>
+
+        <div class="clear"></div>
+    </div>
+
+{% else %}
+
+    {% if is_logged_in %}
+
+        {{ is_logged_in }} &nbsp;
+
+        {% if is_ad_rep %}
+
+            <a class="button{% if is_ad_rep_account %}on{% endif %}" href="{% url ad-rep-account %}">virtual office</a>
+
+        {% endif %}
+
+        {% if user_type == "advertiser" %}
+
+            <a class="button{% if is_advertiser_account %}on{% endif %}" href="{% url advertiser-account %}">advertiser account</a>
+
+        {% else %}
+            {% if user_type == "media_group_partner" or user_type == "affiliate_partner" %}
+
+                <a class="button" href="{% url media-partner-view-report %}">media partner account</a>
+
+            {% endif %}
+        {% endif %}
+
+        <span id="id_signout_link"><a class="button" href="{% url sign-out %}">sign out</a></span>
+
+    {% else %}
+
+        <strong id="header_email_address" class="hidden"></strong>
+        <span id="id_signout_link" class="hidden"><a class="button" href="{% url sign-out %}">sign out</a></span>
+
+        <div class="header_top_short" id="id_signin_link">Already signed up? <a class="button" href="{% url sign-in %}">sign in</a></div>
+
+    {% endif %}
+
+{% endif %}

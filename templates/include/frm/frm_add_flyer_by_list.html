@@ -1,0 +1,98 @@
+{% load replace_all %}
+{% load add_flyer_by_list %}
+
+<form id="frm_add_flyer_by_list" name='frm_add_flyer_by_list' class="smallForm">
+
+    <div class="boxBorder">
+
+        <div id="counties_list" class="small">
+            <div id="accordion">
+
+                {% for field in add_flyer_by_list_form %}
+
+                    {% if field.is_hidden %}
+
+                        {{ field }}
+
+                    {% else %}
+
+                        {% if 'county' in field|get_geom_region_class %}
+
+                            {% if not forloop.first %}
+                                </div>
+                            {% endif %}
+
+                            <div class="accordionHeader">
+                                <span class="ui-icon sprite accordionHeaderClosed"></span>
+                                <strong>
+                                    {{ field.label }} ({{ field|get_region_consumer_count }})
+                                    <span class="right tiny hidden inboxes {% if field|get_region_consumer_count == '0' %}light{% endif %}">inboxes</span>
+                                </strong>
+                            </div>
+
+                            <div class="accordionContent">
+
+                                <div class="flyer_list">
+                                    {{ field }}<label for="id_select_all_dutchess">SELECT ALL<!-- OF {{ field.label_tag|upper }} {{ municipality_division|upper }}--></label>
+                                    <span class="right {% if field|get_region_consumer_count == '0' %}light{% endif %}">{{ field|get_region_consumer_count }}</span>
+                                </div>
+
+                            {% comment %}div closes above if not first in loop{% endcomment %}
+
+                        {% else %}
+
+                            {% if 'city' in field|get_geom_region_class %}
+
+                                <div class="flyer_list flyer_list_city">
+                                    {{ field }}{{ field.label_tag }}
+                                    <span class="right {% if field|get_region_consumer_count == '0' %}light{% endif %}">{{ field|get_region_consumer_count }}</span>
+                                </div>
+
+                            {% else %}
+
+                                {% if 'zip' in field|get_geom_region_class %}
+
+                                    <div class="flyer_list flyer_list_zip sprite">
+                                        {{ field }}{{ field.label_tag }}
+                                        <span class="right {% if field|get_region_consumer_count == '0' %}light{% endif %}">{{ field|get_region_consumer_count }}</span>
+                                    </div>
+
+                                {% endif %}
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="county_zip_price" class="arrowCols arrowCols_gray">
+
+            <div class="left">
+                <h3><span id="subdivision_consumer_count">{{ subdivision_consumer_count }}</span></h3>
+                <span class="tiny">consumers</span>
+            </div>
+
+            <div class="arrowCols_right">
+                <h3 ><strong><span id="single_flyer_price"></span></strong></h3>
+                <span class="tiny">one-time charge</span>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <input id="btn_counties_zip" class="button fullBtn fullBtnTight fade_on_slide disabled" type="submit" value="Send to these selected areas &raquo;" />
+
+       <div class="clear"></div>
+   </div>
+
+   <input type="hidden" value="" id="zip_data"/>
+   <input type="hidden" value="" id="city_data"/>
+</form>

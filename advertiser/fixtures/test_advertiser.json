@@ -1,0 +1,629 @@
+[
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "BULK", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "!", 
+            "email": "BULK", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    }, 
+     {
+        "pk": 113, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "113_user@example.com", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [],
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "113_user@example.com", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    }, 
+     {
+        "pk": 114, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "TestUser114", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "user114@company.com", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jordy@forge.net", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2008-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "!", 
+            "email": "jordy@forge.net", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "even@forge.net", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2008-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "!", 
+            "email": "even@forge.net", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    },
+    {
+        "pk": 124, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "advertiser_businesses@forge.ne", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2008-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "!", 
+            "email": "advertiser_businesses@forge.net", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    },
+    {
+        "pk": 125, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "advertiser_inactive@example.co", 
+            "first_name": "inactive", 
+            "last_name": "adder", 
+            "is_active": false, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2008-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "advertiser_inactive@example.com", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "email_hash": "05e2cde57df43558f239ba403b8a1baafaf3fa79", 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-18 09:14:40", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 113, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "email_hash": "93e1d7867447c4b584bfddab836948cb85ea5de", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": true, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-18 09:14:40", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 114, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "site": 2, 
+            "email_hash": "7c1389734083fac33486761d66cf1c2c1bb88363",
+            "subscriber": null, 
+            "is_emailable": true, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2008-05-18 09:14:40", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "site": 2, 
+            "email_hash": "4d755e432962bb7521cb45d8408fff9367f092fa",
+            "subscriber": null, 
+            "is_emailable": true, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2008-05-18 09:14:40", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 124, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "site": 2, 
+            "email_hash": "924c1038a27ff0125c0caf18bd35cc5dec5af8e5",
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2008-05-18 09:14:40", 
+            "email_subscription": []
+        }
+    },
+     {
+        "pk": 125, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2011-05-18 09:14:40", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "",
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": true, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2008-05-18 09:14:40", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-18 16:12:24"
+        }
+    }, 
+    
+    {
+        "pk": 113, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-05-18 16:12:24"
+        }
+    },
+    {
+        "pk": 114, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-05-18 16:12:24"
+        }
+    },
+    {
+        "pk": 120, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-18 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-18 16:12:24"
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": "more then one business", 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    },
+    {
+        "pk": 125, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": "11 Inactive Ave", 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2011-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2011-05-12 16:12:24"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 1, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-18 16:12:24", 
+            "business_create_datetime": "2010-05-18 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "BULK"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 1
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [7], 
+            "advertiser": 113, 
+            "slogan": "Adjust", 
+            "business_modified_datetime": "2010-05-18 16:12:24", 
+            "business_create_datetime": "2010-05-18 16:12:24", 
+            "short_business_name": "Phillips Toolshed", 
+            "is_active": true, 
+            "business_name": "Phillips Toolshed"
+        }
+    },
+    {
+        "pk": 113, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "12590", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "NY", 
+            "billing_address1": "",
+            "business": 113
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 114, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": "Test14 Biz", 
+            "is_active": true, 
+            "business_name": "Test14 Biz"
+        }
+    },
+    {
+        "pk": 119, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 119, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": "Test 119 Biz", 
+            "is_active": true, 
+            "business_name": "Test119 Biz expired slot"
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 120, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": "Test 120 Even", 
+            "is_active": true, 
+            "business_name": "Test120 Even Biz expired slot"
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 124, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:25", 
+            "business_create_datetime": "2010-05-12 16:12:25", 
+            "short_business_name": "Many businesses", 
+            "is_active": true, 
+            "business_name": "Test124 Genoa Salami King"
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 124, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:31", 
+            "business_create_datetime": "2010-05-12 16:12:31", 
+            "short_business_name": "Test 124 Many Business", 
+            "is_active": true, 
+            "business_name": "Test124 Capri Sun"
+        }
+    },
+    {
+        "pk": 114, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 114
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "AL", 
+            "location_exchange": "", 
+            "business": 1, 
+            "location_area_code": "", 
+            "location_description": "", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "", 
+            "business": 1, 
+            "location_area_code": "", 
+            "location_description": "location without zip", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "", 
+            "business": 1, 
+            "location_area_code": "", 
+            "location_description": "location with zip", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "12550", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "41.15454848741", 
+        "location_longitude": "-72.5454841000"}
+    },
+    {
+        "pk": 113, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "CA", 
+            "location_exchange": "", 
+            "business": 113, 
+            "location_area_code": "", 
+            "location_description": "used in coupon/flyer test", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 113,
+        "model": "advertiser.businessprofiledescription",
+        "fields": {
+            "business_description": "Ipsum forum Ipsum forum Ipsum forum Ipsum forum Ipsum forum Ipsum forum Ipsum forum Ipsum f",
+            "business": 113
+            }
+    },
+    {
+        "pk": 122,
+        "model": "advertiser.businessprofiledescription",
+        "fields": {
+            "business_description": "Capri Sun is a brand of juice concentrate drink owned by the German Company WILD (Chairman Dr. Hans-Peter Wild) and sold in silver pouches. It was developed by Rudolf Wild in 1966 in Germany, where Capri Sonne has been a registered trademark since 1952. Capri Sun has been distributed in the United States since 1981. Kraft Foods is a licensed production partner for North America. In the Netherlands and the UK, it is distributed by Coca-Cola Enterprises.",
+            "business": 122
+            }
+    }
+]

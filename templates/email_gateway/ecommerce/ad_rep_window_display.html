@@ -1,0 +1,45 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+    <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 15px 0;">
+        <tr>
+            <td valign="top" style="padding-right: 25px;">
+                <p style="font-size: 13px; margin: 0 0 12px 0;">  
+                    {{ rep_first_name }},<br/>
+                </p>
+                <p style="font-size: 13px; margin: 0 0 12px 0;">
+                    <strong>Congratulations</strong>. The sale to {{ business.business_name }} has been finalized. <strong>Great Job</strong>!
+                </p>
+                <p style="font-size: 13px; margin: 0 0 12px 0;">
+                    The <strong>{% if product_id == 3 %}Annual Coupon Publishing Package{% else %}Monthly Coupon Publishing Package{% endif %}</strong> represents the first purchase from {{ business.business_name}}.
+                    Encourage more local traffic... and make your new client happy! 
+                    <a href='{{ base_url }}{{ window_display_url }}'>
+                    Print a custom window display</a> to let <strong>{{ current_site.region }}</strong> customers know how to find more money-saving coupons.
+                </p>
+                    
+                <p>Check out the <strong>QR Code</strong> at the bottom of the 
+                <a href='{{ base_url }}{{ window_display_url }}'>
+                window sign</a>. Many free smart phone apps can scan these, and point to your personalized website. From there any purchase or (better yet,)
+                any new Advertising Representatives can produce even <strong>more income for you</strong>.</p>
+                
+                <p>We sent the link to {{ business.business_name}}  as well. However, we suggest you 
+                <a href='{{ base_url }}{{ window_display_url }}'>
+                print the sign</a> and deliver
+                a copy (in person,) to your new client. It's another opportunity to show your face, demonstrate your commitment and drop off more
+                business cards.
+                </p>
+                <p>Again, well done and keep up the good work!</p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="padding-right: 25px;">
+                <strong>David Sage</strong><br/>
+                Chief Marketing Officer<br/>
+                10LocalCoupons.com<br/>
+                Phone: 800 581 3380 x306<br/>
+                Email: <a href="mailto:David@10LocalCoupons.com">David@10LocalCoupons.com</a><br/><br/>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

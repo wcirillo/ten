@@ -1,0 +1,40 @@
+{% load gargoyle_tags %}
+
+<div class="header">
+
+    <a class="sitelogo sprite" href="{% url home %}"><div {% if current_site.id == 1 %}class="local"{% endif %}>{{ current_site.name_no_spaces }}</div></a>
+
+    <div class="grid_12 nav">
+
+        <div class="grid_4 alpha omega fullheight">&nbsp;</div>
+
+        {% if current_site.id != 1 %}
+            <a class="button{% if nav_home %}on{% endif %}" href="{% url home %}">home</a>
+            <a class="button{% if nav_coupons %}on{% endif %}" href="{% url all-coupons %}">recent coupons</a>
+            <a class="button{% if js_advertiser_registration or js_create_offer or js_create_location or js_create_restrictions or js_edit_coupon or js_checkout_coupon_purchase or js_checkout_coupon_purchase_success %}on{% endif %}" href="{% url advertiser-registration %}">create coupons</a>
+            <a class="button{% if nav_how_it_works %}on{% endif %}" href="{% url how-it-works %}">why advertise here?</a>
+        {% else %}
+            {% if is_home %}
+                <a class="button{% if nav_home %}on{% endif %}" href="{% url home %}">home</a>
+                <a id="id_link_recent_coupons" class="button{% if nav_coupons %}on{% endif %}" href="{% url all-coupons %}">recent coupons</a>
+                <a id="id_link_create_coupons" class="button{% if js_advertiser_registration or js_create_offer or js_create_location or js_create_restrictions or js_edit_coupon or js_checkout_coupon_purchase or js_checkout_coupon_purchase_success %}on{% endif %}" href="{% url advertiser-registration %}">create coupons</a>
+                <a id="id_link_how_it_works" class="button{% if nav_how_it_works %}on{% endif %}" href="{% url how-it-works %}">why advertise here?</a>
+            {% else %}
+                &nbsp;
+            {% endif %}
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_4 rep small">
+        {% ifswitch replicated-website %}
+            {% if ad_rep %}
+                {% include "include/dsp/dsp_ad_rep_data.html" %}
+            {% endif %}
+        {% endifswitch %}
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>

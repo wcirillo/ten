@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}{% if contest_is_running %}{% if is_eligible_to_win %}{{ current_site.domain }} | I'm in the Drawing for $10,000! Sign up for {{ current_site.name }} Coupons and Qualify to Win too!{% else %}Sign up for {{ current_site.name }} Coupons. Qualify to Win $10,000!{% endif %}{% else %}{{ current_site.name }} Coupons and Deals That Save You Money Weekly | {{ current_site.domain }}{% endif %}{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{% if contest_is_running %}Drawings for $10,000 Rules and details at {{ current_site.domain }}. Save money at the best places to eat, drink, play and shop. It's simple, so get started today!{% else %}Looking for {{ current_site.name }} coupons and deals? {{ current_site.domain }} helps you save money at the best places to eat, drink, play and shop. It's simple, so get started today!{% endif %}"/>
+<link rel="canonical" href="{% url home %}"/>
+<link rel="image_src" href="{{ safe_static_url }}images/fb_logo_100x100.gif"/>
+{% endblock %}
+
+{% if request.flags.is_mobile %}
+
+    {% block body_class %}mobile_home{% endblock %}
+
+{% endif %}
+
+{% block frame %}
+
+    <div class="bgWindow" {% if not request.flags.is_mobile %}style="background-image: url({{ safe_static_url }}images/layout/bgWindow.jpg);"{% endif %}>
+
+        <div id="formConsumer" class="bgWindowForm">
+
+            <div class="bgWindowHeader">
+
+                <h3 {% if request.flags.is_mobile %}class="alt_font2"{% endif %}>Get 10 {{ current_site.name }} coupons sent to your inbox every week</h3>
+
+                <div class="clear"></div>
+            </div>
+
+            {% include "include/frm/frm_consumer_registration.html" %}
+
+            <a class="btnSlidePrev">&raquo;</a>
+
+            {% if request.flags.is_mobile %}
+
+                <div class="small">
+                    Already signed up?
+                    <a class="nodec" href="{% url sign-in %}">Sign In</a>
+                </div>
+
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        {% if not request.flags.is_mobile %}
+
+            <div id="formSubscriber" class="bgWindowForm slidehide">
+
+                <div class="bgWindowHeader">
+
+                    <h3>
+                    	<strong>Optional. </strong>
+                    	Enter your cell phone information.&nbsp;
+                    	<a class="nodec" href="{% url consumer-registration-confirmation %}">No thanks &raquo;</a>
+                	</h3>
+
+                    <div class="clear"></div>
+                </div>
+
+                {% include "include/frm/frm_subscriber_registration.html" %}
+
+                <a class="btnSlideNext">&laquo;</a>
+
+                <div class="clear"></div>
+            </div>
+
+        {% endif %}
+
+        {% if not request.flags.is_mobile %}
+
+            {% include "include/dsp/dsp_facebook_like_home.html" %}
+
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+    {% if not request.flags.is_mobile %}
+
+        {% include "include/dsp/dsp_home_bottom.html" %}
+
+        <div id="modal_cellphone" class="hidden">
+
+            {% include "include/dsp/dsp_subscriber_info.html" %}
+
+            <div class="clear"></div>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

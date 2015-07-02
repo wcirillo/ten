@@ -1,0 +1,115 @@
+.ui-datepicker-inline {
+	background-color: #edf5f9;
+	overflow: hidden;
+	padding: 4px;
+	width: auto !important;
+}
+
+.ui-datepicker-group {
+	float: left;
+	margin: 10px 0 10px 10px;
+	width: 295px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	font-size: 11px;
+	font-weight: bold;
+	height: 30px;
+	position: relative;
+	text-transform: uppercase;
+}
+.ui-datepicker .ui-datepicker-title {
+	line-height: 30px;
+	text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	height: 30px;
+	position: absolute;
+	width: 30px;
+}
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next-hover {right: 0;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {display: none;}
+
+.ui-datepicker table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.ui-datepicker th {
+	border: 0;
+	color: #222;
+	font-weight: bold;
+	padding: 4px 0 2px 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 3px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	display: block;
+	padding: 2px 5px;
+	text-align: right;
+	text-decoration: none;
+}
+
+.ui-datepicker-inline .ui-widget-content a, .ui-datepicker-inline .ui-widget-header a {color: #247cff;}
+
+.ui-datepicker-inline .ui-widget-header {
+	background: #58b6da 50% 50% repeat-x;
+	color: #cbedfa;
+	text-shadow: -1px -1px 0 #48a9ce;
+
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-datepicker-inline .ui-state-default, .ui-datepicker-inline .ui-widget-content .ui-state-default {
+	background: #fff 50% 50% no-repeat;
+	border: 1px solid #e4eff4;
+	color: #222;
+	font-size: 11px;
+}
+
+.ui-datepicker-inline thead {font-size: 11px;}
+
+.ui-datepicker-inline .ui-state-hover, .ui-datepicker-inline .ui-widget-content .ui-state-hover,
+.ui-datepicker-inline .ui-state-focus, .ui-datepicker-inline .ui-widget-content .ui-state-focus {
+	background: #0055e4 50% 50% repeat-x;
+	border: 1px solid #0055e4;
+	color: #fff;
+}
+
+.ui-datepicker-inline .ui-state-active, .ui-datepicker-inline .ui-widget-content .ui-state-active {
+	border: 1px solid #666 !important;
+	background: #97e15d 50% 50% repeat-x !important;
+	color: #222 !important;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-datepicker-inline .ui-state-highlight, .ui-datepicker-inline .ui-widget-content .ui-state-highlight {
+	background: #e0e0e0 50% 50% repeat-x;
+	border: 1px solid #d3d3d3;
+	color: #333;
+}
+
+.ui-datepicker-inline .ui-state-highlight a, .ui-datepicker-inline .ui-widget-content .ui-state-highlight a {color: #363636;}
+
+.ui-datepicker-inline .ui-state-disabled .ui-state-default {color: #ccc;}
+.ui-datepicker-inline .ui-datepicker-today .ui-state-default {color: #333;}
+
+.ui-datepicker-inline .ui-datepicker-prev, .ui-datepicker-inline .ui-datepicker-prev-hover,
+.ui-datepicker-inline .ui-datepicker-next, .ui-datepicker-inline .ui-datepicker-next-hover {background: url(http://10coupons.com/media/images/layout/btnCalendar.png) no-repeat top left;}
+
+.ui-datepicker-inline .ui-datepicker-prev {background-position: 0 0;}
+.ui-datepicker-inline .ui-datepicker-next {background-position: -30px 0;}
+
+.ui-datepicker-inline .ui-datepicker-prev-hover, .ui-datepicker-inline .ui-datepicker-next-hover {
+	background-color: transparent;
+	background-position: -60px 0;
+	border: 0;
+	cursor: pointer;
+}
+.ui-datepicker-inline .ui-datepicker-next-hover {background-position: -90px 0;}

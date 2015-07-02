@@ -1,0 +1,30 @@
+
+<table cellpadding="15" cellspacing="0" border="0" align="center">
+    <tr>
+        <td align="center" valign="top">
+
+            <h4>
+                {% if user_type == "advertiser" %}
+                    Manage Coupons for:
+                {% else %}
+                    Create Coupons for:
+                {% endif %}
+            </h4>
+
+            <a class="button largeBtn" href="{% if user_type == 'advertiser' %}{% url advertiser-account %}{% else %}{% url advertiser-registration %}{% endif %}">&nbsp; &nbsp; My Own Business &nbsp; &nbsp;</a>
+
+        {% if user_type == "advertiser" %}
+
+        </td>
+        <td align="center" valign="top">
+
+            <h4>Create Coupons for:</h4>
+
+        {% endif %}
+
+            <a class="button largeBtn" href="{% url sign-out %}?next={% url advertiser-registration %}">Another Local Business</a>
+
+        </td>
+
+    </tr>
+</table>

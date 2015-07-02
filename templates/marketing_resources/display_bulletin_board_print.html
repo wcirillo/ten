@@ -1,0 +1,94 @@
+{% extends "frames/print/frame1.html" %}
+{% load gargoyle_tags %}
+
+{% block meta %}<meta name="robots" content="noindex, follow">{% endblock %}
+
+{% block base_header_top %}
+
+    <div class="header_top">
+        <a class="button back" href="#">&laquo; Back &nbsp;</a>
+        <a class="button" href="JavaScript:window.print();">Print this page</a>
+        <div class="clear"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a.back').click(function(e){
+                e.preventDefault();
+                parent.history.back();
+                return false;
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block base_content %}
+
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="98%">
+    <tr>
+        <td valign="top">
+
+            <!--
+            <h2 class="bulletin_print_header" align="center">Page Header</h2>
+
+            <p align="center">test</p>
+            -->
+
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+
+            <table class="bulletin_tearoffs" cellpadding="0" cellspacing="0" border="0" width="99%">
+                <tr>
+                    <td class="first" align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="rotate">
+                            {{ http_protocol_host }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+{% include "include/dsp/dsp_print_marketing_footer.html" %}
+
+{% endblock %}

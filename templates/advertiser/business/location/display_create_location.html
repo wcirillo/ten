@@ -1,0 +1,54 @@
+{% extends "frames/web/leftCol.html" %}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    <div class="left">
+
+        <h3>
+            <strong>Where is this offer available?</strong>
+        </h3>
+
+        <h4>Provide information to help customers find you.</h4>
+
+    </div>
+
+    <div class="right padding">
+
+        <h3 class="alt_font2 highlight">
+            {% include "include/dsp/dsp_subheading_create_coupon.html" %}
+        </h3>
+
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="box2">
+
+        <p class="small">
+            Please supply <em>at least one</em> of the following:<br/>
+            Street Address, Description, Phone Number or Website.
+        </p>
+
+        {% include "include/frm/frm_create_location.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    {% include "include/dsp/dsp_preview_coupon_locations.html" %}
+
+    <p align="center">{% include "include/dsp/dsp_purchase_intent.html" %}</p>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

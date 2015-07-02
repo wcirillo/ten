@@ -1,0 +1,119 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+<form name="frm_add_slot" action="" method="post">{% csrf_token %}
+
+    <h3>Add Email Flyers</h3>
+
+    <p class="small">
+        {% if locked_consumer_count > 500 %}There are <strong>{{ locked_consumer_count }}</strong> registered {{ site.name }} consumers. <br/>{% endif %}
+        The rate to display this coupon is <strong>${{ slot_price }} each month</strong>.
+    <p/>
+    <p class="small">
+        Distribute your coupon with <strong>Email Flyers</strong>. Add a <strong>one-time charge</strong> (below.) 
+    </p>
+    
+    <div class="colFlyerContainer">
+
+        <div class="colFlyer">
+
+            <div class="colFlyerHeader"><a id="addFlyer0" class="button" href="#">Add 1 Flyer &raquo;</a></div>
+
+            <div class="colFlyerDate sprite"><strong>{{ first_flyer_date }}</strong></div>
+            <div class="colFlyerDate">{{ second_flyer_date }}</div>
+            <div class="colFlyerDate">{{ third_flyer_date }}</div>
+            <div class="colFlyerDate">{{ fourth_flyer_date }}</div>
+
+            <div class="colFlyerPrice">{{ first_flyer_price }}</div>
+            <div class="colFlyerPriceBtm">one-time charge</div>
+
+            <div></div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="colFlyer">
+
+            <div class="colFlyerHeader"><a id="addFlyer1" class="button" href="#">Add 2 Flyers &raquo;</a></div>
+
+            <div class="colFlyerDate sprite"><strong>{{ first_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ second_flyer_date }}</strong></div>
+            <div class="colFlyerDate">{{ third_flyer_date }}</div>
+            <div class="colFlyerDate">{{ fourth_flyer_date }}</div>
+
+            <div class="colFlyerPrice">{{ second_flyer_price }}</div>
+            <div class="colFlyerPriceBtm">one-time charge</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="colFlyer">
+
+            <div class="colFlyerHeader"><a id="addFlyer2" class="button" href="#">Add 3 Flyers &raquo;</a></div>
+
+            <div class="colFlyerDate sprite"><strong>{{ first_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ second_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ third_flyer_date }}</strong></div>
+            <div class="colFlyerDate">{{ fourth_flyer_date }}</div>
+
+            <div class="colFlyerPrice">{{ third_flyer_price }}</div>
+            <div class="colFlyerPriceBtm">one-time charge</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="colFlyer">
+
+            <div class="colFlyerHeader"><a id="addFlyer3" class="button" href="#">Add 4 Flyers &raquo;</a></div>
+
+            <div class="colFlyerDate sprite"><strong>{{ first_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ second_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ third_flyer_date }}</strong></div>
+            <div class="colFlyerDate sprite"><strong>{{ fourth_flyer_date }}</strong></div>
+
+            <div class="colFlyerPrice">{{ fourth_flyer_price }}</div>
+            <div class="colFlyerPriceBtm">one-time charge</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <p class="center">
+        <a id="addFlyer4" class="button" href="#">Just display the coupon for <strong>${{ slot_price }}</strong> each month</a> 
+    </p>
+
+    {% if show_save_coupon_link %}
+    <p class="center small">
+        <a href="{% url advertiser-account %}">Save this coupon to publish later</a> 
+    </p>
+    {% endif %}
+
+    <div class="hidden">
+
+        <ol>
+            <li>
+                <ol class="level2">
+                    {{ add_slot_form.add_slot_choices.errors }}
+                    {{ add_slot_form.add_slot_choices }}
+                </ol>
+            </li>
+        </ol>
+
+        <ol>
+            <li>
+                <input class="button largeBtn" type="submit" tabindex="3" value="Next Step &raquo;"/>
+            </li>
+        </ol>
+
+    </div>
+
+    <p class="small center">
+        Email Flyers purchased at a later time <strong>{% if locked_consumer_count > 500 %} will probably {% else %} may {% endif %}be priced higher</strong> based on the number of <strong>registered consumers</strong>.
+    </p>
+
+</form>

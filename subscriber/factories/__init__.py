@@ -1,0 +1,1 @@
+""" Factory package for subscriber app of project ten. """

@@ -1,0 +1,127 @@
+{% extends "frames/web/columns.html" %}
+
+{% block meta %}
+<meta name="description" content="{{ meta_description }}"/>
+{% if canonical != "" %}
+<link rel="canonical" href="{{ canonical }}"/>
+{% endif %}
+{% endblock %}
+
+{% block top_content %}{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>{{ business.business_name }}</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% if business.slogan %}
+
+        <h3>{{ business.business_name }}</h3>
+
+        <p class="alt_font smallmargin">{{ business.slogan }}</p>
+
+    {% else %}
+
+        <h2>{{ business.business_name }}</h2>
+
+    {% endif %}
+
+    <p class="profile small">
+        {{ business.business_profile_description.business_description }}
+    </p>
+
+    {% if business.web_url %}
+        <p class="small">
+            Visit our website for more info:
+            <a href="{% url click-business-web_url coupon_id=coupon_id %}" rel="nofollow" alt="{{ business.web_url }}">{% if business.web_url|cut:'http://'|length > 30 %}{{ business.web_url|cut:'http://'|slice:':30' }}...{% else %}{{ business.web_url|cut:'http://' }}{% endif %}</a>
+        </p>
+    {% endif %}
+
+    <div class="all_offers">
+
+        {% for coupon in all_coupons %}         
+            {% include "include/dsp/dsp_single_offer.html" %}
+        {% endfor %}
+
+        <div class="clear"></div>
+    </div>
+
+    <div>
+
+        <div class="grid_4 alpha">
+
+            {% if business.web_snap_path and business.show_web_snap %}
+                <div class="boxBorderTight"><a class="block" href="{% url click-business-web_url coupon_id=coupon_id %}" rel="nofollow"><img class="websnap" src="{{ safe_media_url }}images/web-snap/{{ business.web_snap_path }}" alt="{{ business.web_url }}"/></a></div>
+            {% endif %}
+
+        </div>
+
+        <div class="grid_6 omega">
+
+            {% if business.web_url %}
+                <h5 class="alt_font highlight">Visit Us Online:</h5>
+                <p class="small">
+                    <a class="nodec" href="{% url click-business-web_url coupon_id=coupon_id %}" rel="nofollow" alt="{{ business.web_url }}">
+                        <span class="url">
+                            {% if business.web_url|cut:'http://'|length > 30 %}
+                                {{ business.web_url|cut:'http://'|slice:':30' }}...
+                            {% else %}
+                                {{ business.web_url|cut:'http://' }}
+                            {% endif %}
+                        </span>
+                    </a>
+                </p>
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% if business.show_map %}
+        {% if location_coords %}
+            {% include "include/dsp/dsp_map_location.html" %}
+        {% endif %}
+    {% endif %}
+
+    {% for location in all_locations %}
+        {% include "include/dsp/dsp_single_location.html" %}
+    {% endfor %}
+
+    <div class="hr"></div>
+
+    <div class="iconList small">
+
+        <div class="sprite iconCreate"></div>
+
+        <a class="nodec" href="{% url advertiser-registration %}">Create coupons for YOUR business &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+    {% if not request.flags.is_mobile %}
+
+        <div class="hr"></div>
+
+        <div class="iconList small">
+
+            <div class="sprite iconPrint"></div>
+
+            <a class="nodec" href="{% url window-display coupon.id %}" rel="nofollow">Print a window display for this business &raquo;</a>
+    
+            <div class="clear"></div>
+        </div>
+
+    {% endif %}
+
+    <div class="hr"></div>
+
+    {# include "include/dsp/dsp_registration_rotation.html" #}
+    
+{% endblock %}

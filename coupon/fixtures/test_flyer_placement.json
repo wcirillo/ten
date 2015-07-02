@@ -1,0 +1,347 @@
+[
+    {
+        "pk": 1, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 411, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 10, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 416, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 4, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 417, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 6, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 7, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 8, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "coupon.flyerplacement", 
+        "fields": {
+            "slot": 9, 
+            "send_date": "2011-05-19", 
+            "site": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 23181, 
+            "flyer_placement": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 16045, 
+            "flyer_placement": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 16045, 
+            "flyer_placement": 2
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 15145, 
+            "flyer_placement": 2
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 16045, 
+            "flyer_placement": 3
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 23181, 
+            "flyer_placement": 3
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 15145, 
+            "flyer_placement": 3
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1890, 
+            "flyer_placement": 4
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 23181, 
+            "flyer_placement": 4
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1844, 
+            "flyer_placement": 4
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1866, 
+            "flyer_placement": 5
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1844, 
+            "flyer_placement": 5
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 16142, 
+            "flyer_placement": 6
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1886, 
+            "flyer_placement": 7
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1886, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1883, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uscounty"
+            ],
+            "geolocation_id": 1870, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 16045, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 23181, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 23181, 
+            "flyer_placement": 8
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 30218, 
+            "flyer_placement": 9
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "coupon.flyerplacementsubdivision", 
+        "fields": {
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "geolocation_id": 31367, 
+            "flyer_placement": 9
+        }
+    }
+]

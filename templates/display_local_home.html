@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ current_site.name }} Coupons, {{ current_site.name }} | {{ current_site.domain }}{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Save money at the best places to eat, drink, play and shop in the {{ current_site.region }} with coupons from {{ current_site.domain }}"/>
+<link rel="canonical" href="{% url home %}"/>
+{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block frame %}
+
+    <div class="bgWindow" style="background-image: url({{ safe_static_url }}images/layout/bgWindow.jpg);">
+
+        <div id="formConsumer" class="bgWindowForm">
+
+            <div class="bgWindowHeader">
+                <h3>Type your zip code to find great deals in <em>your</em> neighborhood:</h3>
+                <div class="clear"></div>
+            </div>
+
+            {% include "include/frm/frm_market_search.html" %}
+
+            <p class="tiny nomargin">
+                10LocalCoupons.com operates <a href="{% url site-directory %}">{{ site_count }} individual websites</a>, each designed to supply area consumers with valuable coupons from local businesses.<br/>
+                Coupons are provided on the website, in our weekly Email Flyers and as text messages on your phone.
+            </p>
+
+            <div class="clear"></div>
+        </div>
+
+        {% include "include/dsp/dsp_facebook_like_home.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+    {% include "include/dsp/dsp_home_bottom.html" %}
+
+{% endblock %}

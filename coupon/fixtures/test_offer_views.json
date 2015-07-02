@@ -1,0 +1,474 @@
+[
+    {
+        "pk": 500, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "vsantaiti", 
+            "first_name": "Vinny", 
+            "last_name": "Advertiser", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2010-11-01 15:45:10", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$43688$d2c669f4f4f674a854267dc6a0cd073b00636178", 
+            "email": "vinny@strausdigital.com", 
+            "date_joined": "2010-11-01 15:45:10"
+        }
+    }, 
+    {
+        "pk": 501, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "dbenedetto", 
+            "first_name": "Dennis", 
+            "last_name": "Consumer", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2010-11-01 15:45:10", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$43688$d2c669f4f4f674a854267dc6a0cd073b00636178", 
+            "email": "dennis@strausdigital.com", 
+            "date_joined": "2010-11-04 15:45:10"
+        }
+    }, 
+    {
+        "pk": 502, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jborne", 
+            "first_name": "Jason", 
+            "last_name": "Advertiser", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2010-11-06 15:45:10", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$43688$d2c669f4f4f674a854267dc6a0cd073b00636178", 
+            "email": "jason@strausdigital.com", 
+            "date_joined": "2010-11-01 15:45:10"
+        }
+    }, 
+    {
+        "pk": 503, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jdepp", 
+            "first_name": "Jonny", 
+            "last_name": "Advertiser", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2010-11-06 15:45:10", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$43688$d2c669f4f4f674a854267dc6a0cd073b00636178", 
+            "email": "jonny@strausdigital.com", 
+            "date_joined": "2010-11-30 15:45:10"
+        }
+    },
+     {
+        "pk": 504, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "aHare", 
+            "first_name": "Angela", 
+            "last_name": "Hare", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2010-11-06 15:45:10", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$43688$d2c669f4f4f674a854267dc6a0cd073b00636178", 
+            "email": "ahare@biz.com", 
+            "date_joined": "2010-11-30 15:45:10"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "consumer.emailsubscription", 
+        "fields": {"email_subscription_name": "Email"}
+    }, 
+    {
+        "pk": 500, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 20:56:38", 
+            "consumer_zip_postal": null, 
+            "email_hash": "aef292db06bb5c318d36788ce504213d838fd984", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "geolocation_id": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": 27, 
+            "consumer_create_datetime": "2010-11-21 20:56:38", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 501, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 20:56:38", 
+            "consumer_zip_postal": null, 
+            "email_hash": "aef292db06bb5c318d36788ce504213d838fd984", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "geolocation_id": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": 27, 
+            "consumer_create_datetime": "2010-11-21 20:56:38", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 502, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 20:56:38", 
+            "consumer_zip_postal": null, 
+            "email_hash": "aef292db06bb5c318d36788ce504213d838fd984", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "geolocation_id": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": 27, 
+            "consumer_create_datetime": "2010-11-21 20:56:38", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 503, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 20:56:38", 
+            "consumer_zip_postal": null, 
+            "email_hash": "aef292db06bb5c318d36788ce504213d838fd984", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "geolocation_id": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": 27, 
+            "consumer_create_datetime": "2010-11-30 20:56:38", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 504, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 20:56:38", 
+            "consumer_zip_postal": null, 
+            "email_hash": "aef292db06bb5c318d36788ce504213d838fd984", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "geolocation_id": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": 27, 
+            "consumer_create_datetime": "2010-11-30 20:56:38", 
+            "email_subscription": [1]
+        }
+    },
+    {
+        "pk": 500, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-21 20:56:38", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [
+                1
+            ], 
+            "advertiser_modified_datetime": "2010-11-21 20:56:38"
+        }
+    }, 
+    {
+        "pk": 500, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [1], 
+            "advertiser": 500, 
+            "slogan": "here and now", 
+            "business_modified_datetime": "2010-11-21 20:56:38", 
+            "business_create_datetime": "2010-11-21 20:56:38", 
+            "short_business_name": "JSON INC", 
+            "is_active": true, 
+            "web_url": "http://google.com", 
+            "show_web_snap": true, 
+            "business_name": "JSON INCORPORATED LLC", 
+            "web_snap_path": null, 
+            "business_zip_postal": "12601", 
+            "show_map": true
+        }
+    },
+     {
+        "pk": 502, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-21 20:56:38", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [
+                1
+            ], 
+            "advertiser_modified_datetime": "2010-11-21 20:56:38"
+        }
+    }, 
+    {
+        "pk": 501, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 502, 
+            "slogan": "here and now", 
+            "business_modified_datetime": "2010-11-21 20:56:38", 
+            "business_create_datetime": "2010-11-21 20:56:38", 
+            "short_business_name": "JSON3 INC", 
+            "is_active": true, 
+            "web_url": "http://google.com/3", 
+            "show_web_snap": true, 
+            "business_name": "JSON3 INCORPORATED LLC", 
+            "web_snap_path": null, 
+            "business_zip_postal": "12601", 
+            "show_map": true
+        }
+    },
+    {
+        "pk": 503, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-30 20:56:38", 
+            "advertiser_zip_postal": "12590", 
+            "advertiser_state_province": "NY",  
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [1], 
+            "advertiser_modified_datetime": "2010-11-21 20:56:38"
+        }
+    }, 
+        {
+        "pk": 502, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 503, 
+            "slogan": "here and now4", 
+            "business_modified_datetime": "2010-11-30 20:56:38", 
+            "business_create_datetime": "2010-11-30 20:56:38", 
+            "short_business_name": "JSON4 INC", 
+            "is_active": true, 
+            "web_url": "http://google.com/4", 
+            "show_web_snap": true, 
+            "business_name": "JSON4 INCORPORATED LLC", 
+            "web_snap_path": null, 
+            "business_zip_postal": "12590", 
+            "show_map": true
+        }
+    },
+    {
+        "pk": 504, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": "with unpaid coupon", 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-30 20:56:38", 
+            "advertiser_zip_postal": "12590", 
+            "advertiser_state_province": "NY",  
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [1], 
+            "advertiser_modified_datetime": "2010-11-21 20:56:38"
+        }
+    }, 
+    {
+        "pk": 503, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 504, 
+            "slogan": "WE believe", 
+            "business_modified_datetime": "2010-11-30 20:56:38", 
+            "business_create_datetime": "2010-11-30 20:56:38", 
+            "short_business_name": "Alive SHort", 
+            "is_active": true, 
+            "web_url": "http://believeit.com", 
+            "show_web_snap": true, 
+            "business_name": "Alive Packs LLC", 
+            "web_snap_path": null, 
+            "business_zip_postal": "12590", 
+            "show_map": true
+        }
+    },
+    {
+        "pk": 500, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "$100 OFF total order", 
+            "create_datetime": "2010-11-23 13:37:59", 
+            "qualifier": "of purchases > 1000", 
+            "business": 500
+            }
+    },
+    {
+        "pk": 501, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "$10 OFF Next Purchase", 
+            "create_datetime": "2010-11-30 13:37:59", 
+            "qualifier": "give us a try!", 
+            "business": 502
+        }
+    },
+    {
+        "pk": 502, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "$10 OFF Next Purchase", 
+            "create_datetime": "2010-11-30 13:37:59", 
+            "qualifier": "offer no coupon", 
+            "business": 502
+        }
+    },
+    {
+        "pk": 503, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "$25 OFF Purchase > 100", 
+            "create_datetime": "2010-11-30 13:37:59", 
+            "qualifier": "unpaid coupon", 
+            "business": 503
+        }
+    },
+    {
+        "pk": 500, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-11-23 13:39:58", 
+            "coupon_create_datetime": "2010-11-23 13:38:36", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "$100 OFF total order Hooters", 
+            "default_restrictions": [3], 
+            "location": [500], 
+            "is_valid_friday": false, 
+            "start_date": "2010-11-23", 
+            "is_valid_tuesday": false, 
+            "offer": 500, 
+            "expiration_date": "2017-02-21", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 501, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-11-23 13:39:58", 
+            "coupon_create_datetime": "2010-11-23 13:38:36", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "unpaid coupon", 
+            "default_restrictions": [3], 
+            "location": [501], 
+            "is_valid_friday": true, 
+            "start_date": "2010-11-23", 
+            "is_valid_tuesday": true, 
+            "offer": 503, 
+            "expiration_date": "2011-02-21", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 500, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "", 
+            "business": 1, 
+            "location_area_code": "", 
+            "location_description": "location in newburgh", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "12550", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 501, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "", 
+            "location_state_province": "NY", 
+            "location_exchange": "", 
+            "business": 1, 
+            "location_area_code": "", 
+            "location_description": "location in fishkill", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "12524", 
+            "location_address1": "", 
+            "location_address2": "", 
+            "location_number": "", 
+            "location_url": ""
+        }
+    }
+]

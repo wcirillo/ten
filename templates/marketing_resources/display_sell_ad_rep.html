@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}{{ current_site.domain }} - Become an Advertising Representative{% endblock %}
+
+{% block meta %}
+<link rel="canonical" href="{% url become-an-ad-rep %}"/>
+{% endblock %}
+
+{% block frame %}
+
+    <div class="bgWindow" style="background-image: url({{ safe_static_url }}images/layout/bgWindowRep.jpg); height: 375px; margin-bottom: 0;">
+
+        <div style="position: absolute; top: 30px; left: 20px; width: 540px;">
+
+            <h1 class="large" align="center">Start a new career <em>now.</em></h1>
+
+            <p align="center">
+                This is an opportunity to become an <strong>Independent Advertising Representative</strong>.
+                <em>This is not a standard 9-5 position.</em>
+                Commissions are earned by helping local businesses succeed.
+                Apply if you have <strong>better than average sales ability</strong>.
+            </p>
+
+            <p align="center">
+                <a class="button largeBtn" href="{% url show-ad-rep-form %}" style="width: 350px;">Let's get started! &raquo;</a>
+            </p>
+
+            <table align="center" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <td><img src="{{ safe_static_url }}images/checkmark.png" border="0" height="19" width="19"/></td>
+                    <td><h5 class="nomargin">Be your own boss. Make your own hours!</h5></td>
+                </tr>
+                <tr>
+                    <td><img src="{{ safe_static_url }}images/checkmark.png" border="0" height="19" width="19"/></td>
+                    <td><h5 class="nomargin">Commissions are paid weekly.</h5></td>
+                </tr>
+                <tr>
+                    <td><img src="{{ safe_static_url }}images/x.png" border="0" height="19" width="19"/></td>
+                    <td><h5 class="nomargin">This is <strong>NOT</strong> multi-level marketing!</h5></td>
+                </tr>
+                <tr>
+                    <td><img src="{{ safe_static_url }}images/x.png" border="0" height="19" width="19"/></td>
+                    <td><h5 class="nomargin">There is <strong>nothing to buy.</strong></h5></td>
+                </tr>
+            </table>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <table align="center" border="0" cellpadding="20" cellspacing="0">
+        <tr>
+            <td align="center" valign="top" width="25%">
+
+                <h2 class="alt_font2 light">Be Your Own Boss</h2>
+
+                <p class="small nomargin">
+                    This is not a typical "work-from-home" position.
+                    This is a be-the-boss, make-your-own-hours, and <strong>work-harder-to-earn-more</strong> opportunity.
+                </p>                    
+
+            </td>
+            <td align="center" valign="top" width="25%">
+
+                <h2 class="alt_font2 light">Your Opportunity</h2>
+
+                <p class="small smallmargin">
+                    Your timing could not be better.
+                    Learn more about <a href="{% url your-opportunity %}">your opportunity</a> as an Advertising Representative.
+                </p>
+
+                <p class="small nomargin">
+                    <a href="{% url compensation-overview %}">Learn</a> how to get started today!
+                </p>
+
+            </td>
+            <td align="center" valign="top" width="25%">
+
+                <h2 class="alt_font2 light">About Us</h2>
+
+                <p class="small nomargin">
+                    We're a seasoned team focused on helping businesses attract customers, helping consumers save money, and providing you with the financial opportunity of a lifetime.
+                    <a href="{% url the-10localcoupons-story %}">About us</a>
+                </p>   
+
+            </td>
+            <td align="center" valign="top" width="25%">
+
+                <h2 class="alt_font2 light">Local Businesses</h2>
+
+                <p class="small smallmargin">
+                    Help {{ current_site.region }} business owners drive customers to their doors!
+                </p>
+
+                <p class="small nomargin">
+                    See how we stack up to <a href="{% url our-competition %}">our competition</a> and how we <a href="{% url benefits-for-business %}">benefit local businesses</a>.
+                </p>
+
+            </td>
+        </tr>
+    </table>
+
+    <div class="padding">
+        <h4 class="alt_font light" align="center">
+
+            <a class="nodec light" href="{% url testimonial-ad-rep %}">
+
+                {% include "include/dsp/dsp_testimonial_ad_rep.html" %}
+
+            </a>
+
+        </h4>
+    </div>
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

@@ -1,0 +1,124 @@
+<h2>Sample Email Flyer</h2>
+
+<div class="sample_flyer" style="border: 1px #d9e7ed solid; padding: 1px;">
+
+      <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" bgcolor="#c5e4f0">
+        <tr>
+            <td align="right" bgcolor="#111111" style="border-bottom: 1px #fff solid;"><img src="{{ STATIC_URL }}images/trans.gif" height="5" width="10" border="0" style="display: block;"/></td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" style="padding-top: 10px;">
+
+                <table cellpadding="0" cellspacing="0" border="0" align="center" width="620" style="margin-bottom: 0;">
+                    <tr>
+                        <td width="10" bgcolor="#c5e4f0"><img src="{{ STATIC_URL }}images/email/email_header_left.gif" height="70" width="10" border="0" style="display: block;"/></td>
+                        <td bgcolor="#ffffff" valign="top" width="600" background="{{ STATIC_URL }}images/email/email_header.gif" style="padding-top: 8px;">
+                            <table cellpadding="0" cellspacing="0" height="55" width="600" align="center" border="0">
+                                <tr>
+                                    <td align="left" valign="top" height="55" width="330" bgcolor="#58b6da" background="{{ STATIC_URL }}images/email/email_header_center.gif" style="line-height: 52px;">&nbsp; <a href="http://{{ site.domain }}" style="color: #fff; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 18px; text-decoration: none;">{{ current_site.domain }}</a></td>
+                                    <td align="right" valign="top" style="padding: 12px 20px 0 0;"><span style="color: #222; font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 12px; font-style: italic;">{% if flyer %}{{ flyer.send_date|date:"l, F j" }}{% else %}{% now "l, F j" %}{% endif %}</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right" height="7"><img src="{{ STATIC_URL }}images/trans.gif" height="7" width="1" border="0" style="display: block;"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="10" bgcolor="#c5e4f0"><img src="{{ STATIC_URL }}images/trans.gif" height="5" width="10" border="0" style="display: block;"/></td>
+                    </tr>
+                </table>
+
+                <table cellpadding="10" cellspacing="0" border="0" align="center" width="600" style="margin-bottom: 0;">
+                    <tr>
+                        <td bgcolor="#ffffff" style="padding-top: 10px;">
+
+                            <table cellpadding="0" cellspacing="0" border="0" align="center" width="580">
+                                <tr>
+                                    <td width="320" valign="top" align="left">
+
+                                        {% if flyer %}
+                                            {% include "include/dsp/dsp_coupons_for_flyer.html" %}
+                                        {% else %}
+                                            {% include "include/dsp/dsp_sample_coupons_for_flyer.html" %}
+                                        {% endif %}
+            
+                                        <p class="small" style="margin: 20px 0 20px 0;">
+                                            We'll send 10 more coupons in a week or so.
+                                            Thanks for being a member of <a href="http://{{ current_site.domain }}" style="color: #1ab1e8; text-decoration: underline;"><span style="color: #1ab1e8;">{{ current_site.domain }}</span></a>!
+                                        </p>
+            
+                                        <p class="small">
+                                            <strong>Eric Straus</strong><br/>
+                                            <em>President</em><br/>
+                                            {{ current_site.domain }}<br/>
+                                            Phone: 800-581-3380 x301
+                                        </p>
+
+                                    </td>
+                                    <td width="260" valign="top" align="left">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="260" bgcolor="#222222" style="margin: 0 0 14px 0;">
+                                            <tr>
+                                                <td>{% include 'include/dsp/dsp_create_coupon_banner.html' %}</td>
+                                            </tr>
+                                        </table>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="260" bgcolor="#e4eff5" style="margin: 0 0 14px 0;">
+                                            <tr>
+                                                 <td>{% include 'include/dsp/dsp_ad_rep_banner.html' %}</td>
+                                            </tr>
+                                        </table>
+                        
+                                        <table cellpadding="0" cellspacing="0" border="0" width="260" style="margin: 0 0 14px 0;">
+                                            <tr>
+                                                <td>{% include 'include/dsp/dsp_contest_banner.html' %}</td>
+                                            </tr>
+                                        </table>
+                                        <table cellpadding="10" cellspacing="0" border="0" width="260" style="margin: 0 0 15px 0;">
+                                            <tr>
+                                                <td>{% include 'include/dsp/dsp_forward_friend_banner.html' %}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{% include 'include/dsp/dsp_unsubscribe_banner.html' %}</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- footer-->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="background-color: #edf5f9; border-top: 1px #e4eff5 solid;">
+                  <tr>
+                    <td align="center">
+                        <p style="font-size: 11px; line-height: 15px; margin: 10px 0 5px 0;">
+                            {{ site.domain }} Customer Care: (800) 581-3380
+                            {% if ref_num %} &nbsp;|&nbsp; Ref: {{ ref_num }}{% endif %}
+                        </p>
+                        <p style="font-size: 11px; line-height: 15px; margin: 10px 0 5px 0;text-align:center;">
+                            {% include 'email_gateway/generic_corporate_address.html' %}
+                        </p>
+                        <p style="font-size: 11px; line-height: 15px; margin: 0 0 12px 0;">
+                            <a href="mailto:help@10Coupons.com?Subject=Help with {{ current_site.domain }}" style="color: #1ab1e8;"><span style="color: #1ab1e8;">Help by email</span></a>
+                            &nbsp;|&nbsp;
+                            <a href="{% url advertiser-registration %}" style="color: #1ab1e8;"><span style="color: #1ab1e8;">Advertise with us</span></a>
+                        </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="5" valign="bottom" style="background-color: #edf5f9;"><img src="{{ STATIC_URL }}images/email/email_footer_bottom.gif" height="5" width="600" border="0" style="display: block;"/></td>
+                  </tr>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="font-size: 11px; line-height: 13px; padding: 15px 10px 20px 10px;" valign="top">
+                Ensure delivery of your coupons.<br/>
+                Add us as a contact in your email program.
+            </td>
+        </tr>
+    </table>
+
+    <div class="clear"></div>
+</div>

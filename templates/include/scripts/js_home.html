@@ -1,0 +1,126 @@
+$("#id_form_subscriber").addClass("hidden");
+$("#id_subscriber_zip_postal_li").hide();
+
+function load_subscriber_form()
+{
+    $("#id_signin_link").slideUp(500, function(){
+        $(".header_top_inner").animate({
+            height: '21px'
+        }, 500, function(){
+            $("#header_email_address").html($("input[id='id_email']").val() + ' &nbsp;').show(1000);
+            $("#id_signout_link").show(1000);
+        });
+    });
+    $("input[id='id_subscriber_zip_postal']").val($("input[id='id_consumer_zip_postal']").val());
+    $("#id_form_subscriber").removeClass("hidden");
+    $("#id_subscriber_zip_postal_li").hide();
+    $("#formConsumer").animate({"left": "-960px","opacity":0.4},1000);
+    $("#formSubscriber").animate({"left": "0","opacity":1},1000);
+    $(".btnSlidePrev").show();
+}
+
+{% if cross_site %}
+    $(document).ready(function(){
+      load_subscriber_form();
+    });
+{% endif %}
+
+$("#submit_consumer_reg").click(function(e){
+    e.preventDefault();
+    disable_element($(this));
+    $.ajax({
+        url: "{% url home %}",
+        async: true,
+        type: "POST",
+        data: {'ajax_mode':'consumer_reg',
+               'email':$("input[id='id_email']").val(),
+               'consumer_zip_postal':$("input[id='id_consumer_zip_postal']").val()
+               },
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) {
+                if(data['errors']){
+                    if(data['errors']['email']){
+                        $("#email_errors").html(data.errors.email.toString());
+                    }else{
+                        $("#email_errors").html('');
+                    }
+                    if(data['errors']['consumer_zip_postal']){
+                        $("#consumer_zip_postal_errors").html(data.errors.consumer_zip_postal.toString());
+                    }else{
+                        $("#consumer_zip_postal_errors").html('');
+                    }
+                }else{
+                    if(data['url_to_change_market'])
+                    {
+                        window.parent.location = data['url_to_change_market'] + '?cross_site=True';
+                        return;
+                    }
+                    load_subscriber_form();
+                }
+                enable_submit_btn();
+            },
+        error: function() {enable_submit_btn();}
+    });
+});
+
+$("#submit_subscriber_reg").click(function(e){
+    e.preventDefault();
+    disable_element($(this));
+    $.ajax({
+        url: "{% url home %}",
+        type: "POST",
+        data: {"ajax_mode": 'subscriber_reg',
+               "mobile_phone_number": $("input[id='id_mobile_phone_number']").val(),
+               "subscriber_zip_postal": $("input[id='id_subscriber_zip_postal']").val(),
+               "carrier": $("#id_carrier").val()
+               },
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) {
+                
+                if(data['errors']){
+                    if(data['errors']['mobile_phone_number']){
+                        $("#mobile_phone_number_errors").html(data.errors.mobile_phone_number.toString());
+                    }else{
+                        $("#mobile_phone_number_errors").html('');
+                    }
+                    if(data['errors']['carrier']){
+                        $("#carrier_errors").html(data.errors.carrier.toString());
+                    }else{
+                        $("#carrier_errors").html('');
+                    }
+                }
+                else{
+                    window.parent.location = "{% url con-sub-reg-confirmation %}";
+                }
+                enable_submit_btn();
+            },
+        error: function() {enable_submit_btn();}
+    });
+    
+});
+
+$(".btnSlidePrev").click(function(){
+    $("#formConsumer").animate({"left": "0","opacity":1.0},1000);
+    $("#formSubscriber").animate({"left": "960px","opacity":0.4},1000);
+    $(".btnSlideNext").show().addClass("btnSlideNextOn");
+    $(".btnSlidePrev").hide();
+});
+
+$(".btnSlideNext").click(function(){
+    $("#formConsumer").animate({"left": "-960px","opacity":0.4},1000);
+    $("#formSubscriber").animate({"left": "0","opacity":1},1000);
+    $(".btnSlidePrev").show();
+    $(".btnSlideNext").hide();
+});
+
+$(".terms").click(function(e){
+    e.preventDefault();
+    window.parent.location = "{% url terms-of-use %}";
+});
+
+$(".rules").click(function(e){
+    e.preventDefault();
+    window.parent.location = "{% url contest-rules %}";
+});

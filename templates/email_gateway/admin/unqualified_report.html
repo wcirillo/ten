@@ -1,0 +1,9 @@
+{% block email_content %}
+
+    {% for msg in summary %}
+        {% if forloop.first %}<strong>{% endif %}
+        {{ msg }}<br/>
+        {% if forloop.first %}</strong>{% endif %}
+    {% endfor %}
+
+{% endblock %}

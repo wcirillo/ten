@@ -1,0 +1,36 @@
+
+var animation = {
+    open: function (dialog) {
+        dialog.overlay.fadeIn(300, function () {
+            dialog.data.hide();
+            dialog.container.fadeIn(200, function () {
+                dialog.data.fadeIn(200);
+            });
+        });
+    },
+    close: function (dialog) {
+        dialog.data.fadeOut(100, function () {
+            dialog.container.fadeOut(100, function () {
+                dialog.overlay.fadeOut(300, function () {
+                    $.modal.close();
+                  });
+            });
+        });
+    }
+}
+
+function modal_recruit_summary(ad_rep_id){
+    var iframe_src;
+    iframe_src = '<iframe src="' + '{{ http_protocol_host }}' + '{% url ad-rep-summary %}' + ad_rep_id + '/' + '" width="700px" height="550px" marginheight="0" marginwidth="0" frameBorder="1" scrolling="yes" style="border: 0; overflow-y: hidden; overflow-x: hidden;">';
+
+    scroll(0,0);
+    $.modal(
+        iframe_src, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modal",
+        onClose: animation.close
+        }
+    );
+}

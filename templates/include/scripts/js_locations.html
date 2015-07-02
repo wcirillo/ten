@@ -1,0 +1,12 @@
+var locationListOut = function(){};
+var locationList = {
+    over: function(){
+        var listId = $(this).attr("id");
+        if (listId != "screenshot")
+        {
+            ol_map.setMarkerToCenter(listId);
+        }
+    },
+    timeout: 0,
+    out: locationListOut
+};

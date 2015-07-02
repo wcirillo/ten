@@ -1,0 +1,29 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+This is a response to a text message sent from {{ mobile_phone_number }}
+
+{% if contest_is_running %}Get qualified for the next $10,000 Drawing!*{% endif %}
+Use the link to accept Terms of Use and verify your email:
+{{base_url}}{% url email_verify_consumer payload=payload %}
+
+Use the link below to read the Terms of Use:
+{{base_url}}{% url terms-of-use %}
+
+{% if contest_is_running %}
+*Eligibility requires current complete signup.
+Signup includes both Email and Text Messages.
+
+Use the link below to read the rules:
+{{base_url}}{% url contest-rules %}
+{% endif %}
+
+{{ current_site.domain }}
+Customer Care: 800-581-3380
+{% if ref_num %}Ref: {{ ref_num }}{% endif %}
+
+For Customer Service by email: help@{{ current_site.domain }}
+
+If you no longer wish to receive awesome deals from us, please unsubscribe by going to the following link in your browser:
+{{ base_url }}{{ unified_host }}{% url opt_out payload=payload %}
+{% endblock %}

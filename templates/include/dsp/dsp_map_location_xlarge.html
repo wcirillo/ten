@@ -1,0 +1,10 @@
+{%if onload_site_directory %}
+    <div id="loadingmap" style="display:inline;position:absolute; top:220px;width:{%if map_width %}{{ map_width}}{% else %}1020{% endif%}px;height:{% if map_height %}{{map_height}}{% else %}600{% endif %}px;vertical-align:middle;text-align:center;margin:0 auto;background-color:black;color:white;">
+        Loading map, please wait...
+    </div>
+{% endif %}
+
+<div id="displaymap" style="width: {%if map_width %}{{ map_width}}{% else %}1020{% endif%}px; height: {% if map_height %}{{map_height}}{% else %}600{% endif %}px;">
+    <div id="displaymap_controls"></div>
+    <div id="map_loader"></div>
+</div>

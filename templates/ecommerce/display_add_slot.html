@@ -1,0 +1,24 @@
+{% extends "frames/web/columns.html" %}}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Add Email Flyers</span>
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% include "include/frm/frm_add_slot.html" %}
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+    <p class="center smallmargin"><a class="button smallBtn" href="{% url preview-coupon %}">Make changes to this coupon</a></p>
+
+    {% include "include/dsp/dsp_pricing_locked.html" %}
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

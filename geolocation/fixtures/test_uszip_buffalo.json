@@ -1,0 +1,51 @@
+[
+    {
+        "pk": 35, 
+        "model": "geolocation.usstate", 
+        "fields": {
+            "abbreviation": "NY", 
+            "name": "New York"
+        }
+    }, 
+    {
+        "pk": 1845, 
+        "model": "geolocation.uscounty", 
+        "fields": {
+            "name": "Erie", 
+            "us_state": 35
+        }
+    }, 
+    {
+        "pk": 33765, 
+        "model": "geolocation.coordinate", 
+        "fields": {
+            "latitude": 41.539099999999998,
+            "longitude": -74.049099999999996,
+            "rad_lat": 0,
+            "rad_lon": 0,
+            "sin_rad_lat": 0,
+            "cos_rad_lat": 0
+        }
+    }, 
+    {
+        "pk": 17032, 
+        "model": "geolocation.uscity", 
+        "fields": {
+            "name": "Buffalo", 
+            "coordinate": 33765,
+            "us_county": 1845,
+            "us_state": 35
+        }
+    }, 
+    {
+        "pk": 17184, 
+        "model": "geolocation.uszip", 
+        "fields": {
+            "code": "14201", 
+            "coordinate": 33765,
+            "us_city": 17032,
+            "us_county": 1845,
+            "us_state": 35
+        }
+    }
+]

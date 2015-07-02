@@ -1,0 +1,124 @@
+{% extends "frames/email/non-glossy.html" %}
+{% load currency %}
+
+{% block email_content %}
+{% if original_to %}
+    <p><strong>Message sent to {{ original_to }}</strong></p>
+    <p><strong>{{ phone }}</strong></p>
+{% endif %}
+{% if is_to_ad_rep %}
+<p>Below is an email sent on your behalf. It shows 
+{% if coupon.offer %}how the coupon might look if it were published.
+{% else %}an example of a finished coupon.{% endif %}
+{% if schedule_item == 130 %}(Note that a $100 discount is offered.){% endif %}</p>
+
+<p>Contact <strong>{{ business.business_name }}</strong> and offer your help completing the purchase.<br/>
+{% if business.advertiser.advertiser_name %}Contact name:
+<strong>{{ business.advertiser.advertiser_name }}</strong><br/>{% endif %}
+Email address: <strong>{{ business.advertiser.email }}</strong></p>
+
+<p><strong>Good luck!</strong></p>
+<p><span style='color:#00A9E7; font-weight:bold;'>{{ sales_rep_signature_name }}</span><br/>
+{% if sales_rep_signature_title %}{{ sales_rep_signature_title }}<br/>{% endif %}
+<a style='color:#00A9E7;' href="mailto:{{ sales_rep_signature_email }}">{{ sales_rep_signature_email }}</a><br/>
+{% if sales_rep_signature_phone %}{{ sales_rep_signature_phone }}{% endif %}</p>
+
+<hr>
+
+{% endif %}
+<p style="margin-top: 0;">
+{{ business.business_name }}<br/>
+{% now "M jS, Y" %}<br/>
+<br/>
+    Hi{% if business.advertiser.advertiser_name %} <strong>{{ business.advertiser.advertiser_name }}</strong>{% endif %},<br/><br/>
+
+<p>
+{% if schedule_item == 1 %}
+    This coupon could be complete with just a few clicks. Start attracting
+    potential {{ site.name }} customers. <a href="{{ dynamic_url }}">Publish your first
+    coupon today!</a>
+{% endif %}
+{% if schedule_item == 10 %}
+    Publish this coupon! It's almost done already. Just a few more clicks.
+    <a href="{{ dynamic_url }}">Show your first coupon</a> to {{ site.name }} customers!
+{% endif %}
+{% if schedule_item == 40 %}
+    You can start attracting potential {{ site.name }} customers in mere minutes.
+    <a href="{{ dynamic_url }}">Publish this coupon today!</a>
+{% endif %}
+{% if schedule_item == 70 %}
+    Attract {{ site.name }} customers today! <a href="{{ dynamic_url }}">Finish this coupon</a>.
+    Display your offer to new customers right now.
+{% endif %}
+{% if schedule_item == 100 %}
+    Complete your first coupon and start attracting {{ site.name }} customers!
+    <a href="{{ dynamic_url }}">Publish your first coupon</a> now!
+{% endif %}
+{% if schedule_item == 130 %}
+    {% if firestorm_id %}
+        Publish your first coupon today and
+        <a href="{{ base_url }}{% url sale-redirect-with-promo payload promo_code %}">save
+        a hundred bucks</a>. {{ site.name }} customers are waiting for your offer.
+    {% else %}
+        <a href="{{ dynamic_url }}">Publish your first coupon today</a>.
+        {{ site.name }} customers are waiting for your offer!
+    {% endif %}
+{% endif %}
+</p>
+
+<p>
+{% if coupon.offer %}
+Your <strong>first</strong> of as many as <strong>10 coupons</strong> could look
+like <strong>this,</strong> or it can say (almost) <strong>anything</strong> you
+want.
+{% else %}
+The next step in building your first coupon will be choosing the <strong>offer
+</strong> to customers. Here's an example we created using "<strong>30% Off.
+</strong>" You can choose any offer you want.
+{% endif %}
+</p>
+
+
+{% if firestorm_id and schedule_item == 130 %}
+<div align="center">
+<a href="{{ base_url }}{% url sale-redirect-with-promo payload promo_code %}">Publish
+your first coupon now and Save $100</a><br/>
+Just
+<span style="text-decoration: line-through;">{{ annual_coupon_display|currency }}</span>
+{{ discounted_annual_coupon_display|currency }} to Publish <strong>10 Coupons</strong>
+for an <strong>entire year</strong>.
+{% else %}
+<div>
+Publish up to <strong>10 coupons</strong>, all at the same time for <strong>one
+low price</strong>! <strong>Changes</strong> are <strong>free</strong> and
+<strong>unlimited</strong>!
+{% endif %}
+</div>
+
+{% include "include/dsp/dsp_coupon_in_email.html" %}
+
+<p>
+{% if recent_coupon %}
+New coupons from {{ site.name }} businesses have recently been published. 
+<a href="{{ base_url }}{% url view-all-businesses-coupons slug=recent_coupon.offer.business.slug business_id=recent_coupon.offer.business.id %}">{{ recent_coupon.offer.business.business_name }}</a>
+just added "<a href="{{ base_url }}{% url view-single-coupon slug=recent_coupon.slug coupon_id=recent_coupon.id %}">{{ recent_coupon.offer.headline }}</a>".
+{% else %}
+We drive prospects to {{ site.name }} with continuous promotion.
+{% endif %}
+</p>
+
+<p>
+Want <strong>help</strong>? Got <strong>questions</strong>?
+<strong>Contact me</strong>. Let's work together to get <strong>new customers</strong>.
+</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+
+{% include "email_gateway/generic_email_unsubscribe.html" %}
+
+<p style='font-size:12px;padding-top:5px;text-align:center;'>
+{% include "email_gateway/generic_corporate_address.html" %}
+</p>
+{% endblock %}
+
+

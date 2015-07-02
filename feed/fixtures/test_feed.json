@@ -1,0 +1,68 @@
+[
+    {
+        "pk": 1, 
+        "model": "feed.feedprovider", 
+        "fields": {
+            "modified_datetime": "2011-04-05 14:48:53", 
+            "advertiser": 114, 
+            "create_datetime": "2011-04-05 14:48:53", 
+            "name": "Nashville Half Off Deals", 
+            "feed_url": "http://nash.halfoffdeals.com/inline/promos_xml.php?num=2&link=Yes&logo=Yes"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "feed.feedcoupon", 
+        "fields": {
+            "state_province": null, 
+            "city": null, 
+            "coupon_url": "http://nash.halfoffdeals.com/promodetails.php?h=3465033&src=inline", 
+            "create_datetime": "2020-04-05 15:07:27", 
+            "modified_datetime": "2020-04-06 16:34:07", 
+            "offer": "50% off", 
+            "expiration_date": "2020-06-06", 
+            "address2": null, 
+            "zip_postal": null, 
+            "feed_provider": 1, 
+            "custom_restrictions": null, 
+            "address1": "Online Purchases Only", 
+            "business_name": "3-6-5 Baseball Academy - Probatter or Batting Cage Rental", 
+            "logo_url": "http://nash.halfoffdeals.com/images/logos/109366.png", 
+            "external_id": "119172", 
+            "start_date": "2011-04-05"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "feed.feedcoupon", 
+        "fields": {
+            "state_province": null, 
+            "city": null, 
+            "coupon_url": "http://nash.halfoffdeals.com/promodetails.php?h=7464268&src=inline", 
+            "create_datetime": "2020-04-05 15:07:27", 
+            "modified_datetime": "2020-02-02 16:34:07", 
+            "offer": "50% off", 
+            "expiration_date": "2020-08-08", 
+            "address2": null, 
+            "zip_postal": null, 
+            "feed_provider": 1, 
+            "custom_restrictions": null, 
+            "address1": "Online Purchases Only", 
+            "business_name": "2011 Senior PGA Championship presented by KitchenAid", 
+            "logo_url": "http://nash.halfoffdeals.com/images/logos/109416.jpg", 
+            "external_id": "119197", 
+            "start_date": "2011-04-05"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "feed.feedrelationship", 
+        "fields": {
+            "coupon": 301, 
+            "modified_datetime": "2011-04-07 15:16:25", 
+            "create_datetime": "2011-04-07 15:16:25", 
+            "feed_provider": 1, 
+            "feed_coupon": 1
+        }
+    }
+]

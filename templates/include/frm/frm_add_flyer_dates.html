@@ -1,0 +1,65 @@
+<form id="frm_add_flyer_dates" name="frm_add_flyer_dates" action="" method="post">{% csrf_token %}
+{{ add_flyer_dates_form.errors.non_field_error }}
+    <div class="boxBorder">
+        
+        {% for flyer_month in available_flyer_dates_list %}
+            <div id="{{ flyer_month.month }}" class="month {% if forloop.counter > 2 %}hidden {% endif %}">
+
+                <p class="tiny smallmargin"><strong>{{ flyer_month.month }} {{ flyer_month.year }}</strong></p>
+
+                <div class="date_list small">
+                    {% for field in add_flyer_dates_form %}
+                        
+                        
+                        {% if flyer_month.month in field.label_tag %}
+                            {% for week in flyer_month.weeks %}
+                                {% if week.send_date == field.value %}
+                                    
+                                    <div class="date">
+                                        {{ field.errors }}
+                                        {{ field }} <span class="{% if not week.date_is_available %}light{% endif %}">{{ field.label_tag }}</span>
+                                    </div>
+                                    
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <a id="id_open_next_monthset" class="next_month tiny nodec {% if forloop.counter = 1 or forloop.last %}hidden {% endif %}" href="#">
+                        <span id="sjkfbv" class="next_month_text">next month</span><span> &raquo;</span>
+                    </a>
+
+                    <div class="clear"></div>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="clear"></div>
+            </div>
+
+        {% endfor %}
+        
+        <div class="sprite arrowCols">
+
+            <div class="left">
+                <h3 id="single_flyer_price"></h3>
+                <span class="tiny">per flyer</span>
+            </div>
+
+            <div class="arrowCols_right">
+                <h3 id="flyer_count"></h3>
+                <span id="flyer_count_text" class="tiny"></span>
+            </div>
+
+            <div class="arrowCols_right">
+                <h3 id="total_flyer_price"><strong></strong></h3>
+                <span class="tiny">one-time charge</span>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+        <input class="button fullBtn" type="submit" value="Continue to Checkout &raquo" />
+        <div class="clear"></div>
+    </div>
+    {{ add_flyer_dates_form.subdivision_consumer_count }}
+</form>

@@ -1,0 +1,172 @@
+<form name="frm_recommend_ad_rep" action="" method="post">{% csrf_token %}
+
+    {{ terms_of_use_form.non_field_errors }}
+
+        <table align="center" border="0" cellpadding="5" cellspacing="0">
+
+            <tr>
+                <td align="right">
+                    <label for="id_first_name" class="block">First Name</label>
+                </td>
+                <td>
+                    {{ ad_rep_lead_form.first_name }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">
+                    <label for="id_last_name" class="block">Last Name</label>
+                </td>
+                <td>
+                    {{ ad_rep_lead_form.last_name }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">
+                    <label for="id_email" class="block">Email Address</label>
+                </td>
+                <td>
+                    <div id="email_errors" class="errorlist">{{ ad_rep_lead_form.errors.email }}</div>
+                    {{ ad_rep_lead_form.email }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">
+                    <label for="id_consumer_zip_postal" class="block">Zip Code</label>
+                </td>
+                <td>
+                    <div id="consumer_zip_postal_errors" class="errorlist">{{ ad_rep_lead_form.errors.consumer_zip_postal }}</div>
+                    {{ ad_rep_lead_form.consumer_zip_postal }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" style="padding-bottom: 0;">
+                    <label for="id_primary_phone_number" class="block">Phone Number</label>
+                </td>
+                <td style="padding-bottom: 0;">
+                    <div id="primary_phone_number_errors" class="errorlist">{{ ad_rep_lead_form.errors.primary_phone_number }}</div>
+                    {{ ad_rep_lead_form.primary_phone_number }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"></td>
+                <td class="tiny" style="padding-top: 0;">
+                    Type the number you'll use to conduct business,<br/>"Land Line" or Cellular.
+                    Include your Area Code.
+                </td>
+            </tr>
+        </table>
+        <table align="center" border="0" cellpadding="5" cellspacing="0">
+    
+            <tr>
+                <td colspan="2">
+    
+                    <h3 align="center">Create a password</h3>
+    
+                    <p class="small smallmargin" align="center">
+                        <em>
+                            Choose at least 6 characters. Use numbers, punctuation, capital (upper-case) or lower-case characters.
+                        </em>
+                    </p>
+    
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="id_password1" class="block">Password</label>
+                </td>
+                <td>
+                    {{ set_password_form.password1.errors }}
+                    {{ set_password_form.password1 }}
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">
+                    <label for="id_password2" class="block">Confirm Password</label>
+                </td>
+                <td>
+                    {{ set_password_form.password2.errors }}               
+                    {{ set_password_form.password2 }}
+                </td>
+            </tr>
+
+        </table>
+
+        <br/>
+
+    <table align="center" border="0" cellpadding="5" cellspacing="0">
+
+        <tr>
+            <td colspan="2">
+
+                <h3 align="center">Create your personalized website address</h3>
+
+                <p class="small smallmargin" align="center">
+                    <em>
+                        Create a web address that will be easy to remember and share with your potential customers (local businesses).<br/>
+                        Example: If you want <strong>10coupons.com/eric</strong> type <strong>eric</strong> in the box.</br>
+                        Use letters and/or numbers without spaces, punctuation or special characters.
+                    </em>
+                </p>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td align="right">
+                <label for="id_ad_rep_url" class="block">www.10coupons.com/</label>
+            </td>
+            <td>
+                {{ ad_rep_url_form.ad_rep_url.errors }}
+                {{ ad_rep_url_form.ad_rep_url }}
+            </td>
+        </tr>
+
+    </table>
+
+    <br/>
+
+    <h3 align="center">Review and agree to the documents listed below.</h3>
+
+    <table align="center" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>
+                1) <a href="{% url terms-of-agreement %}">Terms of Agreement</a><br/>
+                2) <a href="{% url policies-procedures %}">Policies & Procedures</a><br/>
+                3) <a href="{% url compensation-plan %}">Compensation Plan</a>
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <p class="small" align="center">
+            
+                    {{ terms_of_use_form.terms_of_use.errors }}
+                    
+                    {{ terms_of_use_form.terms_of_use }}&nbsp;
+            
+                    <label for="id_terms_of_agreement">I have read and agree to these three documents for Independent Advertising Representatives.</label>
+            
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    {% if request.session.ad_rep_id %}
+        <p align="center">
+            Accept the recommendation from <strong>{{ ad_rep.first_name }} {{ ad_rep.last_name }}</strong>.
+        </p>
+    {% endif %}
+
+    <p align="center">
+        <input type="submit" class="button largeBtn" name="submit_frm_enroll_ad_rep" value="Become an Advertising Representative" tabindex="50"/>
+    </p>
+
+</form>

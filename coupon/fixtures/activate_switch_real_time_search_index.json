@@ -1,0 +1,15 @@
+[
+    {
+        "pk": "real-time-search-index",
+        "model": "gargoyle.switch", 
+        "fields": {
+            "status": 3, 
+            "date_created": "2011-06-28 11:34:01", 
+            "description": "When this switch is active, Haystack will use RealTimeSearchIndex. Coupon insert, updates and deletes will be reflected immediately in the solr search index.\r\n\r\nWhen this is not active, new coupons or coupon changes will not be reflected in the search results until the management command 'rebuild_index' (or 'clear_index' followed by 'update_index') is issued.", 
+            "value": {
+                "is_active": true
+            }, 
+            "label": "real-time-search-index"
+        }
+    }
+]

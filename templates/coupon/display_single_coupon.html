@@ -1,0 +1,120 @@
+{% extends "frames/web/columns.html" %}
+{% include "include/dsp/dsp_facebook_head_tag.html" %}
+{% block meta %}
+<meta name="title" content="{{ title }}"/>
+<meta name="description" content="{{ meta_description }}"/>
+{% if canonical != "" %}
+<link rel="canonical" href="{{ canonical }}"/>
+{% endif %}
+<link rel="image_src" href="{{ safe_static_url }}images/fb_logo_100x100.gif"/>
+{% endblock %}
+
+{% block top_content %}{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url view-all-businesses-coupons coupon.offer.business.slug coupon.offer.business.id %}">{{ coupon.offer.business.business_name }}</a> &nbsp;&rsaquo;&nbsp;
+    <span>{{ coupon.offer.headline }}</span>
+    <div class="share">
+        {% include "include/dsp/dsp_facebook_like_small.html" %}
+        <a class="sprite twitter" href="http://twitter.com/share" onclick="javascript:return openWindow('http://{{ request.META.HTTP_HOST }}{% url tweet-coupon coupon_id=coupon.id textflag=1 %}')" rel="nofollow" ></a>
+        {% include "include/dsp/dsp_google_plus_one.html" %}
+    </div>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_single_coupon.html" %}
+
+    {% if coupon.offer.business.web_snap_path and coupon.offer.business.show_web_snap and not request.flags.is_mobile %}
+
+        <div class="grid_4 alpha">
+            <div class="boxBorderTight"><a class="block" href="{% url click-business-web_url coupon_id=coupon.id %}" rel="nofollow"><img class="websnap" src="{{ safe_static_url }}images/web-snap/{{ coupon.offer.business.web_snap_path }}" alt="{{ coupon.offer.business.business_name }}"/></a></div>
+        </div>
+
+        <div class="grid_6 omega">
+
+    {% else %}
+
+        <div class="grid_10 alpha omega">
+
+    {% endif %}
+
+        {% if coupon.offer.business.business_profile_description.business_description %}
+            <h5 class="alt_font highlight">About {{ coupon.offer.business.business_name }}:</h5>
+            <p class="profile small">
+                {{ coupon.offer.business.business_profile_description.business_description }}
+            </p>
+        {% endif %}
+
+        {% if coupon.offer.business.web_url %}
+            <h5 class="alt_font highlight">Visit Us Online:</h5>
+            <p class="small">
+                <a class="nodec" href="{% url click-business-web_url coupon_id=coupon.id %}" rel="nofollow" alt="{{ coupon.offer.business.web_url }}">
+                    <span class="url">
+                        {% if coupon.offer.business.web_url|cut:'http://'|length > 30 %}
+                            {{ coupon.offer.business.web_url|cut:'http://'|slice:':30' }}...
+                        {% else %}
+                            {{ coupon.offer.business.web_url|cut:'http://' }}
+                        {% endif %}
+                    </span>
+                </a>
+            </p>
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% if coupon.offer.business.show_map %}
+        {% if location_coords %}
+            {% include "include/dsp/dsp_map_location.html" %}
+        {% endif %}
+    {% endif %}
+
+    {% for location in all_locations %}
+        {% include "include/dsp/dsp_single_location.html" %}
+    {% endfor %}
+
+    <div class="hr"></div>
+    
+    <div class="iconList small">
+
+        <div class="sprite iconCoupon"><div>{{ business_active_coupon_count }}</div></div>
+
+        <a class="nodec" href="{% url view-all-businesses-coupons coupon.offer.business.slug coupon.offer.business.id %}">All coupons from {{ coupon.offer.business.business_name }} &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="iconList small">
+
+        <div class="sprite iconCreate"></div>
+
+        <a class="nodec" href="{% url advertiser-registration %}">Create a coupon like this for YOUR business &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+    {% if not request.flags.is_mobile %}
+
+        <div class="hr"></div>
+
+        <div class="iconList small">
+
+            <div class="sprite iconPrint"></div>
+
+            <a class="nodec" href="{% url window-display coupon.id %}" rel="nofollow">Print a window display for this business &raquo;</a>
+    
+            <div class="clear"></div>
+        </div>
+
+    {% endif %}
+
+    <div class="hr"></div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load gargoyle_tags %}
+
+<h3 class="window_header" align="center"><em>Get money-saving coupons for</em></h3>
+<h1 class="window_business_name" align="center">{% if coupon.business.business_name %}{{ coupon.business.business_name }}{% endif %}</h1>
+
+<br/>
+
+<div class="coupon">
+    <div class="couponInner">
+
+        <div class="window_logo">
+            <img class="window_logo_image" src="{{ safe_static_url }}images/layout/print_window_display_logo_blue.gif"/>
+            <div class="window_logo_market">{{ current_site.name_no_spaces }}</div>
+            <div class="clear"></div>
+        </div>
+
+        <h3 align="center" class="window_sitename">www.{{ current_site.domain }}{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}</h3>
+
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<br/><br/>
+
+<table cellpadding="5" cellspacing="0" border="0" align="center">
+    <tr>
+        <td align="center">
+            <p>
+                Scan this QR code with your smartphone:
+            </p>
+            <p>
+                <img src="http://chart.apis.google.com/chart?chs=225x225&cht=qr&chld=M|2&chl={{ http_protocol_host }}{{ qr_image_path }}"/>
+            </p>        
+        </td>
+        <td>
+            <h3 class="window_contest_header alt_font2" align="center">&mdash; Win $10,000!* &mdash;</h3>
+            <p class="window_contest_details" align="center">See details on website</p>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,231 @@
+[   
+    {
+        "pk": 500, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 114, 
+            "is_locked": false, 
+            "create_datetime": "2010-04-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "",
+            "invoice": "2.300", 
+            "amount_discounted": "49.95", 
+            "promotion_code": null,
+            "subtotal": "49.95", 
+            "method": "V"
+        }
+    }, 
+    {
+        "pk": 501, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 114, 
+            "is_locked": false, 
+            "create_datetime": "2010-04-26 12:49:13", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.2", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 502, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 114, 
+            "is_locked": false, 
+            "create_datetime": "2010-04-26 12:49:13", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.2", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 500, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "free flyer", 
+            "business": 114, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-04-26 12:48:20", 
+            "start_datetime": "2010-04-26 10:34:50", 
+            "units": 1, 
+            "order": 500,
+            "item_id": 300,
+            "content_type": [
+                "coupon", 
+                "coupon"
+            ]
+        }
+    }, 
+    {
+        "pk": 501, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "flyer placement, no promo", 
+            "business": 114, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-04-26 12:49:10", 
+            "start_datetime": "2010-04-26 10:34:50", 
+            "units": 1, 
+            "order": 501,
+            "item_id": 300,
+            "content_type": [
+                "coupon", 
+                "coupon"
+            ]
+        }
+    },
+    {
+        "pk": 502, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "for testing receipt", 
+            "business": 114, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-04-26 12:49:10", 
+            "start_datetime": "2010-04-26 10:34:50", 
+            "units": 1, 
+            "order": 502,
+            "item_id": 300,
+            "content_type": [
+                "coupon", 
+                "coupon"
+            ]
+        }
+    },
+    {
+        "pk": 500,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": "gak",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "gak",
+            "business": 114
+        }
+    },
+    {
+        "pk": 501,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": "foo",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "foo",
+            "business": 114
+        }
+    },
+    {
+        "pk": 502,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": true,
+            "encrypted_number": "bar",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "Has storage opt in true",
+            "business": 114
+        }
+    },
+    {
+        "pk": 503,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": true,
+            "encrypted_number": "gak",
+            "cc_type": "amex",
+            "last_4": "2233",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "Has storage opt in true",
+            "business": 114
+           }
+    },
+    {
+        "pk": 504,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": null,
+            "cc_type": "amex",
+            "last_4": "2233",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "King Lear",
+            "business": 114
+           }
+    },
+    {
+        "pk": 505,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": null,
+            "cc_type": "visa",
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 10,
+            "card_holder": "Is Expired",
+            "business": 114
+        }
+    },
+    {
+        "pk": 500, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "A", 
+            "is_locked": false, 
+            "create_datetime": "2010-10-20 15:47:46", 
+            "is_void": false, 
+            "order": 502, 
+            "amount": "1.00", 
+            "credit_card": 500, 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 501, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "A", 
+            "is_locked": true, 
+            "create_datetime": "2010-10-20 15:47:46", 
+            "is_void": false, 
+            "order": 502, 
+            "amount": "1.00", 
+            "credit_card": 500, 
+            "method": "C"
+        }
+    }
+]

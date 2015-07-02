@@ -1,0 +1,27 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Hi {% if business.advertiser.advertiser_name %}{{ business.advertiser.advertiser_name }}{% endif %},
+A coupon for {{ business.business_name }} is almost ready.
+Display your offer to potential customers.
+
+Use this link to finish your purchase today,
+{% comment %}
+{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}
+{% endcomment %}
+{{ base_url }}{% url sale-redirect payload=payload %}
+
+Your coupon can say (almost) anything you want.
+
+You can make unlimited changes.
+Change a single word or the entire offer.
+Display one coupon after another all for one low price.
+
+Five minutes is all it takes!
+Need help? Contact me by phone or email.
+
+Thanks.
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+{% endblock %}

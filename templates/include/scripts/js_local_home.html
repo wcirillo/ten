@@ -1,0 +1,73 @@
+var modal_iframe_src;
+modal_iframe_src = '<iframe src="' + '{{ http_protocol_host }}' + '{% url market-zip-search %}' + '" width="100%" marginheight="0" marginwidth="0" frameBorder="0" scrolling="no" style="border: 0; overflow-y: hidden; overflow-x: hidden;">';
+
+$("#id_link_recent_coupons").click(function(e){
+    e.preventDefault();
+    scroll(0,0);
+    $.modal(
+        '<h2 id="id_search_form_label" align="center">Find recent coupons near:</h2>' + ' ' +
+        '<span id="id_search_form_summary"></span>' + ' ' +
+        '<span id="id_success_url_path" class="hidden">{% url locate-market-map %}?next={% url all-coupons %}</span>' + 
+        modal_iframe_src, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modalSm",
+        onClose: animation.close
+        }
+    );
+});
+
+$("#id_link_create_coupons").click(function(e){
+     e.preventDefault();
+    scroll(0,0);
+    $.modal(
+        '<h2 id="id_search_form_label" align="center">Create coupons near:</h2>' + ' ' +
+        '<span id="id_search_form_summary"></span>' + ' ' +
+        '<span id="id_success_url_path" class="hidden">{% url locate-market-map %}?next={% url advertiser-registration %}</span>' + 
+        modal_iframe_src, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modalSm",
+        onClose: animation.close
+        }
+    );
+});
+
+$("#id_link_how_it_works").click(function(e){
+    e.preventDefault();
+    scroll(0,0);
+    $.modal(
+        '<h2 id="id_search_form_label" align="center"></h2>' + ' ' +
+        '<span id="id_search_form_summary">We operate and promote locally-branded websites in {{ site_count }} markets.<br/> Type your zip code to find a market near your business.</span>' + ' ' +
+        '<span id="id_success_url_path" class="hidden">{% url locate-market-map %}?next={% url how-it-works %}</span>' + 
+        modal_iframe_src, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modalSm",
+        onClose: animation.close
+        }
+    );
+});
+
+$("#id_link_footer_create_coupon").click(function(e){
+    e.preventDefault();
+    $("#id_search_form_label").text('Advertise near:');
+    $("#id_search_form_summary").html('');
+    $("#id_success_url_path").text('{% url locate-market-map %}?next={% url how-it-works %}');
+    scroll(0,0);
+    $.modal(
+        '<h2 id="id_search_form_label" align="center">Advertise near:</h2>' + ' ' +
+        '<span id="id_search_form_summary"></span>' + ' ' +
+        '<span id="id_success_url_path" class="hidden">{% url locate-market-map %}?next={% url how-it-works %}</span>' + 
+        modal_iframe_src, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modalSm",
+        onClose: animation.close
+        }
+    );
+});

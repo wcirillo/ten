@@ -1,0 +1,33 @@
+<h2>Unsubscribed from {{ current_site.domain }}</h2>
+
+<p>
+    You've chosen to unsubscribe.
+    {% if user_type == 'advertiser' %}(Messages may still be sent regarding Advertiser Account activity.){% endif %}    
+    No {% if user_type == 'advertiser' %}other{% else %}additional{% endif %} messages will be sent to this email address: <strong>{{ email }}</strong>
+</p>
+
+<p>
+    We know it's a great big web out there.
+    Thanks for giving us a shot.
+    We're always making the website better.
+    Creating a new account will be easy.
+</p>
+
+<p>
+    We hope you'll try {{ current_site.domain }} again soon!
+</p>
+
+{% if contest_is_running %}
+
+    <div class="hr"></div>
+
+    <h4>Sign up for email to qualify for the next <strong>$10,000 Drawing!*</strong></h4>
+
+    <p><a class="button largeBtn" href="{% url home %}">Get Free Coupons! &raquo;</a></p>
+
+    <p class="small">
+        *Eligibility requires current complete signup for both email and text messages.
+        <a href="{% url contest-rules %}">Rules</a>
+    </p>
+
+{% endif %}

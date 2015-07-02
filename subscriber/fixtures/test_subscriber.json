@@ -1,0 +1,177 @@
+[
+    {
+        "pk": 1, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "10101", 
+            "subscriber_modified_datetime": "2010-06-17 00:00:00", 
+            "site": 1, 
+            "subscriber_create_datetime": "2010-03-19 10:33:28"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [
+                1
+            ], 
+            "subscriber_zip_postal": "12550", 
+            "subscriber_modified_datetime": "2010-10-13 14:49:11", 
+            "site": 2, 
+            "subscriber_create_datetime": "2010-05-05 15:51:55"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "00000", 
+            "subscriber_modified_datetime": "2010-06-17 00:00:00", 
+            "site": 1, 
+            "subscriber_create_datetime": "2010-03-19 10:33:28"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "12543", 
+            "subscriber_modified_datetime": "2010-05-07 13:46:43", 
+            "site": 2,
+            "subscriber_create_datetime": "2010-05-07 13:46:43"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "12550", 
+            "subscriber_modified_datetime": "2011-06-02 13:46:43", 
+            "site": 2,
+            "subscriber_create_datetime": "2011-06-02 13:46:43"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "12524", 
+            "subscriber_modified_datetime": "2011-09-12 13:46:43", 
+            "site": 2,
+            "subscriber_create_datetime": "2011-09-12 13:46:43"
+        }
+    }, 
+     {
+        "pk": 7, 
+        "model": "subscriber.subscriber", 
+        "fields": {
+            "sms_subscription": [], 
+            "subscriber_zip_postal": "12508", 
+            "subscriber_modified_datetime": "2011-09-12 13:46:43", 
+            "site": 2,
+            "subscriber_create_datetime": "2011-09-12 13:46:43"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 1, 
+            "mobile_phone_number": "1115550001", 
+            "carrier": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 2, 
+            "mobile_phone_number": "8455550000", 
+            "carrier": 2
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 4, 
+            "mobile_phone_number": "8885553333", 
+            "carrier": 2
+        }
+    },
+    {
+        "pk": 4, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 5, 
+            "mobile_phone_number": "8455550002", 
+            "carrier": 5
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 6, 
+            "mobile_phone_number": "8455550006", 
+            "carrier": 3,
+            "is_verified": true
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "subscriber.mobilephone", 
+        "fields": {
+            "subscriber": 7, 
+            "mobile_phone_number": "8455550004", 
+            "carrier": 6,
+            "is_verified": false
+        }
+    },
+    {
+        "pk": 1100, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jillian_gerry@10coupons.com", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-06-09 14:14:03", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "", 
+            "email": "jillan_gerry@10coupons.com", 
+            "date_joined": "2011-06-02 14:14:03"
+        }
+    }, 
+    {
+        "pk": 1100, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-09 12:57:26", 
+            "consumer_zip_postal": "12550", 
+            "email_hash": "c8e16be77850ce7ad9bbd52c92b86f127a289dad", 
+            "site": 2, 
+            "subscriber": 5, 
+            "is_emailable": true, 
+            "geolocation_id": 23181, 
+            "is_email_verified": true, 
+            "groups": [], 
+            "user_permissions": [], 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_create_datetime": "2010-06-02 10:05:11", 
+            "email_subscription": [1]
+        }
+    }
+]

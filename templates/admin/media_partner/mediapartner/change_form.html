@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+{% if original %}
+<fieldset class="module aligned ">
+<table width="100%"><tr>
+<td>
+<h2>Consumer: <a href="{% url admin:consumer_consumer_change original.id %}">{{ original.username }}</a></h2>
+</td>
+</tr></table>
+</fieldset>
+{% include "admin/includes/dsp_history.html" %}
+</td>
+</tr></table>
+{% endif %}
+{% endblock %}

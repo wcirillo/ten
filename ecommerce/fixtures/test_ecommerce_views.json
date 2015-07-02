@@ -1,0 +1,1340 @@
+[
+    {
+        "pk": 600, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test600@test.com", 
+            "first_name": "consumer", 
+            "last_name": "only", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-05-18 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test600@test.com", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test601@test.com", 
+            "first_name": "advertiser", 
+            "last_name": "OfferNoCoupon", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-12-01 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test601@test.com", 
+            "date_joined": "2010-05-18 16:59:59"
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test602@test.com", 
+            "first_name": "advertiser", 
+            "last_name": "withcoupon", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-12-01 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test602@test.com", 
+            "date_joined": "2010-12-01 16:59:59"
+        }
+    }, 
+     {
+        "pk": 603, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test603@test.com", 
+            "first_name": "advertiser", 
+            "last_name": "withpaidpromocoupon", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-12-01 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test603@test.com", 
+            "date_joined": "2010-12-01 16:59:59"
+        }
+    }, 
+    {
+        "pk": 604, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test604@test.com", 
+            "first_name": "advertiser", 
+            "last_name": "withnocoupon", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-12-01 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test604@test.com", 
+            "date_joined": "2010-12-01 16:59:59"
+        }
+    }, 
+    {
+        "pk": 605, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test605@test.com", 
+            "first_name": "advertiser", 
+            "last_name": "first_time_customer", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2010-12-01 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test605@test.com", 
+            "date_joined": "2010-12-01 16:59:59"
+        }
+    },
+    {
+        "pk": 606, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "test606@test.com", 
+            "first_name": "advertiser6", 
+            "last_name": "declined_advertiser", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2011-10-17 16:59:59", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "test606@test.com", 
+            "date_joined": "2010-12-01 16:59:59"
+        }
+    },
+    {
+        "pk": 600,
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-12-01 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-05-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [],  
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-05-21 10:05:35", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 603, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-11-21 10:05:35", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-11-21 10:05:35", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 605, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-11-21 10:05:35", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 606, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-11-21 10:05:35", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "", 
+            "site": 2, 
+            "subscriber": null, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-11-21 10:05:35", 
+            "email_subscription": []
+        }
+    },
+    {
+        "pk": 601, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-05-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-05-12 16:12:24"
+        }
+    }, 
+    {
+        "pk": 603, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-11-12 16:12:24"
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-11-12 16:12:24"
+        }
+    },
+     {
+        "pk": 605, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-11-12 16:12:24"
+        }
+    },
+    {
+        "pk": 606, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": null, 
+            "advertiser_city": null, 
+            "advertiser_address2": null, 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-11-12 16:12:24", 
+            "advertiser_zip_postal": null, 
+            "advertiser_state_province": null, 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [4], 
+            "advertiser_modified_datetime": "2010-11-12 16:12:24"
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 601, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-12 16:12:24",
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business No Offers"
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 602, 
+            "slogan": "how 'bout it?", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business With Coupons"
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 603, 
+            "slogan": "no more matters", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business with one paid promo coupon"
+        }
+    }, 
+    {
+        "pk": 603, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 604, 
+            "slogan": "no more matters 604", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business with one offer and no coupon "
+        }
+    }, 
+    {
+        "pk": 604, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 604, 
+            "slogan": "no more matters 604", 
+            "business_modified_datetime": "2010-05-12 16:12:24", 
+            "business_create_datetime": "2010-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Business Ordered Coupon no payment"
+        }
+    }, 
+    {
+        "pk": 605, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [1], 
+            "advertiser": 605, 
+            "slogan": "Business No Previous orders", 
+            "business_modified_datetime": "2011-05-12 16:12:24", 
+            "business_create_datetime": "2011-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Quick Check"
+        }
+    },
+    {
+        "pk": 606, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [1], 
+            "advertiser": 606, 
+            "slogan": "Has one declined payment for monthly slot", 
+            "business_modified_datetime": "2011-05-12 16:12:24", 
+            "business_create_datetime": "2011-05-12 16:12:24", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "business_name": "Burger Joint"
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 601
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": null, 
+            "billing_city": "", 
+            "billing_address2": "", 
+            "billing_zip_postal": "10101", 
+            "alt_email": null, 
+            "alt_last_name": null, 
+            "billing_state_province": "AL", 
+            "billing_address1": "",
+            "business": 602
+        }
+    }, 
+     {
+        "pk": 602, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": "Edicott", 
+            "billing_city": "Pearl", 
+            "billing_address2": "", 
+            "billing_zip_postal": "12590", 
+            "alt_email": null, 
+            "alt_last_name": "Jonson", 
+            "billing_state_province": "NY", 
+            "billing_address1": "10 Main St",
+            "business": 603
+        }
+    }, 
+     {
+        "pk": 603, 
+        "model": "advertiser.billingrecord", 
+        "fields": {
+            "alt_first_name": "Smith", 
+            "billing_city": "Pearl", 
+            "billing_address2": "", 
+            "billing_zip_postal": "12590", 
+            "alt_email": null, 
+            "alt_last_name": "Jonson", 
+            "billing_state_province": "NY", 
+            "billing_address1": "10 Main St",
+            "business": 600
+        }
+    }, 
+     {
+        "pk": 604, 
+        "model": "advertiser.billingrecord",
+        "fields": {
+            "alt_first_name": "Shoe", 
+            "billing_city": "Lizzy", 
+            "billing_address2": "", 
+            "billing_zip_postal": "12590", 
+            "alt_email": null, 
+            "alt_last_name": "Jonson", 
+            "billing_state_province": "NY", 
+            "billing_address1": "10 Main St",
+            "business": 604
+        }
+    },
+    {
+        "pk": 605, 
+        "model": "advertiser.billingrecord",
+        "fields": {
+            "alt_first_name": "Walt", 
+            "billing_city": "Clemings", 
+            "billing_address2": "", 
+            "billing_zip_postal": "12551", 
+            "alt_email": null, 
+            "alt_last_name": "Whitman", 
+            "billing_state_province": "NY", 
+            "billing_address1": "",
+            "business": 606
+        }
+    }, 
+    {
+        "pk": 600, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "15% off dine in", 
+            "create_datetime": "2010-05-21 10:08:49", 
+            "qualifier": "1 coupon per table", 
+            "business": 601
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "10% Off Purchase", 
+            "create_datetime": "2010-05-21 10:08:49", 
+            "qualifier": "total at least $25.00", 
+            "business": 602
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "$5 Off any Purchase", 
+            "create_datetime": "2010-05-21 10:08:49", 
+            "qualifier": "save money with us today!", 
+            "business": 602
+        }
+    }, 
+    {
+        "pk": 603, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "free dinner", 
+            "create_datetime": "2010-11-21 10:08:49", 
+            "qualifier": "with purchase of automobile", 
+            "business": 603
+        }
+    }, 
+     {
+        "pk": 604, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "free ticket no payment", 
+            "create_datetime": "2010-11-21 10:08:49", 
+            "qualifier": "order no payment", 
+            "business": 604
+        }
+    }, 
+    {
+        "pk": 605, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "10% off electric blanket", 
+            "create_datetime": "2010-11-21 10:08:49", 
+            "qualifier": "offer no coupon", 
+            "business": 600
+        }
+    }, 
+    {
+        "pk": 606, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "10% off oil cans", 
+            "create_datetime": "2010-11-21 10:08:49", 
+            "qualifier": "offer with coupon", 
+            "business": 605
+        }
+    },
+    {
+        "pk": 607, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "99% off cheese burgers", 
+            "create_datetime": "2010-11-21 10:08:49", 
+            "qualifier": "offer with coupon", 
+            "business": 606
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [], 
+            "is_valid_friday": true, 
+            "start_date": "2010-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 600, 
+            "expiration_date": "2020-01-09", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [], 
+            "is_valid_friday": true, 
+            "start_date": "2020-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 601, 
+            "expiration_date": "2011-01-09", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 1, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [], 
+            "is_valid_friday": true, 
+            "start_date": "2010-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 602, 
+            "expiration_date": "2011-01-09", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    }, 
+    {
+        "pk": 603, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 3, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [601], 
+            "is_valid_friday": true, 
+            "start_date": "2010-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 604, 
+            "expiration_date": "2011-01-09", 
+            "custom_restrictions": "order no payment", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    }, 
+    {
+        "pk": 604, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 2, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [601], 
+            "is_valid_friday": true, 
+            "start_date": "2010-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 606, 
+            "expiration_date": "2013-01-09", 
+            "custom_restrictions": "no previous orders/payments", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 605, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-09-16 14:13:55", 
+            "coupon_create_datetime": "2010-09-16 14:13:55", 
+            "is_valid_saturday": true, 
+            "is_redeemed_by_sms": true, 
+            "is_approved": false, 
+            "coupon_type": 2, 
+            "is_valid_monday": true, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [601], 
+            "is_valid_friday": true, 
+            "start_date": "2010-09-16", 
+            "is_valid_tuesday": true, 
+            "offer": 607, 
+            "expiration_date": "2013-01-09", 
+            "custom_restrictions": "no previous orders/payments", 
+            "is_valid_sunday": true, 
+            "is_valid_thursday": true, 
+            "is_valid_wednesday": true, 
+            "simple_code": null, 
+            "precise_url": null
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "ecommerce.promoter", 
+        "fields": {
+            "name": "Pippy the Promoter", 
+            "end_date": null, 
+            "create_datetime": "2010-11-26 10:13:33", 
+            "is_active": true, 
+            "promoter_cut_percent": "0.00", 
+            "start_date": "2010-04-26", 
+            "is_approved": true
+        }
+    }, 
+    
+    {
+        "pk": 600, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1, 2 ],
+            "name": "20 dollars off total coupon placement",
+            "description": "20 dollars off total coupon placement",
+            "end_date": "2021-04-26", 
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 20, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1 ],
+            "name": "1% off total coupon placement",
+            "description": "1% off total coupon placement",
+            "end_date": "2021-04-26",
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 1, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    }, 
+   {
+        "pk": 602, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1, 2 ],
+            "name": "10 dollars off total coupon placement, one time",
+            "description": "10 dollars off total coupon placement, one time use",
+            "end_date": "2021-04-26", 
+            "promo_type": "2", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 1, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "2"
+        }
+    }, 
+    {
+        "pk": 603, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1, 2 ],
+            "name": "free-all",
+            "description": "free-all",
+            "end_date": "2021-04-26", 
+            "promo_type": "1", 
+            "create_datetime": "2010-11-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 1 ], 
+            "name": "one-time-use free-all",
+            "description": "one-time-use free-all",
+            "end_date": "2021-04-26", 
+            "promo_type": "1", 
+            "create_datetime": "2010-04-26 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2010-04-26", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0, 
+            "code_method": "one", 
+            "use_method": "2"
+        }
+    }, 
+    {
+        "pk": 605, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 3 ],
+            "name": "annual-100-off",
+            "description": "100 off annual slot purchase",
+            "end_date": "2021-04-23", 
+            "promo_type": "2", 
+            "create_datetime": "2011-08-17 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2011-08-17", 
+            "promo_amount": 100, 
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 606, 
+        "model": "ecommerce.promotion", 
+        "fields": {
+            "product": [ 3 ],
+            "name": "free-annual-slot",
+            "description": "FREE Annual slot purchase",
+            "end_date": "2021-04-23", 
+            "promo_type": "1", 
+            "create_datetime": "2011-08-17 10:20:04", 
+            "is_active": true, 
+            "promoter": 600, 
+            "start_date": "2011-08-17", 
+            "promo_amount": 100,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 600, 
+            "code": "charter1", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 601, 
+            "code": "charter2", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 602, 
+            "code": "onetimeuse", 
+            "used_count": 0
+        }
+    }, 
+     {
+        "pk": 603, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 603, 
+            "code": "FREE-ALL", 
+            "used_count": 0
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 604, 
+            "code": "one-time-free", 
+            "used_count": 0
+        }
+    },
+    {
+        "pk": 605, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 605, 
+            "code": "annual-100-off", 
+            "used_count": 0
+        }
+    }, 
+     {
+        "pk": 606, 
+        "model": "ecommerce.promotioncode", 
+        "fields": {
+            "promotion": 606, 
+            "code": "free-annual-slot", 
+            "used_count": 0
+        }
+    }, 
+    {
+        "pk": 600, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "39.95", 
+            "billing_record": 601, 
+            "is_locked": false, 
+            "create_datetime": "2010-11-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.601", 
+            "amount_discounted": "10.00", 
+            "promotion_code": 602, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 601, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 604, 
+            "is_locked": false, 
+            "create_datetime": "2010-11-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.699", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 602, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 604, 
+            "is_locked": false, 
+            "create_datetime": "2010-11-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.603", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 600, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "flyer placement,one time promo", 
+            "business": 602, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-11-26 12:49:10", 
+            "start_datetime": "2010-11-26 10:34:50", 
+            "units": 1, 
+            "order": 600,
+            "item_id": 601,
+            "content_type": "46"
+        }
+    },
+    {
+        "pk": 601, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "order with no coupon", 
+            "business": 601, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-11-26 12:49:10", 
+            "start_datetime": "2010-11-26 10:34:50", 
+            "units": 1, 
+            "order": 601,
+            "item_id": 699,
+            "content_type": "46"
+        }
+    },
+     {
+        "pk": 602, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "order item with no payment", 
+            "business": 604, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-11-26 12:49:10", 
+            "start_datetime": "2010-11-26 10:34:50", 
+            "units": 1, 
+            "order": 602,
+            "item_id": 603,
+            "content_type": "46"
+        }
+    },
+    {
+        "pk": 603, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 604, 
+            "is_locked": false, 
+            "create_datetime": "2010-11-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.603", 
+            "amount_discounted": "0.00", 
+            "promotion_code": 604, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    },
+{
+        "pk": 603, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "order item with free promo", 
+            "business": 604, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2010-11-26 12:49:10", 
+            "start_datetime": "2010-11-26 10:34:50", 
+            "units": 1, 
+            "order": 603,
+            "item_id": 603,
+            "content_type": "46"
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "499.99", 
+            "billing_record": 605, 
+            "is_locked": false, 
+            "create_datetime": "2010-11-26 12:48:24", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.605", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "499.99", 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 604, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 3, 
+            "description": "order item annual slot", 
+            "business": 605, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "499.99", 
+            "end_datetime": "2010-11-26 12:49:10", 
+            "start_datetime": "2010-11-26 10:34:50", 
+            "units": 1, 
+            "order": 604,
+            "item_id": 605,
+            "content_type": "46"
+        }
+    },
+    {
+        "pk": 600,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": "gak",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 10,
+            "exp_year": 30,
+            "card_holder": "Steven Bera",
+            "business": 602
+        }
+    },
+    {
+        "pk": 601,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": "gak",
+            "cc_type": null,
+            "last_4": "1111",
+            "exp_month": 11,
+            "exp_year": 31,
+            "card_holder": "Steven Bera",
+            "business": 606
+        }
+    },
+    {
+        "pk": 602,
+        "model": "ecommerce.creditcard",
+        "fields": {
+            "is_storage_opt_in": false,
+            "encrypted_number": "gak",
+            "cc_type": "mastercard",
+            "last_4": "2222",
+            "exp_month": 12,
+            "exp_year": 32,
+            "card_holder": "Max Million",
+            "business": 600
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "A", 
+            "is_locked": false, 
+            "create_datetime": "2010-10-20 15:47:46", 
+            "is_void": false, 
+            "order": 600, 
+            "amount": "39.95", 
+            "credit_card": 600, 
+            "method": "C"
+        }
+    },
+    {
+        "pk": 601, 
+        "model": "ecommerce.payment", 
+        "fields": {
+            "status": "D", 
+            "is_locked": false, 
+            "create_datetime": "2010-10-20 15:47:46", 
+            "is_void": false, 
+            "order": 604, 
+            "amount": "499.99", 
+            "credit_card": 601, 
+            "method": "C"
+        }
+    },
+     {
+        "pk": 1, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "In Progress"
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "coupon.coupontype", 
+        "fields": {
+            "coupon_type_name": "Paid"
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City 1", 
+            "location_state_province": "AL", 
+            "location_exchange": "111", 
+            "business": 604, 
+            "location_area_code": "111", 
+            "location_description": "Across from 1", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "11111", 
+            "location_address1": "1 Road", 
+            "location_address2": "Apartment 1", 
+            "location_number": "1111", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 600, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0060", 
+        "location_longitude": "-72.0060"}
+    },
+     {
+        "pk": 601, 
+        "model": "advertiser.location", 
+        "fields": {
+            "location_city": "City2", 
+            "location_state_province": "AL", 
+            "location_exchange": "111", 
+            "business": 604, 
+            "location_area_code": "112", 
+            "location_description": "Across from 2", 
+            "location_create_datetime": "2010-05-12 16:12:40", 
+            "location_zip_postal": "11112", 
+            "location_address1": "2 Road", 
+            "location_address2": "Apartment 2", 
+            "location_number": "1112", 
+            "location_url": ""
+        }
+    },
+    {
+        "pk": 601, 
+        "model": "advertiser.locationcoordinate", 
+        "fields": {"location_latitude": "0.0061", 
+        "location_longitude": "-72.0061"}
+    },
+    {
+        "pk": 2, 
+        "model": "consumer.salesrep", 
+        "fields": {
+            "consumer": 600, 
+            "sites": [
+                1
+            ], 
+            "extension": "500", 
+            "title": "Customer Success Manager"
+        }
+    }
+
+]

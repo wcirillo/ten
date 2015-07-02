@@ -1,0 +1,46 @@
+{% extends "frames/web/leftCol.html" %}
+
+{% block title %}{% if contest_is_running %}Sign up for {{ current_site.name }} Coupons. Qualify to Win $10,000!{% else %}{{ current_site.name }} Coupons and Deals That Save You Money Weekly | {{ current_site.domain }}{% endif %}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{% if market_coverage %}{% if county_list %}Map of {{ current_site.default_state_province.name }} {{ municipality_division|title }} within the {{ current_site.name }} consisting of {{ county_list }} {{ municipality_division }}.{% endif %}{% else %}Map of {{ current_site.name }} region{% endif %}"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Add Email Flyers</span>
+{% endblock %}
+
+{% block full_content %}
+
+    <h3>Send your coupon in weekly Email Flyers</h3>
+
+    <p>
+        Consumers have requested {{ current_site.name }} coupons by email.
+        Distribute your coupon for <strong class="highlight">just pennies per inbox</strong>.
+    </p>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% include "include/frm/frm_add_flyer_by_map.html" %}
+
+{% endblock %}
+
+{% block base_content %}
+
+    <div id="scrollfollow_container">
+
+        <div id="scrollmap" class="boxBorderTight">
+
+            {% include "include/dsp/dsp_map_location_xlarge.html" %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="map_counties_block" style="height: 0; overflow: hidden;"><textarea id="map_counties" style="scrolling: no; height: 0;">{{ market_coverage }}</textarea></div>
+
+{% endblock %}

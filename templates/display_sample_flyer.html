@@ -1,0 +1,21 @@
+{% extends "frames/web/sidenav.html" %}
+{% block title %}{{ current_site.domain }} - Sample Flyer{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/sample-flyer/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Sample Email Flyer</span>
+{% endblock %}
+
+{% block links %}
+    {% include "include/navigation/nav1.html" %}
+{% endblock %}
+
+{% block base_content %}
+    {% block display_sample_flyer %}
+        {% block display_sample_flyer_content %}            
+            {% include "include/dsp/dsp_sample_flyer.html" %}
+        {% endblock %}
+    {% endblock %}
+{% endblock %}

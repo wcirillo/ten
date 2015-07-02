@@ -1,0 +1,37 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p style="margin-top: 0;">
+    Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},<br/>
+</p>
+
+<p>
+    <a href='{{ base_url }}/{{site.directory_name}}/create-coupon/'>Rerun this coupon</a> 
+    or <a href='{{ base_url }}/{{site.directory_name}}/create-coupon/preview/'>create a new coupon</a> today..
+</p>
+
+<p>
+    Thanks to heavy advertising from {% if market_medium_list %}<strong>local</strong> {{ market_medium_list }}{% else %}our <strong>
+    local</strong> media partners{% endif %}, the number of smart shoppers <strong>looking for <i>your</i> coupon</strong> on {{ site.domain }}
+    is growing every day.
+</p>
+
+<p>
+<strong>This is how the coupon looked last time. It can say (almost) anything.</strong>
+</p>
+
+{% include "include/dsp/dsp_coupon_in_email.html" %}
+
+<p>
+    Put <strong>{{ business.business_name }}</strong> back on {{ site.domain }} and you can make <strong>unlimited changes</strong>. Change a <strong>single word</strong> or the <strong>entire offer</strong> -- instantly, as many times as you want, for <strong>one low price</strong>.    
+</p>
+
+<p>
+    Please let me know if you have any questions, I'll be here if you need me!
+</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+{% include "email_gateway/generic_email_unsubscribe.html" %}
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - Mobile Coupons{% endblock %}
+
+{% block top_content %}{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Mobile Coupons</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_subscriber_info.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="box1 largeForm">
+
+        {% include "include/dsp/dsp_subscriber_registration.html" %}
+        {% include "include/frm/frm_subscriber_registration.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

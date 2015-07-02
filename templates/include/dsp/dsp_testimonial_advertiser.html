@@ -1,0 +1,93 @@
+<div class="testimonial">
+
+    <div id="testimonial1">
+
+        "Someone just came in with a coupon from your website!"
+        - Danielle N.            
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial2" style="display: none; padding-top: 20px;">
+
+        "Thank you for the coupons!
+        I am going to utilize the roses today and deliver to a friend of mine.
+        The coupon makes the item affordable for me."
+        - Sue C.
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial3" style="display: none; padding-top: 20px;">
+
+        "We saved $75 in delivery charges from our local lumber yard...
+        thanks to a coupon we just got from you.
+        Thanks!"
+        - Joe R.
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial4" style="display: none; padding-top: 20px;">
+
+        "ValPak's system wasn't right for us.
+        Groupon was way over our budget...
+        and with you guys, we can really change the coupon offer at anytime?
+        For FREE?
+        That's AMAZING!"
+        - Suzie P.
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial5" style="display:none">
+
+        "Sorry.
+        We need to cancel our coupon.
+        The response was TOO good."
+        - Julie J.
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial6" style="display: none; padding-top: 20px;">
+
+        "Our $5.99 pizza has been our best offer.
+        I can see the program is growing and the future looks bright."
+        - Shahid
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="testimonial7" style="display:none">
+
+        "More and more people are showing up to my business, keep up the good work."
+        - Ralph
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+
+    function fadeEngine(x) {
+
+        var total_divs=7; //set your own number of divs
+
+        var y=x;
+
+        if(x==total_divs) y=1; else y++;
+
+        $("#testimonial"+x).css("display","none");
+
+        $("#testimonial"+y).fadeIn("slow");
+
+        setTimeout('fadeEngine('+y+')',8000);
+
+    }
+
+    fadeEngine(0); //initialisation of the script
+
+</script>

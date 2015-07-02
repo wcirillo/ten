@@ -1,0 +1,227 @@
+<form name="frm_search_coupons" action="{% url all-coupons %}" method="post">{% csrf_token %}
+
+    {% if not is_home %}
+
+        {% if search_coupons_form.cleaned_data.cat != '' or search_coupons_form.q.value != None and search_coupons_form.q.value != '' %}
+
+                {% if search_coupons_form.cleaned_data.cat != '' and search_coupons_form.q.value != '' %}
+
+                    <!--Double Search:-->
+
+                    {% if search_coupons_form.category_not_found and search_coupons_form.query_string_not_found %}
+
+                        <!--No search results for this category and query-->
+
+                        <div class="small message">
+
+                            Get better results for "<strong>{{ search_coupons_form.q.value }}</strong>" in 
+
+                            {% for choice in search_coupons_form.cat.field.choices %}
+                                {% if choice.0 == search_coupons_form.cat.value|add:"0" %}
+                                    <strong>{{ choice.1 }}</strong>.
+                                {% endif %}
+                            {% endfor %}
+
+                            Ask local businesses to publish their offers.
+
+                            <div class="right"><a class="nodec closeMessage" href="#">X</a></div>
+
+                            <div class="clear"></div>
+                        </div>
+
+                    {% endif %}
+
+                {% else %}
+
+                    {% if search_coupons_form.cleaned_data.cat != '' %}
+
+                        <!--Category Search:-->
+
+                        {% if search_coupons_form.category_not_found %}
+
+                            <!--No search results for this category-->
+
+                            <div class="small message">
+
+                                Get better results for
+
+                                {% for choice in search_coupons_form.cat.field.choices %}
+                                    {% if choice.0 == search_coupons_form.cat.value|add:"0" %}
+                                        <strong>{{ choice.1 }}</strong>.
+                                    {% endif %}
+                                {% endfor %}
+
+                                Ask local businesses to publish their offers.
+
+                                <div class="right"><a class="nodec closeMessage" href="#">X</a></div>
+
+                                <div class="clear"></div>
+                            </div>
+
+                        {% endif %}
+
+                    {% else %}
+
+                        {% if search_coupons_form.q.value != '' %}
+
+                            <!--Query Search:-->
+
+                            {% if search_coupons_form.query_string_not_found %}
+
+                                <!--No search results for this query-->
+
+                                <div class="small message">
+
+                                    Get better results for <strong>{{ search_coupons_form.q.value }}</strong>.
+
+                                    Ask local businesses to publish their offers.
+
+                                    <div class="right"><a class="nodec closeMessage" href="#">X</a></div>
+
+                                    <div class="clear"></div>
+                                </div>
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endif %}
+
+        {% endif %}
+
+    {% endif %}
+
+    <div class="toolbar">
+
+        <div class="sprite dropdownOuter left">
+
+            <label for="id_category" class="hidden">Category</label>
+            {{ search_coupons_form.cat }}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="sprite searchtextOuter">
+
+            <label for="id_q" class="hidden">Search</label>
+            {{ search_coupons_form.q }}
+
+            <div class="search_loader_container"></div>
+
+            <div class="clear"></div>
+        </div>
+        <input type="hidden" id="process_search_btn" name="process_search_btn" value="1"/>
+        <input class="button searchBtn left" id="submit_frm_search_coupons" type="submit" name="submit_frm_search_coupons" tabindex="3" value="Search" />
+
+        <div class="clear"></div>
+    </div>
+
+    {% if not is_home %}
+
+        <div class="searchMessage">
+
+            {{ search_coupons_form.cat.errors }}
+            {{ search_coupons_form.q.errors }}
+
+            {% if suggestion %}
+
+                <p class="smallmargin"><span class="highlight">Did you mean: </span><strong><em><a href="{% url all-coupons %}?q={{ suggestion }}" alt="{{ suggestion }}">{{ suggestion }}</a></em></strong></p>
+
+            {% endif %}
+
+            {% if search_coupons_form.cleaned_data.cat != '' or search_coupons_form.q.value != None and search_coupons_form.q.value != '' %}
+
+                {% if search_coupons_form.cleaned_data.cat != '' and search_coupons_form.q.value != '' %}
+
+                    {% if search_coupons_form.cleaned_data.cat != '' and search_coupons_form.q.value == None %}
+
+                        {% if search_coupons_form.category_not_found %}
+
+                            <!--No search results for this category-->
+
+                            <p class="small nomargin">
+                                <em>
+                                    No results found for
+                                    {% for choice in search_coupons_form.cat.field.choices %}
+                                        {% if choice.0 == search_coupons_form.cat.value|add:"0" %}
+                                            <strong>{{ choice.1 }}</strong>.
+                                        {% endif %}
+                                    {% endfor %}
+                                    Displaying all coupons.
+                                </em>
+                            </p>
+
+                        {% endif %}
+
+                    {% else %}
+
+                        <!--Double Search:-->
+    
+                        {% if search_coupons_form.query_string_not_found %}
+    
+                            <p class="small nomargin">
+                                <em>
+    
+                                    {% for choice in search_coupons_form.cat.field.choices %}
+                                        {% if choice.0 == search_coupons_form.cat.value|add:"0" %}
+
+                                            {% if search_coupons_form.category_not_found %}
+
+                                                No results found for <strong>{{ search_coupons_form.q.value }}</strong> in <strong>{{ choice.1 }}</strong>.
+                                                Displaying all coupons.
+
+                                            {% else %}
+
+                                                No results found for <strong>{{ search_coupons_form.q.value }}</strong>.
+                                                Coupons matching only <strong>{{ choice.1 }}</strong> listed first.
+
+                                            {% endif %}
+
+
+                                        {% endif %}
+                                    {% endfor %}
+    
+                                </em>
+                            </p>
+    
+                        {% endif %}
+
+                    {% endif %}
+
+                {% else %}
+
+                    {% if search_coupons_form.q.value != '' %}
+
+                        <!--Query Search:-->
+
+                        {% if search_coupons_form.query_string_not_found %}
+
+                            <!--No search results for this query-->
+
+                            <p class="small nomargin">
+                                <em>
+                                    No results found for <strong>{{ search_coupons_form.q.value }}</strong>.
+                                    Displaying all coupons.
+                                </em>
+                            </p>
+
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% else %}
+
+                <p class="small nomargin"><em>Displaying all coupons.</em></p>
+
+            {% endif %}
+
+            <div class="clear"></div>
+        </div>
+
+    {% endif %}
+
+</form>

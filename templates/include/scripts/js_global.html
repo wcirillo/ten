@@ -1,0 +1,128 @@
+// modal window with div content
+function modaltrigger(divId, modalSize){
+    $('#modalcontent').html($(divId).html());
+    $('#modaldiv').modal({
+        opacity:70,
+        onOpen: animation.open,
+        containerId: modalSize,
+        onClose: animation.close
+    });
+}
+function clicktrigger(){
+    $('a.modaltrigger').click(function(e){
+        e.preventDefault();
+        var divId = "#" + $(this).attr('name');
+        modaltrigger(divId, "modal");
+    });
+}
+clicktrigger();
+
+function clicktriggerSm(){
+    $('a.modaltriggerSm').click(function(e){
+        e.preventDefault();
+        var divId = "#" + $(this).attr('name');
+        modaltrigger(divId, "modalSm");
+    });
+}
+clicktriggerSm();
+
+// ajax modal window
+$('a.ajaxtrigger').click(function(e){
+    e.preventDefault();
+    var url = $(this).attr('href');
+    $('#modalcontent').load(url);
+    $('#modaldiv').modal({
+        opacity:70,
+        onOpen: animation.open,
+        containerId: "modal",
+        onClose: animation.close
+    });
+});
+
+// modal animation
+var animation = {
+    open: function (dialog) {
+        dialog.overlay.fadeIn(300, function () {
+            dialog.data.hide();
+            dialog.container.fadeIn(200, function () {
+                dialog.data.fadeIn(200);
+            });
+        });
+    },
+    close: function (dialog) {
+        dialog.data.fadeOut(100, function () {
+            dialog.container.fadeOut(100, function () {
+                dialog.overlay.fadeOut(300, function () {
+                    $.modal.close();
+                  });
+            });
+        });
+    }
+}
+
+// infield labels
+$("label.infield").inFieldLabels();
+
+
+// spin
+var opts = {
+  lines: 10, // The number of lines to draw
+  length: 4, // The length of each line
+  width: 2, // The line thickness
+  radius: 4, // The radius of the inner circle
+  color: '#000', // #rgb or #rrggbb
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false // Whether to render a shadow
+};
+
+var optslarge = {
+  lines: 15, // The number of lines to draw
+  length: 8, // The length of each line
+  width: 3, // The line thickness
+  radius: 8, // The radius of the inner circle
+  color: '#fff', // #rgb or #rrggbb
+  speed: 1, // Rounds per second
+  trail: 60, // Afterglow percentage
+  shadow: false // Whether to render a shadow
+};
+
+$.fn.spin = function(opts) {
+  this.each(function() {
+    var $this = $(this),
+        data = $this.data();
+
+    if (data.spinner) {
+      data.spinner.stop();
+      delete data.spinner;
+    }
+    if (opts !== false) {
+      data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+    }
+  });
+  return this;
+};
+
+//Disable all submit buttons to avoid double click race conditions.
+
+function disable_element(element){
+    element.attr('disabled', 'disabled');
+    element.addClass("disabled");
+}
+
+$("form").submit(function(e){
+    var submit_name = e.target.name;
+    var submit_value = e.target.value;
+    var form = e.target;
+
+    e.preventDefault();
+    while (form.tagName != "FORM" && form.nodeName != "FORM")
+    {
+        if (form.parentNode == null || form.parentNode == undefined)
+        {break;}
+        form = form.parentNode;
+    }
+    $(form).append("<input type=\"hidden\" name=\"" + "submit_" + submit_name + "\" value=\"" + "1" + "\">");
+    this.submit();
+    disable_element($('input[type=submit]', this));
+});

@@ -1,0 +1,75 @@
+[
+    {
+        "pk": 112, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "advertiser", 
+            "first_name": "Test", 
+            "last_name": "Client", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2006-12-17 07:03:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161", 
+            "email": "advertiser@ten.com", 
+            "date_joined": "2006-12-17 07:03:31"
+        }
+    },
+    {
+        "pk": 112, 
+        "model": "consumer.consumer", 
+        "fields": {
+            "consumer_modified_datetime": "2010-04-22 11:29:49", 
+            "geolocation_type": [
+                "geolocation", 
+                "uszip"
+            ],
+            "consumer_zip_postal": "10990", 
+            "email_hash": null, 
+            "site": 1, 
+            "subscriber": null, 
+            "is_emailable": false, 
+            "is_email_verified": false, 
+            "groups": [], 
+            "user_permissions": [], 
+            "consumer_create_datetime": "2010-04-22 11:29:49", 
+            "email_subscription": []
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "advertiser.advertiser", 
+        "fields": {
+            "advertiser_address1": "", 
+            "advertiser_city": "", 
+            "advertiser_address2": "", 
+            "approval_count": 0, 
+            "advertiser_create_datetime": "2010-09-15 12:57:00", 
+            "advertiser_zip_postal": "", 
+            "advertiser_state_province": "", 
+            "groups": [], 
+            "user_permissions": [], 
+            "email_subscription": [], 
+            "advertiser_modified_datetime": "2010-09-15 12:57:00"
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "advertiser.business", 
+        "fields": {
+            "categories": [], 
+            "advertiser": 112, 
+            "slogan": "", 
+            "business_modified_datetime": "2010-05-19 15:50:51", 
+            "business_create_datetime": "2010-05-19 15:50:51", 
+            "short_business_name": null, 
+            "is_active": true, 
+            "web_url": "http://www.google.com/", 
+            "business_name": "Snap Google Snap", 
+            "web_snap_path": null, 
+            "business_zip_postal": null
+        }
+    }
+]

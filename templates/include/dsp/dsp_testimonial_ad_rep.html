@@ -1,0 +1,45 @@
+<span id="testimonial1">
+
+    "I wanted a business that offered both time flexibility and the opportunity to set my own goals." <span style="white-space:nowrap;"> - Michele M.</span>
+
+</span>
+
+<span id="testimonial2" style="display: none;">
+
+    "I have taken control of my own career and life..." <span style="white-space:nowrap;"> - Steven F.</span>
+
+</span>
+
+<span id="testimonial3" style="display: none;">
+
+    "The recipe for success is the right product or service at the right time with the right people." <span style="white-space:nowrap;"> - Donovan N.</span>
+
+</span>
+
+<span id="testimonial4" style="display: none;">
+
+    "10LocalCoupons.com allows me to work where and when I want while keeping priorities with family &amp; friends." <span style="white-space:nowrap;"> - Dan G.</span>
+
+</span>
+
+<script type="text/javascript">
+
+    function fadeEngine(x) {
+
+        var total_divs=4; //set your own number of divs
+
+        var y=x;
+
+        if(x==total_divs) y=1; else y++;
+
+        $("#testimonial"+x).css("display","none");
+
+        $("#testimonial"+y).fadeIn("slow");
+
+        setTimeout('fadeEngine('+y+')',8000);
+
+    }
+
+    fadeEngine(0); //initialisation of the script
+
+</script>

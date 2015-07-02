@@ -1,0 +1,217 @@
+[
+    {
+        "pk": 1, 
+        "model": "ecommerce.product", 
+        "fields": {
+            "base_units": "1", 
+            "is_active": true, 
+            "name": "Flyer Placement", 
+            "base_days": 7, 
+            "base_rate": "0", 
+            "content_type": [
+                "coupon", 
+                "slot"
+            ]
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "ecommerce.product", 
+        "fields": {
+            "base_units": "1", 
+            "is_active": true, 
+            "name": "Monthly Coupon Display", 
+            "base_days": 30, 
+            "base_rate": "199.00",
+            "content_type": [
+                "coupon", 
+                "slot"
+            ]
+        }
+    },
+    {
+        "pk": 3,
+        "model": "ecommerce.product",
+        "fields": {
+            "base_units": "1",
+            "is_active": true,
+            "name": "Annual Coupon Display",
+            "base_days": 365,
+            "base_rate": "499.00",
+            "content_type": [
+                "coupon",
+                "slot"
+            ]
+        }
+    },
+    {
+        "pk": 10,
+        "model": "ecommerce.promoter",
+        "fields": {
+            "is_paid_traffic": false,
+            "is_approved": true,
+            "end_date": null,
+            "create_datetime": "2011-07-26 14:45:08",
+            "is_active": true,
+            "object_id": null,
+            "promoter_cut_percent": "62.50",
+            "content_type": null,
+            "guid": "297f3c274b70fbdccc0dbf4a478fc52fa4ce8abe",
+            "start_date": "2011-07-26",
+            "name": "Firestorm Ad Reps"
+        }
+    },
+    {
+        "pk": 99,
+        "model": "ecommerce.promotion",
+        "fields": {
+            "product": [
+                1, 2, 3
+            ],
+            "name": "Ad Rep No Discount",
+            "description": "Thanks, from your Advertising Representative!",
+            "end_date": "2099-12-31",
+            "promo_type": "1",
+            "create_datetime": "2011-07-26 14:48:32",
+            "is_active": true,
+            "promoter": 10,
+            "start_date": "2011-07-26",
+            "promo_amount": 0,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 100,
+        "model": "ecommerce.promotion",
+        "fields": {
+            "product": [
+                3
+            ],
+            "name": "Annual Coupon Posting @ $475",
+            "description": "Annual Coupon Posting @ $475",
+            "end_date": "2099-12-31",
+            "promo_type": "3",
+            "create_datetime": "2011-07-26 14:48:32",
+            "is_active": true,
+            "promoter": 10,
+            "start_date": "2011-07-26",
+            "promo_amount": 475,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "ecommerce.promotion",
+        "fields": {
+            "product": [
+                3
+            ],
+            "name": "Annual Coupon Posting @ $450",
+            "description": "Annual Coupon Posting @ $450",
+            "end_date": "2099-12-31",
+            "promo_type": "3",
+            "create_datetime": "2011-07-26 14:50:30",
+            "is_active": true,
+            "promoter": 10,
+            "start_date": "2011-07-26",
+            "promo_amount": 450,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "ecommerce.promotion",
+        "fields": {
+            "product": [
+                3
+            ],
+            "name": "Annual Coupon Posting @ $425",
+            "description": "Annual Coupon Posting @ $425",
+            "end_date": "2099-12-31",
+            "promo_type": "3",
+            "create_datetime": "2011-07-26 14:51:39",
+            "is_active": true,
+            "promoter": 10,
+            "start_date": "2011-07-26",
+            "promo_amount": 425,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "ecommerce.promotion",
+        "fields": {
+            "product": [
+                3
+            ],
+            "name": "Annual Coupon Posting @ $399",
+            "description": "Annual Coupon Posting @ $399",
+            "end_date": "2099-12-31",
+            "promo_type": "3",
+            "create_datetime": "2011-07-26 14:52:39",
+            "is_active": true,
+            "promoter": 10,
+            "start_date": "2011-07-26",
+            "promo_amount": 399,
+            "monthly_usages_allowed": 0,
+            "code_method": "one",
+            "use_method": "1"
+        }
+    },
+    {
+        "pk": 98,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 103,
+            "code": "ONEYEAR399"
+        }
+    },
+    {
+        "pk": 99,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 99,
+            "code": "zero"
+        }
+    },
+    {
+        "pk": 100,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 100,
+            "code": "A475"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 101,
+            "code": "A450"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 102,
+            "code": "A425"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "ecommerce.promotioncode",
+        "fields": {
+            "promotion": 103,
+            "code": "A399"
+        }
+    }
+]

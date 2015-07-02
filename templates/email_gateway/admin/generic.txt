@@ -1,0 +1,5 @@
+{% if admin_data %}
+{%for data in admin_data %}
+{{data}}
+{% endfor %}
+{% endif %}

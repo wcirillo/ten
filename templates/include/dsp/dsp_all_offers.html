@@ -1,0 +1,16 @@
+<div class="all_offers">
+
+    {% if msg == '1'%}
+        <ul class="errorlist">
+            <li>Oops! Sorry, the coupon you are looking for is not available. Check out the current coupons in the {{ current_site.region }} below.<br/><br/></li>
+        </ul>
+    {% endif %}
+
+    {% for coupon in all_coupons %}
+
+        {% include "include/dsp/dsp_single_offer.html" %}
+
+    {% endfor %}
+
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,39 @@
+{% if is_to_ad_rep %}An email was sent on your behalf.
+
+It shows {% if coupon.offer %}an example of a finished coupon.
+{% else %}how the coupon might look if it were published.
+{% endif %}
+
+Contact {{ business.business_name }}.
+Offer your help completing the purchase.
+{% if business.advertiser.advertiser_name %}CONTACT: {{ business.advertiser.advertiser_name }}
+{% endif %}EMAIL ADDRESS: {{ business.advertiser.email }}
+
+Good Luck!
+
+{{ sales_rep_signature_name }}
+{% if sales_rep_signature_title %}{{ sales_rep_signature_title }}
+{% endif %}{{ sales_rep_signature_email }}
+{% if sales_rep_signature_phone %}{{ sales_rep_signature_phone }}
+{% endif %}
+
+-----------------------------------------------------------
+{% endif %}{{ business.business_name }}
+{% now "M jS, Y" %}
+
+{% if business.advertiser.advertiser_name %}Hi {{ business.advertiser.advertiser_name }},
+{% else %}Hi,{% endif %}
+
+View the HTML version of this email.
+
+Follow this link to publish your first coupon.
+{% if firestorm_id and schedule_item == 130 %}{{ base_url }}{% url sale-redirect-with-promo payload promo_code %}
+{% else %}{{ dynamic_url }}
+{% endif %}
+
+Contact me for any help you may need.
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+{% include "email_gateway/generic_corporate_address.txt" %}
+
+{% include "email_gateway/generic_email_unsubscribe.txt" %}

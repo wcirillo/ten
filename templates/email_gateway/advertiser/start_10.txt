@@ -1,0 +1,44 @@
+{% extends "frames/email/non-glossy.txt" %}
+
+{% block email_content %}
+Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},
+
+{% if business.order_items.count == 0 %}
+Create a coupon today and pay just $10 for the first month!
+{% else %}
+One of the first to put a coupon on our website was:
+{{ business.business_name }}
+
+Thanks! We're getting more popular every day.
+{% if site.consumers.count > 500 %}There are now {{ site.consumers.count }} registered consumers.{% endif %}
+
+Try us again and pay just $10 for the next 30 days!
+{% endif %}
+
+Simply use Tracking Code: {{ promo_code }} at checkout.
+
+Display your offer to
+{% if business.order_items.count == 0 and site.consumers.count > 500 %}
+- {{ site.consumers.count }} registered consumers
+{% else %}
+- The entire {{ current_site.region }}!
+{% endif %}
+
+Make unlimited changes anytime.
+Contact me and we'll get your coupon done in minutes.
+
+Get started for just ten bucks.
+Use this link: {{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}
+
+
+{{ signature_name }}
+{{ signature_title }}
+{{ signature_email }}
+{{ signature_phone }}
+
+P.S. Use {{ promo_code }} now! Offer good only today!
+
+
+If you'd prefer not to receive notice of future advertiser opportunities form {{ site.domain }}, please use this the following link to instantly unsubscribe from these messages.
+{{base_url}}{% url opt_out payload=payload %}
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "frames/web/columns.html" %}
+{% load zinnia_tags tagging_tags i18n %}
+{% tags_for_model zinnia.entry as tag_entry %}
+{% block title %}{% endblock %}
+
+{% block meta %}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="language" content="{{ LANGUAGE_CODE }}" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="home" href="{% url zinnia_entry_archive_index %}" />
+    {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="EditURI" type="application/rsd+xml" href="{% url zinnia_rsd %}" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url zinnia_wlwmanifest %}" />
+    <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url zinnia_entry_latest_feed %}" />
+    {% block link %}{% endblock %}
+    {% block script %}{% endblock %}
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    {% block breadcrumbs %}{% endblock %}
+{% endblock %}
+
+{% block base_content %}
+
+    <div>
+        <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}">
+            {% trans "Sitemap" %}
+        </a>
+        |
+        <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}">
+            {% trans "RSS Feed" %}
+        </a>
+    </div>
+
+    <h2>
+        <a class="dark nodec" href="{% url zinnia_entry_archive_index %}" title="10LocalCoupons.com Blog" rel="home">10LocalCoupons.com Blog</a>
+    </h2>
+
+    <div class="hr"></div>
+
+    <div id="content">
+        {% block content %}
+            <h3>The content block need to be overrided!</h3>
+        {% endblock %}
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    {% block sidebar %}
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,63 @@
+<h2>Help / Frequently Asked Questions</h2>
+
+<h4 class="highlight">What is {{ current_site.domain }}? What am I signing up for?</h4>
+<p id="answer1">Find coupons here from the {{ current_site.region }}. Sign Up for 10 {{ current_site.name }} coupons in the weekly <a href="{% url sample-flyer %}">Email Flyer</a>.
+</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">You're not going to SPAM me, are you?</h4>
+<p id="answer2">No. Never! We hate SPAM too! And it's bad for business. We respect your privacy and won't send you anything you don't ask for! Sometimes an email program or internet provider (ISP) will filter our messages unless you <a class="faqQuestion" name="9" href="#">make it clear</a> that they are NOT SPAM. If you ever do need a break, it's easy to <a href="{% url unsubscribe %}">stop receiving our email</a>. 
+</p> 
+
+<div class="hr"></div>
+
+<h4 class="highlight">Do I need a password to get coupons?</h4>
+<p id="answer3">No. Get coupons on {{ current_site.domain }} anytime.</p> 
+
+<div class="hr"></div>
+
+<h4 class="highlight">Coupons on my cell phone? Explain!</h4>
+<p id="answer4">Many {{ current_site.name }} businesses encourage customers to redeem "text message" coupons. Look for a phone icon on coupons available as text. Simply click the phone, supply your number and cellular provider. The coupon is sent to the phone as a text message. Pretty cool, huh? No trees are cut down. You're already carrying the phone! It's easy for local businesses. Easier for you! 
+</p> 
+
+<div class="hr"></div>
+
+{% if contest_is_running %}
+
+<h4 class="highlight">Can I enter the $10,000 Sweepstakes without registering a text-capable cell phone?</h4>
+<p id="answer5">Sure! Check out the <a href='{% url contest-rules %}'>Sweepstakes rules</a>.</p> 
+
+<div class="hr"></div>
+
+<h4 class="highlight">Can I verify my cell phone without receiving coupons automatically?</h4> 
+<p id="answer6">Absolutely! Just reply "No" to the confirmation message. We'll use the response to verify the number. Then (only if you choose,) request any coupon you'd like to receive as a text message. We'll only send what you ask for!</p> 
+
+<div class="hr"></div>
+
+{% endif %}
+<h4 class="highlight">I want to make a coupon for my business. Is there help for Advertisers?</h4>
+<p id="answer7">Get answers to the most <a href="{% url how-it-works %}">frequently asked questions</a>. You can always contact <a href="{% url contact-us %}">customer service</a>.</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">How do I stop getting email or text messages?</h4>
+<p id="answer8">You can cancel email instantly. Use the "unsubscribe" link found on our email messages or any page of the website. Text "stop" to 71010 and we'll stop sending text messages. We're always working to improve. Change your mind? We'll welcome you back with open arms.</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">I signed up, why am I not receiving an Email Flyer?</h4>
+<p id="answer9">The Email Flyer is sent Thursdays. Sometimes, email messages get filtered by the email program or internet service provider (ISP). Filtering is meant to discourage SPAM and unwanted messages. Often messages you want get blocked. Sometimes important email is mistakenly sent to folders called “Spam” or “Junk.” We can only guess why certain messages are blocked. Most systems allow you to indicate that a message is NOT SPAM or NOT JUNK. Add Coupons@10coupons.com as a contact to prevent missing any coupons.</p>
+
+<div class="hr"></div>
+
+<h4 class="highlight">Do I see coupons for national online businesses?</h4>
+<p id="answer10">Yes. Sometimes valuable national or online coupons are available. However, we'll always provide as many local coupons as possible.</p>
+
+<div class="hr"></div>
+ 
+<h4 class="highlight">How do I change my email address or cell phone number if it is incorrect or needs updating?</h4>
+<p id="answer11">Simply email <a href="mailto:Danielle@10Coupons.com">Danielle@10Coupons.com</a> with your old and new address and it will be changed within 24 hours.</p>
+
+<div class="hr"></div>
+

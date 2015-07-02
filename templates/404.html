@@ -1,0 +1,12 @@
+{% extends "frames/web/full.html" %}
+{% with "http" as request_protocol %}{% endwith %}
+{% with "http://10static.com/media/" as safe_static_url %}{% endwith %}
+{% block title %}Page not found{% endblock %}
+
+{% block base_content %}
+    <div class="padding center">
+        <h1>Page not found</h1>
+        <p>Sorry, but the requested page could not be found. <em>(404)</em></p>
+    </div>
+{% endblock %}
+

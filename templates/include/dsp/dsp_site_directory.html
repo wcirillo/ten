@@ -1,0 +1,26 @@
+<h3>We're adding new markets every month!</h3>
+
+<p><em>Check back soon if you don't see your area listed.</em></p>
+
+{% if neighboring_markets %}<h2>Websites near you:</h2>{% endif %}
+
+<div>
+    <p>{% include "include/dsp/dsp_map_location_xlarge.html" %}</p>
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div id="state_list">
+{% for state in state_site_list %}
+        <div class="markets"> 
+        <h5><a class="dark" href='/map/{{ state.state_url }}/'>{{ state.state }}</a></h5>
+        <p>
+        {% for domain_item in state.market %}      
+                <a class="small nodec" href="/{{ domain_item.directory_name }}/">{{ domain_item.domain }}</a><br/>           
+        {% endfor %}
+        </p>
+        </div>
+    
+{% endfor %}
+<div class="clear"></div>
+</div>

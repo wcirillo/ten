@@ -1,0 +1,88 @@
+{% load static %}
+{% get_static_prefix as STATIC_URL %}
+
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>
+      10Coupons Email Flyer
+    </title>
+  </head>
+  <body bgcolor="#c5e4f0" style="margin: 0; padding: 0;">
+      <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" bgcolor="#c5e4f0">
+        <tr>
+            <td align="right" bgcolor="#111111" style="border-bottom: 1px #fff solid;"><img src="{{ STATIC_URL }}images/trans.gif" height="5" width="10" border="0" style="display: block;"/></td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" style="padding-top: 10px;">
+
+                <table cellpadding="0" cellspacing="0" border="0" align="center" width="620" style="margin-bottom: 0;">
+                    <tr>
+                        <td width="10" bgcolor="#c5e4f0"><img src="{{ STATIC_URL }}images/email/email_header_left.gif" height="70" width="10" border="0" style="display: block;"/></td>
+                        <td bgcolor="#ffffff" valign="top" width="600" background="{{ STATIC_URL }}images/email/email_header.gif" style="padding-top: 8px;">
+                            <table cellpadding="0" cellspacing="0" height="55" width="600" align="center" border="0">
+                                <tr>
+                                    <td align="left" valign="top" height="55" width="330" bgcolor="#58b6da" background="{{ STATIC_URL }}images/email/email_header_center.gif" style="line-height: 52px;">&nbsp; <a href="http://{{ site.domain }}" style="color: #fff; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 18px; text-decoration: none;">{{ site.domain }}</a></td>
+                                    <td align="right" valign="top" style="padding: 12px 20px 0 0;"><span style="color: #222; font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 12px; font-style: italic;">{% now "l, F j" %}</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right" height="7"><img src="{{ STATIC_URL }}images/trans.gif" height="7" width="1" border="0" style="display: block;"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="10" bgcolor="#c5e4f0"><img src="{{ STATIC_URL }}images/trans.gif" height="5" width="10" border="0" style="display: block;"/></td>
+                    </tr>
+                </table>
+
+                <table cellpadding="10" cellspacing="0" border="0" align="center" width="600" style="margin-bottom: 0;">
+                    <tr>
+                        <td bgcolor="#ffffff" style="padding-top: 10px;">
+
+                            {% block frame_email %}
+                            {% endblock %}
+
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- footer-->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="background-color: #edf5f9; border-top: 1px #e4eff5 solid;">
+                  <tr>
+                    <td align="center">
+                        <p style="font-size: 11px; line-height: 15px; margin: 10px 0 5px 0;">
+                            {{ site.domain }} Customer Care: (800) 581-3380
+                            {% if ref_num %} &nbsp;|&nbsp; Ref: {{ ref_num }}{% endif %}
+                        </p>
+                        <p style="font-size: 11px; line-height: 15px; margin: 10px 0 5px 0;text-align:center;">
+                            {% include 'email_gateway/generic_corporate_address.html' %}
+                        </p>
+                        <p style="font-size: 11px; line-height: 15px; margin: 0 0 12px 0;">
+                            <a href="mailto:{{ help_email_address }}?Subject=Help with {{ site.domain }}" style="color: #1ab1e8; text-decoration: none;"><span style="color: #1ab1e8;">Help by email</span></a>
+                            &nbsp;|&nbsp;
+                            <a href="{{ base_url }}{% if site.directory_name %}/{{site.directory_name}}{% endif %}/create-coupon/" style="color: #1ab1e8; text-decoration: none;"><span style="color: #1ab1e8;">Advertise with us</span></a>
+                        </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="5" valign="bottom" style="background-color: #edf5f9;"><img src="{{ STATIC_URL }}images/email/email_footer_bottom.gif" height="5" width="600" border="0" style="display: block;"/></td>
+                  </tr>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="font-size: 11px; line-height: 13px; padding: 15px 0 20px 0;" valign="top">
+                Ensure delivery of your coupons.<br/>
+                Add <a href="mailto:{{ from_email }}" style="color: #1ab1e8;"><span style="color: #1ab1e8;">{{ from_email }}</span></a> as a contact in your email program.
+            </td>
+        </tr>
+        {% if show_unsubscribe %}
+        <tr>
+            <td align="center" style="font-size: 11px; line-height: 13px; padding: 0 0 20px 0;" valign="top">
+                {% include 'email_gateway/generic_email_unsubscribe.html' %}
+            </td>
+        </tr>
+        {% endif %}
+    </table>
+  </body>
+</html>

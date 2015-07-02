@@ -1,0 +1,55 @@
+$("#id_business_name").blur(function(){
+    $(".business_name").html($("input[id='id_business_name']").val());
+});
+$("#id_business_name").keyup(function(){
+    $(".business_name").html($("input[id='id_business_name']").val());
+});
+
+$("#id_slogan").blur(function(){
+    $(".slogan").html($("input[id='id_slogan']").val());
+});
+$("#id_slogan").keyup(function(){
+    $(".slogan").html($("input[id='id_slogan']").val());
+});
+
+$("#id_business_description").blur(function(){
+    $(".profile").html($("textarea[id='id_business_description']").val());
+});
+$("#id_business_description").keyup(function(){
+    $(".profile").html($("textarea[id='id_business_description']").val());
+});
+
+
+function bizProfileImages(){
+
+    if ($("#id_show_web_snap").is(":checked")){
+        $("#sampledisplayscreenshot").removeClass("hidden");
+    }else{
+        $("#sampledisplayscreenshot").addClass("hidden");
+    }
+
+    if ($("#id_show_map").is(":checked"))
+       {
+       $("#samplemaps").removeClass("hidden");
+        }
+    else{
+        $("#samplemaps").addClass("hidden");
+    }
+
+}
+
+$("#id_show_web_snap").click(function(){
+    bizProfileImages();
+});
+
+$("#id_show_map").click(function(){
+    bizProfileImages();
+});
+
+bizProfileImages();
+
+if (! $("#id_maps_form_display div").hasClass("image")){
+    $("#id_form_show_map").addClass("hidden");
+    $("#samplemaps").addClass("hidden");
+}
+

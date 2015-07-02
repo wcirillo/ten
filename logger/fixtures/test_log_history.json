@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1, 
+        "model": "logger.loghistory", 
+        "fields": {
+            "execution_date_time": "2011-05-10 14:49:38", 
+            "status": "FAIL", 
+            "logger": "my_task", 
+            "detail_dict": null
+            }
+     }, 
+     {
+        "pk": 2, 
+        "model": "logger.loghistory", 
+        "fields": {
+            "execution_date_time": "2011-05-11 14:51:41", 
+            "status": "SUCCESS", 
+            "logger": "my_task", 
+            "detail_dict": "{'key': 'keyvalue'}"
+            }
+     }, 
+     {
+        "pk": 3, 
+        "model": "logger.loghistory", 
+        "fields": {
+            "execution_date_time": "2011-05-12 14:53:13", 
+            "status": "SUCCESS", 
+            "logger": "another_task", 
+            "detail_dict": "{'key': 'keyvalue'}"
+            }
+      }, 
+      {
+        "pk": 4, 
+        "model": "logger.loghistory", 
+        "fields": {
+            "execution_date_time": "2011-05-13 14:54:29", 
+            "status": "SUCCESS", 
+            "logger": "my_task", 
+            "detail_dict": "{'key': 'keyvalue'}"
+            }
+       }
+]

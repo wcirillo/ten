@@ -1,0 +1,80 @@
+
+
+<div class="coupon"><div class="padding">
+
+    <h1 class="business_name">{% if business.business_name %}{{ business.business_name }}{% endif %}</h1>
+
+    <h2 class="slogan">{% if business.slogan %}{{ business.slogan }}{% endif %}</h2>
+
+    <h3 class="headline">{{ offer.headline }}</h3>
+
+    <h4 class="qualifier">{% if offer.qualifier %}{{ offer.qualifier }}{% endif %}</h4>
+
+    <div class="location">
+        <ul>
+            <li>Available at:</li>
+
+            {% for location in coupon.location %}
+            <li>
+
+                {% if location.location_address1 %}
+                <div class="address1">{{ location.location_address1 }}</div>
+                {% endif %}
+
+                {% if location.location_address2 %}
+                <div class="address2">{{ location.location_address2 }}</div>
+                {% endif %}
+
+                {% if location.location_city or location_state_province or location.location_zip_postal %}
+                <div>
+                    <span class="city">{% if location.location_city %}{{ location.location_city }}{% if location.location_city and location.location_state_province %},{% endif %}{% endif %}</span>
+                    <span class="state">{% if location.location_state_province %}{{ location.location_state_province }}{% endif %}</span>
+                    <span class="zip_postal">{% if location.location_zip_postal %}{{ location.location_zip_postal }}{% endif %}</span>
+                </div>
+                {% endif %}
+
+                {% if location.location_area_code and location.location_exchange and location.location_number %}
+                <div>
+                    <span class="area_code">({{ location.location_area_code }})</span> <span class="exchange">{{ location.location_exchange }}</span>-<span class="number">{{ location.location_number }}</span>
+                </div>
+                {% endif %}
+
+                {% if location.location_url %}
+                <div class="location_url"><span class="url fakelink">{{ location.location_url }}</span></div>
+                {% endif %}
+
+                {% if location.location_description %}
+                <div class="description">{{ location.location_description }}</div>
+                {% endif %}
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p class="restrictions">
+        {% for restriction in default_restrictions %}
+            {{ restriction }}
+        {% endfor %}
+
+        {% if custom_restrictions %}
+            {{ custom_restrictions }}
+        {% endif %}
+
+        {{ ten_coupon_restrictions }}
+        {{ valid_days }}
+    </p>
+
+    <footer class="redemption_window">
+        Valid through <span>{{ coupon.expiration_date }}</span>
+    </footer>
+
+</div></div> <!-- End Coupon -->
+
+<div class="layout couponBottom"></div>
+
+<div id="receipt_iframe" class="hidden">
+    <iframe class="modal_iframe" src="{% url receipt order.id %}" width="100%" height="900" frameborder="0"></iframe>
+</div>
+
+

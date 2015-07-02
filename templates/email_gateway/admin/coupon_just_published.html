@@ -1,0 +1,17 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p style="margin-top: 0;">
+    {{ coupon.offer.business.business_name }} just published another coupon on {{ site }}.
+</p>
+
+<p>
+    Check out all of their coupons:<br/>
+    <a href='{{ base_url }}/{{site.directory_name}}/coupons/{{ coupon.offer.business.slug }}/{{ coupon.offer.business.id }}/'>{{ coupon.offer.headline }}</a>
+</p>
+
+{% include "include/dsp/dsp_coupon_in_email.html" %}
+
+{% endblock %}
+

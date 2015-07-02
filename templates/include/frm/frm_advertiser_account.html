@@ -1,0 +1,339 @@
+{% load currency %}
+
+<div class="grid_16">
+
+    {% if not business_profile_description %}
+        <div class="message">
+            {{ business_name }} is included in the{% if business_category != '' %} {{ business_category|safe }}{% endif %} category. To change the business description or category, click 
+            <a  href="{% url edit-business-profile business_id %}">customize business info</a>
+            <div class="clear"></div>
+        </div>
+    {% endif %}
+
+    <form class="toolbar" name="frm_select_business" method="POST">{% csrf_token %}
+
+        <div class="sprite dropdownOuter left {% if businesses.count == 1 %}hidden{% endif %}">
+            <select name="business_id" id="id_select_business">
+                {% for business in businesses %}
+                    <option value="{{ business.id }}" {% if business_id == business.id %} selected{% endif %}>{{business.business_name}}</option>
+                {% endfor %}
+            </select>
+            <div class="clear"></div>
+        </div>
+
+        <a class="button" href="{% url edit-business-profile business_id %}">Customize Business Info</a>
+        <a class="button" href="{% url coupon-stats %}">View Performance</a>
+        <a class="button" id="btnNewCoupon" href="{% url advertiser-registration %}">Create a New Coupon &raquo;</a>
+
+        <div class="clear"></div>
+    </form>
+
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+{% for slot_item in slot_items_list %}
+
+<div class="{% if slot_item.slot.id != slot_item.slot.parent_slot.id %}hidden{% else %}subheader small{% endif %}">
+
+    <div class="left">
+
+        <em>Your purchase enables display of any <strong>10</strong> coupons without an additional charge</em>
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="slot_rate_locked{{ forloop.counter }}" class="slot_rate right {% if not slot_item.slot.is_autorenew %}hidden{% endif %}">
+        Auto Renew is ON
+        <a class="button smallBtn modaltrigger" name="modal_turn_autorenew_off{{ forloop.counter }}" href="#">Auto Renew Settings</a>
+    </div>
+
+    {% if slot_item.slot.renewal_rate %}
+    <div id="slot_rate_unlocked{{ forloop.counter }}" class="slot_rate right {% if slot_item.slot.is_autorenew %}hidden{% endif %}">
+        Auto Renew is OFF 
+        <a class="button smallBtn modaltrigger" name="modal_turn_autorenew_on{{ forloop.counter }}" href="#">Auto Renew Settings</a>
+    </div>
+    {% endif %}
+
+    {% if slot_item.slot.renewal_rate %}
+    <div id="modal_turn_autorenew_off{{ forloop.counter }}" class="hidden">
+
+        <br/><br/>
+        <br/><br/><br/>
+
+        <p class="center">
+        	<strong>
+        	   Auto Renew is ON.<br/> 
+					{% if slot_item.product_id == 2 %}A Monthly{% endif %}{% if slot_item.product_id == 3 %}An Annual{% endif %} Payment of {{ slot_item.slot.renewal_rate|currency }} is scheduled for {{ slot_item.slot.end_date }}*.
+            </strong>
+            <br/>
+            {% if slot_item.product_id == 3 %}Processing payment for your Annual Publishing Plan will require confirmation via email.{% endif %}
+        </p>
+
+        <script>
+            function turnAutoRenewOff(){
+                $.modal.close();
+                $("#slot_rate_locked{{ forloop.counter }}").addClass("hidden");
+                $("#slot_rate_unlocked{{ forloop.counter }}").removeClass("hidden");
+                $.ajax({
+                    url: "{% url advertiser-account %}",
+                    type: "POST",
+                    data: {ajax_mode:'turn-autorenew-off',
+                           display_id: {{ slot_item.slot.id }}
+                           },
+                    dataType: "json",
+                    timeout: 10000,
+                    success: function(data) {
+                        $(".growl").html(data['msg']);
+                        $(".growl").slideDown().delay(5000).fadeOut("slow");
+                   },
+                    error: function() {
+                    }
+                });
+            }
+        </script>
+
+        <div class="center padding">
+            <a class="button" href="#" onclick="$.modal.close();">Leave Auto Renew On</a>
+            <a class="button" href="#" onclick="turnAutoRenewOff();">Turn Auto Renew Off</a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="modal_turn_autorenew_on{{ forloop.counter }}" class="hidden">
+
+        <br/><br/>
+        <br/><br/><br/>
+
+        <p class="center">
+            <strong>
+                Auto Renew the Next {% if slot_item.product_id == 2 %}Monthly{% endif %}{% if slot_item.product_id == 3 %}Annual{% endif %} Payment of <strong>{{ slot_item.slot.renewal_rate|currency }}</strong> for {{ slot_item.slot.end_date }}*.
+            <br/>
+            </strong>
+            {% if slot_item.product_id == 3 %}Processing payment for your Annual Publishing Plan will require confirmation via email.{% endif %}
+        </p>
+
+        <script>
+            function turnAutoRenewOn(){
+                $.modal.close();
+                $("#slot_rate_unlocked{{ forloop.counter }}").addClass("hidden");
+                $("#slot_rate_locked{{ forloop.counter }}").removeClass("hidden");
+                $.ajax({
+                    url: "{% url advertiser-account %}",
+                    type: "POST",
+                    data: {ajax_mode:'turn-autorenew-on',
+                           display_id: {{ slot_item.slot.id }}
+                           },
+                    dataType: "json",
+                    timeout: 10000,
+                    success: function(data) {
+                        $(".growl").html(data['msg']);
+                        $(".growl").slideDown().delay(5000).fadeOut("slow");
+                    },
+                    error: function() {
+                    }
+                });
+            }
+        </script>
+
+        <div class="center padding">
+            <a class="button" href="#" onclick="turnAutoRenewOn('Auto Renew is now ON');">Approve Auto Renew</a>
+            <a class="button" href="#" onclick="$.modal.close();">Not Now</a>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    {% endif %}
+
+    <div class="clear"></div>
+</div>
+
+{% if slot_item.coupon %}
+<div class="slot available">
+
+    <div class="grid_6">
+
+        <div class="slotHeader">
+
+            <div class="slotCount">{{ forloop.counter }}</div>
+
+            <div class="slotHeaderText">Display:</div>
+
+            <a id="btn{{ slot_item.slot.id }}" class="btnDisplay displayOn sprite" href="#"></a>
+
+            <a class="btnEdit sprite" href="{% url edit-coupon slot_item.coupon.id %}"></a>
+
+            <div class="slotExpiration light">Expires <span id="expiration_date{{ slot_item.coupon.id }}">{{ slot_item.coupon.expiration_date }}</span></div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div id="arrow{{ slot_item.coupon.id }}" class="sprite arrowCols">
+            <div class="arrowContent">
+
+                Distribute this coupon in an Email Flyer!<br/>
+
+                <span class="tiny">
+                    {% if slot_item.purchased_flyers_count > 0 %}
+                        <span class="dark">This coupon is scheduled to be sent in <b>{{ slot_item.purchased_flyers_count }} Email Flyer{{ slot_item.purchased_flyers_count|pluralize }}</b></span>
+                    {% else %}
+                        This coupon is NOT scheduled to be distributed
+                    {% endif %}
+                </span>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <a id="btnFlyer{{ slot_item.coupon.id }}" class="button fullBtn fullBtnTight" href="{% if current_site.phase == 1 %}{% url buy-market-flyer slot_item.slot.id %}{% else %}{% url add-flyer-by-map slot_item.slot.id %}{% endif %}">Schedule {% if slot_item.purchased_flyers_count > 0 %}More{% endif %} Email Flyers &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_10">
+
+        {% if slot_item.coupon %}
+
+            <div id="slt_cpn{{ slot_item.slot.id }}" class="couponPreview couponDrag active">
+
+                <div id="coupon{{ slot_item.coupon.id }}" class="coupon">
+                    <div class="couponInner">
+
+                        <div class="coupon_business">
+                            <h1 class="business_name">{{ slot_item.coupon.offer.business.business_name }}</h1>
+                            <h2 class="slogan">{% if slot_item.coupon.offer.business.slogan %}- {{ slot_item.coupon.offer.business.slogan }} -{% endif %}</h2>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="coupon_line"></div>
+
+                        <div class="coupon_offer">
+                            <h3 class="headline">{{ slot_item.coupon.offer.headline }}</h3>
+                            {% if slot_item.coupon.offer.qualifier %}<h4 class="qualifier">{{ slot_item.coupon.offer.qualifier }}</h4>{% endif %}
+                            <div class="clear"></div>
+                        </div>
+
+                        <br/>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="clear"></div>
+</div>
+
+{% endif %}
+
+{% endfor %}
+
+<div class="clear"></div>
+
+<div class="bucket">
+
+    {% for coupon in no_slot_coupons %}
+
+    <div class="grid_6">
+
+        <div class="slotHeader">
+
+            <div class="slotHeaderText">Display:</div>
+
+            <a id="btn{{ coupon.id }}" class="btnDisplay displayOff sprite" href="#"></a>
+
+            <a class="btnEdit sprite" href="{% url edit-coupon coupon.id %}"></a>
+
+            <div class="slotExpiration light">Expires <span id="expiration_date{{ coupon.id }}">{{ coupon.expiration_date }}</span></div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div id="arrow{{ coupon.id }}" class="sprite arrowCols arrowCols_gray">
+            <div class="arrowContent">
+
+                Distribute this coupon in an Email Flyer!<br/>
+
+                <span class="tiny">
+                    {% if slot_item.purchased_flyers_count > 0 %}
+                        This coupon is scheduled to be sent in {{ slot_item.purchased_flyers_count }} Email Flyers
+                    {% else %}
+                        This coupon is not scheduled to be distributed
+                    {% endif %}
+                </span>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <a id="btnFlyer{{ coupon.id }}" class="button fullBtn disabled fullBtnTight" href="">Schedule Email Flyers &raquo;</a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_10">
+
+        <div id="slt_cpn{{ coupon.id }}" class="couponPreview couponPreviewDisabled couponDrag inactive">
+
+            <div id="coupon{{ coupon.id }}" class="coupon">
+                <div class="couponInner">
+
+                    <div class="coupon_business">
+                        <h1 class="business_name">{{ coupon.offer.business.business_name }}</h1>
+                        <h2 class="slogan">{{ coupon.offer.business.slogan }}</h2>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="coupon_line"></div>
+
+                    <div class="coupon_offer">
+                        <h3 class="headline">{{ coupon.offer.headline }}</h3>
+                        {% if coupon.offer.qualifier %}<h4 class="qualifier">{{ coupon.offer.qualifier }}</h4>{% endif %}
+                        <div class="clear"></div>
+                    </div>
+
+                    <br/>
+
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="hr"></div>
+
+    {% endfor %}
+
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<a id="add_a_display" class="hidden" href="{% url add-a-new-display 0%}">Add display</a>
+
+<script type="text/javascript">
+    function select_business(){
+        var business_id = $("#id_select_business").val();
+        document.frm_select_business.submit();
+    }
+    $(document).ready(function(){
+        $("#id_select_business").change(select_business);
+    });
+</script>

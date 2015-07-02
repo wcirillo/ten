@@ -1,0 +1,19 @@
+{% block email_content %}
+{% for key, value_dict in results_dict.items %}
+For Abandoned {{ key }} Days Ago...
+    {% if value_dict.offers %}Warm leads sent for the following abandoned offers/coupons:
+
+    Market      Advertiser          BizName              Offer
+    {% for offer in value_dict.offers %}
+    {{ offer.business.advertiser.site.name }}   {{ offer.business.advertiser.email }}   {{offer.business.id}}   {{ offer.business.business_name }}  {{ offer.headline }}
+    {% endfor %}
+
+    {% else %}{% if value_dict.businesses %}{% else %}Sorry, No orphaned coupons or businesses since {{ last_run }} - {{ key }} days ago, found
+    {% endif %}{% endif %}
+    {% if value_dict.businesses %}Warm leads sent to the following businesses who never filled-in an offer
+    Market           Advertiser     BizName
+    {% for business in value_dict.businesses %}
+    {{ business.advertiser.site.name }}   {{ business.advertiser.email }}   {{ business.id }}   {{ business.business_name }}
+    {% endfor %}{% endif %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "frames/email/full.html" %}
+{% block email_content %}
+    <h2>Advertising Representatives Enrolled </h2>
+    <table border=0 cellpadding=5 cellspacing=0 width=100%>
+        <tr>
+            <td><b>Market</b></td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Work Phone</b></td>
+            <td><b>Sponsor</b></td>
+        </tr>
+        {% for ad_rep in ad_reps %}
+            <tr bgcolor={% cycle '#ffffff' '#eeeeee' %}>    
+                <td>{{ ad_rep.site }}</td>
+                <td>{{ ad_rep.first_name }} {{ ad_rep.last_name }}</td>
+                <td>{{ ad_rep.email }}</td>
+                <td>{{ ad_rep.primary_phone_number }}</td>
+                <td>{% if ad_rep.parent_ad_rep %}{{ ad_rep.parent_ad_rep.first_name }} {{ ad_rep.parent_ad_rep.last_name }}{% endif %}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

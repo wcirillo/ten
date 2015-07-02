@@ -1,0 +1,50 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p style="margin-top: 0;">
+    Hi{% if business.advertiser.advertiser_name %} {{ business.advertiser.advertiser_name }}{% endif %},<br/>
+    {% if promo_code %}
+    <a href='{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code product_id=2 item_id=coupon.id %}'>
+    Rerun {% if coupon_count > 1 %}a {% else %}this {% endif %} coupon</a> or <a href='{{ base_url }}{% url sale-redirect-with-promopayload=payload promo_code=promo_code %}'>
+    create a new coupon</a> today. Pay just $10 for the first month.
+    {% else %}
+     <a href='{{ base_url }}{% url sale-redirect payload=payload product_id=2 item_id=coupon.id %}'>
+    Rerun {% if coupon_count > 1 %}a {% else %}this {% endif %} coupon</a> or <a href='{{ base_url }}{% url sale-redirect payload=payload %}'>
+    create a new coupon</a> today.
+    {% endif %}
+</p>
+
+<p>                         
+    Thanks to heavy advertising from {% if market_medium_list %} <strong>local</strong> {{ market_medium_list }},{% else %} our <strong>local</strong> media partners{% endif %} the number of
+    smart shoppers <strong>looking for <i>your</i> coupon</strong> on {{ site.domain }} is growing every day.
+</p>
+
+<p>
+    <strong>This is how your coupon looked last time. It can say (almost) anything.</strong>
+</p>
+
+{% include "include/dsp/dsp_coupon_in_email.html" %}
+
+<p>
+    Put {{ business.business_name }} back on {{ site.domain }} and you can make <strong>unlimited changes</strong>. Change a <strong>single word</strong> or the
+    <strong>entire offer</strong> -- instantly, as many times as you want, for <strong>one low price</strong>.
+</p>
+{% if promo_code %}
+    <p>
+     <a href="{{ base_url }}{% url sale-redirect-with-promo payload=payload promo_code=promo_code %}" style="background-color: #a6206a; background-image: url('{{media_url}}images/email/buttons/btn200x40.gif'); color: #ffffff; display: block; font-size: 18px; height: 40px; line-height: 38px; margin: 0 auto 20px auto; text-align: center; text-decoration: none; width: 400px;"><span style="color: #ffffff;">I'm back for $10! &raquo;</span></a>
+    </p>
+{% endif %}
+<p>
+Please let me know if you have any questions, I'll be here if you need me!
+</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+
+{% if promo_code %}
+    PS. Don't wait! The $10 offer is good today ({% now "n/j/Y" %}) only.
+{% endif %}
+
+{% include "email_gateway/generic_email_unsubscribe.html" %}
+
+{% endblock %}

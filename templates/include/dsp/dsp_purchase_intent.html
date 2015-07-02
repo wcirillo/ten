@@ -1,0 +1,23 @@
+{% load currency %}
+
+{% if coupon_mode %}
+
+    Offer customers up to <strong>10 coupons</strong> at any time.<br/>
+
+{% else %}
+
+    <strong>Publish up to 10 coupons</strong> for just <strong> 
+    {% if request.session.ad_rep_id %}{{ annual_slot_price|currency:"False" }}/year{% else %}{{ slot_price|currency:"False" }}/month{% endif %}</strong>.
+
+{% endif %}
+</br>
+<span class="small">
+    <em>
+        {% if request.session.ad_rep_id %}
+        Monthly plan available for {{ slot_price|currency:"False" }}/month (Select at checkout).</br>
+        Publish your first
+        {% else %}
+        Finish this
+        {% endif %} coupon in minutes.
+    </em>
+</span>

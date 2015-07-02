@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">
+        var map, base_layer, kml;
+        function init(){
+            map = new OpenLayers.Map('map');
+            base_layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
+               "http://labs.metacarta.com/wms/vmap0", {layers: 'basic'} );
+            kml = new OpenLayers.Layer.GML("KML", "/hudson-valley/geolocation/zips_kml/", 
+               { format: OpenLayers.Format.KML });
+            map.addLayers([base_layer, kml]);
+            map.zoomToExtent(new OpenLayers.Bounds{{ extent }});
+            }
+    </script>
+  </head>
+  <body onload="init()">
+    Hi.  There should be a total of {{location_count}} Locations.<br />
+    <div id="map"></div>
+  </body>
+</html>

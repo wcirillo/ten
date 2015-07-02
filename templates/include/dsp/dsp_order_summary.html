@@ -1,0 +1,64 @@
+{% load currency %}
+{% load humanize %}
+
+<table class="order_summary" cellpadding="6" cellspacing="0" border="0" width="100%">
+
+    <tr id="id_code_clone_div" class="hidden">
+        <td>
+            <label for="id_code_clone">Tracking Code (Not Required)</label>
+        </td>
+        <td align="right" class="form smallForm">
+            <ol>
+                <ul id="id_code_clone_errorlist" class="errorlist hidden">
+                    <li id="id_code_clone_errorlist_li"></li>
+                </ul>
+                <li>
+                    <input id="id_code_clone" type="text" size="12" maxlength="64"/>
+                    <a id="id_code_btn" class="button smallBtn" style="margin: 0;" href="">Apply</a>
+                </li>
+            </ol>
+        </td>
+    </tr>
+
+    {% for product in product_list %}
+        <tr>
+            <td align="left" valign="top">{{ product.2 }}</td>
+            <td align="right" valign="top">{{ product.1|currency }}</td>
+        </tr>
+    {% endfor %}
+
+    <tr>
+        <td align="left" {% if promotion_code and amount_discounted and amount_discounted > 0 %}{% else %}class="total"{% endif %}>{% if promotion_code and amount_discounted and amount_discounted > 0 %}<strong>Subtotal</strong>{% else %}<strong>Total</strong>{% endif %}:</td>
+        <td align="right" {% if promotion_code and amount_discounted and amount_discounted > 0 %}{% else %}class="total"{% endif %}><strong>{{ subtotal|currency }}</strong></td>
+    </tr>
+
+    {% if promotion_code %}        
+        <tr>
+            <td align="left" {% if promotion_code and amount_discounted and amount_discounted > 0 %}class="red"{% endif %}>Tracking code {{ promotion_code.code|upper }} ({{ promotion_code.promotion.description }})</td>
+        {% if amount_discounted > 0 %} 
+            <td align="right"><span class="nobr red">-{{ amount_discounted|currency }}</span></td>
+        </tr>
+        <tr>
+            <td align="left" class="total"><strong>Total:</strong></td>
+            <td align="right" class="total"><strong id="id_total">{{ total|currency }}</strong></td>
+        {% endif %}
+        </tr>
+    {% endif %}
+</table>
+
+{% if request.session.ad_rep_id and product_form %}
+<BR>
+
+    {% if product_list.0.0 == 2 or product_list.0.0 == 3 %}
+        <p class="small" align='center'>
+            {% if product_list.0.0 == 3 %}
+                The Annual Plan is selected and <strong>saves {{ annual_savings|currency:"False" }}</strong> over the 
+                <a id="id_pay_option" style="margin: 0;">{{ slot_price|currency:"False" }} One-Month Plan</a>.
+            {% else %}
+                <a id="id_pay_option" class="button gray smallBtn" style="margin: 0;">
+                Get a whole year for {{ annual_slot_price|currency:"False" }}</a>.
+            {% endif %}
+                
+        </p>
+    {% endif %}
+{% endif %}

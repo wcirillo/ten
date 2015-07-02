@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}All {{ current_site.name }} Coupons & Deals | {{ current_site.domain }}{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Get {{ current_site.region }} coupons and deals from local restaurants, pet stores, automotive service shops and other businesses."/>
+<link rel="canonical" href="{% url all-coupons %}"/>
+<link rel="image_src" href="{{ safe_static_url }}images/fb_logo_100x100.gif"/>
+{% endblock %}
+
+{% block frame %}
+
+    <div class="breadcrumbs"></div>
+
+    <div class="grid_10">
+
+        {% if not request.flags.is_mobile %}
+
+            {% include "include/frm/frm_search_coupons.html" %}
+
+        {% endif %}
+
+        {% include "include/dsp/dsp_all_offers.html" %}
+
+    </div>
+
+    {% if not request.flags.is_mobile %}
+
+        <div class="grid_6 sidebar">
+
+            {% include "include/dsp/dsp_registration_rotation.html" %}
+
+            {% include "include/dsp/dsp_facebook_like.html" %}
+
+            <div class="boxBorder">
+
+                {% include "include/dsp/dsp_nearby_sites.html" %}
+
+                <div class="hr"></div>
+
+                {% include "include/dsp/dsp_market_counties.html" %}
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,184 @@
+ol_map.build_map_selector(false, false, 'whole_market');
+//set_market_flyer_price();
+set_single_flyer_price(get_subdivision_consumer_count());
+set_zip_data();
+prime_checkboxes();
+//run_zip_postal_check();
+
+function activateBtn(){
+    $("#btn_counties_zip").removeClass("disabled");
+    $("#btn_counties_zip").addClass("btnAlt");
+    $("#county_zip_price").removeClass("arrowCols_gray");
+    $("#county_zip_price").addClass("arrowCols_green");
+}
+
+function deactivateBtn(){
+    $("#btn_counties_zip").addClass("disabled");
+    $("#btn_counties_zip").removeClass("btnAlt");
+    $("#county_zip_price").addClass("arrowCols_gray");
+    $("#county_zip_price").removeClass("arrowCols_green");
+    /* Clear all previously selected zip layers*/
+    ol_map.clear_zip_selections();
+}
+
+$("#frm_add_flyer_by_list input:checkbox").click(function(){
+    //alert($(this).attr('name'));
+    checkbox_object = $(this);
+    if($(this).hasClass('zip')){
+        zip_data = get_zip_data();
+        // Load zips:
+        $("#map_loader").fadeTo('slow', 0.4, function(){
+            if (zip_data == ''){
+                load_zip_data(checkbox_object);
+            }else{
+                //adjust_zone();
+                check_this_checkbox(checkbox_object);
+                toggle_button_state();
+                $("#map_loader").fadeTo('slow', 0.0);                  
+            }
+        }
+        );
+    }
+    if($(this).hasClass('city')){
+        city_data = get_city_data();
+        // Load cities:
+        $("#map_loader").fadeTo('slow', 0.4, function(){
+            if (city_data == ''){
+                load_city_data(checkbox_object);
+            }else{
+                //adjust_zone();
+                check_this_checkbox(checkbox_object);
+                toggle_button_state();
+                $("#map_loader").fadeTo('slow', 0.0);                  
+            }
+        }
+        );
+    }
+    if($(this).hasClass('county')){
+        var county_name = $(this).attr("name");
+        var county_region = county_name.replace(/county_/g, 'region_');
+        if ($(this).attr("checked")){
+            $(".city." + county_region).attr("checked", true);
+            $(".zip." + county_region).attr("checked", true);
+        }else{
+            $(".city." + county_region).attr("checked", false);
+            $(".zip." + county_region).attr("checked", false);
+        }
+        $("#map_loader").fadeTo('slow', 0.4, function(){
+            check_this_checkbox(checkbox_object);
+            toggle_button_state();
+            $("#map_loader").fadeTo('slow', 0.0);                  
+        }
+        );
+    }
+    //check_this_checkbox($(this));
+    //toggle_button_state();
+});
+
+function load_zip_data(checkbox_object){
+    $.ajax({
+           url: "{% url get-or-set-site-geoms geom_zip_url_arg %}",
+           type: "GET",
+           data: {ajax_mode:'available'},
+           timeout: 10000,
+           success: function(data) {
+            set_zip_data(data);
+            ol_map.build_geom_layers(data, false, false, "zip");
+            //is_zip_valid = adjust_zone();
+            /*
+            if(is_zip_valid != false){
+                ol_map.display_layer($("#id_zip_postal").val()); 
+                activateSlider();
+                activateBtn();
+                selected = ol_map.report_selected_geoms();
+                set_subdivision_consumer_count();
+                set_single_flyer_price(get_subdivision_consumer_count());
+            }*/
+            check_this_checkbox(checkbox_object);
+            toggle_button_state();
+            $("#map_loader").fadeTo('slow', 0.0);
+           },
+           error: function() {
+            
+           }
+       });                        
+}
+
+function load_city_data(checkbox_object){
+    $.ajax({
+           url: "{% url get-or-set-site-geoms geom_city_url_arg %}",
+           type: "GET",
+           data: {ajax_mode:'available'},
+           timeout: 10000,
+           success: function(data) {
+            set_city_data(data);
+            ol_map.build_geom_layers(data, false, false, "city");
+            //is_zip_valid = adjust_zone();
+            /*
+            if(is_zip_valid != false){
+                ol_map.display_layer($("#id_zip_postal").val()); 
+                activateSlider();
+                activateBtn();
+                selected = ol_map.report_selected_geoms();
+                set_subdivision_consumer_count();
+                set_single_flyer_price(get_subdivision_consumer_count());
+            }*/
+            check_this_checkbox(checkbox_object);
+            toggle_button_state();
+            $("#map_loader").fadeTo('slow', 0.0);
+           },
+           error: function() {
+            
+           }
+       });                        
+}
+
+function toggle_button_state(){
+    if ($("#frm_add_flyer_by_list input:checked").length == 0){
+        deactivateBtn();
+    }else{
+        
+        activateBtn();
+    }                               
+}
+
+function get_subdivision_consumer_count(){
+    return $("#subdivision_consumer_count").html();
+}
+
+//$(".flyer_list_zip").prev(".flyer_list_city").css("font-weight", "bold");
+
+$(".flyer_list_zip + .flyer_list_city").prev(".flyer_list_zip").addClass("flyer_list_zip_last");
+$(".flyer_list_zip").last().addClass("flyer_list_zip_last");
+
+$(".accordionHeader").click(function() {
+    $(this).toggleClass("ui-state-active");
+    $(this).find(".ui-icon").toggleClass("accordionHeaderClosed");
+    $(this).find(".ui-icon").toggleClass("accordionHeaderOpen");
+    $(this).next().toggle('slow', function(){
+        set_scrollfollow_height();
+        $("#scrollmap").stickyfloat({ duration: 400 });
+    });
+    $(this).find(".inboxes").toggleClass("hidden");
+    return false;
+}).next().hide();
+
+$(".select_all").click(function() {
+    var selectAllCounty = $(this).attr("name");
+    if ($(this).attr("checked")){
+        $("input[name=" + selectAllCounty + "]").attr("checked", true);
+    }else{
+        $("input[name=" + selectAllCounty + "]").attr("checked", false);
+    }
+});
+
+$(".zip_checkbox").change(function(){
+    var zipCheckboxCounty = $(this).attr("name");
+    var zipCountyTotal = $("input[name=" + zipCheckboxCounty+ "]").not(".select_all").length;
+    var zipCountySelected = $("input[name=" + zipCheckboxCounty+ "]").not(".select_all").filter(":checked").length;
+    if(zipCountyTotal == zipCountySelected){
+        $("input[name=" + zipCheckboxCounty+ "]").filter(".select_all").attr("checked", true);
+    }else{
+        $("input[name=" + zipCheckboxCounty+ "]").filter(".select_all").attr("checked", false);
+    }
+});

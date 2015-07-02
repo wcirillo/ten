@@ -1,0 +1,35 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - Benefits for the Local Business Advertiser{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/benefits-for-local-business/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url become-an-ad-rep %}">Become an Advertising Representative</a> &nbsp;&rsaquo;&nbsp;
+    <span>Benefits for the Local Business Advertiser</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_benefits_for_business.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <img src="{{ safe_static_url }}images/reach_new_customers.jpg" border="0" height="350" width="350" alt="Business owners - Reach new customers"/>
+
+    <div class="padding small">
+        <img src="{{ safe_static_url }}images/pdf_icon.gif" border="0" height="16" width="16"/>&nbsp;
+        <a class="nodec" href="{{ safe_static_url }}docs/10LC_Benefits_for_advertisers.pdf" style="vertical-align: top;">Download .pdf version for printing</a>
+    </div>
+
+{% endblock %}
+
+{% block bottom_content %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

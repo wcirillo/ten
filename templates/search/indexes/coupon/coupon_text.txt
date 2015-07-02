@@ -1,0 +1,18 @@
+{{ object.offer.headline }}
+{{ object.offer.qualifier }}
+{{ object.offer.business.business_name }}
+{{ object.offer.business.slogan }}
+{% for category in object.offer.business.categories.all %}
+    {{ category.name }}
+{% endfor %}
+{{ object.custom_restrictions }}
+{{ object.offer.business.business_profile_description.business_description }}
+{{ object.offer.business.business_zip_postal }}
+{{ object.offer.business.web_url }}
+{{ object.offer.business.short_business_name }}
+{% for location in object.location.all %}
+    {{ location.location_address1 }} {{ location.location_address2 }}
+    {{ location.location_city }}
+    {{ location.location_exchange }}
+    {{ location.location_description }}
+{% endfor %}

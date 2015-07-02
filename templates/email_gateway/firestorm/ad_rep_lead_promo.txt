@@ -1,0 +1,47 @@
+{% extends "email_gateway/base_email.txt" %}
+{% block email_content %}
+Hi{% if ad_rep_lead.first_name or ad_rep_lead.last_name %} {{ ad_rep_lead.first_name }} {{ ad_rep_lead.last_name }}{% endif %},
+
+Here's some important news.
+We've recently experienced some rapid growth.
+Candidates are needed to start immediately.
+Enrollment fees have been eliminated.
+
+Follow this link to finalize your approved application.
+{{ base_url }}{% url show-offer-to-enroll payload %}
+
+Next, you'll be asked:
+{% if not ad_rep_lead.has_usable_password %}- to create a unique Password.{% endif %}
+- to choose a unique "name" for your Personalized Website
+- to read and agree to three important documents.
+Our Terms of Agreement, Policies and Procedures
+...and our Compensation Plan.
+
+Use this link to read these documents:
+{{ base_url }}{% url terms-of-agreement %}
+
+You WON'T be asked:
+- for any payment.
+- for any additional personal information.
+
+A Social Security number, Or Tax ID number
+...are needed only AFTER the first sale.
+We'll need that to pay you the commission!
+You'll be notified by email..
+
+Good luck! Please call or email with any questions.
+
+{% if firestorm_id == 43096 %}
+
+{% include "email_gateway/three_person_signature.txt" %}
+
+{% else %}
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+{% endif %}
+
+
+To cancel these messages follow the link:
+{{ base_url }}{% url opt_out payload=payload %}
+{% endblock %}

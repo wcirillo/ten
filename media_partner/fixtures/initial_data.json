@@ -1,0 +1,30 @@
+[
+    {
+        "pk": 1, 
+        "model": "media_partner.medium", 
+        "fields": {
+            "name": "Radio"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "media_partner.medium", 
+        "fields": {
+            "name": "TV"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "media_partner.medium", 
+        "fields": {
+            "name": "Cable"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "media_partner.medium", 
+        "fields": {
+            "name": "Newspaper"
+        }
+    }
+]

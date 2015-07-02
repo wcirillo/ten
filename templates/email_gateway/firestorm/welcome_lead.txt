@@ -1,0 +1,50 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+{% if ad_rep_lead.first_name %}{{ ad_rep_lead.first_name }},{% else %}Hi!{% endif %}
+
+Thank you for contacting us.
+
+I'm delighted that you are interested in our opportunity.
+
+I look forward to visiting with you personally.
+
+I'm sure you've heard of Groupon and Living Social.
+Many other digital coupon companies offer discounts.
+They are usually successful for themselves.
+They are not always successful for their clients.
+The advertiser almost always loses money on the offer.
+Our company has a fresh, business-friendly model.
+We're much more like direct mail.
+More affordable and profitable for local advertisers.
+
+
+I would love to tell you our story in more detail.
+Let's see if our business is what you are looking for.
+
+Contact me or the CEO, Eric Straus. Our information is below.
+You can email us with a number, day and time to call you.
+
+Learn more about our company.
+Follow this link for a quick 4 minute recording:
+{{ media_url }}spots/etc/10LocalCoupons_AdRep_Four_Minute_Overview.mp3
+To read our story on the website, follow this link:
+{{ base_url }}{% url the-10localcoupons-story %}
+
+Control your professional destiny and personal future.
+Some people think you have to be born lucky.
+Others wish for "something wonderful" to change their life.
+At 10LocalCoupons.com, you create the future you desire.
+All of us here would be delighted to help you achieve it.
+
+Thanks again for your interest.
+Please feel free to contact me or call Eric at any time.
+
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+Eric Straus, CEO
+Eric@10LocalCoupons.com
+(914) 920-3059
+
+
+{% endblock %}

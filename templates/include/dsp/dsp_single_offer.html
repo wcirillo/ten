@@ -1,0 +1,33 @@
+<a {% if request.flags.is_mobile %}ontouchstart=""{% endif %} class="offer {% if forloop.last %}last{% endif %}" href="{% url view-single-coupon coupon.slug coupon.id %}" {% if is_iframe %} target="new"{% endif %}>
+
+    <div class="sprite category cat{% for category in coupon.offer.business.categories.all %}{{ category.id }}{% endfor %}"></div>
+
+    <div class="left">
+
+        <div class="business_name">
+            {{ coupon.offer.business.business_name }}
+        </div>
+
+        <div class="headline">
+            {{ coupon.offer.headline }}
+        </div>
+
+        <div class="location small">
+            {{ coupon.location_list }}
+        </div>
+
+        <!--
+        <span class="categorylabel tiny nodec">
+            {% for category in coupon.offer.business.categories.all %}
+                {{ category.name }}
+            {% endfor %}
+        </span>
+        -->
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="arrowright"></div>
+
+    <div class="clear"></div>
+</a>

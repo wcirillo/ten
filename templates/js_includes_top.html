@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    // Auto-enables all submit buttons page.
+    function enable_submit_btn(){
+        $("input[type=submit]").removeAttr("disabled").removeClass("disabled");
+    }
+    /* Don't auto-enable disabled buttons on pageshow. */
+    {% if not js_consumers_map %}
+            
+            window.addEventListener("pageshow", function() { 
+                enable_submit_btn();
+            }, false);
+        
+    {% endif %}
+    
+    function test_1()
+    {
+    alert('function test_1');
+    }
+    function open_ad_rep_summary(ad_rep_id){
+    var modal_iframe_src2;
+    alert('test');
+    modal_iframe_src2 = '<iframe src="' + '{{ http_protocol_host }}' + '{% url ad-rep-summary %}' + ad_rep_id + '/' + '" width="100%" marginheight="0" marginwidth="0" frameBorder="0" scrolling="no" style="border: 0; overflow-y: hidden; overflow-x: hidden;">';
+
+    scroll(0,0);
+    $.modal(
+        modal_iframe_src2, 
+        {
+        opacity:70,
+        onOpen: animation.open,
+        containerId:"modalSm",
+        onClose: animation.close
+        }
+    );
+}
+</script>

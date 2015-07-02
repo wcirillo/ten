@@ -1,0 +1,151 @@
+<div class="clear"></div>
+
+{% if errors %}
+    <div>
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+    </div>
+{% endif %}
+
+{% if msg_credit_card_problem %}
+    <div id="confirmBox">
+       {{ msg_credit_card_problem }}
+    </div>
+{% endif %}
+
+{{ credit_card_form.non_field_errors }}
+
+<form name="frm_checkout_coupon_purchase" action="" method="post">{% csrf_token %}
+ 
+    <ol>
+        {{ credit_card_form.cc_number.errors }}
+        <li class="fullInput">
+            <label for="id_cc_number" class="block">Card Number (no spaces)</label>
+            {{ credit_card_form.cc_number }}
+        </li>
+    <ol>
+
+    {{ credit_card_form.exp_month.errors }}
+    {{ credit_card_form.exp_year.errors }}
+
+    <ol>
+
+        <li class="li_float"> <!-- ie7 -->
+
+            <div class="left">
+                <label for="id_exp_month" class="block">MM</label>
+                {{ credit_card_form.exp_month }}
+            </div>
+            <div class="left">
+                <label for="id_exp_year" class="block">YY</label>
+                {{ credit_card_form.exp_year }}
+            </div>
+            <div class="clear"></div>
+            <span class="small light">Expiration Month (MM) and Year (YY)</span>
+
+        </li>
+
+        {{ credit_card_form.cvv_number.errors }}
+        <li>
+            <label for="id_cvv_number" class="block">CVV</label>
+            {{ credit_card_form.cvv_number }}
+            <span class="small tip">&nbsp; <a class="nodec modaltrigger" name="modalCVV" href="#">What's this?</a></span>
+        </li>
+
+        {{ credit_card_form.card_holder.errors }}
+        <li class="fullInput">
+            <label for="id_card_holder" class="block">Name on this card</label>
+            {{ credit_card_form.card_holder }}
+        </li>
+
+        {{ billing_record_form.billing_address1.errors }}
+        <li class="fullInput">
+            <label for="id_billing_address1" class="block">Billing Address 1</label>
+            {{ billing_record_form.billing_address1 }}
+        </li>
+
+        {{ billing_record_form.billing_address2.errors }}
+        <li class="fullInput">
+            <label for="id_billing_address2" class="block">Billing Address 2 (optional)</label>
+            {{ billing_record_form.billing_address2 }}
+        </li>
+
+        {{ billing_record_form.billing_city.errors }}
+        <li class="fullInput">
+            <label for="id_billing_city" class="block">City</label>
+            {{ billing_record_form.billing_city }}
+        </li>
+
+        {{ billing_record_form.billing_state_province.errors }}
+        <li>
+            <label for="id_billing_state_province" class="block">State</label>
+            {{ billing_record_form.billing_state_province }}
+            <div class="clear"></div>
+        </li>
+
+        {{ billing_record_form.billing_zip_postal.errors }}
+        <li>
+            <label for="id_billing_zip_postal" class="block">Zip Code</label>
+            {{ billing_record_form.billing_zip_postal }}
+        </li>
+         <div class="hidden">
+            {{ product_form.selected_product_id }}
+        </div>
+	</ol>
+
+    <fieldset id="id_code_fieldset" class="tinyForm">
+        <ol>
+            {{ promo_code_form.code.errors }}
+            <li>
+                <label for="id_code" class="tiny">Tracking Code (Not Required)</label><br/>
+                {{ promo_code_form.code }}
+            </li>
+        </ol>
+    </fieldset>
+
+    <ol>
+        <li>
+            <input id="id_post_reload" type="hidden" name="post_reload" value=0 />
+            <input class="button fullBtn fullBtnTight" type="submit" name="submit_frm_checkout_coupon_purchase" value="Complete Purchase &raquo;" tabindex="11" />
+        </li>
+    </ol>
+
+    <ol>
+        <li>
+            <p class="tiny">
+                <em>
+                    {% if renewal_rate and selected_product_id == 2 %}
+                        Monthly Publishing involves a recurring charge that can be discontinued by setting auto-renew to "off."  Credit card information is stored safely as encrypted data.
+                        "Complete Purchase" to approve.<br/>
+                    {% else %} 
+                        "Complete Purchase" charges the credit card entered above.<br/>
+                    {% endif %}
+                    <a class="nodec modaltrigger" name="modalSecure" href="#">What makes our checkout secure?</a>
+                </em>
+            </p>
+            <img src="{{ safe_static_url }}images/verified.gif" width="110" height="35" border="0"/>
+        </li>
+    </ol>
+
+</form>
+
+<div id="modalSecure" class="hidden">
+
+    <h2>What makes our checkout secure?</h2>
+
+    <p>{{ current_site.domain }} is secured with a Web Server Certificate from Starfield Technology. Our Transactions are protected with Secure Socket Layer SSL encryption.</p>
+
+    <p>We use the strongest encryption available to protect your information.</p>
+
+    <img src="{{ safe_static_url }}images/verified.gif" width="110" height="35" border="0"/>
+
+</div>
+
+<div id="modalCVV" class="hidden">
+
+    <h2 class="center">What's a CVV?</h2>
+
+    <p class="center"><img src="{{ safe_static_url }}images/cvv.gif" width="420" height="190" border="0"/></p>
+
+</div>

@@ -1,0 +1,118 @@
+{% load replace_all %}
+
+<form id="frm_add_flyer_by_map" name="frm_add_flyer_by_map" method="post">{% csrf_token %}
+{% if not is_consumer_map %}
+    <div class="boxBorder">
+
+        <div class="sprite arrowCols">
+
+            <div class="left">
+                <h3 id="market_consumer_count">{{ market_consumer_count }}</h3>
+                <span class="tiny">consumers</span>
+            </div>
+
+            <div class="arrowCols_right">
+                <h3 id="market_flyer_price"><strong></strong></h3>
+                <span class="tiny">one-time charge</span>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <a id="id_flyer_entire_market" class="button fullBtn fullBtnTight" href="{% url buy-market-flyer slot_id=slot_id %}">Send to the entire market &raquo;</a>
+        
+        <div class="clear"></div>
+    </div>
+{% endif %}
+    <div class="boxBorder">
+
+        <p class="tiny smallmargin"><strong>{{ municipality_divisions|upper }}</strong></p>
+        <div id="counties_list" class="small fade_on_slide">
+            {% for field in add_flyer_by_map_form %}
+                
+                {% if field.is_hidden %}
+                    {{ field }}
+                {% else %}
+                    {% for county in county_dict %}                   
+                        {% if county.county|replace_all:" ,_" == field.value %}
+                            <div class="county">
+                                {{ field.errors }}
+                                {{ field }}&nbsp;{{ field.label_tag }}&nbsp;<em class="light">({{ county.county_count }})</em></label>
+                            </div>
+                          
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div>
+
+            <div class="grid_2 alpha smallForm">
+
+                <p class="tiny smallmargin"><strong>ZIP CODE</strong></p>
+                <input id="id_zip_postal" type="text" value="" size="8"/>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="grid_3 omega">
+
+                <p class="tiny smallmargin">
+                    Include zip codes within <strong id="textamount"></strong> mi.
+                    {% if not is_consumer_map %}
+                        <a id="zip_list_link" class="nodec hidden" href="{% url add-flyer-by-list slot_id %}">list</a>
+                    {% endif %}
+                </p>
+
+                <input class="hidden" type="text" id="id_include_zip_distance"/>
+
+                <style>
+                    #slider-container {padding: 6px 0 0 0;}
+                    .ui-corner-all {border-radius: 3px !important;}
+                    .ui-slider-horizontal {height: 11px !important;}
+                    .ui-slider-horizontal-alt {border: 1px #666 solid !important;}
+                    .ui-slider-range-alt {background: none repeat-x scroll 50% 50% #afe882 !important;}
+                    .ui-slider-handle, .ui-slider-handle-alt {height: 17px!important;}
+                    .ui-slider-handle-alt {border: 1px #333 solid!important;}
+                </style>
+
+                <div id="slider-container">
+                    <div id="slider-range-min"></div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="id_invalid_zip"  class="tiny highlight hidden"></div>
+        <div class="hr"></div>
+
+        <div id="county_zip_price" class="sprite arrowCols arrowCols_gray">
+
+            <div class="left">
+                <h3><span id="subdivision_consumer_count" class="fade_on_slide">{{ subdivision_consumer_count }}</span></h3>
+                <span class="tiny">consumers</span>
+            </div>
+
+            <div class="arrowCols_right">
+                <h3 ><strong><span id="single_flyer_price" class="fade_on_slide"></span></strong></h3>
+                <span class="tiny">one-time charge</span>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        {% if not is_consumer_map %}
+            <input id="btn_counties_zip" class="button fullBtn fullBtnTight fade_on_slide" type="submit" value="Send to these selected areas &raquo;" />
+        {% endif %}
+
+       <div class="clear"></div>
+   </div>
+   <input type="hidden" value="" id="zip_data"/>
+</form>

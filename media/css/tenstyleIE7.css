@@ -1,0 +1,52 @@
+/* style fixes for lt IE7 */
+/* seriously, update your browser. */
+
+.header {z-index: 1000;}
+
+.nav { /* sitelogo absolutely positioned, with float sibling bug */
+	display: inline-block;
+	float: none;
+}
+
+.rep { /* sitelogo absolutely positioned, with float sibling bug */
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.inline .errorlist, .box1 .errorlist {
+	color: #ff0000;
+	height: 0;
+	zoom: 0;
+}
+
+.category, .offer .left { /* absolutely positioned with float sibling bug */
+	display: inline-block;
+	float: none;
+	position: absolute;
+}
+.offer .left { /* absolutely positioned with float sibling bug */
+	position: relative;
+}
+
+.bgWindowForm .largeForm {padding-left: 65px;}
+.bgWindowFormDark .largeForm {padding-left: 50px;}
+
+.bgWindowForm #id_terms_signup { /* homepage small text under consumer registration */
+	clear: both;
+	margin-top: -15px;
+}
+
+.toolbar {
+	height: 1%; /* hasLayout Bug */
+	padding: 5px;
+}
+
+.li_float {height: 1%;} /* hasLayout Bug */
+
+.inline li,
+.searchform li {float: left;}
+
+.dropdownOuter select {
+	margin: 7px 0 0 5px;
+}

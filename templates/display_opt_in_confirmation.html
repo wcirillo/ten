@@ -1,0 +1,42 @@
+{% extends "frames/web/columns.html" %}
+
+{% block top_content %}
+
+    <div id="confirmBox">
+        {% include "include/dsp/dsp_opt_in_confirmation.html" %}
+    </div>
+    
+    <div class="stage largeForm">
+        <div class="left wide">
+
+            {% if contest_is_running %}
+                <h1 class="large">Win $10,000!*</h1>
+                <h4>Get coupons sent to your phone as text messages</h4>
+            {% else %}
+                <h1>Send coupons to your phone too!</h1>
+            {% endif %}
+
+            {% include "include/frm/frm_subscriber_registration.html" %}
+
+        </div>
+        {% include "include/dsp/dsp_sample_phone.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    <div class="paddingSm">
+        <p class="small"><a href="{% url all-coupons %}">Maybe later. Show me coupons</a></p>
+        {% include "include/dsp/dsp_subscriber_info.html" %}
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+    <div class="shortcode" style="background-image: url('{{ safe_static_url }}images/71010.png');">
+        {{ current_site.domain }} is
+    </div>
+{% endblock %}

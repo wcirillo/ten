@@ -1,0 +1,22 @@
+{% load currency %}
+
+Thanks{% if advertiser.first_name %} {{ advertiser.first_name }}{% endif %}!
+
+{% if purchased_flyers_count > 0 %}
+
+    Your coupon is scheduled for {% if purchased_flyers_count == 1 %}the {% endif %} Email Flyer{{ purchased_flyers_count|pluralize }} sent on the date{{ purchased_flyers_count|pluralize }} below.
+
+{% else %}
+
+    Your purchase enables {{ business_name }} to publish up to 10 coupons at a time.
+    Unpublished coupons are stored in your account. 
+
+{% endif %}
+
+<br/><br/>
+
+{% if cc_type %}
+    <strong>{{ payment.amount|currency }} </strong> was paid by {{ cc_type }} ending in <strong>{{ payment.credit_card.last_4 }}</strong>.
+{% endif %}
+
+<strong>Receipt {{ order.invoice }}</strong> has been sent to your email.

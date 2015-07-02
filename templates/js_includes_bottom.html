@@ -1,0 +1,146 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    {% include "include/scripts/js_global.html" %}
+    
+    {% if js_home %}
+        {% include "include/scripts/js_ajax_csrf.html" %}
+        {% include "include/scripts/js_home.html" %}
+        {% include "include/scripts/js_facebook_like_button.html" %}
+    {% endif %}
+
+    {% if js_local_home %}
+        {% include "include/scripts/js_local_home.html" %}
+    {% endif %}
+
+    {% if js_market_search_form %}
+        {% include "include/scripts/js_ajax_csrf.html" %}
+        {% include "include/scripts/js_market_search_form.html" %}
+    {% endif %}
+
+    {% if js_search_coupons %}       
+        {% include "include/scripts/js_search_coupons.html" %}
+    {% endif %}
+
+    {% if js_single_coupon %}
+        {% include "include/scripts/js_truncate_profile.html" %}
+        {% include "include/scripts/js_facebook_like_button.html" %}
+        {% include "include/scripts/js_facebook_coupon_action.html" %}
+        {% include "include/scripts/js_google_plus_one.html" %}
+    {% endif %}
+
+    {% if js_site_directory or js_single_coupon or js_all_coupons_this_business or js_checkout_coupon_purchase_success %}
+        {% include "include/scripts/js_locations.html" %}
+    {% endif %}
+
+    {% if js_advertiser_registration %}
+        {% include "include/scripts/js_advertiser_registration.html" %}
+    {% endif %}
+
+    {% if js_compensation_overview %}
+        {% include "include/scripts/js_accordion.html" %}
+    {% endif %}
+
+    {% if js_create_offer %}
+        {% include "include/scripts/js_create_offer.html" %}
+    {% endif %}
+
+    {% if js_create_location %}
+        {% include "include/scripts/js_create_location.html" %}
+    {% endif %}
+
+    {% if js_create_restrictions %}
+        {% include "include/scripts/js_list_columns.html" %}
+        {% include "include/scripts/js_create_restrictions.html" %}
+        {% include "include/scripts/js_valid_days.html" %}
+    {% endif %}
+
+    {% if js_edit_coupon %}
+        {% include "include/scripts/js_edit_coupon.html" %}
+        {% include "include/scripts/js_valid_days.html" %}
+    {% endif %}
+
+    {% if js_checkout_coupon_purchase %}
+        {% include "include/scripts/js_checkout_coupon_purchase.html" %}
+    {% endif %}
+
+    {% if js_checkout_coupon_purchase_success %}
+        {% include "include/scripts/js_truncate_profile.html" %}
+    {% endif %}
+
+    {% if js_advertiser_account or js_single_coupon or js_coupon_stats or js_advertiser_stats %}
+        {% include "include/scripts/js_ajax_csrf.html" %}
+    {% endif %}
+
+    {% if js_advertiser_account %}
+        {% include "include/scripts/js_advertiser_account.html" %}
+    {% endif %}
+
+    {% if js_add_slot %}
+        {% include "include/scripts/js_add_slot.html" %}
+    {% endif %}
+    
+    {% if js_add_flyers %}
+        {% include "include/scripts/js_add_flyers.html" %}
+    {% endif %}
+    
+    {% if js_email_coupon %}
+        {% include "include/scripts/js_ajax_csrf.html" %}
+        {% include "include/scripts/js_email_coupon.html" %}
+    {% endif %}
+
+    {% if js_edit_business_profile %}{% endif %}
+    {% if js_help %}{% endif %}
+    {% if js_how_it_works %}{% endif %}
+    {% if js_sample_flyer %}{% endif %}
+    {% if js_send_to_phone %}{% endif %}
+    {% if js_sign_in %}{% endif %}
+    {% if js_subscriber_registration %}{% endif %}
+
+    {% if js_flot %}
+        {% include "include/scripts/js_flot_graph.html" %}
+    {% endif %}
+
+    {% if js_site_directory %}
+        {% include "include/scripts/js_list_columns.html" %}
+        {% include "include/scripts/js_site_directory.html" %}
+    {% endif %}
+
+    {% if js_consumers_map or js_add_flyer_by_list or js_add_flyer_dates %}
+        {% include "include/scripts/js_add_flyer.html" %}
+    {% endif %}
+    
+    {% if js_consumers_map %}
+        {% include "include/scripts/js_list_columns.html" %}
+        {% include "include/scripts/js_scrollfollow.html" %}
+        {% include "include/scripts/js_add_flyer_by_map.html" %}
+    {% endif %}
+
+    {% if js_add_flyer_by_list %}
+        {% include "include/scripts/js_scrollfollow.html" %}
+        {% include "include/scripts/js_add_flyer_by_list.html" %}
+    {% endif %}
+
+    {% if js_add_flyer_dates %}
+        {% include "include/scripts/js_add_flyer_dates.html" %}
+    {% endif %}
+
+    {% if js_my_location %}
+         {% include "include/scripts/js_my_location.html" %}
+    {% endif %}
+
+    });
+    /* Outside of document.ready */
+    {% if js_ad_rep_recruits %}
+        {% include "include/scripts/js_ad_rep_recruits.html" %}
+    {% endif %}
+    
+</script>
+
+{% if js_contact_us or js_how_it_works or js_advertiser_registration or js_create_offer or js_create_location or js_create_restrictions or js_edit_coupon or js_add_slot or js_add_flyers or js_checkout_coupon_purchase or js_checkout_coupon_purchase_success  %}
+    {% include "include/scripts/js_live_chat.html" %}
+{% endif %}
+
+<!--[if IE 8]>
+    {% include "include/scripts/js_ie_corners.html" %}
+<![endif]-->

@@ -1,0 +1,32 @@
+{% extends "frames/email/full.html" %}
+{% load currency %}
+
+{% block email_content %}
+
+<h2>Slot renewals for {% now "F j, Y " %}</h2>
+<table border=0>
+    <tr >
+        <td width=200><strong>Market</strong></td>
+        <td width=20><strong>Invoice</strong></td>
+        <td width=300 align='center'><strong>Business</strong></td>
+        <td width=50 align=right><strong>Amount</strong></td>
+        <td width=50 align=right><strong>Ad Rep?</strong></td>
+    </tr>
+{% for payment, ad_rep in payment_tuples %}
+    {% for item in payment.order.order_items.all %}
+        <tr bgcolor={% cycle '#eeeeee' '#dddddd' %}>
+            <td>{% ifchanged %} {{ item.business.advertiser.site}} {% endifchanged %}</td>
+            <td>{{ payment.order.invoice }}</td>
+            <td>{{ item.business.business_name }}</td>
+            <td align=right>${{ payment.amount }}</td>
+            <td>{% if ad_rep %}{{ ad_rep }}{% endif %}</td>
+        </tr>
+    {% endfor %}
+{% endfor %}
+<tr>
+    <td colspan="3" align="right"><strong>Total:</strong></td>
+    <td align=right><strong>${{ total }}</strong></td>
+    <td></td>
+</tr>
+</table>
+{% endblock %}

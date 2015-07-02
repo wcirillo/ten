@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ current_site.domain }} - Advertiser Account{% endblock %}
+
+{% block open_content %}
+    <div class="growl"></div>
+{% endblock %}
+
+{% block frame %}
+
+    <div class="breadcrumbs"></div>
+
+    {% include "include/frm/frm_advertiser_account.html" %}
+
+    <div class="clear"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}
+

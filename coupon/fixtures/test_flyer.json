@@ -1,0 +1,556 @@
+[
+   {
+        "pk": 113, 
+        "model": "coupon.offer", 
+        "fields": {
+            "headline": "A lot of stuff", 
+            "create_datetime": "2010-05-12 16:12:24", 
+            "qualifier": "Free with item purchase", 
+            "business": 113
+        }
+    }, 
+    {
+        "pk": 411, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                113
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 113, 
+            "expiration_date": "2099-12-31", 
+            "custom_restrictions": "Paid, approved, slotted", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 412, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "Paid, not ordered", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 413, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 4, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                3
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "Bulk with a location 12550", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 414, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 5, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                3
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2015-10-29", 
+            "custom_restrictions": "Media partner, location on site 2", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 415, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 6, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "National", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 416, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "Coupon in a slot that ends this week", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk":417, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "Has never beein in a flyer", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 418, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 419, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 6, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 420, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 3, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 421, 
+        "model": "coupon.coupon", 
+        "fields": {
+            "coupon_modified_datetime": "2010-10-20 14:37:19", 
+            "coupon_create_datetime": "2010-10-20 14:37:19", 
+            "is_valid_saturday": false, 
+            "is_redeemed_by_sms": false, 
+            "is_approved": true, 
+            "coupon_type": 1, 
+            "is_valid_monday": false, 
+            "redemption_method": [], 
+            "is_coupon_code_displayed": true, 
+            "sms": "", 
+            "default_restrictions": [], 
+            "location": [
+                1
+            ], 
+            "is_valid_friday": false, 
+            "start_date": "2010-10-20", 
+            "is_valid_tuesday": false, 
+            "offer": 1, 
+            "expiration_date": "2010-10-29", 
+            "custom_restrictions": "", 
+            "is_valid_sunday": false, 
+            "is_valid_thursday": false, 
+            "is_valid_wednesday": false, 
+            "simple_code": "", 
+            "precise_url": ""
+        }
+    }, 
+    {
+        "pk": 401,
+        "model": "coupon.flyer",
+        "fields": {
+            "is_approved": true,
+            "is_mini": false,
+            "create_datetime": "2011-01-07 13:34:59",
+            "site": 2,
+            "num_recipients": 571,
+            "send_status": 2
+        }
+    },
+    {
+        "pk": 402,
+        "model": "coupon.flyer",
+        "fields": {
+            "is_approved": true,
+            "is_mini": false,
+            "create_datetime": "2011-01-07 13:34:59",
+            "site": 3,
+            "num_recipients": 1,
+            "send_status": 2
+        }
+    }, 
+    {
+        "pk": 401, 
+        "model": "coupon.flyercoupon", 
+        "fields": {
+            "coupon": 419, 
+            "flyer": 401, 
+            "rank": 1
+        }
+    }, 
+    {
+        "pk": 402, 
+        "model": "coupon.flyercoupon", 
+        "fields": {
+            "coupon": 420, 
+            "flyer": 401, 
+            "rank": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 1, 
+            "title": "Save Money with the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 2, 
+            "title": "Check Out the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 3, 
+            "title": "Don\u2019t be afraid. Save with the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 4, 
+            "title": "Thanks for your Vote. Get More with the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 5, 
+            "title": "Check Out the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 6, 
+            "title": "Save Money with the Latest %s Coupons"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "coupon.flyersubject", 
+        "fields": {
+            "week": 7, 
+            "title": "Time to Shop. Buy More with the Latest %s Coupons"
+        }
+    },
+    {
+        "pk": 411, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 114, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 411, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 411, 
+            "coupon": 411, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 416, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 1, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 416, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 416, 
+            "coupon": 416, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 417, 
+        "model": "coupon.slot", 
+        "fields": {
+            "business": 1, 
+            "end_date": "2099-12-31", 
+            "site": 2, 
+            "renewal_rate": "10.00", 
+            "start_date": "2011-01-17", 
+            "is_autorenew": true
+        }
+    }, 
+    {
+        "pk": 417, 
+        "model": "coupon.slottimeframe", 
+        "fields": {
+            "slot": 417, 
+            "coupon": 417, 
+            "start_datetime": "2011-01-17 00:00:00", 
+            "end_datetime": null
+        }
+    },
+    {
+        "pk": 411, 
+        "model": "ecommerce.order", 
+        "fields": {
+            "total": "49.95", 
+            "billing_record": 1, 
+            "is_locked": false, 
+            "create_datetime": "2010-10-19 12:49:13", 
+            "tax": "0.00", 
+            "promoter_cut_amount": "0.00", 
+            "purchase_order": "", 
+            "invoice": "2.402", 
+            "amount_discounted": "0.00", 
+            "promotion_code": null, 
+            "subtotal": "49.95", 
+            "method": "C"
+        }
+    }, 
+    {
+        "pk": 411, 
+        "model": "ecommerce.orderitem", 
+        "fields": {
+            "product": 1, 
+            "description": "a paid flyer placement", 
+            "business": 1, 
+            "site": 2, 
+            "is_taxable": false, 
+            "amount": "49.95", 
+            "end_datetime": "2099-10-19  12:49:10", 
+            "start_datetime": "2010-10-19 10:34:50", 
+            "units": 1, 
+            "order": 411,
+            "item_id": 411,
+            "content_type": [
+                "coupon", 
+                "slot"
+            ]
+        }
+    }
+]

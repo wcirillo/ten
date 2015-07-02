@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% load currency %}
+
+{% block title %}How {{ current_site.domain }} Works{% endblock %}
+
+{% block meta %}
+<link rel="canonical" href="http://10coupons.com/how-it-works/"/>
+{% endblock %}
+
+{% block frame %}
+
+<div class="breadcrumbs sprite hidden">
+    <a href="{% url all-coupons %}">{{ current_site.name }} Coupons</a> &nbsp;&rsaquo;&nbsp;
+    <span>Why Advertise Here?</span>
+</div>
+
+{% if not request.flags.is_mobile %}
+
+    <div class="bgWindow" style="background-image: url('{{ safe_static_url }}images/layout/bgWindow2.jpg'); height: 375px; margin-bottom: 25px; padding: 0;">
+
+        <div class="bgWindowFormShort">
+
+            <div class="bgWindowHeader">
+
+                <h3>Why create coupons for my business?</h3>
+
+                <div class="clear"></div>
+            </div>
+
+            <h5>
+                You'll reach people right here in the {{ site.region }}.
+            </h5>
+
+            <h5>
+                It's a great way to grow your business. 
+                It's <em>easy</em> and it <em>gets results</em>.
+            </h5>
+
+            <br/>
+
+            {% if user_type != 'advertiser' %}
+                <a class="button largeBtn" href="{% url advertiser-registration %}">Create your first coupon in minutes! &raquo;</a>
+            {% else %}
+                <a class="button largeBtn" href="{% url advertiser-registration %}">Create a coupon now! &raquo;</a>
+            {% endif %}
+
+            {% include "include/dsp/dsp_testimonial_advertiser.html" %}
+
+            <div class="clear"></div>
+        </div>    
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="id_modal_video" class="hidden">
+
+        <div class="center">
+            <iframe width="550" height="400" src="http://www.youtube.com/embed/TTnTFU1mbUs?hl=en&fs=1" frameborder="0" allowfullscreen></iframe>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+{% endif %}
+
+<div class="grid_10">
+
+    {% if request.flags.is_mobile %}
+
+        <h2>Why create coupons for my business?</h2>
+
+        <p>
+            You'll reach people right here in the {{ site.region }}.
+        </p>
+
+        <p>
+            It's a great way to grow your business. 
+            It's <em>easy</em> and it <em>gets results</em>.
+        </p>
+
+        <p>
+            <a class="button largeBtn" href="{% url advertiser-registration %}">Create a coupon now! &raquo;</a>
+        </p>
+
+        <p align="center" class="small"><em>See how easy it is to create a coupon:</em></p>
+
+        <iframe class="video_iframe" width="98%" src="http://www.youtube.com/embed/TTnTFU1mbUs?hl=en&fs=1" frameborder="0"></iframe>
+
+    {% endif %}
+
+    <h1 class="large">Coupon use is huge!</h1>
+    <h4>It's growing and changing. Use 10 Local Coupons to gain customers!</h4>
+
+    <p>
+    {% if has_newspaper %}People are looking online for new ways to save money.{% else %}Are your prospects looking in the daily newspaper for your business? <strong>No, they're looking online</strong>.{% endif %}
+        You can publish (up to 10 separate) coupons in just minutes. Potential customers easily find your business and your offers.
+        Coupons drive customers and prospects to your business ready to buy. 
+    </p>
+
+    <p>
+        Commercials lead consumers to {{ site.domain }} to find goods and services in {% if current_site.id != 118 %}the {{ municipality_division }} of {% endif %} {{ county_list }}.
+        {% if not request.flags.is_mobile %}
+            <a class="small" href="{% url show-counties-in-market %}">Map</a>
+        {% endif %}
+    </p>
+
+    {% if user_type != 'advertiser' %}
+    <p>
+        <a href="{% url advertiser-registration %}">Display up to 10 coupons online</a> for only <strong>{{ slot_price|currency }}</strong> monthly{% if request.session.ad_rep_id %} or get a full year for <strong>only {{ annual_slot_price|currency }}</strong>{% endif %}!
+    </p>
+    {% endif %}
+
+    <div class="clear"></div>
+</div>
+
+{% if not request.flags.is_mobile %}
+
+    <div class="grid_6">
+
+        <a class="modaltrigger" name="id_modal_video" href="#"><img src="{{ safe_static_url }}images/howitworks_video.gif" height="250" width="350" border="0" style="margin: 5px 0 0 20px;"/></a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div><br/>
+
+    <div class="grid_8 alpha">
+
+        <img src="{{ safe_static_url }}images/howitworks_screenshot_101211.jpg" height="285" width="500" border="0" style="margin: 10px 0 0 0"/>
+
+        <div class="clear"></div>
+    </div>
+
+{% endif %}
+
+<div class="grid_8">
+
+    <br/><br/>
+
+    <h3>What's an Email Coupon Flyer?</h3>
+    
+    <p> Each week we send 10 coupons to people right here in the {{ current_site.region }}.
+        Coupons for your business can be included in <strong>Email Flyers</strong> sent to registered consumers who have requested local offers.
+    </p>
+
+    <p> 
+        Reserved positions in these Email Flyers can be purchased from your Local Business Account. 
+        <a href="{% url sample-flyer %}">See an Email Flyer</a>.
+    </p>
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<br/>
+
+<div class="grid_11">
+
+    <br/>
+
+    <h3>What's a text message coupon?</h3>
+
+    <p>
+        Text coupons are short electronic versions of printed coupons. 
+        If available, a consumer may send a text coupon to their phone. 
+        We offer this option because there's a whole world of people out there that will carry their phone sooner than a fistful of paper coupons. 
+        This option allows them to arrive at your cash register with a coupon stored on their phone. 
+        If you provide this option, you'll surely get better response. 
+        If you're unsure, we recommend you first try including text coupons. 
+        You can turn that option off at anytime.
+    </p>
+
+    <br/><br/>
+
+    <div class="clear"></div>
+</div>
+
+{% if not request.flags.is_mobile %}
+
+    <div class="grid_5">
+
+        <img src="{{ safe_static_url }}images/howitworks_phones_101211.gif" height="230" width="240" border="0" style="margin: -15px 0 15px 10px;"/>
+
+        <div class="clear"></div>
+    </div>
+
+{% endif %}
+
+<!--
+
+<div class="clear"></div>
+
+<div class="grid_6 alpha">
+
+    <a href="http://www.shooger.com" target="_blank"><img src="{{ safe_static_url }}images/howitworks_shooger.gif" height="230" width="370" border="0"/></a>
+
+    <div class="clear"></div>
+</div>
+
+<div class="grid_10 omega">
+
+    <br/>
+
+    <h3>What about mobile apps for smartphones?</h3>
+
+    <p>
+        Coupons published on {{ current_site.domain }} are automatically featured on the free <strong>Shooger</strong> smartphone app.
+        Shooger delivers deals when and where consumers want them.
+        Your customers can immediately access available nearby deals (like yours!) by location, by category or through free-form search.
+    </p>
+
+    <p><a href="http://www.shooger.com" target="_blank">Visit Shooger</a> or search the App Store or Android market to download the free smartphone app!</p>
+
+    <div class="clear"></div>
+</div>
+
+-->
+
+<div align="center">
+
+    <a class="button largeBtn" href="{% url advertiser-faq %}">Frequently Asked Questions &raquo;</a>
+
+    {% if user_type != 'advertiser' %}
+        <a class="button largeBtn" href="{% url advertiser-registration %}">Create a Coupon Now! &raquo;</a>
+    {% endif %}
+
+</div>
+
+{% endblock %}

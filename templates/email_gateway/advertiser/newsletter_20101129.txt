@@ -1,0 +1,36 @@
+{% extends "frames/email/non-glossy.txt" %}
+{% block email_content %}
+
+    Greetings!                
+
+    We hope you had a wonderful Thanksgiving.
+
+    {{ site.domain }} is growing nicely... and we're about to increase our prices (finally!)
+
+    Presently: You can post your coupon on {{ site.domain }} for THREE months (and get your offer emailed out to all our subscribers in the market THREE times over that 3 month period)... for just $49.
+
+    Starting Wednesday 12/1.... that same $49... will buy you just a ONE month coupon posting and ONE emailing!
+
+    So... if you're thinking of posting your coupon soon... then NOW is the time to ACT!
+
+    Post your coupon here: {{ site.domain }}/create-coupon/ or call me at 800-581-3380 x1 for more information!
+
+    We look forward to working with you!
+
+    Sincerely,
+
+    <strong>Eric Straus</strong><br/>
+    President<br/>
+    {{ site.domain }}<br/>
+    Phone: 800-581-3380 x301<br/>
+    Email: Eric@10Coupons.com
+
+    PS: If you already have a coupon on the site with us, you may want to post a second coupon while our price is so low!
+
+    PPS: If you know other business owners who may be interested in our services.... please forward this email to them! Thanks so much!!!
+
+    I'll very occasionally send updates like these to let you know what's going on with our site. If you'd prefer not to receive them, please use this unsubscribe link to cancel these newsletters instantly:
+
+	{{base_url}}{% url opt_out payload=payload %}
+
+{% endblock %}

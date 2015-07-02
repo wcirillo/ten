@@ -1,0 +1,78 @@
+{% load currency %}
+
+<div style="border-top: 1px #e6e6e6 solid; display: block; height: 1px; margin-bottom: 10px;"></div>
+
+<h3 style="font-size: 19px; margin-top: 0; margin-bottom: 15px;">Receipt {{ order.invoice }}</h3>
+
+<p style="font-size: 13px; margin: 0 0 10px 0;">
+    <strong>{{ business.business_name }},</strong><br/>
+    This is a receipt for your {{ order.create_datetime|date:"M j, Y" }} {% if order.total > 0 %}purchase{% else %}transaction{% endif %}:
+</p>
+
+<table cellpadding="0" cellspacing="0" border="0" style="border: 1px #e0e0e0 solid; margin-bottom: 20px;width:100%">
+    <tr>
+        <td>
+
+<table cellpadding="10" cellspacing="0" border="0" style="background-color: #fafafa; border: 1px #ffffff solid; font-size: 13px;width:100%">
+    {% if coupon %}
+        <tr>
+            <td colspan='2' style="border-bottom: 1px #e0e0e0 solid;">
+                <table cellpadding="00" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td align="left" valign="top">Coupon Offer 1 of 10:</td>
+                        <td align="right" valign="top" width="300"><a href="{{ base_url}}{{unified_host}}{% url view-single-coupon coupon.slug coupon.id %}">{{ coupon.offer.headline }}</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    {% endif %}
+
+    {% for order_item in order.order_items.all %}
+        <tr>
+            <td align="left" valign="top" style="border-bottom: 1px #e0e0e0 solid;">{{ order_item.description }}</td>
+            <td align="right" valign="top" width="95" style="border-bottom: 1px #e0e0e0 solid;">{{ order_item.amount|currency }}</td>
+        </tr>
+    {% endfor %}
+
+    {% if order.amount_discounted > 0 or order.tax > 0 %}
+        {% if order.promotion_code %}
+            <tr>
+                <td align="left" valign="top" style="border-bottom: 1px #e0e0e0 solid;">Tracking Code <strong>{{ order.promotion_code.code }}</strong>:</td>
+                <td align="right" valign="top" style="border-bottom: 1px #e0e0e0 solid; color: #ff0000">-{{ order.amount_discounted|currency }}</td>
+            </tr>
+            {% endif %}
+            {% if order.tax > 0 %}
+            <tr>
+                <td align="left" valign="top" style="border-bottom: 1px #e0e0e0 solid;"></td>
+                <td align="right" valign="top" style="border-bottom: 1px #e0e0e0 solid;">{{ order.tax|currency }} tax</td>
+            </tr>
+        {% endif %}
+    {% endif %}
+
+    <tr>
+        <td colspan="2" style="border-top: 1px #333333 solid;">
+
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td align="left" valign="top" style="font-size: 15px;">
+                        {% if order.total > 0 %}
+                            Total charged to {{ cc_type }}{% ifnotequal cc_type 'MasterCard' %} card{% endifnotequal %} XXXX-{% if cc_type == 'American Express' %}XXXXXX-X{% else %}XXXX-XXXX-{% endif %}{{ payment.credit_card.last_4 }}
+                        {% endif %}
+                    </td>
+                    <td align="right" valign="top" style="font-size: 15px;">
+                        <strong>{{ order.total|currency }}</strong>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+        </td>
+    </tr>
+</table>
+{% if product_id == 2 and renewal_rate > 0 %}
+    
+    This is a recurring monthly charge. Change auto-renew setting to cancel.</br>
+        
+{% endif %}

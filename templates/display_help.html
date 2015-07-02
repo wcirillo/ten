@@ -1,0 +1,21 @@
+{% extends "frames/web/sidenav.html" %}
+{% block title %}{{ current_site.domain }} - Help{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/help/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Help / FAQ</span>
+{% endblock %}
+
+{% block links %}
+    {% include "include/navigation/nav1.html" %}
+{% endblock %}
+
+{% block base_content %}
+ 
+	{% include "include/dsp/dsp_help.html" %} 
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

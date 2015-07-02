@@ -1,0 +1,58 @@
+{% extends "frames/web/leftCol.html" %}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    {% if coupon_mode == 'EDIT' %}
+        <h2>Edit this coupon</h2>
+    {% else %}
+        {% if headline %}
+            <h2>Preview &amp; Edit</h2>
+        {% else %}
+            <h2>Provide the offer for your new coupon.</h2>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="box2">
+
+        <p class="small"><em>Click the menu (below) or the image (right) to make changes.</em></p>
+
+        {% include "include/frm/frm_edit_coupon.html" %}
+
+        {% if coupon_mode != 'EDIT' %}
+            <p class="small nomargin">
+                <em>
+                {% if business_description %}
+                Remember, you can <strong>always make changes to the profile</strong> for your business. Complete this coupon. Then use the tools provided in your Advertiser Account.
+                {% else %}
+                Want to <strong>say more about your business?</strong> Great! There's <strong>plenty of room</strong> for that, and it is <strong>free!</strong> Complete this coupon first. Next, we'll help you show as much information as you like.
+                {% endif %}
+                </em>
+            </p>
+        {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_preview_coupon.html" %}
+
+    {% if coupon_mode != 'EDIT' and coupon_mode != 'PUBLISH' %}
+    
+    	<p align="center">{% include "include/dsp/dsp_purchase_intent.html" %}</p>
+    
+    {% endif %}
+    
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}
+

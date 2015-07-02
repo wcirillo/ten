@@ -1,0 +1,254 @@
+# 10coupons .tenrc file
+#
+# This file should set up the basic environment for working on the ten project
+#
+# Assumptions:
+#
+SKIP=''
+unalias -a
+alias crontab='crontab -i'
+#Adjust these if the naming convention of eith the dev servers or the djangostack VMs change
+DEVSTR='devweb'
+VMSTR='djangostack'
+
+#  config for making commands work on the mac when you're using a VM
+VM_IP=local.10coupons.com
+[ -f $HOME/.tenip ] && VM_IP=`cat $HOME/.tenip`
+
+
+HOSTING=""
+#This should _ONLY_ be set on hosting boxen
+if [[ `hostname` =~ "hs" ]]; then
+    HOSTING="True"
+fi
+# For local dev installs
+if [ -n "$TEN_ROOT" ]; then
+    export VIRT_HOME=$TEN_ROOT
+else
+    export VIRT_HOME=/home/django/10coupons
+fi
+export PYLINTRC=$VIRT_HOME/.pylintrc
+## OSX
+if [[  "`uname`" =~ "Darwin" ]] ; then 
+	echo "Configuring for Mac workstation with a django vm"
+	tenhome()
+	{
+        ssh $VM_IP
+	}
+    alias tenactivate=tenhome
+    alias runserver=tenhome
+## LINUX    
+elif [[  "`uname`" =~ "Linux" ]] ; then  
+    alias egrep='egrep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias grep='grep --color=auto'
+    alias ls='ls --color=auto'
+    celeryrestart()
+    {
+        sudo /etc/init.d/celeryd restart
+        echo "  celeryd -- Done."
+        sudo /etc/init.d/celerycam restart
+        echo "  celerycam -- Done."
+        sudo /etc/init.d/celerybeat restart
+        echo "  celerybeat -- Done."
+    }
+    # #DjangoStack VM
+    if [[ "`hostname`" =~ "$VMSTR" ]]; then 
+        echo "Configuring for djangostack virtual machine"
+        export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;37m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+	tenrestart()
+            {
+		echo "Running $0 at `date`"
+                echo "Done. $0 restarting celeryi daemons"
+                celeryrestart
+                echo "Done."
+            }
+
+    ## DEV or Hosting
+    elif [[ "`hostname`" =~ "$DEVSTR" || "$HOSTING" ]]; then 
+        echo "Configuring for dev/hosting server"
+        VM_IP=''
+        tenreload()
+        {
+            ACTION='reload'
+            if [[ "$1" == "restart" ]]; then 
+                ACTION='restart'
+            fi
+            echo "Running ten$ACTION at `date`"
+
+
+
+            for SERVICE in `ls $VIRT_HOME/webconfig/services | grep -v available`; do
+            
+                echo "Running $SERVICE ${ACTION} script..."
+                $VIRT_HOME/webconfig/services/$SERVICE $ACTION
+                echo "Done with $SERVICE restart script."
+            done
+            echo "Done."
+        }
+        tenrestart()
+        {
+            tenreload restart
+        }
+    
+
+    # Mac or other workstation using a VM for django stack
+
+    else  
+        #if we're a local workstation install with no VM
+        echo "Configuring for standard local ten workstation"
+        tenreload()
+            {
+		echo "Running $0 at `date`"
+                find $VIRT_HOME/ten -name \*.pyc -delete
+                echo "Done. $0 Restarting restart"
+                celeryrestart
+            }
+        tenrestart()
+        {
+            tenreload
+        }
+
+    fi
+    resetrabbit()
+    {
+        sudo rabbitmqctl stop_app
+        sudo rabbitmqctl reset
+        sudo rabbitmqctl start_app
+        sudo rabbitmqctl add_user ten_rabbit_user snerfmorger
+        sudo rabbitmqctl change_password ten_rabbit_user snerfmorger
+        sudo rabbitmqctl add_vhost ten_vhost
+        sudo rabbitmqctl set_permissions -p ten_vhost ten_rabbit_user ".*" ".*" ".*"
+    }
+    alias list_migrations="manage migrate --list | grep -v '(\*)'"
+    export TEN_HOME=$VIRT_HOME/ten
+    tenhome()
+    {
+        cd $TEN_HOME
+    }
+    if [ -n "$VIRTUAL_ENV" ]; then
+        alias tenactivate="source $VIRTUAL_ENV/bin/activate;cd $TEN_HOME"
+    else
+        alias tenactivate="source $VIRT_HOME/bin/activate;cd $TEN_HOME"
+    fi
+
+    #These two lines _MUST_ come before the runserver definition to work properly
+    if [ -n "$VIRTUAL_ENV" ]; then
+        source $VIRTUAL_ENV/bin/activate
+    else
+        source $VIRT_HOME/bin/activate
+    fi
+    cd $TEN_HOME
+    alias trunk_update='cd $VIRT_HOME;svn up;cd -'
+    alias sudo="/usr/bin/sudo PATH=$PATH $@"
+
+    alias manage="cd $TEN_HOME; $VIRT_HOME/bin/python manage.py $@"
+	migrate()
+	{
+		sudo /etc/init.d/celeryd stop && cd $TEN_HOME; $VIRT_HOME/bin/python manage.py migrate $@ && sudo /etc/init.d/celeryd start
+	}
+    die()
+    {
+           echo "ERROR: $1"
+           exit 1
+    }
+
+    checklocaldjango()
+    {
+           [ -n "$TEN_HOME" ] || die "ERROR: TEN_HOME not defined!"
+    }
+
+    runserver()
+    {
+            if [ "$1" == 'public' ] || [ -f $HOME/.tenpublic ] || [ -f $VIRT_HOME/ten/.tenpublic ]; then
+		if [[ "$2" =~ "eth" ]]; then
+		   ETH="$2"
+		   echo "using $2"
+		else
+		   ETH="eth0"
+		   echo "using eth0"
+		fi
+                RUNSERVER_IP="`ifconfig $ETH | grep 'inet ' | cut -f2 -d ':' | cut -f1 -d ' '`:"  
+            else
+                RUNSERVER_IP=""
+            fi
+            if [ -n "$VIRTUAL_ENV" ]; then
+                cd $TEN_HOME && sudo PATH=$VIRTUAL_ENV/bin:$PATH bash -c "source ../bin/activate && python manage.py runserver_plus ${RUNSERVER_IP}80"
+            else
+		cd $TEN_HOME && sudo PATH=$VIRT_HOME/bin:$PATH bash -c "source ../bin/activate && python manage.py runserver_plus ${RUNSERVER_IP}80"
+            fi;
+    }
+fi
+
+debugserver() { gunicorn_django  -b 0.0.0.0:9000; }
+
+fixpermissions()
+{
+    tengroup=`stat $VIRT_HOME/ten | grep Gid | sed -e 's/.*Gid:.*\/ *\([a-z]*\))/\1/' `
+    mediagroup=`stat $VIRT_HOME/ten | grep Gid | sed -e 's/.*Gid:.*\/ *\([a-z]*\))/\1/'`
+    sudo chmod -R g+w $VIRT_HOME/ten
+    sudo addgroup www-data $tengroup
+    sudo addgroup www-data $mediagroup
+    sudo chmod -R g+w /var/log/django
+}
+
+appservers()
+{
+    usage()
+    {
+        echo 
+        echo "  appservers <show|showfile|register|regen|delete> <ip>"
+        echo 
+    }
+    regen_file()
+    {
+        sudo /home/django/10coupons/webconfig/scripts/collate-nginx-backends.sh
+    } 
+    SERVERSDIR=/export/ten/appservers
+    SERVERSFILE=django.servers
+    FRONTEND="/etc/init.d/nginx"
+    case "$1" in 
+        default)
+            sudo mkdir -p $SERVERSDIR 
+            sudo cp $VIRT_HOME/webconfig/nginx/127.0.0.1.9000.10-backend.default $SERVERSDIR
+            regen_file
+            sudo $FRONTEND restart
+            ;;
+            
+        show)   echo "Registered appservers:" ; cat $SERVERSDIR/$SERVERSFILE
+                ;;
+        showfiles)   echo "Registered appservers:" ; ls $SERVERSDIR | grep backend
+                ;;
+        register)
+                if [ -n "$2" ] && echo "$2" | grep -qE "^[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*$"
+                then
+                    PORT=9000
+                    WEIGHT=10
+                    IP=$2
+                    sudo touch  $SERVERSDIR/$IP.$PORT.$WEIGHT-backend
+                    regen_file
+                else
+                    usage
+                fi
+                ;;
+        regen)
+            echo "Regenerating server file with current directory structire..."
+            regen_file
+            echo "Done."
+            ;;
+        delete)
+                echo "Checking for $2"
+                ([ -f "$SERVERSDIR/$2" ] && echo "Removing $SERVERSDIR/$2" && sudo rm "$SERVERSDIR/$2" && regen_file) || echo "Not found: $2"
+                ;;
+        *)
+            usage
+            ;;
+
+    esac
+}
+ 
+update_repo() 
+{ 
+	cd /export/ten/10coupons-repo && hg fetch && tenhome 
+}
+

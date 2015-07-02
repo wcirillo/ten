@@ -1,0 +1,67 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block base_content %}
+
+    {% if not is_eligible_to_win %}
+
+        <div class="grid_8 alpha">
+            <div class="boxBorder boxBottomArrow">
+
+                {% include "include/dsp/dsp_subscriber_registration_confirmation.html" %}
+
+                {% if contest_is_running %}<div class="sprite btmArrowRight"></div>{% endif %}
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="grid_8 omega">
+            <div class="boxBorder boxBottomArrow">
+
+                {% if not is_email_verified %}
+
+                    {% include "include/dsp/dsp_con_sub_reg_confirmation.html" %}
+
+                {% else %}
+
+                    {% include "include/dsp/dsp_consumer_registration_confirmation.html" %}
+
+                {% endif %}
+
+                {% if contest_is_running %}<div class="sprite btmArrowLeft"></div>{% endif %}
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+
+        {% if contest_is_running %}
+            <h2 class="large highlight alt_font2" align="center">Win $10,000!*</h2>
+            <p class="tiny" align="center">
+                <strong>*</strong>Verify both your cell phone and email address to qualify for the next $10,000 Drawing. No purchase necessary.
+                <a href="{% url contest-rules %}">Rules</a>
+            </p>
+        {% endif %}
+
+    {% else %}
+
+        <h2 class="highlight alt_font2" align="center">You're eligible to Win $10,000!*</h2>
+
+        <p align="center">Check out some <a href="{% url all-coupons %}">recent {{ current_site.name }} coupons</a>.</p>
+
+        <br/><br/>
+        <br/><br/>
+
+        <p class="tiny" align="center">
+            <strong>*</strong>Eligibility requires current and complete signup. No purchase necessary.
+            <a href="{% url contest-rules %}">Rules</a>
+        </p>
+
+    {% endif %}
+
+{% endblock %}

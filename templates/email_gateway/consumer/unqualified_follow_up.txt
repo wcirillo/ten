@@ -1,0 +1,47 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+
+{% if consumer.first_name and consumer.first_name != '' %}{{ consumer.first_name }}{% else %}{{ consumer.email }}{% endif %},
+You're signed up for free money-saving {{ site.name }} coupons.
+I also want to make sure you are eligible to win $10,000!
+
+The next $10,000 winner may as well be you!
+
+{% if consumer.is_email_verified %}{% else %}
+Use this link to confirm your email address:
+{{ base_url }}{% url email_verify_consumer payload=payload %}
+
+{% endif %}
+{% if consumer.subscriber %}
+
+{% if phone.is_verified %}{% else %}
+Do you want text message coupons sent to your phone?
+Text Yes or No to 71010.
+Text from {{ consumer.subscriber.mobile_phones.0.mobile_phone_number }} to verify your number.
+Message and Data Rates May Apply.
+No Text messaging on that phone?
+No Problem! Use this link to read the rules:
+{{ base_url }}{% url contest-rules %}
+{% endif %}
+
+{% else %}
+Provide your cell phone number. Follow this link:
+{{ base_url }}{% url subscriber-registration %}
+No cell phone? No Problem! Use this link to read the rules:
+{{ base_url }}{% url contest-rules %}
+{% endif %}
+
+Get this done today. Qualify for the next $10,000 drawing!
+
+We appreciate your time and attention.
+
+Thanks and Good Luck!
+{% include "include/dsp/dsp_email_text_signature.txt" %}
+
+
+PS Why do we collect this information?
+To make the $10,000 Contest Drawings fair.
+Verified emails and phone numbers discourage multiple entries.
+
+{% endblock %}

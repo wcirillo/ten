@@ -1,0 +1,67 @@
+<form name="frm_sign_in" class="largeForm" action="" method="post">{% csrf_token %}
+
+    <ol class="inline">
+
+        <li id="signinform_email">
+
+            {{ form.non_field_errors }}
+
+            {{ form.email.errors }}
+
+            <label for="id_email" class="infield">email address</label>
+
+            {{ form.email }}<br/>
+
+            <div class="left tiny">
+
+                {% if request.session.consumer.advertiser %}
+
+                    An Advertiser Account is set up automatically when you <a class="nodec" href="{% url advertiser-registration %}">create a coupon</a>.
+
+                {% else %}
+
+                    {% if not user_type %}
+                        TIP: You don't need a password just to get coupons.
+                    {% endif %}
+
+                {% endif %}
+
+                <div class="clear"></div>
+            </div>
+
+        </li>
+
+        <li>
+
+            {{ form.password.errors }}
+
+            <label for="id_password" class="infield">password</label>
+
+            {{ form.password }}<br/>
+
+            <div class="left tiny">
+                Problems? <a class="nodec" href="{% url forgot-password %}">Reset your password</a>
+                <div class="clear"></div>
+            </div>
+
+        </li>
+
+        <li>
+
+            <input class="button largeBtn" type="submit" tabindex="3" value="Sign In!"/><br/>
+
+            {% if not user_type %}
+                <div class="left">
+                    &nbsp;<input type="checkbox" id="id_keep_signed_in" name="keep_signed_in"/>
+                    <label for="id_keep_signed_in" class="small"> Keep me signed in</label>
+                    <div class="clear"></div>
+                </div>
+            {% endif %}
+
+            {{ form.ad_rep_sign_in }}
+
+        </li>
+        
+    </ol>
+
+</form>

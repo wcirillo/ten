@@ -1,0 +1,10 @@
+{% if county_list %}
+
+    <p class="smallmargin">{{ current_site.name }} coupons for consumers in: </p>
+
+    <span class="small">
+        {{ county_list }} {{ municipality_division }}.
+        <a class="nodec" href="{% url show-counties-in-market %}">map</a>
+    </span>
+
+{% endif %}

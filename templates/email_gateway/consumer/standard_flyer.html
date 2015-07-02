@@ -1,0 +1,80 @@
+{% extends "frames/email/columns.html" %}
+
+{% block email_content %}
+
+    <table cellpadding="0" cellspacing="0" border="0" width="305" style="border-bottom: 1px #d9e7ed solid;">
+
+        {% for flyer_coupon in flyer_coupons %}
+
+            {% if first_national.id == flyer_coupon.id %}
+                <tr>
+                    <td colspan="2">
+                        <p>
+                            {{ national_text }}
+                        </p>
+                    </td>
+                </tr>
+            {% endif %}
+
+            <tr>
+                <td style="border-top: 1px #d9e7ed solid; padding: 10px 5px;">
+    
+                    <h2 style="font-size: 17px; font-weight: normal; margin: 0 0 2px 0;">{{ flyer_coupon.coupon.offer.business.business_name }}</h2>
+                    <h3 style="font-size: 23px; letter-spacing: -1px; margin: 0 0 2px 0;"><a href="{{ base_url }}{% url flyer-click flyer_coupon.coupon.id payload %}" style="color: #009ed8; font-weight: bold; margin: 0; padding: 0; line-height: 25px; font-size: 23px; text-decoration: underline;">{{ flyer_coupon.coupon.offer.headline }}</a></h3>
+                    <span style="color: #009933; font-size: 11px; text-decoration: none;">Valid through {{ flyer_coupon.coupon.expiration_date|date:"n/j/y" }}</span>
+    
+                </td>
+                <td valign="middle" width="13" style="border-top: 1px #d9e7ed solid;"><img src="{{ STATIC_URL }}images/mobile/arrowright.gif" border="0" height="19" width="13"/></td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <p style="margin: 20px 0 20px 0;">
+        We'll send 10 more coupons in a week or so.<br/>
+        Thanks for being a member. For all our {{ site.region }} coupons <a href="{{ base_url }}{% url all-coupons %}" style="color: #1ab1e8; text-decoration: underline;"><span style="color: #1ab1e8;">bookmark this link</span></a>.
+    </p>
+
+    <p>
+        <strong>Eric Straus</strong><br/>
+        <em>President</em><br/>
+        {{ site.domain }}<br/>
+        Phone: 800-581-3380 x301
+    </p>
+
+    <br/><br/>
+
+{% endblock %}
+
+{% block email_column_content %}
+
+    <table cellpadding="0" cellspacing="0" border="0" width="260" bgcolor="#222222" style="margin: 0 0 14px 0;">
+        <tr>
+            <td>{% include 'include/dsp/dsp_create_coupon_banner.html' %}</td>
+        </tr>
+    </table>
+        
+
+    <table cellpadding="0" cellspacing="0" border="0" width="260" bgcolor="#e4eff5" style="margin: 0 0 14px 0;">
+        <tr>
+            <td>{% include 'include/dsp/dsp_ad_rep_banner.html' %}</td>
+        </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="260" style="margin: 0 0 14px 0;">
+        <tr>
+            <td>{% include 'include/dsp/dsp_contest_banner.html' %}</td>
+        </tr>
+    </table>
+
+    <table cellpadding="10" cellspacing="0" border="0" width="260" style="margin: 0 0 15px 0;">
+        <tr>
+            <td>{% include 'include/dsp/dsp_forward_friend_banner.html' %}</td>
+        </tr>
+        <tr>
+            <td>{% include 'include/dsp/dsp_unsubscribe_banner.html' %}</td>
+        </tr>
+    </table>
+
+{% endblock %}

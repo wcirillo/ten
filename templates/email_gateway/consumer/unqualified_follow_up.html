@@ -1,0 +1,104 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        {% if consumer.first_name and consumer.first_name != '' %}
+            {{ consumer.first_name }},
+        {% else %}
+            {{ consumer.email }},
+        {% endif %}
+    </p>
+
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        You're signed up for free money-saving {{ site.name }} coupons.
+    </p>
+
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        I also want to make sure you are eligible to <strong>win $10,000!</strong>
+    </p>
+
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        Another drawing is coming soon. The next <strong>$10,000 winner</strong> may as well be <strong>you</strong>!
+    </p>
+    
+    {% if consumer.is_email_verified %}{% else %}
+
+        <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 15px;">
+            <tr>
+                <td align="left" style="font-size: 14px;">
+                    Confirm your email address with a single click.
+                </td>
+                <td align="right" style="padding-left: 15px;">
+                    <table cellpadding="0" cellspacing="0" width="190" border="0" align="right">
+                        <tr>
+                            <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 30px;">
+                                <a href="{{ base_url }}{% url email_verify_consumer payload=payload %}" style="color: #222222; display: block; height: 30px; font-size: 16px; font-weight: bold; line-height: 29px; padding: 0; text-align: center; text-decoration: none;">
+                                    <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;">Verify Now &raquo;</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    {% endif %}
+    
+    {% if consumer.subscriber %}
+        {% if phone.is_verified %}{% else %}
+
+            <p style="font-size: 14px; margin: 0 0 15px 0;">
+                Do you want text message coupons sent to your phone? Text <strong>Yes</strong> or <strong>No</strong> to <strong>71010</strong>.<br/>
+                Either response is okay. It's up to you. Just be sure to text from {{ consumer.subscriber.mobile_phones.0.mobile_phone_number }} to verify your number.<br/>
+                Message and Data Rates May Apply.<br/>
+                No Text messaging on that phone? <a href="{{ base_url }}{% url contest-rules %}">No Problem</a>!
+            </p>
+
+        {% endif %}
+    {% else %}
+
+        <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 15px;">
+            <tr>
+                <td align="left" style="font-size: 14px;">
+                    Provide your cell phone number.
+                </td>
+                <td align="right" style="padding-left: 15px;">
+                    <table cellpadding="0" cellspacing="0" width="190" border="0" align="right">
+                        <tr>
+                            <td bgcolor="#ffbddf" background="{{ STATIC_URL }}images/email/buttons/btnBg.gif" style="background-repeat: repeat-x; background-position: left top; border: 1px #ff85c4 solid; border-bottom-color: #ce5eaa; border-radius: 3px; height: 30px;">
+                                <a href="{{ base_url }}{% url add_subscriber payload=payload %}" style="color: #222222; display: block; height: 30px; font-size: 16px; font-weight: bold; line-height: 29px; padding: 0; text-align: center; text-decoration: none;">
+                                    <span style="color: #222222; letter-spacing: -1px; text-shadow: 0 1px 1px #ffeef7;">Supply cell phone &raquo;</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <p style="font-size: 14px; margin: 0 0 15px 0;">
+            No cell phone? <a href="{{ base_url }}{% url contest-rules %}">No Problem</a>!
+        </p>        
+
+    {% endif %}
+    
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        Be sure to <strong>get this done today</strong>. Be qualified for the next <strong>$10,000 drawing</strong>! We appreciate your time and attention.
+    </p>
+    
+    <p style="font-size: 14px; margin: 0 0 15px 0;">
+        Thanks and <strong>Good Luck</strong>!<br/>
+        {% include "include/dsp/dsp_email_html_signature.html" %}
+    </p>
+
+    <br/>
+
+    <p style="font-size: 12px; margin: 0 0 15px 0;">
+        <strong>PS</strong> You may wonder why we collect this information. The rules make the <strong>$10,000 Contest Drawings</strong> fair.
+        <ul style="font-size: 12px; margin: 0 0 15px 0; padding: 0;">
+            <li> Your verified email address confirms you are the authorized user.</li>
+            <li> Requiring a verified phone number for each email address discourages multiple entries.</li>
+        </ul>
+    </p>
+
+{% endblock %}

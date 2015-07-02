@@ -1,0 +1,32 @@
+{% extends "email_gateway/base_email.txt" %}
+
+{% block email_content %}
+Just a reminder…
+Company Overview Conference Call for 10LocalCoupons.com
+Tomorrow (and EVERY Tuesday) at 9pm Eastern Time. 
+
+The call-in info is below. 
+
+Please attend: 
+If you're interested in the opportunity, and want to hear more about becoming an Advertising Representative.
+
+If you are already an Advertising Representative, and simply want to brush up on 10LocalCoupons.com information.
+
+You are welcome to invite guests.
+
+Please dial in!!
+
+Conference Dial-in Number: (218) 339-4600
+Participant Access Code: 509938#
+
+You'll be joined by 
+Eric Straus: Founder and CEO and
+David Sage, Chief Marketing Officer
+
+We hope to talk to you Tuesday night!
+
+
+Thanks,
+
+Your 10LocalCoupons.com Customer Service Team!
+{% endblock %}

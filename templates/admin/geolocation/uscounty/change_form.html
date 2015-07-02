@@ -1,0 +1,33 @@
+{% extends "admin/change_form.html" %}
+
+{% block after_related_objects %}
+<p>
+{{ original.name }} is a member of US State {{ original.us_state }}.<br/>
+</p>
+<table width="100%"><tr>
+<td>
+<h2>US Zips in {{ original.name }}:</h2>
+<ul>{% for us_zip in original.us_zips.all %}
+    <li>{{ us_zip }}</li>
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+<td>
+<h2>US Cities in {{ original.name }}:</h2>
+<ul>{% for us_city in original.us_cities.all %}
+    <li>{{ us_city }}</li>
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+<td>
+<h2>Markets that include {{ original.name }}:</h2>
+<ul>{% for site in original.sites.all %}
+    <li>{{ site }}</li>
+{% empty %}
+    <li>(None)</li>
+{% endfor %}</ul>
+</td>
+</tr></table>
+{% endblock %}

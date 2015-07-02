@@ -1,0 +1,13 @@
+<table width="100%" style='border:none;' cellpadding=0 cellspacing=0>
+    <tr>
+        <td valign="top" align="left">
+            <h3 style="font-size: 13px; font-weight: bold; margin: 0 0 2px 0;">
+                Unsubscribe
+            </h3>
+            <p style="font-size: 12px; margin: 0 0 5px 0;">
+                We don't send email unless you've asked for it.
+                Use this <a {% if not payload or payload == 0 %}class="fake_link"{% else %}href="{{base_url}}{% url opt_out payload=payload %}"{% endif %} style="color: #1ab1e8;"><span style="color: #1ab1e8;">unsubscribe</span></a> link to cancel these email messages instantly.
+            </p>
+        </td>
+    </tr>
+</table>

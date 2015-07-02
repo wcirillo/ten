@@ -1,0 +1,40 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+<p>{{ ad_rep_dict.first_name }} {{ ad_rep_dict.last_name }} <br/>
+{% now "F j, Y " %}</p>
+
+<p>Hi {{ ad_rep_dict.first_name }},</p>
+
+<p><strong>Congratulations!</strong> <br/> 
+Thanks for being part of {{ site.domain }}!</p>
+
+<p><strong>Your Website</strong> <br/>
+Your very own free personalized website has been generated.</p>
+
+<p>Start earning money by referring friends, family or anyone you know to: <br/> 
+{{ site.domain }}/<strong>{{ ad_rep_dict.url }}</strong></p>
+
+<p>Refer people outside of the {{ site.region }} to: <br/> 
+10LocalCoupons.com/<strong>{{ ad_rep_dict.url }}</strong></p>
+
+<p>Those who receive Coupon Flyers and have a verified email address count toward a Referral Bonus.</p>
+
+<p><strong>Your Virtual Office</strong> <br/>
+We've also provided a free web-based Virtual Office. Go to {{ site.domain }} and click the "Sign In" link in the upper right corner of the screen. Use this email address and the password you created (below).</p>
+
+<p>Password: {{ ad_rep_dict.password }}</p> 
+
+<p>From the Virtual Office Menu; choose <i>My Money</i>> <i>Referral Bonus Manager</i> <br/> 
+View a list of your referrals. See who receives Coupon Flyers and who has verified their Email Address.<br/> 
+<a href='{{base_url}}{% url compensation-plan %}'>{{ site.domain }} compensation plan</a> </p>
+
+<p>Get started, and Good Luck!</p>
+
+<p>Thanks,</p>
+
+<p>Customer Care Team! <br/>
+(800) 581-3380</p>
+
+{% endblock %}

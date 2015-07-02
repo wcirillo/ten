@@ -1,0 +1,92 @@
+<div class="coupon">
+    <div class="couponInner">
+
+        <div class="coupon_business">
+
+            <h1 class="business_name">
+                {{ business_name|default:"Business Name" }}
+            </h1>
+
+            <h2 class="slogan">
+                {% if slogan %}
+                    - {{ slogan }} -
+                {% endif %}
+            </h2>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="coupon_offer">
+
+            <h3 class="headline">
+                {{ headline|default:"Coupon Offer" }}
+            </h3>
+
+            <h4 class="qualifier">
+                {{ qualifier }}
+            </h4>
+
+        </div>
+
+        <div class="coupon_line"></div>
+
+        <div class="redemption_method">
+
+            <div class="clear"></div>
+        </div>
+
+        <h5 class="alt_font">The Fine Print:</h5>
+        <ul class="fine_print small">
+            {% for restriction in default_restrictions %}
+                <li>{{ restriction }}</li>
+            {% endfor %}
+
+            <li class="restriction_0 hidden"></li>
+            <li class="restriction_1 hidden"></li>
+            <li class="restriction_2 hidden"></li>
+            <li class="restriction_3 hidden"></li>
+            <li class="restriction_4 hidden"></li>
+            <li class="restriction_5 hidden"></li>
+            <li class="restriction_6 hidden"></li>
+            <li class="restriction_7 hidden"></li>
+            <li class="restriction_8 hidden"></li>
+            <li class="restriction_9 hidden"></li>
+
+            {% if custom_restrictions %}
+                <li>{{ custom_restrictions }}</li>
+            {% endif %}
+            <li class="custom_restriction hidden"></li>
+            <li class="ten_coupon_restrictions">
+                {{ ten_coupon_restrictions }}
+            </li>
+
+            {% if coupon %}
+                {% if valid_days %}
+                    <li class="valid_days">
+                {% endif %}
+                        {{ valid_days }}
+                {% if valid_days %}
+                    </li>
+                {% endif %}
+            {% else %}
+                <li class="valid_days">
+                    {{ valid_days|default:"Offer good 7 days a week." }}
+                </li>
+            {% endif %}
+
+            <li class="redemption_window">
+                Valid through <span>{{ expiration_date }}</span>.
+            </li>
+        </ul>
+
+        <div class="qrcodesample">
+            <div class="center alt_font2 smallmargin">Sample</div>
+            <img class="block" src="{{ safe_static_url }}images/qrcodesample.gif" height="75" width="75"/>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>

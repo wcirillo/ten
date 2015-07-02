@@ -1,0 +1,19 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{% if contest_is_running %}Sign up for {{ current_site.name }} Coupons. Qualify to Win $10,000!{% else %}{{ current_site.name }} Coupons and Deals That Save You Money Weekly | {{ current_site.domain }}{% endif %}{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{% if market_coverage %}{% if state_site_list %}{% for state_site_dictionary in state_site_list %}Map of {{ state_site_dictionary.state }} showing{% for domain_directory_dict in state_site_dictionary.domain %}{% if forloop.last and not forloop.first %} and{% endif %} {{ domain_directory_dict.domain }}{% endfor %}. {% endfor %}{% endif %}{% else %}Map of {{ state_name|title }}{% endif %}"/>
+<link rel="canonical" href="{% url site-directory %}"/>
+{% endblock %}
+
+{% block base_content %}
+{% if market_coverage %}
+     {% if state_site_list %}
+           {% include "include/dsp/dsp_site_directory.html" %}
+     {% endif %}
+{% else %}
+        <div>Unfortunately we do not currently have any websites devoted to markets in {{ state_name|title }}.<br>
+        But we are adding markets <i>every month</i> so be sure to check back soon! 
+        </div>
+{% endif %}
+ {% endblock %}

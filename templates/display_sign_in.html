@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ current_site.domain }} - Sign In{% endblock %}
+
+{% block body_onload %}onload="document.getElementById('id_email').focus();"{% endblock %}
+
+{% block frame %}
+
+    <div class="bgWindow" style="background-image: url('{{ safe_static_url }}images/layout/bgWindowPattern1.jpg');">
+
+        <div id="formSearch" class="bgWindowFormDark">
+
+            <div class="bgWindowHeader">
+
+                {% include "include/dsp/dsp_sign_in_intro.html" %}
+
+                <div class="clear"></div>
+            </div>
+
+            {% include "include/frm/frm_sign_in.html" %}
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

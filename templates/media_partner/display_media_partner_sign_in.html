@@ -1,0 +1,57 @@
+{% extends "frames/web/full.html" %}}
+{% block title %}{{ current_site.domain }} - Media Partner Sign In{% endblock %}
+
+{% block body_onload %}onload="document.getElementById('id_email').focus();"{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Media Partner Login</span>
+{% endblock %}
+
+{% block base_content %}
+
+    <div class="grid_5">
+
+        <h3>Media Partner Login:</h3>
+
+        <p class="small">Sign in to your Media Partner account to view reports or update your account settings.</p>
+
+        {% include "include/frm/frm_sign_in.html" %}
+
+        <br/><br/>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="grid_7 push_2">
+
+            <h4>Why {{ current_site.domain }}?</h4>
+
+            <ul>
+                <li>It's turnkey. You run spots. Period.</li> 
+                <li>Creative is professional, localized, customized by market.</li>
+                <li>Straus Digital Media manages all of the backend, sales, fulfillment, payment, &amp; technology</li>
+                <li>High ROI and High ROE (return on effort) for your stations.</li>
+                <li>Straus Digital Media has a proven leadership team, great track record and strong funding.</li> 
+                <li>Just run the spots &amp; cash the checks!</li>
+            </ul>
+
+            {% if current_site.id == 1 %}
+            
+            {% else %}
+
+                <p>
+                    <strong class="highlight">NEW! </strong> <a href="{% url widgets %}">Banner Ads for your website</a>
+                </p>
+
+                {% if has_spots %}
+                <p>
+                    <strong class="highlight">NEW! </strong> <a href="{% url show-spots %}">Download the latest spots</a>
+                </p>
+                {% endif %}
+
+            {% endif %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

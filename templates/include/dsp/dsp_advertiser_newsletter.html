@@ -1,0 +1,72 @@
+{% block email_content %}
+
+    <p style="font-size: 13px; margin-top: 0;">
+        {{ company_name }}:
+    </p>
+
+    <p style="font-size: 13px;">
+        I wanted to take this time to say "hello"... and "thank you" for being one of our CHARTER advertisers on <strong>{{ site.domain }}!!!</strong>        
+    </p>
+
+    <p style="font-size: 13px;">
+        We have been seeing significant increases in our business since we launched this site.
+        The number of folks receiving your coupons continues to rise on a daily basis... thanks to heavy and ongoing broadcast advertising!
+        Across the board, we are currently in 96 markets in the United States; and our database of consumers is growing rapidly.
+    </p>
+
+    <p style="font-size: 13px;">
+        Please pass the word around to people that you think might benefit from getting great local coupons...
+    </p>
+
+    <p style="font-size: 13px;">
+        We will touch base every once in a while to share with you what we have going on since we are in the very early stages of growth and change.
+        We need your input.
+        Please let us know your thoughts/comments/complaints.
+        Testimonials are always welcome and we can share them with everyone so please, don't be shy... tell us about your successes using {{ site.domain }}!!!
+    </p>
+
+    <p style="font-size: 13px;">
+        Just a little insight for you...
+    </p>
+
+    <p style="font-size: 13px;">
+        Our sites are never complete and our team is continually working to build and grow the sites.
+    </p>
+
+    <p style="font-size: 13px; margin-bottom: 10px;">
+        <strong style="color: #c2317b;">Some recent features added to the website:</strong>
+    </p>
+
+    <ol style="font-size: 13px;">
+        <li style="margin-bottom: 8px;">Facebook and Twitter users can share coupons with their friends with a few clicks.</li>
+        <li style="margin-bottom: 8px;">Create A Coupon tool lets you see your coupon as it's being built. The Preview screen changes as you type!</li>
+        <li style="margin-bottom: 8px;">Google Maps automatically show customers your location(s).</li>
+        <li style="margin-bottom: 8px;">Advertiser Accounts display performance indicators for each coupon (views and clicks, more to come).</li>
+        <li style="margin-bottom: 8px;">Thumbnail image of your website is displayed next to your coupon.</li>
+        <li style="margin-bottom: 8px;">Business Description. So you can put more information about your business in front of your prospects.</li>
+    </ol>
+
+    <p style="font-size: 13px;">
+        We are excited to have you as a charter advertiser!
+        Thank you for being part of this growing family and we look forward to a long and beneficial relationship!
+        Please feel free to call me or email me 24/7.
+    </p>
+
+    <p style="font-size: 13px;">
+        Best,
+    </p>
+
+    <p style="font-size: 13px;">
+        <strong>Eric Straus</strong><br/>
+        President<br/>
+        {{ site.domain }}<br/>
+        Phone: 914-920-3059<br/>
+        Email: <a href="mailto:Eric@10Coupons.com?subject=RE: {{site.domain}}">Eric@10Coupons.com</a>
+    </p>
+
+    <p style="font-size: 13px;">
+        I'll very occasionally send updates like these to let you know what's going on with our site.
+        If you'd prefer not to receive them, please use this <a href="{{base_url}}{% if redirected_site %}/{{redirected_site}}{% endif %}{% url opt_out payload=payload %}">unsubscribe</a> link to cancel these newsletters instantly.
+    </p>
+
+{% endblock %}

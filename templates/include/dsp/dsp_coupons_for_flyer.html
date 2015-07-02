@@ -1,0 +1,24 @@
+{% for coupon in flyer_coupons %}
+    <table cellpadding="0" cellspacing="0" border="0" width="305" style="margin: 0 0 10px 0;">
+        <tr>
+            <td>
+                <table cellpadding="3" cellspacing="0" border="0" width="100%" style="border: 3px #c7d8df solid; margin: 0;"><tr><td>
+                    <table cellpadding="8" cellspacing="0" border="0" width="100%" style="border: 1px #c7d8df dashed;"><tr><td style="padding-bottom: 15px; padding-left: 10px;">
+    
+                        <h2 style="font-size: 15px; font-weight: normal; margin: 0 0 12px 0;">{{ coupon.offer.business.business_name }}</h2>
+                        <a href="{{ base_url }}{% url flyer-click coupon.id payload %}" style="color: #1ab1e8; font-weight: normal; margin: 0; padding: 0; line-height: 25px; font-size: 20px; text-decoration: underline;" class="offer"><span style="color: #1ab1e8;">{{ coupon.offer.headline }}</span></a>
+                        <br/>
+                        {% if coupon.offer.qualifier %}
+                        <span style="font-family: 'Georgia', 'Times New Roman', Times, serif; font-size: 14px; font-style: italic;">{{ coupon.offer.qualifier }}</span><br/>
+                        {% endif %}
+                        <br/>
+                        <span style="color: #afc4cd; font-size: 12px; text-decoration: none;">Valid through {{ coupon.expiration_date|date:"n/j/y" }}</span>
+                    </td></tr></table>
+                </td></tr></table>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="{{ safe_static_url }}images/email/layout/couponShadow.gif" height="5" width="305" border="0" style="display: block;"/></td>
+        </tr>
+    </table>
+{% endfor %}

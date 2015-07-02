@@ -1,0 +1,9 @@
+{% extends "email_gateway/base_email.txt" %}
+{% load currency %}
+
+{% block email_content %}
+Slot renewals for {% now "F j, Y " %}
+
+Total  ${{ total }}
+
+{% endblock %}

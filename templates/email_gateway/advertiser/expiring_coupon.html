@@ -1,0 +1,66 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+{% if is_to_ad_rep %}
+<p>{{ rep_first_name }},</p>
+
+<p>Below is an email sent on your behalf.</p>
+
+<p>Explain to {{ business.business_name }} that expiration dates are <strong>automatically
+extended for 90 days</strong> unless the display is turned off, or the expiration date
+is changed from the account.</p>
+
+<p>{% if business.advertiser.advertiser_name %}Contact name:
+<strong>{{ business.advertiser.advertiser_name }}</strong><br/>{% endif %}
+{% include "include/dsp/dsp_single_location.html" %}
+<br/>
+Email address: <strong>{{ business.advertiser.email }}</strong></p>
+
+<p>Encourage the display of valid coupons to drive {{ market.name }} customers to local
+businesses.</p>
+
+<p><span style='color:#00A9E7; font-weight:bold;'>{{ sales_rep_signature_name }}</span><br/>
+{% if sales_rep_signature_title %}{{ sales_rep_signature_title }}<br/>{% endif %}
+<a style='color:#00A9E7;' href="mailto:{{ sales_rep_signature_email }}">{{ sales_rep_signature_email }}</a><br/>
+{% if sales_rep_signature_phone %}{{ sales_rep_signature_phone }}{% endif %}</p>
+
+<hr>
+{% endif %}
+<p style="margin-top: 0;">
+{{ business.business_name }}<br/>
+{% now "M jS, Y" %}<br/>
+<br/>
+    Hi{% if business.advertiser.advertiser_name %} <strong>{{ business.advertiser.advertiser_name }}</strong>{% endif %},</p>
+
+<p>{% if coupon %}Your coupon - <strong>{{ coupon.offer.headline }}</strong> - 
+expires {{ coupon.expiration_date|date:"F j" }}.
+{% else %}
+These coupons expire soon:<br/><br/>
+{% for coupon in coupons %}
+<strong>{{ coupon.offer.headline }}</strong> - expires {{ coupon.expiration_date|date:"F j" }}<br/>
+{% endfor %}
+{% endif %}
+</p>
+
+<p>For your convenience we'll <strong>automatically extend the
+{% if coupon %}date{% else %}dates{% endif %} another 90 days.</strong><br/>
+You may set {% if coupon %}the{% else %}any{% endif %} <strong>Display</strong>
+switch to "<strong>OFF</strong>" or choose {% if coupon %}a different expiration
+date{% else %}different expiration dates{% endif %} from
+<a href="{{ base_url }}{% url advertiser-account %}">your account</a>.
+
+{% include "include/dsp/dsp_email_button_go_to_account.html" %}
+
+<p>
+Want <strong>help</strong>? Got <strong>questions</strong>?
+<strong>Contact me</strong>. Let's work together to get <strong>new customers</strong>.
+</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+
+{% include "email_gateway/generic_email_unsubscribe.html" %}
+
+<p style='font-size:12px;padding-top:5px;text-align:center;'>
+{% include "email_gateway/generic_corporate_address.html" %}
+</p>
+{% endblock %}

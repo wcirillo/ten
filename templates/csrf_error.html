@@ -1,0 +1,12 @@
+{% extends "frames/web/full.html" %}
+{% with "http" as request_protocol %}{% endwith %}
+{% with "http://10static.com/media/" as safe_static_url %}{% endwith %}
+{% block title %}Cookies Required{% endblock %}
+
+{% block base_content %}
+    <div class="padding center">
+        <h1>Cookies required</h1>
+        <p>The cookie functionality of your browser is turned off. Please turn it on. <em>(403)</em></p>
+        <p>{{ reason }}</p>
+    </div>
+{% endblock %}

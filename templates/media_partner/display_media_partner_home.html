@@ -1,0 +1,17 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - Media Partner Home{% endblock %}
+{% block meta %}
+<link rel="canonical" href="{% url media-partner-home %}"/>
+{% endblock %} 
+
+{% block breadcrumbs_content %}
+    <span>Media Partners Info</span>
+{% endblock %}
+
+{% block base_content %}
+    {% include "include/dsp/dsp_media_partner_explanation.html" %}
+{% endblock %}
+
+{% block sidebar_content %}
+    {% include "include/dsp/dsp_media_partner_links.html" %}
+{% endblock %}

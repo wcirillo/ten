@@ -1,0 +1,16 @@
+<table style="margin: 5px 0 0 0;">
+    <tr>
+        {% if firestorm_repl_website_api and firestorm_id %}
+            <td valign="top" style="padding-right: 8px;"><a href="{{ site.domain }}{% if signature_ad_rep_url %}/{{ signature_ad_rep_url }}/{% endif %}" style="color: #00A9E7;"><img src="http://{{ firestorm_repl_website_api }}Utils/ReturnDealerImage.aspx?DealerID={{ firestorm_id }}" height="50" width="50" align="left" border="0"></a></td>
+        {% endif %}
+        <td align="left" valign="top">
+            <a href="{{ site.domain }}{% if signature_ad_rep_url %}/{{ signature_ad_rep_url }}/{% endif %}" style="color: #00A9E7;"><span style="color:#00A9E7; font-weight:bold;">{{ signature_name }}</span></a><br/>
+            {% if signature_title %}{{ signature_title }}<br/>{% endif %}
+            <a style="color: #00A9E7;" href="mailto:{{ signature_email }}">{{ signature_email }}</a><br/>
+            {% if signature_phone %}{{ signature_phone }}<br/>{% endif %}
+            <a href="{{ site.domain }}{% if signature_ad_rep_url %}/{{ signature_ad_rep_url }}/{% endif %}" style="color: #00A9E7;"><span style="color:#00A9E7;">{{ site.domain }}{% if signature_ad_rep_url %}/{{ signature_ad_rep_url }}/{% endif %}</span></a><br/>
+        </td>
+    </tr>
+</table>
+
+<br/>

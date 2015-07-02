@@ -1,0 +1,27 @@
+{% extends "frames/email/full.html" %}
+
+{% block email_content %}
+
+<p>Please join us for the 10LocalCoupons.com Company Overview Telephone Conference.</p> 
+
+<p>The Overview Conference is held this and every Tuesday at 9pm Eastern Time.</p> 
+
+<p>This is a great way to {% if is_ad_rep %} brush up on basic information about the company. This is the same weekly call you may have heard before becoming an Advertising Representative. Dial in! You are always welcome to invite guests. {% else %} learn more about opportunities as an Advertising Representative. Dial in! {% endif %}</p>
+
+<p>Conference Dial-in Number: (218) 339-4600 <br />
+Participant Access Code: 509938#</p>
+
+<p>You'll be joined by: <br />
+Eric Straus, Founder and CEO <br /> 
+David Sage, Chief Marketing Officer</p>
+
+<p>We hope to talk to you Tuesday night!<p>
+
+<p>Thanks,</p>
+
+<p>Your 10LocalCoupons.com Customer Care Team!<br />
+800 581 3380</p>
+
+<p><a href="{{ base_url }}{% url opt_out payload=payload %}">Don't send this invitation again</a></p>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% if not is_email_verified %}<h2 align="center"><strong>Check your email right away!</strong></h2>{% endif %}
+
+{% if coupon %}
+
+    <h6 align="center">
+        Your coupon: <strong>{{ coupon.offer.headline }}</strong> from {{ coupon.offer.business.business_name }}<br/>
+        was sent to <strong>{{ is_logged_in }}</strong>
+    </h6>
+
+    <h2 class="center highlight">To print the coupon click the button in our email message.</h2>
+
+    <br/><br/>
+
+    {% if contest_is_running %}
+
+        <h5 class="center">
+            <strong>
+                {% if not is_eligible_to_win %}
+                    Qualify to Win $10,000!*
+                {% else %}
+                    You're Qualified to Win $10,000!*
+                {% endif %}        
+            </strong>
+        </h5>
+
+        <p class="small center">
+            <strong>*</strong>Eligibility requires current and complete signup. No purchase necessary.
+            <a href="{% url contest-rules %}">Rules</a><br/>
+            Your email address is verified when you click "Print the coupon."
+        </p>
+
+    {% endif %}
+
+{% else %}
+
+    <h6 align="center">
+        You've signed up for {{ current_site.name }} coupons.
+    </h6>
+
+    <p align="center">
+        {% if not is_email_verified %}
+
+            A confirmation message was sent to {{ is_logged_in }}
+
+        {% else %}
+
+            <em>Your email address has been verified.</em>
+
+        {% endif %}
+    </p>
+
+    {% if not is_email_verified %}
+        <table cellpadding="10" cellspacing="0" border="0" align="center">
+            <tr>
+                <td valign="top">
+                    <h2><strong>Click </strong> <span class="highlight">"<strong>Send my coupons</strong>"</span> <strong> to verify your email address.</strong></h2>
+                </td>
+            </tr>
+        </table>
+
+        <br/><br/>
+
+    {% endif %}
+
+{% endif %}

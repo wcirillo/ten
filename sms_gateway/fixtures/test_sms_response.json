@@ -1,0 +1,40 @@
+[
+     {
+        "pk": 1, 
+        "model": "sms_gateway.smsmessage", 
+        "fields": {
+            "smsto": "71010", 
+            "mobile_phone": 1, 
+            "subaccount": "", 
+            "smsfrom": "1115550001", 
+            "smsid": 1, 
+            "note": "", 
+            "vp": null, 
+            "report": 0
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "sms_gateway.smsmessagereceived", 
+        "fields": {
+            "smsucs2": null, 
+            "network": "ATTUS", 
+            "smsc": null, 
+            "smsdate": "2010-10-10 21:58:00", 
+            "smsmsg": "foo", 
+            "received_datetime": "2010-10-13 13:12:51", 
+            "bits": 7, 
+            "smsudh": null
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "sms_gateway.smsresponse", 
+        "fields": {
+            "received": 1, 
+            "is_opt_out": false, 
+            "sent": 2, 
+            "response_direction": "out"
+        }
+    }
+]

@@ -1,0 +1,52 @@
+{% block email_content %}
+
+    <p style="font-size: 13px;">Hi,</p> 
+
+    <p style="font-size: 13px;">My name is Eric Straus. I’m the President of {{ site.domain }}, and parent company, 10LocalCoupons.com 
+    
+
+    <p style="font-size: 13px;">
+        Thanks for signing up. You’ll now receive 10 valuable, money-saving coupons every week!
+    </p>
+    
+    {% if consumer_count < 500 %}
+        <p style='font-size: 13px;'>
+            We're a new company. As we expand and improve, the coupons that you see will be more local and more relevant. We're glad you're part of {{ site.domain }}! 
+            Please tell all your friends so they can save too.
+        </p>
+    {% endif %}
+    
+    {% if not ad_rep_url %}
+    
+        <p style='font-size: 13px;'>
+            Maybe you know a business owner who could benefit by displaying and distributing a valuable coupon to thousands of {{ site.region }} customers.  If you do, please forward this email to them, and have them contact me at their earliest convenience. 
+        </p>
+    
+        <p style="font-size: 13px;">
+           We're also looking for local Advertising Representatives. If you or someone you know would be interested, <a href='{{ base_url }}{% url become-an-ad-rep %}'>more information</a> is available on the website.
+        </p>
+    {% endif %}
+    <p style="font-size: 13px;">
+        Welcome aboard!
+    </p>
+
+    <p style="font-size: 13px;">
+        <strong>Eric Straus</strong><br/>
+        President<br/>
+        {{ site.domain }}<br/>
+        Phone: 914-920-3059<br/>
+        Email: <a href="mailto:Eric@10Coupons.com?subject=RE: Message from the president of {{site.domain}}">Eric@10Coupons.com</a><br/>
+        {% include 'email_gateway/generic_corporate_address.html' %}
+    </p>
+
+    {% if ad_rep_url %}
+    
+        <p style='font-size: 13px;'>
+            <strong>P.S.</strong> Do you know any {{ site.region }} <a href='{{ base_url }}{% url how-it-works %}{{ ad_rep_url }}/'>business owners</a> that could benefit from publishing and distributing coupons? 
+            Perhaps you or someone you know might <a href='{{ base_url }}{% url become-an-ad-rep%}{{ ad_rep_url }}/'>enjoy extra income</a> by becoming an Advertising Representative with our growing company. 
+            Share this email and encourage them to visit: <a href='{{base_url}}/{{ site.directory_name }}/{{ ad_rep_url }}/'>{{base_url}}/{{ site.directory_name }}/{{ ad_rep_url }}</a>
+        </p>
+        
+    {% endif %}
+    
+{% endblock %}

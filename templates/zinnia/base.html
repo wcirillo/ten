@@ -1,0 +1,75 @@
+{% extends "frames/web/columns.html" %}
+{% load zinnia_tags tagging_tags i18n %}
+{% tags_for_model zinnia.entry as tag_entry %}
+
+{% block meta %}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="language" content="{{ LANGUAGE_CODE }}" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="home" href="{% url zinnia_entry_archive_index %}" />
+    {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="EditURI" type="application/rsd+xml" href="{% url zinnia_rsd %}" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url zinnia_wlwmanifest %}" />
+    <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url zinnia_entry_latest_feed %}" />
+    {% block link %}{% endblock %}
+    {% block script %}{% endblock %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs sprite tiny">
+    <a href="{% url all-coupons %}">10LocalCoupons.com</a> &nbsp;&rsaquo;&nbsp;
+    {% zinnia_breadcrumbs '&nbsp;&rsaquo;&nbsp;' %}
+    <div class="right">
+        <a class="right" href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}">{% trans "RSS Feed" %}</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+
+    <form method="get" id="searchform" action="{% url zinnia_entry_search %}">
+        <div class="toolbar">
+            <div class="sprite searchtextOuter">
+                <input type="text" value="{% trans "Search Blog Entries" %}" name="pattern" size="25" id="searchbox" onfocus="this.value=''"/>
+                <div class="clear"></div>
+            </div>
+            <input type="submit" class="button searchBtn left" value="Search"/>
+            <a title="{% trans 'You can use - to exclude words or phrases, &quot;double quotes&quot; for exact phrases and the AND/OR boolean operators combined with parenthesis for complex searchs.' %}"></a>
+            <div class="clear"></div>
+        </div>
+    </form>
+
+    <p>
+        <a class="dark nodec hidden" href="{% url zinnia_entry_archive_index %}" title="10LocalCoupons.com Blog" rel="home">10LocalCoupons.com Blog</a>
+    </p>
+
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="boxBorder recents">
+        <h4>{% trans "Recent entries" %}</h4>
+        <div class="small">{% get_recent_entries 5 %}</div>
+    </div>
+
+    <div class="boxBorder categories">
+        <h4>{% trans "Categories" %}</h4>
+        <div class="small">{% get_categories %}</div>
+    </div>
+
+    <div class="boxBorder archives">
+        <h4>{% trans "Archives" %}</h4>
+        <div class="small">{% get_archives_entries_tree %}</div>
+    </div>
+
+{% endblock %}

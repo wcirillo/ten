@@ -1,0 +1,4 @@
+{% if show_unsubscribe %}
+{% if recipient_email %}Message sent to: <span style='text-decoration:none;font-weight:bold;'>{{ recipient_email }}</span><br/>{% endif %}
+Use this <a href="{{base_url}}{% url opt_out payload=payload %}">unsubscribe</a> link to cancel these email messages instantly.
+{% endif %}

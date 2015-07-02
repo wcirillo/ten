@@ -1,0 +1,35 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - Become an Advertising Representative{% endblock %}
+{% block meta %}
+<link rel="canonical" href="{% url show-ad-rep-form %}"/>
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs"></div>
+{% endblock %}
+
+{% block base_content %}
+
+    {% if is_ad_rep %}
+        <div class="message center">
+    
+            <strong>{% if request.session.consumer.first_name %}{{ request.session.consumer.first_name }}, y{% else %}Y{% endif %}our 
+            Virtual Office has been activated.</strong></br>
+            Let a friend apply using the form.
+            <div class="clear"></div>
+            
+        </div>
+    
+    {% endif %}
+
+    <h2 align="center">Become an Independent Advertising Representative</h2>
+
+    {% include "include/frm/frm_ad_rep_lead.html" %}
+
+    <br/>
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

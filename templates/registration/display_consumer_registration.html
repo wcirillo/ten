@@ -1,0 +1,45 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }}{% endblock %}
+
+{% block top_content %}
+    <div class="stage largeForm">
+        <div class="left">
+
+            {% if contest_is_running %}
+                <h1 class="large">Win $10,000!*</h1>
+                <h4>Get 10 {{ current_site.name }} coupons sent to your inbox</h4>
+            {% else %}
+                <h1>Get 10 {{ current_site.name }} coupons sent to your inbox</h1>
+            {% endif %}
+
+            {% include "include/frm/frm_consumer_registration.html" %}
+        </div>
+        <div class="right">
+            <img src="{{ safe_static_url }}images/stage_flyer.gif"/>
+        </div>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+
+    <h3>Sign Up Today!</h3>
+
+    <p>
+        We'll send 10 {{ current_site.name }} Coupons right to your inbox.
+        Browse the website too.
+        Print any coupon you like.
+        Send coupons as text messages to your cell phone!
+    </p>
+
+    <img src="{{ safe_static_url }}images/print_or_sms_vert.gif" width="270" height="150" border="0" alt="Print your coupons, or send them to your cell phone as a text message"/>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <h5>Advertisers...</h5>
+    <h3><strong>Want more business?</strong></h3>
+
+    <p>Send your coupons to loyal clients and potential customers. <a href="{% url how-it-works %}">Learn More!</a></p>
+
+{% endblock %}

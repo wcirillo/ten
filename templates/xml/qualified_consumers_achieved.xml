@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MainQualifiedRequest>
+{% spaceless %}
+<IndividualUsers>
+{% for ad_rep in ad_reps.all %}    
+    <User>
+        <ID>{{ ad_rep.firestorm_id }}</ID>
+        <Qualified>{{ ad_rep.is_qualified }}</Qualified>
+    </User>
+{% endfor %}
+</IndividualUsers>
+{% endspaceless %}
+</MainQualifiedRequest>
+
+ 

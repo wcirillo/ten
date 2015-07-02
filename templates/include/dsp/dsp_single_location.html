@@ -1,0 +1,37 @@
+<div class="locationList small">
+
+    <div class="sprite iconPin"><div>{{ forloop.counter }}</div></div>
+
+    {% if location.location_address1 %}
+    <div class="address1">{{ location.location_address1 }}</div>
+    {% endif %}
+
+    {% if location.location_address2 %}
+    <div class="address2">{{ location.location_address2 }}</div>
+    {% endif %}
+
+    {% if location.location_city or location.location_state_province or location.location_zip_postal %}
+    <div>
+        <span class="city">{% if location.location_city %}{{ location.location_city }}{% if location.location_city and location.location_state_province %},{% endif %}{% endif %} </span>
+        <span class="state">{% if location.location_state_province %}{{ location.location_state_province }}{% endif %} </span>
+        <span class="zip_postal">{% if location.location_zip_postal %}{{ location.location_zip_postal }}{% endif %} </span>
+    </div>
+    {% endif %}
+
+    {% if location.location_area_code and location.location_exchange and location.location_number %}
+    <div class="phone">
+        <span class="area_code">({{ location.location_area_code }}) </span>
+        <span class="exchange">{{ location.location_exchange }}</span>-<span class="number">{{ location.location_number }}</span>
+    </div>
+    {% endif %}
+
+    {% if location.location_description %}
+    <div class="description">{{ location.location_description }}</div>
+    {% endif %}
+
+    {% if location.location_url %}
+    <div class="location_url"><a class="url nodec" href="{% url click-business-web_url coupon_id=coupon.id %}?url={{ location.location_url }}" rel="nofollow">{{ location.location_url }}</a></div>
+    {% endif %}
+
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,50 @@
+var lat;
+var long;
+consumer_zip_postal = '{{ request.session.consumer.consumer_zip_postal }}';
+if (navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition
+        (
+            function (ppos){
+                lat = ppos.coords.latitude;
+                lon = ppos.coords.longitude;
+                $.ajax({
+                    
+                    url: "{% url test-zip-from-coords %}?lat=" + lat + "&lon=" + lon,
+                    type: "GET",
+                    data: {'ajax_mode':'get_location'},
+                    dataType: "json",
+                    timeout: 10000,
+                    success: function(data)
+                        {
+                            if(data['errors']){}
+                            else
+                            {
+                                $("#id_update_me2").html('<strong>Ajax return:</strong> ' + data);
+                            }
+                        },
+                    error: function() {}
+                });
+            },
+            function (err){
+                switch(err.code) 
+                {
+                    case err.TIMEOUT:
+                        alert('Attempts to retrieve location timed out.')
+                        break;
+                    case err.POSITION_UNAVAILABLE:
+                        alert("Your browser doesn't know where you are.")
+                        break;
+                    case err.PERMISSION_DENIED:
+                        alert('You have to give us permission!')
+                        break;
+                    case err.UNKNOWN_ERROR:
+                      alert('Unknown error returned.')
+                      break;
+                    default:
+                      alert(err + ' ' + err.code)
+                }
+            },
+            { enableHighAccurancy: true }
+        );
+    }

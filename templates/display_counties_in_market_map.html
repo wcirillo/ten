@@ -1,0 +1,42 @@
+{% extends "frames/web/columns.html" %}
+
+{% block title %}{% if market_coverage %}{% if county_list %}Map of {{ current_site.name }} {{ municipality_division.1 }} in {{ current_site.default_state_province.name }}{% endif %}{% endif %}{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="{% if market_coverage %}{% if county_list %}Map of {{ current_site.default_state_province.name }} {{ municipality_division.1|title }} within the {{ current_site.name }} consisting of {{ county_list }} {{ municipality_division.1 }}.{% endif %}{% else %}Map of {{ current_site.name }} region{% endif %}"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>{{ municipality_division.0|title }} Map</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% if market_coverage %}
+
+        {% if county_list %}
+
+            <h4>The {{ current_site.region }} includes <strong>{{ county_list }}</strong> {{ municipality_division.1 }}.</h4>
+
+            <p>{% include "include/dsp/dsp_map_location_xlarge.html" %}</p>
+
+        {% endif %}
+
+    {% else %}
+
+        <div>There was an error processing this request.</div>
+
+    {% endif %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="boxBorder">
+
+        {% include "include/dsp/dsp_nearby_sites.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}

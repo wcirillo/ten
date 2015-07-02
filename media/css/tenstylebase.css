@@ -1,0 +1,258 @@
+/*
+	Name: 10LocalCoupons - Base stylesheet
+	Date: November 2011
+	Author: Shawn M. Adams for Straus Digital Media, LLC.
+*/
+
+.block {display: block;}
+.clear {clear: both;}
+.center {text-align: center;}
+.hidden, .printhidden {display: none;}
+.left {float: left;}
+.padding {padding: 10px;}
+.right {float: right;}
+.top {vertical-align: top;}
+
+body {
+	background-color: #c5e4f0;
+	color: #222;
+	font: 14px/20px Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+.container {
+	background-color: #fff;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	padding: 10px 10px 30px 10px;
+}
+
+/* Text */
+h1 {font-size: 18px; font-weight: normal; line-height: 1; margin: 0 0 5px 0;}
+h2 {font-size: 25px; font-weight: normal; line-height: 1; margin: 0 0 18px 0;}
+h3 {font-size: 25px; font-weight: normal; line-height: 1; margin: 0 0 5px 0;}
+h4 {font-size: 18px; font-weight: normal; line-height: 1; margin: 0 0 18px 0;}
+h5 {font-size: 16px; font-weight: normal; line-height: 1; margin: 0 0 5px 0;}
+h6 {font-size: 18px; font-weight: normal; line-height: 1; margin: 0 0 18px 0;}
+
+p {margin: 0 0 21px 0;}
+.margin {margin: 0 0 19px 0;}
+.smallmargin {margin-bottom: 6px;}
+.nomargin {margin-bottom: 0;}
+
+.small {font: 12px/17px Arial, Helvetica, sans-serif;}
+.tiny {font: 11px/15px Arial, Helvetica, sans-serif;}
+
+.highlight {color: #ce5eaa;}
+.highlight2 {color: #ffcce6;}
+.light {color: #93acbb;}
+
+.alt_font {font-family: 'Georgia', 'Times New Roman', Times, serif; font-style: italic;}
+.alt_font2 {font-family: 'Lobster', Arial, Helvetica, sans-serif;}
+
+ul {
+  margin: 0 0 10px 20px;
+  padding: 0;
+}
+ul li {padding: 0 0 10px 0;}
+
+/* Links */
+a, .fakelink {
+	color: #009ed8;
+	cursor: pointer;
+	text-decoration: underline;
+}
+a:hover, a:active {text-decoration: none;}
+
+.nodec, .breadcrumbs a {text-decoration: none;}
+.nodec:hover, .breadcrumbs a:hover {text-decoration: underline;}
+
+.dark, a.dark:visited {color: #222;}
+
+/* HR */
+.hr {
+	border-bottom: 1px #d9e7ed solid;
+	clear: both;
+	display: block;
+	height: 1px;
+	margin: 3px 0 21px 0;
+}
+.boxBorder .hr {margin: 15px 0 18px 0;}
+
+/******* Coupons *******/
+.coupon {
+	background-color: #fdfdfa;
+	background-image: -moz-radial-gradient(center center, ellipse closest-corner, #ffffff, #fbfbf7 75%);
+	background-image: -webkit-radial-gradient(center center, ellipse closest-corner, #ffffff, #fbfbf7 75%);
+	background-image: -ms-radial-gradient(center center, ellipse closest-corner, #ffffff, #fbfbf7 75%);
+	background-image: radial-gradient(center center, ellipse closest-corner, #ffffff, #fbfbf7 75%);
+	border: 5px #333 solid;
+	margin: 0 0 19px 0;
+	padding: 4px;
+	position: relative;
+}
+
+.couponInner {
+	border: 1px #666 dashed;
+	padding: 15px;
+}
+
+.coupon_line {
+    margin: 15px 25px 10px 25px;
+    height: 1px;
+    background: #666;
+	background: -moz-linear-gradient(left, #ffffff, #666666, #ffffff);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #666));
+}
+
+.coupon_business {text-align: center;}
+
+	.business_name {
+		font-size: 27px;
+		margin: 0;
+	}
+	.slogan {
+		font: italic 17px 'Georgia', Arial, Helvetica, sans-serif;
+		margin: 0;
+		padding: 3px 0 0 0;
+	}
+
+.coupon_offer {text-align: center;}
+
+	.headline {
+		font-size: 55px;
+		font-weight: bold;
+		letter-spacing: -2px;
+		margin: 0;
+	}
+	.qualifier {
+		font: italic 30px 'Georgia', 'Times New Roman', Times, serif;
+		margin: 0;
+	}
+
+.redemption_method {
+	padding: 5px 0 20px 0;
+	text-align: center;
+}
+
+.fine_print {
+	margin: 2px 100px 0 0;
+	line-height: 13px;
+	padding: 0 0 0 1.357em;
+	text-align: left;
+}
+
+.fine_print li {padding: 6px 0 0 0;}
+
+.restrictions, .url {word-wrap: break-word;}
+
+.url {padding: 4px 0 0 0;}
+
+.description {font-style: italic;}
+
+.coupon_location {
+	border-bottom: 1px #d9e7ed solid;
+	margin-bottom: 19px;
+}
+
+/***** Offers *****/
+.all_offers {
+	border-bottom: 1px #d9e7ed solid;
+	margin: 0 0 19px 0;
+}
+
+a.offer {
+	border-top: 1px #d9e7ed solid;
+	display: block;
+	padding: 15px 40px 15px 70px;
+	position: relative;
+	text-decoration: none;
+}
+
+a.offer .business_name {color: #222;}
+
+a.offer .headline {
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	text-decoration: underline;
+}
+
+a.offer .location {color: #009933;}
+
+.arrowright {
+	background-image: url(/media/images/mobile/arrowright.gif);
+	background-repeat: no-repeat;
+	display: block;
+	height: 19px;
+	position: absolute;
+	margin: -10px 0 0 0;
+	right: 10px;
+	top: 50%;
+	width: 13px;
+}
+
+/******* Buttons *******/
+.button, .button:visited, .buttonon {
+	background: #ffbddf;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffcee7), to(#ff93ca));
+	background: -moz-linear-gradient(top, #ffcee7, #ff93ca);
+	border: 0;
+	border-radius: 4px;
+	color: #222;
+	cursor: pointer;
+	display: inline-block;
+	font: normal 1em/1.500em Arial, Helvetica, sans-serif;
+	margin: 0 2px;
+	padding: 0.200em 1em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #ffeef7;
+}
+
+.nav .button, .nav .button:visited, .nav .buttonon {
+	background: #edf5f9;
+	border-radius: 24px;
+	font-size: 16px;
+	padding: 4px 12px;
+	text-shadow: none;
+}
+
+.largeBtn, .largeBtn:visited, .largeBtn:active, .fullBtn, .fullBtn:visited, .fullBtn:active {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-top: 1px #ff9fd0 solid;
+	box-shadow: inset 0 1px 0 #fedeee, inset -1px 0 0 #ff9fd0, inset 1px 0 0 #ff9fd0;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding: 8px 30px;
+	vertical-align: top;
+}
+.fullBtn, .fullBtn:visited {
+	clear: both;
+	display: block;
+	margin: 0 0 14px 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.box1 .largeBtn, .bgWindow .largeBtn, .box1 .fullBtn {
+	border: 0;
+	box-shadow: inset 0 1px 0 #fedeee;
+} 
+
+.fullBtnTight {margin: 0;}
+input.fullBtn, input.fullBtn:visited, input.fullBtn:active {width: 100%;}
+
+/******* Forms *******/
+form ol, .form ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+form li {
+	display: block;
+	padding: 0 0 13px 0;
+	position: relative;
+}

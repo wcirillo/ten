@@ -1,0 +1,12 @@
+{% extends "frames/web/full.html" %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url ad-rep-account %}">Virtual Office</a> &nbsp;&rsaquo;&nbsp;
+    <span>Photo Upload</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/frm/frm_ad_rep_photo_upload.html" %}
+
+{% endblock %}

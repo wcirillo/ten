@@ -1,0 +1,18 @@
+{% load currency %}
+
+<div class="box2">
+
+    <h3 align="center">Advertisers, display up to 10 coupons online for only</h3>
+
+    <h2 class="large padding" align="center">
+        {% if request.session.ad_rep_id %}
+            {{ annual_coupon_display.base_rate|currency:"False" }}/year
+        {% else %}
+            {{ monthly_coupon_display.base_rate|currency:"False" }}/month
+        {% endif %}
+    </h2>
+
+    <a class="button fullBtn fullBtnTight" href="{% url advertiser-registration %}">Create a coupon! &raquo;</a>
+
+    <div class="clear"></div>
+</div>

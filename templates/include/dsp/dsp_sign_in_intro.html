@@ -1,0 +1,17 @@
+{% if request.session.consumer.advertiser and user.has_usable_password %}
+
+    <h3>Please sign in to continue to your account:</h3>
+    
+{% else %}
+
+    {% if request.session.consumer.advertiser %}
+
+        <h3>Please sign in to continue to your account:</h3>
+
+    {% else %}
+
+        <h3>Welcome back! Sign in with your email address &amp; password:</h3>
+        
+    {% endif %}
+
+{% endif %}

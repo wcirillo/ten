@@ -1,0 +1,1 @@
+{% extends "sms/sms_alerts.html" %}{% block msg %}{% if contest_is_running %}Sending {% else %}You'll now get {% endif %}{{ site.short_name }} Alerts (4msg/mo){% if consumer %}{% if contest_is_running %}Learn More About {% endif %}{% else %}Txt EmailAddress for {% endif %}{% if contest_is_running %}$10K Drawing, See Web {% else %}Email Coupons {% endif %}{% endblock %}

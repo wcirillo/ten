@@ -1,0 +1,18 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - The Next Big Opportunity for Radio{% endblock %}
+{% block meta %}
+<link rel="canonical" href="http://10coupons.com/inside-radio/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a class="nodec" href="{% url media-partner-home %}">Media Partner Info</a> &nbsp;&rsaquo;&nbsp;
+    <span>Radio Ink (March 2011)</span>
+{% endblock %}
+
+{% block base_content %}
+    {% include "include/dsp/dsp_radio_ink.html" %} 
+{% endblock %}
+
+{% block sidebar_content %}
+    {% include "include/dsp/dsp_media_partner_links.html" %}
+{% endblock %}

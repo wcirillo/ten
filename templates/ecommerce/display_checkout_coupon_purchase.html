@@ -1,0 +1,56 @@
+{% extends "frames/web/leftCol.html" %}}
+{% block title %}{{ current_site.domain }} - Create a Coupon{% endblock %}
+
+{% block body_onload %}onload="document.getElementById('id_cc_number').focus();"{% endblock %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"></div>{% endblock %}
+
+{% block full_content %}
+
+    <div class="left">
+
+        <h2>
+            <strong>Secure Checkout &nbsp;</strong>
+            <img class="top" src="{{ safe_static_url }}images/cc.gif" width="179" height="25" border="0"/>
+        </h2>
+
+        {% if selected_product_id == 1 %}
+            <p><em>Your coupon will be scheduled for {% if flyer_count == 1 %}the{% endif %} Email Flyer{{ flyer_count|pluralize }} sent on the date{{ flyer_count|pluralize}} below.</em></p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <div class="box2">
+
+        {% include "include/frm/frm_checkout_coupon_purchase.html" %}
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block base_content %}
+
+    <div class="boxBorderTight">
+
+        {% include "include/dsp/dsp_order_summary.html" %}
+
+    </div>
+
+    {% if coupon %}
+
+        {% include "include/dsp/dsp_preview_coupon_small.html" %}
+
+        {% include "include/dsp/dsp_preview_coupon_locations.html" %}
+
+        <p align="center"><a class="button smallBtn" href="{% url preview-coupon %}">Make changes to this coupon</a></p>
+
+    {% endif %}
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

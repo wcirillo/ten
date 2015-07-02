@@ -1,0 +1,40 @@
+{% extends "frames/web/full.html" %}
+{% block title %}Media spots for {{ current_site.domain }}{% endblock %}
+{% block top_content %}
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>Media Spots</span>
+{% endblock %}
+
+{% block base_content %}
+
+{% if spots %}
+
+    <h3>Media Spots</h3>
+
+    <p>Play our spots in your media player or right-click to download them.</p>
+
+    {% for spot in spots %}
+
+        {% ifchanged %}<h4 class="alt_font highlight">First aired {{ spot.date|date:"F Y" }}:</h4>{% endifchanged %}
+
+        <p>
+            <a class="button smallBtn" href="{{ settings.HTTP_PROTOCOL_HOST }}/{{ spot.path }}/{{ spot.filename }}" alt="{{ spot.filename }}">play .{{ spot.file_extension }}</a>
+            -
+            <strong>"{{ spot.title }}"</strong>
+            -
+            {{ spot.target }}
+            -
+            Length: {{ spot.length }}      
+        </p>
+
+    {% endfor %}
+
+{% else %}
+
+    <p> Sorry, we hope to have spots for this market soon. </p>
+
+{% endif %}
+
+{% endblock %}

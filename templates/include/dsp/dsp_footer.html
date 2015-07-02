@@ -1,0 +1,46 @@
+{% block dsp_footer %}
+
+    <p class="small center">
+
+        {% if current_site.id != 1 %}
+            <a class="nodec" href="{% url advertiser-registration %}">Create a Coupon</a> &nbsp;&#149;&nbsp;
+            <a class="nodec" href="{% url how-it-works %}">How It Works</a> &nbsp;&#149;&nbsp;
+        {% endif %}
+
+        {% if request.user.is_authenticated and user_type in 'advertiser' %}
+            <a class="nodec" href="{% url advertiser-account %}">Advertiser Account</a> &nbsp;&#149;&nbsp;
+        {% else %}
+            <a class="nodec" href="{% url advertiser-sign-in %}">Advertiser Account</a> &nbsp;&#149;&nbsp;
+        {% endif %}
+
+        <a class="nodec" href="{% url advertiser-faq %}">Advertiser Help</a> &nbsp;&#149;&nbsp;
+        
+        <a class="nodec" href="{% url become-an-ad-rep %}">Become an Advertising Representative</a>
+
+    </p>
+
+    <p class="small center nomargin">
+
+        {% if current_site.id != 1 %}
+            <a class="nodec" href="{% if is_logged_in %}{% url all-coupons %}{% else %}{% url home %}{% endif %}">Home</a> &nbsp;&#149;&nbsp;
+            <a class="nodec" href="{% url subscriber-registration %}">Mobile Coupons</a> &nbsp;&#149;&nbsp;
+        {% endif %}
+
+        <a class="nodec" href="{% url help %}">Help</a> &nbsp;&#149;&nbsp;
+        <a class="nodec" href="{% url sample-flyer %}">Email Flyer</a> &nbsp;&#149;&nbsp;
+        <a class="nodec" href="{% url unsubscribe %}">Unsubscribe</a> &nbsp;&#149;&nbsp;
+
+        <a class="nodec" href="{% url who-we-are %}">Who We Are</a> &nbsp;&#149;&nbsp;
+        <a class="nodec" href="{% url contact-us %}">Contact Us</a> &nbsp;&#149;&nbsp;
+        <a class="nodec" href="{% url terms-of-use %}">Terms of Use</a> &nbsp;&#149;&nbsp;
+        <a class="nodec" href="{% url privacy-policy %}">Privacy Policy</a> &nbsp;&#149;&nbsp;
+
+        {% if current_site.id != 1 %}
+            <a class="nodec" href="{% url site-directory %}">More Locations</a>
+        {% else %}
+            <a class="nodec" href="{% url site-directory %}">Locations</a>
+        {% endif %}
+
+    </p>
+
+{% endblock %}

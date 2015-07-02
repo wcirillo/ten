@@ -1,0 +1,9 @@
+{% if close_sites %}
+
+    <p class="smallmargin">{% if close_sites_caption %}{{ close_sites_caption }}{% else%}Get coupons for these nearby areas{% endif %}: </p>
+
+    {% for close_site in close_sites %} 
+        <a class="small nodec" href="{{ http_protocol_host }}/{{ close_site.directory_name }}/">{{ close_site.domain }}</a>{% if forloop.last %}{% else %}, {% endif %}
+    {% endfor %}
+
+{% endif %}

@@ -1,0 +1,46 @@
+<businesses>
+{% spaceless %}
+    {% for coupon in coupons %}
+    {% ifchanged coupon.offer.business.id %}
+        {% if not forloop.first %}
+        </coupons>
+    </business>
+    {% endif %}
+    <business>
+        <name>{{ coupon.offer.business.business_name }}</name>
+        <url>{{ coupon.offer.business.web_url }}</url>
+        <categories>
+            {% for category in coupon.offer.business.categories.all %}
+            <category>{{ category.name }}</category>
+            {% endfor %}
+        </categories>
+        <locations>
+            {% for location in coupon.location.all %}
+            <location>
+                <address>{{ location.location_address1 }}</address>
+                <city>{{ location.location_city }}</city>
+                <zip>{{ location.location_zip_postal }}</zip>
+                <state>{{ location.location_state_province }}</state>
+                <description>{{ location.description }}</description>
+                <latitude>{{ location.location_coordinate.location_latitude }}</latitude>
+                <longitude>{{ location.location_coordinate.location_longitude }}</longitude>
+            </location>
+            {% endfor %}
+        </locations>
+        <coupons>
+    {% endifchanged %}
+            <coupon>
+                <headline>{{ coupon.offer.headline }}</headline>
+                <qualifier>{{ coupon.offer.qualifier }}</qualifier>
+                <text>{% for restriction in coupon.default_restrictions.all %} {{ restriction }}{% endfor %} {{ coupon.custom_restrictions }} {% for coupon_id, valid_days in valid_days_dict.items %}{% if coupon_id == coupon.id %}{{ valid_days }}{% endif %}{% endfor %} Valid through {{ coupon.expiration_date }}. Another local deal from {{ coupon.offer.business.advertiser.site.domain }}</text>
+                <start_date>{{ coupon.start_date|date:"Y-m-d" }}</start_date>
+                <end_date>{{ coupon.expiration_date|date:"Y-m-d" }}</end_date>
+                <url>http://10Coupons.com{{ coupon.get_absolute_url }}</url>
+            </coupon>
+    {% if forloop.last %}
+        </coupons>
+    </business>
+    {% endif %}
+    {% endfor %}
+{% endspaceless %}
+</businesses>

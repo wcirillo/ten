@@ -1,0 +1,50 @@
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+
+{% if msg_advertiser_must_opt_in %}
+    <h4 class="highlight">Please contact Customer Service at (800) 581-3380.<br/>We'll create this coupon for you.</h4>
+{% endif %}
+
+<form name="frm_advertiser_registration" action="" method="post">{% csrf_token %}
+
+    <ol>
+        {{ advertiser_reg_form.business_name.errors }}
+        <li class="fullInput">
+            <label for="id_business_name" class="block">Business Name (required)</label>
+            {{ advertiser_reg_form.business_name }}
+            <div class="small light">This will appear at the top of your coupon. <a class="nodec" id="openslogan" href="#">Add a Slogan &raquo;</a></div>
+        </li>
+
+        {{ advertiser_reg_form.slogan.errors }}
+        <li id="sloganhiddenform" class="fullInput hiddenform">
+            <label for="id_slogan" class="block">Slogan (optional)</label>
+            {{ advertiser_reg_form.slogan }}
+            <div class="small light">This will appear below your business name. <a class="nodec" id="closeslogan" href="#">&laquo; Skip this step</a></div>
+        </li>
+
+        {{ advertiser_reg_form.email.errors }}
+        <li class="fullInput">
+            <label for="id_email" class="block">Email Address (required)</label>
+            {{ advertiser_reg_form.email }}
+            <div class="small light">We'll send a receipt to this address.</div>
+        </li>
+        
+        {{ advertiser_reg_form.advertiser_name.errors }}
+        <li>
+            <label for="id_advertiser_name" class="block">Contact Name (optional)</label>
+            {{ advertiser_reg_form.advertiser_name }}
+        </li>
+
+    </ol>
+    
+    <ol>
+        <li>
+            <input class="button fullBtn" type="submit" tabindex="7" value="Next: Create Your Offer &raquo;" />
+            <p align="center" class="tiny nomargin"><em>Accept the <a class="nodec ajaxtrigger" href="{% url loader 'load_terms_of_use' %}">Terms of Use</a> by going to the next step.</em></p>
+        </li>
+    </ol>
+
+</form>

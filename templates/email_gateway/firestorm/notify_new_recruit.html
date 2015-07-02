@@ -1,0 +1,29 @@
+{% extends "frames/email/full.html" %}
+{% load format_phone_number %}
+
+{% block email_content %}
+<p>{% now "F j, Y " %}</p>
+<p>{{ parent_ad_rep.first_name }} {{ parent_ad_rep.last_name }}</p>
+
+<p>Great News!</p>
+
+<p>There's a new member of your team, {% if child_ad_rep.first_name or child_ad_rep.last_name %}<strong>{{ child_ad_rep.first_name }} {{ child_ad_rep.last_name }}</strong>{% else %}{{ child_ad_rep.email }}{% endif %}. 
+You are the <strong>Recruiter</strong> of this new <strong>Independent Advertising Representative</strong>.</p>
+
+<p>Your new recruit can help you <strong>earn more</strong>:</p>
+
+<p>For qualifying sales, you'll earn a <strong>25%</strong> <a href='{{ base_url }}{% url compensation-plan %}'><strong>recruiter's bonus</strong></a>.*</p>
+
+<p>{% if child_ad_rep.primary_phone_number %}We've provided information so that you can <strong>contact your recruit</strong>{% else %}Contact your recruit{% endif %}.</p>
+
+<div style='text-align:center;width:85%;font-size:1.2em;border:dotted #CCC 2px;padding:8px 0 8px 0;'>
+{{ child_ad_rep.first_name }} {{child_ad_rep.last_name }}<br/>
+{{ child_ad_rep.email }}<br/>
+{% if child_ad_rep.primary_phone_number %}{{ child_ad_rep.primary_phone_number|format_phone_number }}{% endif %}
+</div>
+
+<p>Wishing you success,</p>
+
+{% include "include/dsp/dsp_email_html_signature.html" %}
+
+{% endblock %}

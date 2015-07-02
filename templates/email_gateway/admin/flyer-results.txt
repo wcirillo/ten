@@ -1,0 +1,16 @@
+{% if warning %}
+***NOTE:  {{warning}}
+{% endif %}
+
+
+{% if flyer_log %}
+
+    {% for flyer in flyer_log %}
+    Market                  Recipient count         Send Duration</td></tr>    
+    
+        {% for item in flyer %}
+            {{ item }}
+        {% endfor %}
+    {% endfor %}
+
+{% endif %}

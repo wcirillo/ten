@@ -1,0 +1,29 @@
+{% extends "frames/web/full.html" %}
+{% block title %}{{ current_site.domain }} - Our Competition{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/our-competition/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url become-an-ad-rep %}">Become an Advertising Representative</a> &nbsp;&rsaquo;&nbsp;
+    <span>Our Competition</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_our_competition.html" %}
+
+    <div class="padding small">
+        <img src="{{ safe_static_url }}images/pdf_icon.gif" border="0" height="16" width="16"/>&nbsp;
+        <a class="nodec" href="{{ safe_static_url }}docs/10LC_Competitors.pdf" style="vertical-align: top;">Download .pdf version for printing</a>
+    </div>
+
+{% endblock %}
+
+{% block bottom_content %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

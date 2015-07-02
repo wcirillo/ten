@@ -1,0 +1,26 @@
+<form name="frm_ad_rep_photo_upload" class="largeForm" method="post" enctype="multipart/form-data" action="">{% csrf_token %}
+
+    <div class="box2">
+
+        <p align="center">
+            {{ ad_rep_photo_upload_form.ad_rep_photo.errors }}
+            {{ ad_rep_photo_upload_form.ad_rep_photo }}
+
+            <input class="button" type="submit" name="submit_frm_ad_rep_photo_upload" value="Upload Photo &raquo;"/>
+
+        </p>
+
+        <table align="center" border="0" cellpadding="5" cellspacing="0">
+            <tr>
+                <td align="center" background="{{ safe_static_url }}images/layout/bgPhotoUpload.gif" height="200" valign="middle" width="200"><img class="block" src="{% if not ad_rep.ad_rep_photo or ad_rep.ad_rep_photo.name == '' %}{{ safe_static_url }}images/10_200x200.gif{% else %}{{ ad_rep.ad_rep_photo.url }}{% endif %}" width="200" height="200" border="0"/></td>
+            </tr>
+        </table>
+
+        <br/>
+
+        <p align="center"><a class="nodec" href="{% url ad-rep-account %}">&laquo; Back to Virtual Office</a></p>
+
+        <div class="clear"></div>
+    </div>
+
+</form>

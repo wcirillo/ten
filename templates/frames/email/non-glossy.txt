@@ -1,0 +1,5 @@
+{% block email_content %}
+{% endblock %}
+
+10LocalCoupons.com corporate address:
+{% include 'email_gateway/generic_corporate_address.txt' %}

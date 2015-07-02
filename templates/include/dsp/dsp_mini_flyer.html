@@ -1,0 +1,105 @@
+{% block email_content %}
+
+    <table cellpadding="0" cellspacing="0" border="0" align="center" width="610" background="{{media_url}}images/email/layout/bg_header_b_full.gif" style="font-family: Arial, sans-serif; background-image: url('{{media_url}}images/email/layout/bg_header_b_full.gif'); background-repeat: no-repeat; background-position: center top; padding: 5px 0 0" >
+        <tr>
+            <td style="font-size: 1px; height: 7px; line-height: 1px;" height="7" colspan="4"></td>
+        </tr>
+        <tr>
+            <td width="6" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+            <td width="598" valign="top" align="left" style="font-family: Arial, sans-serif; padding-bottom: 50px" bgcolor="#ffffff" class="content">
+                <table cellpadding="15" cellspacing="0" border="0" align="center" width="100%" style="font-family: Arial, sans-serif; padding: 10px 15px;"><tr><td>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0 0 20px 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        Thanks for being one of the first to sign up at <a href="http://{{ site.domain }}"><strong>{{ site.domain }}</strong></a>!
+                    </p>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0 0 20px 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        We <strong>can't wait</strong> to start sending you the local coupons you want!
+                    </p>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0 0 20px 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        As you may know, we just got started {{ current_site.launch_date|date:"F j" }} and we're still in "Beta" mode. It may be a few weeks before we send you 10 {{ current_site.name }} Coupons all at once in a single email.
+                    </p>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0 0 20px 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        Until then, here
+                            {% if flyer_coupons.count == 1 %}
+                                is a recent coupon
+                            {% else %}
+                                are
+                                {% if flyer_coupons.count == 2 %}
+                                    a couple of
+                                {% else %}
+                                    some
+                                {% endif %}
+                                recent coupons
+                            {% endif %}
+                        from {% if flyer_coupons.count == 1 %}one of{% endif %} our new clients. We hope that you'll use
+                            {% if flyer_coupons.count == 1 %}
+                                this coupon
+                            {% else %}
+                                these coupons
+                            {% endif %}
+                        and tell all your friends!
+                    </p>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0 0 20px 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        We look forward to a long wonderful relationship. This is going to be <strong>great!</strong>
+                    </p>
+
+                    <p style="color:#333333; font-weight: normal; margin: 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">
+                        <strong>Eric Straus</strong><br/>
+                        <em>President - {{ site.domain }}</em><br/>
+                        Phone: 800-581-3380 x301
+                    </p>
+
+                    <table cellpadding="0" cellspacing="0" border="0" style="color: #717171; font: normal 11px Arial, sans-serif; margin: 0; padding: 0;" width="411" bgcolor="#ffffff">
+
+                    {% for flyer_coupon in flyer_coupons %}
+
+                        {% if first_national.id = flyer_coupon.id %}
+                        <tr>
+                            <td style="padding: 15px 0 5px 0; font-family: Arial, sans-serif;" align="left">
+
+                                <p style="color:#333333; font-weight: normal; margin: 0; padding: 0; line-height: 13px; font-size: 11px; font-family: Arial, sans-serif;">
+                                    <strong>You're one of the first members of {{ site.domain }}.</strong>
+                                    We appreciate that, and we want to give you the 10 coupons you signed up to receive.
+                                    At first, some offers may be from nation-wide businesses.
+                                    As we grow and get better, our aim is 10 coupons from {{ site.name }} Area businesses each week.
+                                </p>
+
+                            </td>
+                        </tr>
+                        {% endif %}
+
+                        <tr>
+                            <td style="padding: 15px 0 16px 0; font-family: Arial, sans-serif; border-bottom: 1px dashed #cccccc" align="left">
+                
+                                <a name="coupon{{ forloop.counter }}"></a>
+                                <h2 style="color:#333333; font-weight: bold; margin: 0 0 10px 0; padding: 0; line-height: 17px; font-size: 15px; font-family: Arial, sans-serif;">
+                                    <span style="color: #333333;">{{ flyer_coupon.coupon.offer.business.business_name }}</span>
+                                </h2>
+                                <a href="{{ base_url }}/{{site.directory_name}}{% url flyer-view-single-coupon flyer_coupon.coupon.slug flyer_coupon.coupon.id emailhash %}" style="color:#247cff; font-weight: normal; margin: 0; padding: 0; line-height: 25px; font-size: 19px; text-decoration: underline;" class="offer">
+                                    <span style="color: #247cff;">{{ flyer_coupon.coupon.offer.headline }}</span>
+                                </a>
+                                <br/>
+                                {% if flyer_coupon.coupon.offer.qualifier %}
+                                <span style="color:#333333; font-weight: normal; margin: 0; padding: 0; line-height: 17px; font-size: 14px; font-family: Arial, sans-serif;">{{ flyer_coupon.coupon.offer.qualifier }}</span><br/>
+                                {% endif %}
+                                <br/><span style="color:#9a9a9a; font-weight: normal; margin: 0; padding: 10px 0 0 0; line-height: 13px; font-size: 11px; font-family: Arial, sans-serif;" class="expiration">Valid through {{ flyer_coupon.coupon.expiration_date|date:"n/j/y" }}</span>
+                
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                </table>
+
+
+                </td></tr></table>
+            </td>
+            <td width="6" style="font-size: 1px; line-height: 1px; margin: 0; padding: 0;">&nbsp;</td>
+        </tr>
+    </table><!-- body -->
+
+{% endblock %}

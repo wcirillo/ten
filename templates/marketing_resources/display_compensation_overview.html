@@ -1,0 +1,92 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - Compenstation Overview - Getting Started{% endblock %}
+{% block meta %}
+<link rel="canonical" href="{% url compensation-overview %}"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url become-an-ad-rep %}">Become an Advertising Representative</a> &nbsp;&rsaquo;&nbsp;
+    <span>Overview</span>
+{% endblock %}
+
+{% block base_content %}
+
+    <h2>Independent Advertising Representative Overview</h2>
+
+    <p class="small">
+        <em>
+            This is <strong>not multi-level marketing</strong>.
+            Compensation is <strong>commission-based</strong>.
+            There is <strong>no financial investment</strong>.
+        </em>
+    </p>
+
+    <h4>Your success is based on three areas:</h4>
+
+    <ul>
+        <li>
+            <strong class="highlight">Advertising Sales</strong> - 
+            You provide local business owners with a tool to increase traffic and profits by publishing online coupons.
+        </li>
+        <li>
+            <strong class="highlight">Increasing the Audience of Local Customers</strong> - 
+            Promote FREE consumer subscriptions to receive valuable local coupons distributed by email.
+        </li>
+        <li>
+            <strong class="highlight">Recruiting Advertising Representatives</strong> - 
+            Recruit and help train other Independent Advertising Representatives.
+        </li>
+    </ul>
+
+    <h4>Your personalized {{ current_site.domain }} website:</h4>
+
+    <ul>
+        <li>
+            A local business operator can purchase a discounted <strong>10 Coupon Publishing Package</strong> through the personalized website we supply to you as an Advertising Representative.
+        </li>
+        <li>
+            Purchases occur when you consult with local businesses in person, or on the phone, or anytime a visit to your website results in a purchase.
+        </li>
+        <li>
+            Additional purchases benefit you when the home office contacts your local business advertisers and implements up-sells like our <strong>Coupon Email Flyer</strong>.
+        </li>
+    </ul>
+
+    <p>Read the <a href="{% url compensation-plan %}">Compensation Plan</a> for more details.</p>
+
+    <p><a class="button largeBtn" href="{% url show-ad-rep-form %}">Get Started Today &raquo;</a></p>
+
+    <br/><br/>
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <p class="smallmargin" align="center">
+        <img src="{{ safe_static_url }}images/replicated_site_screenshot.jpg" border="1" height="190" width="300"/>
+    </p>
+
+    <p class="tiny" align="center">
+        <em>
+            Personalized website
+        </em>
+    </p>
+
+    <div class="padding">
+
+        <h3 class="alt_font light" align="center">
+            {% include "include/dsp/dsp_testimonial_ad_rep.html" %}
+        </h3>
+
+        <div class="clear"></div>
+    </div>
+
+{% endblock %}
+
+{% block bottom_content %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

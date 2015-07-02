@@ -1,0 +1,17 @@
+{% extends "frames/print/frame1.html" %}
+{% block meta %}
+    <meta name="robots" content="noindex, follow">
+    {% include "include/dsp/dsp_facebook_meta.html" %}
+{% endblock %}
+
+{% block base_header_top %}
+    <div class="{% if request.flags.is_mobile %}mobile_nav{% else %}header_top{% endif %}">
+        <a id="button_back" class="button" href="{% url view-single-coupon coupon.slug coupon.id %}">&laquo; Back &nbsp;</a>
+        <a id="button_print" class="button" href="JavaScript:window.print();">Print this coupon</a>
+        <div class="clear"></div>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+    {% include "include/dsp/dsp_print_single_coupon.html" %}
+{% endblock %}

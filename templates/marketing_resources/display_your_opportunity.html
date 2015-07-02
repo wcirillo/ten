@@ -1,0 +1,30 @@
+{% extends "frames/web/columns.html" %}
+{% block title %}{{ current_site.domain }} - Your Opportunity as an Advertising Representative{% endblock %}
+{% block meta %}
+<link rel="canonical" href="/your-opportunity/"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <a href="{% url become-an-ad-rep %}">Become an Advertising Representative</a> &nbsp;&rsaquo;&nbsp;
+    <span>Your Opportunity as an Advertising Representative</span>
+{% endblock %}
+
+{% block base_content %}
+
+    {% include "include/dsp/dsp_your_opportunity.html" %}
+
+{% endblock %}
+
+{% block sidebar_content %}
+
+    <img src="{{ safe_static_url }}images/ad_rep_group.jpg" border="0" height="325" width="350" alt="Become a 10LocalCoupons.com Advertising Representative"/>
+
+{% endblock %}
+
+{% block bottom_content %}
+
+    <div class="hr"></div>
+
+    {% include "include/dsp/dsp_live_help.html" %}
+
+{% endblock %}

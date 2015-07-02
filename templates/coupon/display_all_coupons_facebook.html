@@ -1,0 +1,17 @@
+{% extends "frames/web/iframeBody.html" %}
+
+{% block title %}{{ current_site.name }} Coupons on Facebook{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Looking for {{ current_site.name }} coupons and deals? {{ current_site.domain }} helps you save money at the best places to eat, drink, play and shop. It's simple, so get started today!"/>
+<link rel="canonical" href="{% url all-coupons %}"/>
+<link rel="image_src" href="{{ safe_static_url }}images/fb_logo_100x100.gif"/>
+{% endblock %}
+
+{% block open_content %}
+
+    {% include "include/frm/frm_search_coupons.html" %}
+
+    {% include "include/dsp/dsp_all_offers.html" %}
+
+{% endblock %}

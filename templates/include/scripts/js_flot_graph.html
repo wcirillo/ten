@@ -1,0 +1,3 @@
+$(function () {
+    $.plot($("#monthly-breakdown-graph"), {{ graph.series_json|safe }}, {{ graph.options_json|safe }});
+});

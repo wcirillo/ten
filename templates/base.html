@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:fb="http://ogp.me/ns/fb#">
+{% block head_tag %}<head>{% endblock %}
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    {% block optimizertop %}{% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>{% block title %}{% if title %}{{ title }}{% else %}{{ current_site.domain }}{% endif %}{% endblock %}</title>{% block meta %}{% endblock %}<meta name="robots" content="noydir">
+    <meta name="robots" content="noodp">
+    {% if current_site.name  == 'return path monitor' %}<meta name="robots" content="NOINDEX">{% endif %}
+    {#<link REL="SHORTCUT ICON" HREF="/favicon.ico">#}
+    {% include "header_includes.html" %}
+    {% if not request.flags.is_mobile %}{% include "js_includes_top.html" %}{% endif %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}" {% include "onload_includes.html" %} {% block body_onload %}{% endblock %}>
+
+{% spaceless %}
+
+{% block open_content %}{% endblock %}
+
+{% block base_header_top %}
+
+    <div class="header_top small">
+        <div class="container_16 header_top_inner">
+            {% include "display_header_top.html" %}
+        </div>
+    </div>
+
+{% endblock %}
+
+<div class="container_16 container">
+
+    {% if not request.flags.is_mobile %}
+        {% block base_header %}
+            {% include "display_header.html" %}
+        {% endblock %}
+    {% endif %}
+
+    {% block frame %}{% endblock %}
+
+    <div class="clear"></div>
+</div>
+
+{% block footer %}
+
+    {% if not request.flags.is_mobile %}
+        <div class="container_16 footer">
+            {% include "include/dsp/dsp_footer.html" %}
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block base_footer %}
+
+    {% if request.flags.is_mobile %}
+        <p class="tiny center">
+            <a href="{{ current_url_no_subdomain }}">Full version</a>
+        </p>
+    {% else %}
+        <div class="container_16 footer_bottom tiny center">
+            {% include "include/dsp/dsp_footer_bottom.html" %}
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block modal %}
+
+    <div id="modaldiv" class="modalwindow">
+        <div id="modalcontent"></div>
+    </div>
+
+{% endblock %}
+
+{% endspaceless %}
+
+{% if not request.flags.is_mobile %}{% include "js_includes_bottom.html" %}{% endif %}
+{% include "js_includes_absolute_bottom.html" %}
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "frames/email/non-glossy.html" %}
+
+{% block email_content %}
+
+<p>
+    Hi{{ business_name }},
+</p>
+
+<p>
+    Add a coupon to {{ site.domain }} and I'll put it into tomorrow's Email Flyer, free!
+</p>
+
+<p>
+    We're a new and growing website and have made changes that you'll appreciate &mdash;
+    like our new low rate of ${{ slot_price }}/month...
+    a rate you can keep for life.
+</p>
+<p>
+    Follow this link to <a href="{{ base_url }}/{{site.directory_name}}{% url advertiser-registration %}">add your coupon</a>.
+</p>
+
+<p>
+    To get your coupon placed in the flyer tomorrow, just call me or reply to this email by 5pm today.
+    And as always, ask any questions you have.
+    I'd love to help you get more customers.
+</p>
+
+<p>
+    Thanks!
+</p>
+
+<p>
+    {{ signature_name }}<br/>
+    {{ signature_title }}<br/>
+    {{ signature_email }}<br/>
+    {{ signature_phone }}
+</p>
+
+<p>
+    P.S. Hurry, I have limited space available in Thursday's Email Flyer.
+</p>
+
+<p> I'll occasionally send email to let you know about opportunities like this. If you'd prefer not to receive them, please use this <a href="{{ base_url }}{% url opt_out payload=payload %}">unsubscribe</a> link to cancel these messages instantly.
+</p>
+{% endblock %}

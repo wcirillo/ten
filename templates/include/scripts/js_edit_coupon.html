@@ -1,0 +1,380 @@
+$("li.hiddenform").hide();
+
+
+// Coupon preview section
+$(".business_name").html($("input[id='id_business_name']").val());
+if ($("input[id='id_slogan']").val().length > 0)
+    $(".slogan").html("- " + $("input[id='id_slogan']").val() + " -");
+$(".web_url").html($("input[id='id_web_url']").val().replace('http://',''));
+if ($("input[id='id_web_url']").val().replace('http://','').length > 30)
+    $(".web_url").html($("input[id='id_web_url']").val().replace('http://','').substring(0,30).concat('...'));
+$(".headline").html($("input[id='id_headline']").val());
+$(".qualifier").html($("input[id='id_qualifier']").val());
+$(".redemption_window span").html($("input[id='id_expiration_date']").val());
+
+// show city/state comma, phone parens and phone hyphen if needed
+if (($("input[id='id_location_city_" + this + "']").val() !== "") && ($("input[id='id_location_state_province_" + this + "']").val() !== "")){
+    $("#location_" + this + " .city_state_comma").show();
+}
+if ($("input[id='id_location_area_code_" + this + "']").val() !== ""){
+    $("#location_" + this + " .phone_paren").show();
+}
+if (($("input[id='id_location_exchange_" + this + "']").val() !== "") && ($("input[id='id_location_number_" + this + "']").val() !== "")){
+    $("#location_" + this + " .phone_hyphen").show();
+}
+
+// locations
+var arrLocation = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+jQuery.each(arrLocation, function() {
+    $("#location_" + this + " .address1").html($("input[id='id_location_address1_" + this + "']").val());
+    $("#location_" + this + " .address2").html($("input[id='id_location_address2_" + this + "']").val());
+    $("#location_" + this + " .city").html($("input[id='id_location_city_" + this + "']").val());
+    $("#location_" + this + " .state").html($("select[id='id_location_state_province_" + this + "']").val());
+    $("#location_" + this + " .zip_postal").html($("input[id='id_location_zip_postal_" + this + "']").val());
+    $("#location_" + this + " .description").html($("input[id='id_location_description_" + this + "']").val());
+    $("#location_" + this + " .area_code").html($("input[id='id_location_area_code_" + this + "']").val());
+    $("#location_" + this + " .exchange").html($("input[id='id_location_exchange_" + this + "']").val());
+    $("#location_" + this + " .number").html($("input[id='id_location_number_" + this + "']").val());
+
+    // show city/state comma, phone parens and phone hyphen if needed
+    if (($("input[id='id_location_city_" + this + "']").val() !== "") && ($("input[id='id_location_state_province_" + this + "']").val() !== "")){
+        $("#location_" + this + " .city_state_comma").show();
+    }
+    if ($("input[id='id_location_area_code_" + this + "']").val() !== ""){
+        $("#location_" + this + " .phone_paren").show();
+    }
+    if (($("input[id='id_location_exchange_" + this + "']").val() !== "") && ($("input[id='id_location_number_" + this + "']").val() !== "")){
+        $("#location_" + this + " .phone_hyphen").show();
+    }
+
+});
+// end locations
+
+// restrictions
+var customRestrictionId = $("label:contains('Enter Custom Restriction')").attr("for");
+var arrRestrictions = [ 0, 1, 2, 3, 4, 5 ];
+jQuery.each(arrRestrictions, function() {
+    if ($("#id_default_restrictions_" + this).is(":checked"))
+        $(".restriction_" + this).html($("label[for='id_default_restrictions_" + this + "']").text()).removeClass('hidden');
+});
+if ($("#" + customRestrictionId).is(":checked"))
+    $(".custom_restriction").html($("#id_custom_restrictions").val()).removeClass('hidden');
+// end restrictions
+
+// redemption
+if ($("input[name='is_redeemed_by_sms']:checked").val() == '1')
+    $("#toolSMS").removeClass("hidden");
+
+
+// Edit Form section
+
+$("#accordion").accordion({
+    animated: "bounceslide",
+    active: false,
+    autoHeight: false,
+    collapsible: true,
+    icons: {
+        header: "sprite accordionHeaderClosed",
+        headerSelected: "sprite accordionHeaderOpen"
+    }
+});
+
+// open accordion sections by clicking directly on preview
+
+$(".edit").click(function(){
+    $(this).removeClass("edit");
+    $varOpenAccordion = "#accordion_" + $(this).attr("class");
+    $("#accordion").accordion("activate", $varOpenAccordion);
+    $(this).addClass("edit");
+});
+// unique cases
+$(".locationList").click(function(){
+
+    if ($("#accordion_coupon_location").hasClass("ui-state-default"))
+        $("#accordion").accordion("activate", "#accordion_coupon_location");
+
+    $(".form_edit_location").addClass("hidden");
+    var show_location_number = ($(this).attr("title"));
+    $("#form_edit_location_" + show_location_number).removeClass("hidden");
+
+});
+
+// accordion edit sections
+
+$("#id_business_name").focus(function(){
+    $(".business_name").effect("highlight", {}, 2000);
+    $(".business_name").addClass("editHover");
+});
+$("#id_business_name").blur(function(){
+    $(".business_name").removeClass("editHover");
+    $(".business_name").html($("input[id='id_business_name']").val());
+});
+$("#id_business_name").keyup(function(){
+    $(".business_name").html($("input[id='id_business_name']").val());
+});
+
+
+$("#id_slogan").focus(function(){
+    $(".slogan").effect("highlight", {}, 2000);
+    $(".slogan").addClass("editHover");
+});
+$("#id_slogan").blur(function(){
+    $(".slogan").removeClass("editHover");
+    if ($("input[id='id_slogan']").val().length > 0){
+        $(".slogan").html("- " + $("input[id='id_slogan']").val() + " -");
+    }else{
+        $(".slogan").html("");
+    }
+});
+$("#id_slogan").keyup(function(){
+    if ($("input[id='id_slogan']").val().length > 0){
+        $(".slogan").html("- " + $("input[id='id_slogan']").val() + " -");
+    }else{
+        $(".slogan").html("");
+    }
+});
+
+
+$("#id_web_url").focus(function(){
+    $(".web_url").effect("highlight", {}, 2000);
+    $(".web_url").addClass("editHover");
+});
+$("#id_web_url").blur(function(){
+    $(".web_url").removeClass("editHover");
+    $(".web_url").html($("input[id='id_web_url']").val().replace('http://',''));
+    if ($("#id_web_url").val().length > 30)
+        $(".web_url").html($("input[id='id_web_url']").val().replace('http://','').substring(0,30).concat('...'));
+});
+$("#id_web_url").keyup(function(){
+    $(".web_url").html($("input[id='id_web_url']").val().replace('http://',''));
+    if ($("#id_web_url").val().length > 30)
+        $(".web_url").html($("input[id='id_web_url']").val().replace('http://','').substring(0,30).concat('...'));
+});
+
+
+$("#id_headline").focus(function(){
+    $(".headline").effect("highlight", {}, 2000);
+    $(".headline").addClass("editHover");
+});
+$("#id_headline").blur(function(){
+    $(".headline").removeClass("editHover");
+    if ($("input[id='id_headline']").val() == ""){
+        $(".headline").html("&nbsp;");
+    }else{
+        $(".headline").html($("input[id='id_headline']").val());
+    }
+});
+$("#id_headline").keyup(function(){
+    $(".headline").html($("input[id='id_headline']").val());
+});
+
+
+$("#id_qualifier").focus(function(){
+    $(".qualifier").effect("highlight", {}, 2000);
+    $(".qualifier").addClass("editHover");
+});
+$("#id_qualifier").blur(function(){
+    $(".qualifier").removeClass("editHover");
+    $(".qualifier").html($("input[id='id_qualifier']").val());
+});
+$("#id_qualifier").keyup(function(){
+    $(".qualifier").html($("input[id='id_qualifier']").val());
+});
+
+
+$(".form_edit_location input").focus(function(){
+    var location_number = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number).effect("highlight", {}, 2000);
+    $("#location_" + location_number).addClass("editHover");
+});
+$(".form_edit_location input").blur(function(){
+    var location_number = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number).removeClass("editHover");
+});
+$(".form_edit_location input[id^='id_location_address1']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .address1").html($("input[id='id_location_address1_" + location_number_keyup + "']").val());
+});
+$(".form_edit_location input[id^='id_location_address2']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .address2").html($("input[id='id_location_address2_" + location_number_keyup + "']").val());
+});
+$(".form_edit_location input[id^='id_location_city']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .city").html($("input[id='id_location_city_" + location_number_keyup + "']").val());
+    if (($("input[id='id_location_city_" + location_number_keyup + "']").val() !== "") && ($("input[id='id_location_state_province_" + location_number_keyup + "']").val() !== "")){
+        $("#location_" + location_number_keyup + " .city_state_comma").show();
+    } else {
+        $("#location_" + location_number_keyup + " .city_state_comma").hide();
+    }
+});
+$(".form_edit_location select[id^='id_location_state_province']").change(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .state").html($("select[id='id_location_state_province_" + location_number_keyup + "']").val());
+    if (($("input[id='id_location_city_" + location_number_keyup + "']").val() !== "") && ($("input[id='id_location_state_province_" + location_number_keyup + "']").val() !== "")){
+        $("#location_" + location_number_keyup + " .city_state_comma").show();
+    } else {
+        $("#location_" + location_number_keyup + " .city_state_comma").hide();
+    }
+});
+$(".form_edit_location input[id^='id_location_zip_postal']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .zip_postal").html($("input[id='id_location_zip_postal_" + location_number_keyup + "']").val());
+});
+$(".form_edit_location input[id^='id_location_description']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .description").html($("input[id='id_location_description_" + location_number_keyup + "']").val());
+});
+$(".form_edit_location input[id^='id_location_area_code']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .area_code").html($("input[id='id_location_area_code_" + location_number_keyup + "']").val());
+    if ($("input[id='id_location_area_code_" + location_number_keyup + "']").val() !== ""){
+        $("#location_" + location_number_keyup + " .phone_paren").show();
+    } else {
+        $("#location_" + location_number_keyup + " .phone_paren").hide();
+    }
+});
+$(".form_edit_location input[id^='id_location_exchange']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .exchange").html($("input[id='id_location_exchange_" + location_number_keyup + "']").val());
+});
+$(".form_edit_location input[id^='id_location_number']").keyup(function(){
+    var location_number_keyup = ($(this).closest("ol").attr("title"));
+    $("#location_" + location_number_keyup + " .iconPin").removeClass("hidden");
+    $("#location_" + location_number_keyup + " .number").html($("input[id='id_location_number_" + location_number_keyup + "']").val());
+    if (($("input[id='id_location_exchange_" + location_number_keyup + "']").val() !== "") && ($("input[id='id_location_number_" + location_number_keyup + "']").val() !== "")){
+        $("#location_" + location_number_keyup + " .phone_hyphen").show();
+    } else {
+        $("#location_" + location_number_keyup + " .phone_hyphen").hide();
+    }
+});
+
+// Restrictions
+
+$("#id_default_restrictions_0").change(function(){
+    if ($("#id_default_restrictions_0").is(":checked")){
+        $(".restriction_0").html($("label[for='id_default_restrictions_0']").text());
+        $(".restriction_0").show();
+    } else {
+        $(".restriction_0").hide();
+    }
+});
+$("#id_default_restrictions_1").change(function(){
+    if ($("#id_default_restrictions_1").is(":checked")){
+        $(".restriction_1").html($("label[for='id_default_restrictions_1']").text());
+        $(".restriction_1").show();
+    } else {
+        $(".restriction_1").hide();
+    }
+});
+$("#id_default_restrictions_2").change(function(){
+    if ($("#id_default_restrictions_2").is(":checked")){
+        $(".restriction_2").html($("label[for='id_default_restrictions_2']").text());
+        $(".restriction_2").show();
+    } else {
+        $(".restriction_2").hide();
+    }
+});
+$("#id_default_restrictions_3").change(function(){
+    if ($("#id_default_restrictions_3").is(":checked")){
+        $(".restriction_3").html($("label[for='id_default_restrictions_3']").text());
+        $(".restriction_3").show();
+    } else {
+        $(".restriction_3").hide();
+    }
+});
+$("#id_default_restrictions_4").change(function(){
+    if ($("#id_default_restrictions_4").is(":checked")){
+        $(".restriction_4").html($("label[for='id_default_restrictions_4']").text());
+        $(".restriction_4").show();
+    } else {
+        $(".restriction_4").hide();
+    }
+});
+$("#id_default_restrictions_5").change(function(){
+    if ($("#id_default_restrictions_5").is(":checked")){
+        $(".restriction_5").html($("label[for='id_default_restrictions_5']").text());
+        $(".restriction_5").show();
+    } else {
+        $(".restriction_5").hide();
+    }
+});
+
+if ($("#" + customRestrictionId).is(":checked"))
+        $("#restrictionhiddenform").slideDown("slow");
+
+$("#" + customRestrictionId).change(function(){
+    if ($("#" + customRestrictionId).is(":checked")) {
+        $(".custom_restriction").show();
+        $("#restrictionhiddenform").show();
+        $("#id_custom_restrictions").focus();
+    } else {
+        $(".custom_restriction").hide();
+        $("#restrictionhiddenform").slideUp("slow");
+    }
+});
+
+$("#id_custom_restrictions").keyup(function(){
+    $(".custom_restriction").html($("#id_custom_restrictions").val());
+});
+
+// Redemption
+
+$("input[name='is_redeemed_by_sms']").change(function(){
+    if ($("input[name='is_redeemed_by_sms']:checked").val() == '1')
+        $("#btnSMS").removeClass("hidden");
+    else
+        $("#btnSMS").addClass("hidden");
+    $(".redemption_method").effect("highlight", {}, 2000);
+});
+
+// Calendar
+
+//year_prefix = '20';
+//expiration_date = $("input[id='id_expiration_date']").val();
+//expiration_second_slash = expiration_date.lastIndexOf("/");
+//expiration_year = expiration_date.slice(expiration_second_slash+1);
+//expiration_day_and_month = expiration_date.slice(0,expiration_second_slash+1);
+//expiration_date = expiration_day_and_month.concat(year_prefix, expiration_year);
+selectedDate = $.datepicker.parseDate("m/d/y", $("input[id='id_expiration_date']").val());
+
+/*
+min_expiration_date = $("#id_minimum_expiration_date").text();
+min_expiration_second_slash = min_expiration_date.lastIndexOf("/");
+min_expiration_year = min_expiration_date.slice(min_expiration_second_slash+1);
+min_expiration_day_and_month = min_expiration_date.slice(0,min_expiration_second_slash+1);
+min_expiration_date = min_expiration_day_and_month.concat(year_prefix, min_expiration_year);
+minimumExpirationDate = $.datepicker.parseDate("m/d/y", min_expiration_date);
+*/
+
+$("#id_calendar").datepicker({
+    onSelect: function(dateText, inst) {
+        $("#id_expiration_date").val(dateText);
+        $(".redemption_window span").html($("input[id='id_expiration_date']").val());
+        $(".redemption_window").effect("highlight", {}, 2000);
+    },
+    dateFormat: "m/d/y",
+    defaultDate: selectedDate,
+    minDate: "0",
+    maxDate: "+364"
+});
+
+// Check for error ul
+$("div.accordionContent:has(ul.errorlist)").prev().addClass("accordionError");   
+$firstErrorHeader = "#" + $("div.accordionContent:has(ul.errorlist):first").prev().attr("id");
+$("#accordion").accordion("activate", $firstErrorHeader);
+
+// For second coupon - check if offer is blank and open accordion
+if ($("input[id='id_headline']").val() == ""){
+    $("#accordion").accordion("activate", $("#accordion_coupon_offer"));
+    $(".headline").html("&nbsp;");
+    $("input[id='id_headline']").focus();
+}

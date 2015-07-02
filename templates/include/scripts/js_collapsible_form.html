@@ -1,0 +1,13 @@
+// if error condition exists, hide the open link and do not collapse the form
+if ($('#id_collapsible_form .errorlist').length == 0){
+    $('#id_collapsible_form').slideUp('slow');
+}else{
+    $('#open_form').addClass('hidden');
+}
+
+$('#open_form').click(function(e){
+    e.preventDefault();
+    $('#id_collapsible_form').slideDown('slow');
+    $('#open_form').fadeOut();
+});
+

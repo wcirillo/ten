@@ -1,0 +1,36 @@
+{% extends "frames/web/full.html" %}
+{% block title %}Blast effect results for {{ site.domain }}{% endblock %}
+{% block top_content %}
+    
+{% endblock %}
+
+{% block base_content %}
+{% if pre_blast_site_age_days %}
+    <div class="padding">
+        <h2>Blast effect results for {{ site.domain }}</h2><br>
+        <h1>Pre-Blast:</h1> 
+        <p>Total {{pre_blast_total}} signups over {{ pre_blast_site_age_days }} days
+        <p>Average {{ pre_blast_signups_per_day }} signups/day
+        <br />
+        <h1>Post Blast:</h1>
+        <p>Signups since blast, total = {{ post_blast_signups }} consumers
+        <p>Signups since blast, average = {{post_blast_signups_per_day}} signups/day
+        <p>Total Consumers, combined: {{ total_consumers }}
+        <br />{% if daily_stats %}
+        <p>Daily Activity since start of blast:
+        
+        
+        
+            <ol>
+            {% for day in daily_stats %}
+            <ul> {{day}} </ul>
+            {% endfor %}
+        {% endif %}
+    
+
+{% else %}
+    <div class="padding">
+        <h1>Site {{ sitenum }} does not exist</h1><br>
+    </div>
+{% endif %}
+{% endblock %}

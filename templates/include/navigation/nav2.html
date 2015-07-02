@@ -1,0 +1,13 @@
+{% block enrollment_links %}
+
+    {% block enrollment_link1 %}
+        <a class="button{{ nav_compensation_plan }}" href="{% url compensation-plan %}">compensation plan</a>
+    {% endblock %}
+    {% block enrollment_link2 %}
+        <a class="button{{ nav_terms_of_agreement }}" href="{% url terms-of-agreement %}">terms of agreement</a>
+    {% endblock %}
+    {% block enrollment_link3 %}
+        <a class="button{{ nav_policies_procedures }}" href="{% url policies-procedures %}">policies &amp; procedures</a>
+    {% endblock %}
+
+{% endblock %}

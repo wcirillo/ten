@@ -1,0 +1,48 @@
+{% load gargoyle_tags %}
+
+<h2 class="steps_print_header">Simple Steps to Increase Your Profits</h2>
+
+<ol>
+
+    <li class="steps_print_li">
+        <strong>Sign up</strong> for free at <u>10LocalCoupons.com{% ifswitch replicated-website %}{% if ad_rep %}/{{ ad_rep.url }}{% endif %}{% endifswitch %}</u>.
+        Receive valuable, money-saving, local coupons every week!
+    </li>
+
+    <li class="steps_print_li">
+        <strong>Play</strong> a little first!
+        Use the <strong>"create coupons"</strong> tool.
+        See how <strong>easy</strong> it will be to build your first coupon.
+        Remember, you can publish <strong>up to 10 Coupons</strong> at once.
+        Changes are <strong>immediate</strong> and <strong>unlimited</strong>.
+    </li>
+
+    <li class="steps_print_li">
+        Contact me!<br/>
+
+        {% ifswitch replicated-website %}
+            {% if ad_rep %}
+                <strong>{{ ad_rep.first_name }} {{ ad_rep.last_name }}</strong><br/>
+                {% if ad_rep.email %}{{ ad_rep.email }}<br/>{% endif %}
+                {% if ad_rep.home_phone_number %}{{ ad_rep.home_phone_number }}<br/>{% endif %}
+                {% if ad_rep.primary_phone_number %}{{ ad_rep.primary_phone_number }}<br/>{% endif %}
+            {% endif %}
+        {% endifswitch %}
+
+        <em>
+            Save at least $1500 annually by working with an Independent Advertising Representative!
+            I'll give you the best price available.
+        </em>
+    </li>
+
+    <li class="steps_print_li">
+        <strong>Publish coupons</strong> in minutes.
+        Begin attracting <strong>new prospects</strong>.
+        Increase visits from your current customers.
+        Enjoy <strong>added traffic</strong> right away!
+        There's <strong>no need to wait</strong> for type-setting or delivery.
+    </li>
+
+</ol>
+
+<div class="clear"></div>

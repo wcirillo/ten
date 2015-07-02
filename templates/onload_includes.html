@@ -1,0 +1,43 @@
+{% block body_onload %}
+
+    onload="
+
+        {% if onload_all_coupons_this_business or onload_single_coupon or onload_print_single_coupon %}
+            {% if location_coords %}
+                 ol_map.build_location_map({{ location_coords }});
+            {% endif %}
+        {% endif %}
+
+        {% if onload_advertiser_registration %}
+            document.getElementById('id_business_name').focus();
+        {% endif %}
+
+        {% if onload_ad_rep_lead_form %}
+            document.getElementById('id_first_name').focus();
+        {% endif %}
+        
+        {% if onload_county_map %}
+            ol_map.build_market_map('{{ market_coverage }}', false);
+        {% endif %}
+        
+        {% if onload_market_search_form %}
+            document.getElementById('id_consumer_zip_postal').focus();
+        {% endif %}
+
+        {% if onload_state_markets %}
+            ol_map.build_state_map('{{ market_coverage }}', true);
+        {% endif %} 
+       
+        {% if onload_site_directory %}
+            ol_map.create_market_list();
+        {% endif %}
+
+        {% if onload_print_single_coupon %}
+            {% if not request.flags.is_mobile %}
+                window.print();
+            {% endif %}
+        {% endif %}
+
+    "
+
+{% endblock %}

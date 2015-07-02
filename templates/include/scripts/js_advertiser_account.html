@@ -1,0 +1,242 @@
+// coupon width (get DOM width and apply it to maintain width while dragging)
+function couponWidth(){
+    var activeCouponWidth = $(".active:first").width();
+    var inactiveCouponWidth = $(".inactive:first").width();
+    $('.active').css('width', activeCouponWidth);
+    $('.inactive').css('width', inactiveCouponWidth);
+}
+couponWidth();
+
+// Growl messaging
+function growl(message){
+    $(".growl").html(message);
+    $(".growl").slideDown().delay(5000).fadeOut("slow");
+}
+/*
+// Make draggable
+function makeDraggable(){
+    $(".active:not('.locked')").draggable({
+        helper: "clone",
+        revert: "invalid",
+        scroll: true,
+        zIndex: 1000
+    });
+    $(".inactive").draggable({
+        helper: "clone",
+        revert: "invalid",
+        scroll: true,
+        zIndex: 1000
+    });            
+}
+
+$(".available:not('.locked')").droppable({
+    accept: ".inactive, .active",
+    activeClass: "slotDrop",
+    drop: function(event, ui){
+        var displayInId = "#" + $(this).find(".couponDrag").attr("id");
+        //var displayOutId = "#" + $(ui.draggable).find(".couponDrag").attr("id");        
+        var incomingId = "#" + $(ui.draggable).attr("id");
+        var incomingCouponId = $(ui.draggable).find(".coupon").attr("id");
+        var outgoingId = "#" + $(this).find(".coupon").attr("id");
+        var outgoingContent = $(displayInId).html(); // holds the content being replaced
+        var display_in_id = displayInId.slice(7);
+        var display_out_id = incomingId.slice(7)
+        var coupon_in_id = incomingCouponId.slice(6);
+        var coupon_out_id = outgoingId.slice(7);        
+        var headline_in = $(this).find(".couponDrag").find(".headline").html()
+        var headline_out = $(ui.draggable).find(".coupon").find(".headline").html()
+        //alert(incomingId);
+        //alert(display_out_id);
+        if(incomingId.slice(0,9) == '#inactive'){
+             display_out_id = '';
+             }
+        //alert(displayInId);// #active96
+        //alert(incomingId);// #active93
+        //alert(incomingCouponId);// coupon581
+        //alert(outgoingId);// #coupon579
+        //alert(outgoingContent);
+        //alert(display_out_id);//93
+        //alert(display_in_id); //96
+        //alert(coupon_in_id);//581
+        //alert(coupon_out_id);//579
+        if(outgoingId == '#undefined'){
+                       coupon_out_id = '';               
+        }
+        //alert(outgoingId);
+        //alert(coupon_out_id);
+        $(displayInId).html($(ui.draggable).html()).find(".coupon").effect("highlight", {}, 1000);
+        $(incomingId).html(outgoingContent).find(".coupon").effect("highlight", {}, 1000);
+        clicktrigger();
+        couponWidth();
+        if (coupon_in_id != coupon_out_id){
+            $.ajax({
+                url: "{% url advertiser-account %}",
+                type: "POST",
+                data: {ajax_mode:'available',
+                       display_in_id: display_in_id,
+                       coupon_in_id: coupon_in_id,
+                       display_out_id: display_out_id,
+                       coupon_out_id: coupon_out_id,
+                       headline_in: headline_in,
+                       headline_out: headline_out},
+                dataType: "json",
+                timeout: 10000,
+                success: function(data) {
+                $('#expiration_date'+coupon_in_id).html(data['expiration_date'])
+                growl(data['msg']);
+                },
+                error: function() {
+                }
+            });
+        };
+    },
+    hoverClass: "slotDropHover"
+});
+*/
+$(".new").droppable({
+    accept: ".inactive",
+    activeClass: "newDrop",
+    drop: function(event, ui){
+        var incomingId = "#" + $(ui.draggable).find(".coupon").attr("id");
+        var coupon_in_id = incomingId.slice(7);
+        var link = $('#add_a_display').attr('href');
+        link_len = link.length;
+        link = link.slice(0,link_len-1);
+        last_index_of = link.lastIndexOf('/');
+        link = link.slice(0,last_index_of+1);
+        link = link + coupon_in_id + '/';
+        $('body').append('<form id="new_form" action="'+link+'"></form>');
+        $('#new_form').submit();
+    },
+    hoverClass: "newHover"
+});
+/*
+$(".bucket").droppable({
+    accept: ".active",
+    activeClass: "bucketDrop",
+    drop: function(event, ui){
+        var removedId = "#" + $(ui.draggable).attr("id");
+        var removedContent = $(removedId).html(); // holds the content being replaced
+        var inactiveCount = $(this).find(".inactive").size() + 1; // needs unique id each time
+        var outgoingId = "#" + $(ui.draggable).find(".coupon").attr("id");
+        var display_out_id = removedId.slice(7);
+        var coupon_out_id = outgoingId.slice(7);
+        var headline_out = $(ui.draggable).find(".coupon").find(".headline").html()
+        $(this).append('<div id="inactive' + inactiveCount + '" class="couponDrag inactive">' + removedContent + '</div>');
+        $(removedId).html("");
+        makeDraggable();
+        clicktrigger();
+        couponWidth();
+        $.ajax({
+            url: "{% url advertiser-account %}",
+            type: "POST",
+            data: {ajax_mode:'bucket',
+                   display_out_id: display_out_id,
+                   coupon_out_id: coupon_out_id,
+                   headline_out: headline_out},
+            dataType: "json",
+            timeout: 10000,
+            success: function(data) {
+            growl(data['msg']);
+            },
+            error: function() {
+            }
+        });
+    },
+    hoverClass: "bucketDropHover"
+});
+*/
+// Locked Rates
+
+function slotLockedBtns(){
+    alert("test");
+}
+
+
+
+
+
+
+
+
+// New stuff!
+
+$(".btnDisplay").click(function(e){
+    e.preventDefault();
+    var btnId = $(this).attr("id");
+    var slt_cpn_id = btnId.slice(3);
+    var id_slt_cpn = $('#slt_cpn' + slt_cpn_id);
+    var id_coupon = id_slt_cpn.find(".coupon").attr("id");
+    var coupon_id = id_coupon.slice(6);
+    var headline = id_slt_cpn.find(".coupon").find(".headline").html();
+    var business_id = $("#id_select_business").val();
+    if($(this).hasClass("displayOn")){
+        ajax_mode = 'turn-display-off';   
+        display_id = slt_cpn_id;
+    }else{
+        ajax_mode = 'turn-display-on';
+        display_id = '';
+    }
+    $.ajax({
+        url: "{% url advertiser-account %}",
+        type: "POST",
+        data: {ajax_mode: ajax_mode,
+               business_id: business_id,
+               display_id: display_id,
+               coupon_id: coupon_id,
+               headline: headline},
+        dataType: "json",
+        timeout: 10000,
+        success: function(data) {
+            if(data['has_full_family']){
+                window.parent.location = "{% url checkout-coupon-purchase %}";
+            }else{
+                if(ajax_mode == "turn-display-off"){
+                    $("#" + btnId).removeClass("displayOn").addClass("displayOff");
+                    $("#" + btnId).attr("id", 'btn' + coupon_id);
+                    $(id_slt_cpn).attr("id", 'slt_cpn' + coupon_id);
+                }else{ 
+                    $("#" + btnId).removeClass("displayOff").addClass("displayOn");
+                    $("#" + btnId).attr("id", 'btn' + data['new_display_id']);
+                    $(id_slt_cpn).attr("id", 'slt_cpn' + data['new_display_id']);
+                    $('#expiration_date'+coupon_id).html(data['expiration_date']);
+                }
+                $("#arrow" + coupon_id).toggleClass("arrowCols_gray");
+                $("#btnFlyer" + coupon_id).toggleClass("disabled");
+                $(id_slt_cpn).toggleClass("couponPreviewDisabled");
+                growl(data['msg']);
+            }
+        },
+        error: function() {
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Run
+makeDraggable();
+*/
