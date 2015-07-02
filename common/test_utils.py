@@ -81,6 +81,18 @@ class EnhancedTestCase(TestCase):
         """ tearDown method for the EnhancedTestClass """
         super(EnhancedTestCase, self).tearDown()
         self.client = None
+
+    def login(self, email='ten@example.com', password='password',
+            is_ad_rep=False):
+        """ Login method for this user, taken from media_partner.tests. Only use
+        this method for testing sign-in. -I have not been able to modify the
+        session that is created to test other scenarios.
+        """
+        post_data = {'email': email, 'password': password}
+        if is_ad_rep:
+            post_data.update({'ad_rep_sign_in': 1})
+        response = self.client.post(reverse('sign-in'), post_data)
+        self.assertEqual(response.status_code, 302)
     
     def add_ad_rep_to_session(self, ad_rep):
         """ Add a referring ad rep to the session. """
@@ -114,18 +126,6 @@ class EnhancedTestCase(TestCase):
         session = self.client.session
         session.update(dictionary)
         session.save()
-        
-    def login(self, email='ten@example.com', password='password', 
-            is_ad_rep=False):
-        """ Login method for this user, taken from media_partner.tests. Only use
-        this method for testing sign-in. -I have not been able to modify the
-        session that is created to test other scenarios.
-        """
-        post_data = {'email': email, 'password': password}
-        if is_ad_rep:
-            post_data.update({'ad_rep_sign_in': 1})
-        response = self.client.post(reverse('sign-in'), post_data)
-        self.assertEqual(response.status_code, 302)
         
     def create_product_list(self, site):
         """ Create the product_list for tests in session so we can use the

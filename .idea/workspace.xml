@@ -1,0 +1,2088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a10a4d2-2cbc-4b8e-9322-3c331ed67f5f" name="Default" comment="Add ten to git">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/feed/.empty" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/.empty" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/businesses/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/web-snap/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/map-data/.hg-placeholder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/spots/HV/10Coupons_2011_09_Change_HV_30_CareerChange.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/docs/10LCOrderForm.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/docs/10LC_Benefits_for_advertisers.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/docs/10LC_Competitors.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/docs/10LC_Success_Guide_SG011912.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/docs/10LC_Success_Guide_SG013112.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/10LC_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/10LC_logo_112111.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/10LC_logo_200x80.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/10LC_logo_320x100.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/10_200x200.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/12908_1324070337.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/22874_1324070338.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/31755_1326142192.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/3_1324070225.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/43202_1324048026.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/45049_1326206072.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/48709_1326211895.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/54070_1324070271.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/56876_1326142192.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/64354_1326206002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/64966_1326142123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/web-snap/6lrt4p2wm7-126-1326211763.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/76424_1324048026.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/80109_1326211895.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/91906_1324047958.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/96033_1326211827.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/print/Ad_Rep_BizCard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ppt/CharterAdvertiser011912.ppt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ppt/CharterAdvertiser013112.ppsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ppt/YourOpportunity011912.pptx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ppt/YourOpportunity013112.ppsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/_default_domain.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/hudson-valley/_default_domain.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/ad_rep_group.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/mobile/arrowright.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/mobile/arrowright@2x.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/bcvnifxhlb.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/be_your_own_boss.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgBody.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgPhotoUpload.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgPreview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindow2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowPattern1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowRep.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm1b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm3b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSm5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSmAdRep.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSmAdRepNoMLM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSmAdvertiser.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSmConsumer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/bgWindowSmConsumerNoContest.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/bodyBg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/bottom_left_dark.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/bottom_right_dark.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btn150x30.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btn200x40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btn275x40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btn400x40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btnBg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/btnCalendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/btnConfirmEmail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/cc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/chatlive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/checkmark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/web-snap/clip-1034-1326221917.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/compensation_plan_chart.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/compensation_plan_chart_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomLeftBox1_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomLeftBox2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomLeftBox2_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomRightBox1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomRightBox1_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerBottomRightBox2_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopLeftBox1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopLeftBox1_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopLeftBox2_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopRightBox1_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopRightBox2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/cornerTopRightBox2_102411.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/couponShadow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/coupon_Shadow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/coupon_buttons.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/coupon_line.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/video/create_coupon.flv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/video/create_coupon.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/cvv.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_number_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_number_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_number_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_preview.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_sample.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_sample_1_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/display_page_sample_1_2_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/email_footer_bottom.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/email_header.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/email_header_center.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/email_header_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/eric.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/eric_signature.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/eszpjlbedo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/example_location_description.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/web-snap/f919g3qvc0-127-1326211774.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/fb_logo_100x100.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/groupon_logo_200x80.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/homepage_screenshot_101911.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_bubble.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_flyer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_phones.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_phones_101211.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_screenshot_090911.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_screenshot_101211.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_shooger.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/howitworks_video.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/iconNewWindow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/inside_radio_blue_page.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/jenkins_test.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/jgauge_face.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/jgauge_needle_default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/jltptxjiht.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/live_help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/loaderAlt.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/logo_print_blue_725x225.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/logo_print_blue_825x225.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/map_pointer_9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/markerstar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/pay_bracket.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/pay_period_bracket.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/pdf_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/phoneDisplay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/print_or_sms.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/print_web_logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/print_web_logo_blue.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/print_window_display_logo_blue.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/qrcodesample.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/radio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/radio_ink_march2011.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/reach_new_customers.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/replicated_site_screenshot.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/roplqrledg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/buttons/sample_coupon_buttons.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/sample_map.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/sdm_staff.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/share_sample.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/share_sample2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/email/layout/spacer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/spending_2006-2014.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/spending_2006-2014_sm.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/sprites/spriteAccountBtns082311.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/sprites/sprite_arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/stbkcrukda.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/team_photo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/team_photo_2010.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite010912.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite091311.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite092111.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite092911.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite100611.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite102511.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite102611.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite111011.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/layout/tensprite111711.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/testimonial_dang.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/testimonial_donovann.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/testimonial_michelem.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/testimonial_stevenf.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/thumbnail10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/trans.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/tzlbzkyrhf.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/ulmcodqfux.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/verified.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/websnap_example.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/whick-whatck-sellit-1328117008.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/whick-whatck-sellit-1328196007.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/ad-rep/whick-whatck-sellit-1328545067.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_160x160.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_160x600.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_234x60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_300x250.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_468x60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBg_728x90.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBtnsHoriz.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/widget/widgetBtnsVert.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/images/QR/ad_rep/wieznfhbbv.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/zoom-in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/map_pointers/zoom-out.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.django-version" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0002_auto__add_adrepwebgreeting__del_field_adrep_id__add_field_adrep_consum.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/migrations/0002_auto__add_bad_user_patterns.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0002_auto__add_field_business_business_zip_postal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0002_auto__add_field_consumer_facebook_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0002_auto__add_field_mobilephone_subscriber__chg_field_mobilephone_mobile_p.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0002_auto__add_field_site_twitter_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/migrations/0002_auto__add_field_uszip_geom__add_field_uscounty_geom.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0002_auto__add_flyer__add_flyercoupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/0002_auto__add_mediapieshare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/migrations/0002_auto__chg_field_loghistory_execution_date_time.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0002_auto__chg_field_orderitem_description.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/migrations/0002_auto__del_field_feedcoupon_external_url__add_field_feedcoupon_coupon_u.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/migrations/0002_auto__del_scheduled_task__del_scheduledtask_status__del_unique_schedul.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/migrations/0003_alter_coordinate_id_to_fk.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0003_auto__add_bonuspoolflyer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0003_auto__add_consumeraction__add_couponaction__add_action__chg_field_coup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0003_auto__add_field_business_web_url.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/migrations/0003_auto__add_field_feedcoupon_business_url__add_field_feedcoupon_business.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0003_auto__add_field_site_facebook_key.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0003_auto__add_historical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0003_auto__chg_field_consumer_consumer_zip_postal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/migrations/0003_auto__chg_field_loghistory_execution_date_time.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/migrations/0003_auto__del_bad_user_patterns__del_site_health__add_baduserpattern__add_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/0003_auto__del_field_affiliate_media_pie_share.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0003_change_mobile_phone_subscriber_fk_direction.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0004_auto__add_field_adreporder_firestorm_order_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0004_auto__add_field_business_web_snap_path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0004_auto__add_field_site_facebook_secret.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/migrations/0004_auto__add_field_usstate_geom__add_field_uscity_geom.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0004_auto__add_unique_consumeraction_action_coupon_consumer__add_unique_cou.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/migrations/0004_auto__chg_field_loghistory_execution_date_time.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/0004_auto__chg_field_mediapieshare_share.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/migrations/0004_auto__del_baduserpattern.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0004_auto__del_field_subscriber_mobile_phone.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0004_auto__del_historical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0005_auto__add_businessprofiledescription__add_field_business_show_web_snap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0005_auto__add_field_adrep_fax_phone_number__add_field_adrep_web_photo_path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0005_auto__add_field_consumer_is_bouncing_email__add_field_consumer_is_blac.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0005_auto__add_historical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/0005_auto__add_mediapartner.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0005_auto__chg_field_subscriber_subscriber_modified_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0005_auto__del_field_site_broadcaster_allotment__add_field_site_media_partn.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0005_auto__del_unique_consumeraction_action_coupon_consumer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0006_auto.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0006_auto__add_field_adrep_ad_rep_create_datetime__add_field_adrep_ad_rep_m.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0006_auto__add_field_consumer_email_hash.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0006_auto__add_field_coupon_sms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0006_auto__add_field_promoter_is_paid_traffic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0006_auto__add_field_site_coordinate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0006_auto__chg_field_mobilephone_subscriber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0007_auto__add_consumertrend.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0007_auto__add_field_adrep_is_fulfilled.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0007_auto__add_field_flyer_is_mini.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0007_auto__add_field_historical_site.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0007_auto__chg_field_businessprofiledescription_business_description.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0007_auto__del_field_site_facebook_key__del_field_site_facebook_secret.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0007_del_mobile_phones_wo_subscribers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0008_auto__add_field_adrep_rank.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0008_auto__add_field_consumertrend_ranking.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0008_auto__add_field_flyer_is_sent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0008_auto__add_field_site_point__add_field_site_boundary.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0008_auto__chg_field_historical_site.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0008_auto__chg_field_mobilephone_subscriber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0008_auto__del_category.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0009_auto__add_adreplead.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0009_auto__add_field_flyer_num_recipients.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0009_auto__add_field_historical_created_on__add_field_historical_updated_on.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0009_auto__add_field_mobilephone_is_verified.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0009_auto__chg_field_consumer_consumer_modified_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0009_remove_old_category_rel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0009_rename_boundary_to_geom.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0010_add_m2m_business_category.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0010_auto__add_field_adreplead_create_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0010_auto__add_uniqueusertoken.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0010_auto__chg_field_orderitem_item_id__add_field_product_content_type.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0010_auto__del_field_flyer_is_sent__add_field_flyer_send_status.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/0010_populate_is_verified.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0010_update_site_geometry.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0011_auto__add_field_adrep_parent_ad_rep.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0011_auto__add_field_advertiser_advertiser_name__add_field_advertiser_adver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0011_auto__add_field_orderitem_content_type.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0011_auto__add_field_site_envelope.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0011_auto__chg_field_flyer_send_status.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0011_auto__del_field_uniqueusertoken_expires_in_seconds__add_field_uniqueus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0012_auto.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0012_auto__add_field_adrep_cell_phone_number.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0012_auto__add_field_promoter_content_type__add_field_promoter_object_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0012_auto__add_field_uniqueusertoken_has_expiration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0012_auto__del_field_advertiser_advertiser_phone.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0012_update_site_geometry_fields.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0013_auto__add_adrepusstate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0013_auto__add_field_promoter_guid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0013_auto__add_subscriberaction.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0013_auto__chg_field_businessprofiledescription_business__add_unique_busine.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0013_auto__del_consumertrend.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0013_save_site_loop.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0014_auto__add_baduserpattern.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0014_auto__add_bonuspoolallocation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0014_auto__add_flyersubject__chg_field_coupon_coupon_modified_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0014_auto__add_locationcoordinates.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0014_auto__add_twitteraccount.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0014_auto__add_unique_promotioncode_code.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0015_auto__add_field_adrep_us_zip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0015_auto__add_field_consumer_geolocation_type__add_field_consumer_geolocat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0015_auto__add_unique_flyercoupon_coupon_flyer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0015_auto__del_historical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0015_auto__del_locationcoordinates__add_locationcoordinate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0015_move_twitter_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0016_auto__add_field_flyersubject_send_date.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0016_auto__add_field_promotion_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0016_auto__del_field_location_location_advertiser_label.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0016_auto__del_field_site_twitter_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0016_save_ad_reps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0016_update_geolocation_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0017_auto__add_field_adreplead_is_commission_ok__add_field_adreplead_sales_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0017_auto__add_slottimeframe__add_slot.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0017_auto__del_field_consumer_facebook_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0017_populate_promotion_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/0017_rename_category_to_categories.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0017_set_all_base_rate_to_zero.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0018_Update_adrepleads_w_adreplead_esubscription.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0018_auto__add_unemailablereason.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0018_auto__chg_field_promotion_name__add_unique_promotion_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/0018_auto__chg_field_site_base_rate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0018_auto__chg_field_slottimeframe_end_date.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/0019_auto.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0019_auto__add_field_consumer_is_emailable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0019_auto__del_field_slottimeframe_end_date__del_field_slottimeframe_start_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0019_delete_ad_reps_from_ad_rep_leads.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0020_auto__chg_field_slottimeframe_start_datetime__chg_field_slottimeframe_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0020_convert_to_unemailable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0020_remove_adreplead_subscription_from_adrep.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0021_auto__add_adrepsite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0021_auto__add_field_flyer_send_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0021_auto__del_field_consumer_is_blacklisted__del_field_consumer_is_perm_op.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0022_add_default_to_send_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0022_auto.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0022_auto__add_adrepcompensation__chg_field_bonuspoolallocation_create_date.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0023_auto__add_flyerplacement__add_flyerplacementsubdivision.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0023_auto__add_salesrep.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/0023_auto__del_field_adreplead_phone_number__add_field_adreplead_primary_ph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0024_auto__add_flyerconsumer__add_unique_flyerconsumer_flyer_consumer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0024_replace_placeholder_for_bang.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0025_auto__add_consumerhistoryeventtype__add_consumerhistoryevent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0025_auto__add_flyersubdivision__add_unique_flyersubdivision_flyer_geolocat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0026_auto__add_field_flyer_send_date__add_unique_flyerplacement_slot_send_d.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0026_auto__del_field_consumerhistoryevent_timestamp__del_field_consumerhist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0027_auto__add_field_slot_parent_slot.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0027_auto__chg_field_consumerhistoryevent_event_type.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0028_auto__chg_field_slot_renewal_rate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0028_auto__del_consumerhistoryeventtype__chg_field_consumerhistoryevent_eve.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/0029_auto__chg_field_consumerhistoryevent_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0029_make_all_slots_parent_slots.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0030_auto__add_rankdatetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/0031_populate_rank_datetime.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/1040grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/1040gridmin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/10CouponsWidget.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget160x160.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget160x600.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget234x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget300x250.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget468x60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/113/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/163/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/advertisers/381/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/coupon-widgets/markets/hudson-valley/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/widgets/10CouponsWidget728x90.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/10CouponsWidgetmin011011.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10coupons.wsgi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/billing_record/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/from_django14/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/email_subscription/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/models/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/offer/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/offer/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/models/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/templatetags/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/service/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tasks/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/factories/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/sms_subscription/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/zinnia/widgets/_content_stats.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/zinnia/_entry_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/abandoned_coupon_follow_up.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/models/action_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/fixtures/activate_switch_firestorm_feeds.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/activate_switch_real_time_search_index.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/fixtures/activate_switch_replicated_website.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/views/ad_rep_account_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/ad_rep_compensation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/ad_rep_enrolled.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/ad_rep_enrolled.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/factories/ad_rep_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/ad_rep_invite.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/ad_rep_invite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/ad_rep_invite.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/factories/ad_rep_lead_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/ad_rep_lead_promo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/ad_rep_lead_promo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/ad_rep_lead_promo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/ad_rep_mtg_reminder_email.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/ad_rep_window_display.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/ad_rep_window_display.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/add_flyer_by_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/views/add_flyers_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/views/add_slot_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/fixtures/admin-views-users.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/factories/advertiser_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/backends.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/zinnia/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/base_email.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/base_email.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/base_from_admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/base_from_admin.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/base_sms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/from_django14/baseconv.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcom.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetail00sk0ddeee20d64.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetail6c663n0ddee921de6.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailext6tti0cd7ee25d17.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailf2lr98a0cd6ed2bd17.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailh2v95s80cd6e621d67.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailjj2rd0ddfef20d15.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailko5586na0ddfef24d78.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailrgz83m0cd7ed22d16.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailrighh6g0ddee920d37.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/bmlnmincentrevcomdetailyh7o0cd7e72bd14.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/factories/business_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/cache_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/calculate_current_price.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/celerybeat.pid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/celeryev.pid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/advertiser/advertiser/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/advertiser/business/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/consumer/consumer/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/coupon/coupon/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/ecommerce/payment/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/firestorm/adrep/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/firestorm/adreplead/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/geolocation/uscounty/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/geolocation/uszip/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/media_partner/mediapartner/change_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/consumer/change_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/check_email_to_confirm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/check_order_paid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/cleanslate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/email/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/common_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/compute_amount_discounted.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/connector.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/connector.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/consumer_acquisition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/consumer_bonus_pool.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/factories/consumer_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/consumer_prospect_emails.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/contest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/counties.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/coupon_code_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/factories/coupon_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tasks/coupon_feed_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/coupon_just_published.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/coupon_just_published.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/models/coupon_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/coupon_performance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/search/indexes/coupon/coupon_text.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/views/coupon_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/coupons_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/create_or_update_ad_rep.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/credit_card_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/csrf_error.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/templatetags/currency.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/custom_cleaning.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/custom_format_for_display.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/custom_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/dashboard_zinnia.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/data_update_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/fixtures/deactivate_switch_firestorm_feeds.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/deactivate_switch_real_time_search_index.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/fixtures/deactivate_switch_replicated_website.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/decorators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/dev.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/difference_range.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_ad_rep_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_ad_rep_consumers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_ad_rep_photo_upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login/display_ad_rep_sign_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_add_flyer_by_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_add_flyer_by_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_add_flyer_dates.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_add_slot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/display_advertiser_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/display_advertiser_faq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_advertiser_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/display_advertiser_sign_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_advertiser_stats.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_all_coupons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_all_coupons_facebook.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_all_coupons_for_this_business.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_apply_review.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_become_an_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_benefits_for_business.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_benefits_for_business_print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_blast_effects.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_build_your_network.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_bulletin_board_print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_checkout_coupon_purchase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_checkout_coupon_purchase_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_checkout_flyer_purchase_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_compensation_overview.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_compensation_plan.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_con_sub_reg_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_consumer_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_consumer_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_consumer_registration_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_contact_us.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_contest_rules.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_counties_in_market_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/display_coupon_stats.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/business/location/display_create_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/offer/display_create_offer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_create_restrictions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_downline_consumers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_downline_recruits.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/advertiser/business/display_edit_business_profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_email_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_enrollment_offer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login/display_forgot_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_free_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_header_top.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_how_it_works.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_inside_radio.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_links_for_sharing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_local_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/consumer/display_market_search_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_media_partner_half_off.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_media_partner_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_media_partner_sign_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/demo/display_my_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_opt_in_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_opt_in_opt_out.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_opt_out_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_our_competition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_our_competition_print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_password_reset.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_policies_procedures.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_press_release.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_preview_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ecommerce/display_print_receipt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_print_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_privacy_policy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_quick_start.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_radio_ink.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_recommend_enroll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_recommend_enroll_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_recruitment_ad.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_ref_consumer_enroll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_ref_consumer_enroll_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login/display_reset_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login/display_reset_password_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_sample_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_select_markets_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_sell_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_send_sms_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_send_sms_single_coupon_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_send_to_friend_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_sign_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_simple_steps_print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_site_directory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_site_spots.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_subscriber_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/registration/display_subscriber_registration_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_terms_of_agreement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_terms_of_use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_testimonial_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_the_10localcoupons_story.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/media_partner/display_transaction_report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login/display_user_login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_variable_opt_out_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_virtual_office_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/firestorm/display_web_addresses.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_who_we_are.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/display_widgets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/coupon/display_window_display.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/marketing_resources/display_your_opportunity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/fixtures/django_sites.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/do_update.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/views/downline_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_about_quick_start_resources.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_about_quick_start_resources.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_ad_rep_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_ad_rep_banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_ad_rep_data.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_ad_rep_data_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_ad_rep_menu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_advertiser_faq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_advertiser_newsletter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_all_offers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_benefits_for_business.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_checkout_coupon_purchase_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_checkout_purchase_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_compensation_plan.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_con_sub_reg_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/includes/dsp_consumer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_consumer_prospects.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_consumer_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_consumer_registration_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_contact_us.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_contest_banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_contest_rules.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_coupon_in_email.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_coupons_for_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_create_coupon_banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_create_coupon_video.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_email_button_go_to_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_email_html_signature.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_email_text_signature.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_facebook_head_tag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_facebook_like.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_facebook_like_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_facebook_like_small.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_facebook_meta.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_firestorm_password_reset.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_firestorm_recruitment_ad.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_footer_bottom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_forward_friend_banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_google_plus_one.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/includes/dsp_history.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_home_bottom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_inside_radio.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_live_help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_management_team_info.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_map_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_map_location_xlarge.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_market_counties.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_media_partner_explanation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_media_partner_half_off.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_media_partner_links.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_mini_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_nearby_sites.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_open_advertiser_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_opt_in_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_opt_in_opt_out_mobile_phone.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_opt_out_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_order_summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_our_competition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_policies_procedures.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_press_release.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_preview_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_preview_coupon_locations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_preview_coupon_small.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_preview_single_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_pricing_locked.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_pricing_unlocked.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_print_marketing_footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_print_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_privacy_policy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_purchase_intent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_qr_code.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_quick_start.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_radio_ink.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_receipt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_registration_rotation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_sample_coupons_for_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_sample_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_sample_phone.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_share_site.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_sign_in_intro.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_simple_steps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_single_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_single_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_single_offer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_site_directory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_subheading_create_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_subscriber_info.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_subscriber_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_subscriber_registration_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_subscriber_registration_header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_terms_of_agreement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_terms_of_use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_testimonial_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_testimonial_advertiser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_the_10localcoupons_story.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_unsubscribe_banner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_variable_opt_out_confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_who_we_are.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_widgets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_window_display.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/dsp/dsp_your_opportunity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/dynamic_variable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/ecommerce_test_case.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/views/ecommerce_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/service/email_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/email_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tasks/email_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/enforceMaxLength.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/zinnia/entry_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/zinnia/entry_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/excanvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/expiration_date_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/expiring_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/expiring_coupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/expiring_coupon.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fabfile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/fbstyle052511.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/feed_test_case.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/firestorm_test_case.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/flash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/flyer-results.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/flyer-results.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/flyer_create_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/models/flyer_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/modals/flyer_pricing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/flyer_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/follow_abandoned_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/follow_abandoned_coupon.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/forgot_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/forgot_password.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/form_widgets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/formatCardNumber.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/format_phone_number.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/offer/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/print/frame1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/free_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/free_flyer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_ad_rep_lead.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_ad_rep_photo_upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_ad_rep_question_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_add_flyer_by_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_add_flyer_by_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_add_flyer_dates.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_add_flyers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_add_slot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_advertiser_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_advertiser_forgot_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_advertiser_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_checkout_coupon_purchase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_consumer_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_coupon_stats.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_create_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_create_offer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_create_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_create_restrictions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_edit_business_profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_edit_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_enroll_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_free_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_market_search.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_opt_in_opt_out.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_recommend_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_ref_consumer_enroll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_reset_password.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_search_coupons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_send_to_friend.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_sign_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/frm/frm_subscriber_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/modals/frm_user_login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/email/full.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/full.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/generic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/generic.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/generic_corporate_address.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/generic_corporate_address.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/xml/generic_coupon_feed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/generic_email_unsubscribe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/generic_email_unsubscribe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/geocode_address.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/tests/geolocation_test_case.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/googleapps-verify/google38139d25274353f9.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/googleapps-verify/google782f27d547e3135d.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/googleapps-verify/googled3f58b599cf34f7e.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/handler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/header_includes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/hsdemo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/iframeBody.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/iframeBox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/fixtures/initial_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/initial_inactive.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/initial_inactive.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/initial_inactive_emails.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jQueryRotate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/jenkins.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/jenkins_stable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jgauge-0.3.0.a3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/jgauge.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery-1.5.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery-ui-1.8.14.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/jquery.autocomplete.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.flot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.flot.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.plugins.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.plugins.min110211.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.plugins.min122211.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/jquery.ui.datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/jquery.valid_days.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_accordion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_ad_rep_recruits.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_flyer_by_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_flyer_by_map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_flyer_dates.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_flyers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_add_slot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_advertiser_account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_advertiser_registration.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_ajax_csrf.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_checkout_coupon_purchase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_collapse_paragraphs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_collapsible_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_create_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_create_offer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_create_restrictions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_edit_business_profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_edit_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_email_coupon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_facebook_coupon_action.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_facebook_like_button.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_flot_graph.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_google_plus_one.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_ie_corners.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/js_includes_absolute_bottom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/js_includes_bottom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/js_includes_top.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_list_columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_live_chat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_local_home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_locations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_market_search_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_my_location.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_scrollfollow.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_search_coupons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_site_directory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_truncate_profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/scripts/js_valid_days.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/adrep/leads_tuesday_oneoff.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/adrep/leads_tuesday_oneoff.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/leftCol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/loader/load_like.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/loader/load_like_contest_is_qualified.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/loader/load_like_contest_not_qualified.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/loader/load_sample_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/loader/load_terms_of_use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/local.py.example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/local.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/factories/location_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/locking_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/login_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/map_zips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/market_manager_pitch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/market_manager_pitch.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/meeting_reminder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/meeting_reminder.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/meta_includes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/middleware.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/modal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/modalSm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/nashhalfoffdealscominlinepromos_xmlphpnum2linkyeslogoyes.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/navigation/nav1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/navigation/nav2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/newsletter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/mediapartner/newsletter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/newsletter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/mediapartner/newsletter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/newsletter_20101129.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/newsletter_20101129.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/email/non-glossy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/email/non-glossy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/notify_new_recruit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/notify_new_recruit.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/factories/offer_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min061311.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_072711.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_072811.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_090111.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_090211.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_090311.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_090611.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_091211.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_091211a.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_110811.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_min_120111.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/ol_google_map_builder_source.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/onload_includes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/openlayers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/openlayers_min050911.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/scripts/openwindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/opt_in_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/opt_out_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/factories/order_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/models/order_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/payload_signing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/models/payment_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/perpetual_inactive.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/perpetual_inactive.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/photo_upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/views/photo_upload_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/post_update.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pre_update.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/views/preview_edit_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/process.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings/prod.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/fixtures/prod_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/product_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/models/product_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/models/promoter_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/promotion_preapproval.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/prospects.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/prospects.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/service/purchase_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/qr_image_cache.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/xml/qualified_consumers_achieved.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/range.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/service/registration_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/renew_notify.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/renew_notify.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/replace_all.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/request_double_opt_in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/request_email_address.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/request_zip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/restrictions_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/views/restrictions_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/include/rpt/rpt_transaction_report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/sale.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/sale.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/sale_sends.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/sample_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/search_indexes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/search_sites.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/send.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/email_subscription/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/sms_subscription/service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/session.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/xml/shooger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frames/web/sidenav.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/sign_up_refer_consumer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/sign_up_refer_consumer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/signals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/signals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/signals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/from_django14/signing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/simple_state_county_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/single_coupon_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/map-data/site-2-zip-geoms-data.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/dynamic/map-data/site-4-zip-geoms-data.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/sitemaps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/zinnia/skeleton.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/factories/slot_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/models/slot_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/slot_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/sms_alerts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/sms_gateway_test_case.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/soap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/standard_flyer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/standard_flyer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/start_10.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/start_10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/data/state_geometries_1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/data/state_geometries_2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/data/state_geometries_3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/data/state_geoms.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/stats.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/service/stupid_spam_complainers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/factories/subscriber_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/subtract.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/templatetags/subtracted_range.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/sugar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/sugar_in.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/sugar_out.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/service/task_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tasks/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ten.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenbasemin011112.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenbasemin012012.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenbasemin020212.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenbasemin122111.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenmobilemin122111.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenprint.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenprint011912.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenprint122211.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tenrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstyleIE7.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylebase.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylefirestorm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylefirestorm100511.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylefirestorm112111.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemin010512.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemin011012.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemin011112.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemin012012.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemin020212.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/css/tenstylemobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_abandoned_coupon_follow_up_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/tests/test_account_view.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/fixtures/test_ad_rep.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_ad_rep_account_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_ad_rep_invite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_ad_rep_photo_upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_ad_rep_reminder_email_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_add_flyer_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_add_slot_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_admin_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_admin_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_admin_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/fixtures/test_advertiser.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/fixtures/test_advertiser_views.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_api.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/fixtures/test_auth_group.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_become_ad_rep_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_blog.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/fixtures/test_business_tasks.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_cases.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_cleaning.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_connector.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/fixtures/test_consumer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_consumer_prospect_emails_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_contest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_coupon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_coupon_code.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_coupon_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_coupon_views.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_custom_format_for_display.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_custom_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/fixtures/test_ecommerce.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/fixtures/test_ecommerce_views.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_edit_preview_edit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_email_model.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_email_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_email_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_expiring_coupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/fixtures/test_feed.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_feed_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_flyer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_flyer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_flyer_401.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_flyer_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_flyer_placement.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_form.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_form.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/test_geolocation.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_home.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_initial_inactive_emails_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/tests/test_location_services.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/tests/test_location_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/fixtures/test_log_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/fixtures/test_media_partner.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_middleware.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/tests/test_model.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/tests/test_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/test_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/tests/test_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/fixtures/test_ny_markets.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_offer_views.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/test_orange_geom.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_order_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_payload_signing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_payment_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_posted_checkout_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_print_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_process.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_product_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_promoter_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/fixtures/test_promotion.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_publish_preview_edit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_qr_image_cache.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_restrictions_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_sale_sends.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/fixtures/test_sales_rep.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_search_coupons.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_send.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logger/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/tests/test_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_session.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_show_checkout_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_sitemap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_slot.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/fixtures/test_slot_autorenewal.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_slot_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_slot_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/fixtures/test_sms_gateway.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/fixtures/test_sms_response.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/fixtures/test_subscriber.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/test_sugar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_task_text_blast_coupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_tasks_email.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_template_tag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/fixtures/test_twitter_account.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_unqualified_consumer_emails_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/test_uszip_buffalo.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_view_coupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/offer/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/tests/test_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_views_preview_edit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_views_preview_edit_biz.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/tests/test_views_promotion.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tests/test_warm_leads_email_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/tests/test_widget_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/three_person_signature.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/three_person_signature.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/twitter_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/feed/twittercom.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/unqualified_consumer_emails.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/unqualified_follow_up.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/unqualified_follow_up.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/unqualified_report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/unqualified_report.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/urls_1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/urls_131.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/urls_2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/urls_3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/urls_local/urls_4.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/urls_ad_rep.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/urls_admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/urls_coupons.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/urls_create_coupon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/templates/urls_local.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/urls_sitemaps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/us_county_fix.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/uscounty_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/fixtures/usstate_data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/valid_days_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecommerce/validators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sms/verify_success.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/advertiser/business/location/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consumer/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/offer/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feed/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firestorm/views/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/market/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media_partner/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subscriber/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/watchdog/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email_gateway/tasks/warm_lead_emails.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/warm_leads.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/warm_leads.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/warm_leads_report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/admin/warm_leads_report.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/web_snap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/welcome.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/welcome.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/welcome.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/welcome.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_ad_rep.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_ad_rep.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_lead.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_lead.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/welcome_receipt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/ecommerce/welcome_receipt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_refer_consumer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/firestorm/welcome_refer_consumer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/welcome_sms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/welcome_sms.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/advertiser/welcome_sms.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/email_gateway/consumer/welcome_sms.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/service/widget_service.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coupon/views/widget_views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/forms/widgets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/zipcode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/zipcode_2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/zipcodes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/zips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geolocation/templates/zips_2.html" />
+    </list>
+    <ignored path="ten.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ten" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="test_utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/test_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="22" selection-start="4617" selection-end="4617" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3645">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decorators.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coupon/decorators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="14" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preview_edit_views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coupon/views/preview_edit_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="1" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="10470">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decorators.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/advertiser/decorators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="7" selection-start="950" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="495">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/tests/test_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1815">
+              <folding>
+                <element signature="e#37#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consumer_factory.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer/factories/consumer_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="27" selection-start="810" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_service.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consumer/tests/test_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="64" selection-start="163" selection-end="179" vertical-scroll-proportion="-2.2741194" vertical-offset="1545" max-vertical-offset="6540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer/tests/test_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/coupon/tests/test_views.py" />
+        <option value="$PROJECT_DIR$/common/test_utils.py" />
+        <option value="$PROJECT_DIR$/settings/common.py" />
+        <option value="$PROJECT_DIR$/settings/dev.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subscriber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subscriber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coupon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coupon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coupon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fixtures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ten" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advertiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ten" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a10a4d2-2cbc-4b8e-9322-3c331ed67f5f" name="Default" comment="" />
+      <created>1389088129398</created>
+      <updated>1389088129398</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19205834" sideWeight="0.67431194" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32568806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Add ten to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ten to git" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/advertiser/business/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="18" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coupon/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="50" selection-end="1453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="18" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="367" column="28" selection-start="11293" selection-end="11293" vertical-scroll-proportion="0.0" vertical-offset="5012" max-vertical-offset="5640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="40" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/jenkins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="853" selection-end="853" vertical-scroll-proportion="0.0" vertical-offset="329" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/test_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="22" selection-start="4617" selection-end="4617" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advertiser/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="7" selection-start="950" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coupon/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="14" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coupon/views/preview_edit_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="1" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="10470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/tests/test_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="777" max-vertical-offset="1695">
+          <folding>
+            <element signature="e#37#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer/factories/consumer_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="27" selection-start="810" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coupon/fixtures/test_coupon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5205">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer/tests/test_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="64" selection-start="163" selection-end="179" vertical-scroll-proportion="-2.2741194" vertical-offset="1545" max-vertical-offset="6540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

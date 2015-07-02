@@ -339,7 +339,7 @@ CELERY_ALWAYS_EAGER = False
 #        "task": "tasks.expire_slot_time_frames",
 #        "schedule": crontab(minute=0, hour=0),
 #    },
-#}
+#
 
 # Settings for Haystack:
 HAYSTACK_SITECONF = 'common.search_sites'

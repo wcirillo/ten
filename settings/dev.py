@@ -25,7 +25,7 @@ MIDDLEWARE_CLASSES += (
 )
 
 ### Settings below here are *NOT* django settings.
-## Settings for ten project:
+## Settings for     ten project:
 HTTP_HOST = 'dev.10coupons.com'
 HTTP_PROTOCOL_HOST = "http://dev.10coupons.com"
 SEND_SALE_NOTIFICATIONS = False
